@@ -18,4 +18,14 @@
 <p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 ]]></content>
   </entry>
+  <entry>
+    <title></title>
+    <url>/2024/09/08/IP%E7%9B%B8%E5%85%B3%E6%8C%87%E4%BB%A4/</url>
+    <content><![CDATA[<h3 id="网络IP服务"><a href="#网络IP服务" class="headerlink" title="网络IP服务"></a>网络IP服务</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">ifconfig ens33 | awk &#x27;/inet /&#123;print $2&#125;&#x27; #查看当前主机ip地址</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">vi /etc/sysconfig/network-scripts/ifcfg-ens33 #修改ip地址（IPADDR和GATEWAY）</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">service network restart #重启网络服务</span><br></pre></td></tr></table></figure></div>
+]]></content>
+  </entry>
 </search>
