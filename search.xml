@@ -1,30 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2024/09/09/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-]]></content>
-      <categories>
-        <category>example</category>
-      </categories>
-      <tags>
-        <tag>example</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>linux常用操作</title>
     <url>/2024/09/09/Linux%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<h3 id="linux常用操作"><a href="#linux常用操作" class="headerlink" title="linux常用操作"></a>linux常用操作</h3><h4 id="命令帮助"><a href="#命令帮助" class="headerlink" title="命令帮助"></a>命令帮助</h4><p><code>man ls</code>（主要）——具体参数和使用方法</p>
@@ -48,10 +24,14 @@
 </code></pre>
 <p>​	选择并使用工具：<code>chsh -s bin/sch</code></p>
 <p>​	查看当前使用的工具：<code>echo $shell</code></p>
-<h3 id="查看操作"><a href="#查看操作" class="headerlink" title="查看操作"></a>查看操作</h3><h4 id="查看当前虚拟机的登录用户"><a href="#查看当前虚拟机的登录用户" class="headerlink" title="查看当前虚拟机的登录用户"></a>查看当前虚拟机的登录用户</h4><p><code>whoami</code></p>
-<h4 id="查看当前用户的主目录"><a href="#查看当前用户的主目录" class="headerlink" title="查看当前用户的主目录"></a>查看当前用户的主目录</h4><p><code>cd</code> 、<code>cd~</code></p>
-<h4 id="查看文本内容"><a href="#查看文本内容" class="headerlink" title="查看文本内容"></a>查看文本内容</h4><p>​	<code>cat filepath</code></p>
-<h4 id="查看当前操作路径"><a href="#查看当前操作路径" class="headerlink" title="查看当前操作路径"></a>查看当前操作路径</h4><p><code>	pwd</code>（工作目录）</p>
+<h3 id="查看操作"><a href="#查看操作" class="headerlink" title="查看操作"></a>查看操作</h3><h4 id="查看当前虚拟机的登录用户"><a href="#查看当前虚拟机的登录用户" class="headerlink" title="查看当前虚拟机的登录用户"></a>查看当前虚拟机的登录用户</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">whoami</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="查看当前用户的主目录"><a href="#查看当前用户的主目录" class="headerlink" title="查看当前用户的主目录"></a>查看当前用户的主目录</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd 、cd~</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="查看文本内容"><a href="#查看文本内容" class="headerlink" title="查看文本内容"></a>查看文本内容</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat filepath</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="查看当前操作路径"><a href="#查看当前操作路径" class="headerlink" title="查看当前操作路径"></a>查看当前操作路径</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">pwd（工作目录）</span><br></pre></td></tr></table></figure></div>
+
 <h4 id="查看文件（lsof：list-open-file）"><a href="#查看文件（lsof：list-open-file）" class="headerlink" title="查看文件（lsof：list open file）"></a>查看文件（lsof：list open file）</h4><p>​	查看某个文件相关进程：<code>lsof filepath</code></p>
 <p>​	列出某个用户打开的文件信息：<code>lsof -u root</code></p>
 <p>​	列出某个程序进程所打开的文件信息：<code>lsof -c redis</code></p>
@@ -213,10 +193,33 @@
 ]]></content>
       <categories>
         <category>linux</category>
-        <category>studydata</category>
       </categories>
       <tags>
         <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2024/09/09/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
+      <categories>
+        <category>example</category>
+      </categories>
+      <tags>
+        <tag>example</tag>
       </tags>
   </entry>
   <entry>
