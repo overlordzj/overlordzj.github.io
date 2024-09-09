@@ -1,73 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2024/09/09/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-]]></content>
-      <categories>
-        <category>example</category>
-      </categories>
-      <tags>
-        <tag>example</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>测试文章时效性</title>
-    <url>/2024/09/09/%E6%B5%8B%E8%AF%95%E6%97%B6%E6%95%88%E6%80%A7/</url>
-    <content><![CDATA[<h1 id="这是测试文字"><a href="#这是测试文字" class="headerlink" title="这是测试文字"></a>这是测试文字</h1><h2 id="这是测试文字-1"><a href="#这是测试文字-1" class="headerlink" title="这是测试文字"></a>这是测试文字</h2><h3 id="这是测试文字-2"><a href="#这是测试文字-2" class="headerlink" title="这是测试文字"></a>这是测试文字</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">这是测试文字</span><br></pre></td></tr></table></figure></div>
-
-<p>这是测试文字</p>
-]]></content>
-      <categories>
-        <category>example</category>
-      </categories>
-      <tags>
-        <tag>example</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>测试密码访问</title>
-    <url>/2024/09/09/test-passwd/</url>
-    <content><![CDATA[
-<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="9c29d2ae8c9408ebabfe5502d542763af69160ec81974d9abe486a1990c0affe">b7d6aa4f9b0e255d1a59a9e7f2b85d1b1ed944caf21c7e84e4e7408bbf88993cf0d430a5b6e273a1f7a43f8b32eac3de82b6eeb75f7c346696330f8d36f5692a27b30c478d7b56d48dc56572de233ad0130e4a303c4df72a9b15befccec21c02e2aee8df667ff0af8266638f6e91eb6a3bca9f45e4922c6488c20e619887cb0056428b759e3198e95d178adb6800981b0db62870df36f8b0da4a902b04d0e8a6ceee478426bcb36ac1e5b28ae924677481c37900a1de536d7efaa30eb218ef7f223fa63e35f0e1c354d920d7d66d0826589b951e4c6908266586755cf8f9cad0a22961a9c6178b098261f1393913ea36e8dd3cdaf6397b637cdc3d67c1ae5cfd403201d724a44cd364b76a4ef929d18f092b7fef6599a6793491e4d7d652bca7d80798504f5eb9ef3cdaf80f3ebcc23b0cf08d33e0ad7f7409b25bfd41104b9857be0e80a0e2089aea9fc7cd8dcaaeb8d0869460e91bedebc63c8e79916d498bab50676f513b39265bee8b113e4959f44ed3f26f0e91e21e3562751b6e630e5b93e64d69c5d3eaf9c3088c67c59713170f93d18d3d1ca720924fccd220caea295921dbcb25828a70e0948f12124c4995c8c91bbef13371aa993f48558f53d23bfb6859de37901a7215a4219876e9cdf076e340760604fff3a1f813762e132f6ebf866ae10b7d00ab9d795337e5cca897a58550889be251f1cb763a63aead731534794db2feb7da838808a864b7560602b9702ac2cd75230437c7aabf3eaa7178d2f053c482843b3512dbc29c56373ef0f2d94b217ac8b4d3a31f6cb6a104d4483f2da79a75e75d0b66ecc0652c4579d4de9f0c9035d270fccd8552e091cacaf453212de088d7e30e6dee84903441a54774e5f69ad6753498a66b405ed67fa6faff788fe48a27d913199d7f0bb2374c7ebebf999efa28c23e276f42eab52a149b148ae4fbd9a1d1d2ce4f160d26ab160195598371cbac8d56b1ddeafb1089a1a77252986eb69ad798915b056b473116bbf9fcd05009b444ccdeffffbd6b9427b7edc8381965716b9759f5abe789ed3daeca3fa03a06e05494cfd5e75abd767d49b166da24c3e1f1473b9e2038e31d3545745984dd5cca808379572584243128ce2e15ddbc5b85863a6c46c378056b847b577a2616abdccc1a07ee1e52a15dad9e9e747e18efda1be6f421ebbc8a3751d85c6ac4d69b9b18f292314caa2b2a197c75dca9f9e682c0ab35628d707350395c</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
-      </label>
-    </div>
-  </div>
-</div>
-<link href="/css/hbe.style.css" rel="stylesheet" type="text/css"><script data-swup-reload-script type="module" src="/js/plugins/hbe.js"></script>
-<script data-swup-reload-script type="module">
-import {initHBE} from "/js/plugins/hbe.js";
-  console.log("hexo-blog-encrypt: loaded.");
-    initHBE();
-</script>
-]]></content>
-      <categories>
-        <category>example</category>
-      </categories>
-      <tags>
-        <tag>example</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>linux常用操作</title>
     <url>/2024/09/09/linux%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<h3 id="linux常用操作"><a href="#linux常用操作" class="headerlink" title="linux常用操作"></a>linux常用操作</h3><h4 id="命令帮助"><a href="#命令帮助" class="headerlink" title="命令帮助"></a>命令帮助</h4><p><code>man ls</code>（主要）——具体参数和使用方法</p>
@@ -259,10 +192,78 @@ import {initHBE} from "/js/plugins/hbe.js";
 </tbody></table>
 ]]></content>
       <categories>
-        <category>hhh</category>
+        <category>study</category>
+        <category>linux</category>
       </categories>
       <tags>
         <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2024/09/09/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
+      <categories>
+        <category>example</category>
+      </categories>
+      <tags>
+        <tag>example</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试密码访问</title>
+    <url>/2024/09/09/test-passwd/</url>
+    <content><![CDATA[
+<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="9c29d2ae8c9408ebabfe5502d542763af69160ec81974d9abe486a1990c0affe">b7d6aa4f9b0e255d1a59a9e7f2b85d1b1ed944caf21c7e84e4e7408bbf88993cf0d430a5b6e273a1f7a43f8b32eac3de82b6eeb75f7c346696330f8d36f5692a27b30c478d7b56d48dc56572de233ad0130e4a303c4df72a9b15befccec21c02e2aee8df667ff0af8266638f6e91eb6a3bca9f45e4922c6488c20e619887cb0056428b759e3198e95d178adb6800981b0db62870df36f8b0da4a902b04d0e8a6ceee478426bcb36ac1e5b28ae924677481c37900a1de536d7efaa30eb218ef7f223fa63e35f0e1c354d920d7d66d0826589b951e4c6908266586755cf8f9cad0a22961a9c6178b098261f1393913ea36e8dd3cdaf6397b637cdc3d67c1ae5cfd403201d724a44cd364b76a4ef929d18f092b7fef6599a6793491e4d7d652bca7d80798504f5eb9ef3cdaf80f3ebcc23b0cf08d33e0ad7f7409b25bfd41104b9857be0e80a0e2089aea9fc7cd8dcaaeb8d0869460e91bedebc63c8e79916d498bab50676f513b39265bee8b113e4959f44ed3f26f0e91e21e3562751b6e630e5b93e64d69c5d3eaf9c3088c67c59713170f93d18d3d1ca720924fccd220caea295921dbcb25828a70e0948f12124c4995c8c91bbef13371aa993f48558f53d23bfb6859de37901a7215a4219876e9cdf076e340760604fff3a1f813762e132f6ebf866ae10b7d00ab9d795337e5cca897a58550889be251f1cb763a63aead731534794db2feb7da838808a864b7560602b9702ac2cd75230437c7aabf3eaa7178d2f053c482843b3512dbc29c56373ef0f2d94b217ac8b4d3a31f6cb6a104d4483f2da79a75e75d0b66ecc0652c4579d4de9f0c9035d270fccd8552e091cacaf453212de088d7e30e6dee84903441a54774e5f69ad6753498a66b405ed67fa6faff788fe48a27d913199d7f0bb2374c7ebebf999efa28c23e276f42eab52a149b148ae4fbd9a1d1d2ce4f160d26ab160195598371cbac8d56b1ddeafb1089a1a77252986eb69ad798915b056b473116bbf9fcd05009b444ccdeffffbd6b9427b7edc8381965716b9759f5abe789ed3daeca3fa03a06e05494cfd5e75abd767d49b166da24c3e1f1473b9e2038e31d3545745984dd5cca808379572584243128ce2e15ddbc5b85863a6c46c378056b847b577a2616abdccc1a07ee1e52a15dad9e9e747e18efda1be6f421ebbc8a3751d85c6ac4d69b9b18f292314caa2b2a197c75dca9f9e682c0ab35628d707350395c</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<link href="/css/hbe.style.css" rel="stylesheet" type="text/css"><script data-swup-reload-script type="module" src="/js/plugins/hbe.js"></script>
+<script data-swup-reload-script type="module">
+import {initHBE} from "/js/plugins/hbe.js";
+  console.log("hexo-blog-encrypt: loaded.");
+    initHBE();
+</script>
+]]></content>
+      <categories>
+        <category>example</category>
+      </categories>
+      <tags>
+        <tag>example</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试文章时效性</title>
+    <url>/2024/09/09/%E6%B5%8B%E8%AF%95%E6%97%B6%E6%95%88%E6%80%A7/</url>
+    <content><![CDATA[<h1 id="这是测试文字"><a href="#这是测试文字" class="headerlink" title="这是测试文字"></a>这是测试文字</h1><h2 id="这是测试文字-1"><a href="#这是测试文字-1" class="headerlink" title="这是测试文字"></a>这是测试文字</h2><h3 id="这是测试文字-2"><a href="#这是测试文字-2" class="headerlink" title="这是测试文字"></a>这是测试文字</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">这是测试文字</span><br></pre></td></tr></table></figure></div>
+
+<p>这是测试文字</p>
+]]></content>
+      <categories>
+        <category>example</category>
+      </categories>
+      <tags>
+        <tag>example</tag>
       </tags>
   </entry>
 </search>
