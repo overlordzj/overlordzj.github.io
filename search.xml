@@ -97,9 +97,17 @@ import {initHBE} from "/js/plugins/hbe.js";
       </tags>
   </entry>
   <entry>
-    <title>关于C语言学习的部分遗漏问题的解答</title>
+    <title>关于C语言学习的部分遗漏问题解答</title>
     <url>/2024/09/10/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/</url>
-    <content><![CDATA[<h1 id="遗漏问题解答"><a href="#遗漏问题解答" class="headerlink" title="遗漏问题解答"></a>遗漏问题解答</h1><h2 id="浮点数的数值范围"><a href="#浮点数的数值范围" class="headerlink" title="浮点数的数值范围"></a>浮点数的数值范围</h2><h3 id="浮点格式"><a href="#浮点格式" class="headerlink" title="浮点格式"></a>浮点格式</h3><p>精度和范围与数据的存储格式密切相关，所以我们先来看一看它们的存储格式：<br>对于float类型的变量，其底层的存储格式为：</p>
+    <content><![CDATA[<h1 id="遗漏问题解答"><a href="#遗漏问题解答" class="headerlink" title="遗漏问题解答"></a>遗漏问题解答</h1><p><a href="#%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E6%95%B0%E5%80%BC%E8%8C%83%E5%9B%B4">浮点数的数值范围</a></p>
+<p><a href="#%E8%B5%8B%E5%80%BC%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%8E%E8%B5%8B%E5%80%BC%E8%AF%AD%E5%8F%A5">赋值表达式与赋值语句</a></p>
+<p><a href="#%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E6%96%B9%E6%B3%95">基础排序方法</a></p>
+<p><a href="#%E6%B1%89%E8%AF%BA%E5%A1%94%E9%97%AE%E9%A2%98">汉诺塔问题</a></p>
+<p><a href="#%E6%95%B0%E7%BB%84%E8%B5%8B%E5%80%BC">数组赋值</a></p>
+<p><a href="#%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D">动态内存分配</a></p>
+<p><a href="#%E6%8C%87%E9%92%88%E9%93%BE%E8%A1%A8">指针链表</a></p>
+<p><a href="#%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C">文件操作</a></p>
+<h2 id="浮点数的数值范围"><a href="#浮点数的数值范围" class="headerlink" title="浮点数的数值范围"></a>浮点数的数值范围</h2><h3 id="浮点格式"><a href="#浮点格式" class="headerlink" title="浮点格式"></a>浮点格式</h3><p>精度和范围与数据的存储格式密切相关，所以我们先来看一看它们的存储格式：<br>对于float类型的变量，其底层的存储格式为：</p>
 <table>
 <thead>
 <tr>
@@ -133,7 +141,7 @@ import {initHBE} from "/js/plugins/hbe.js";
 <h3 id="范围推导"><a href="#范围推导" class="headerlink" title="范围推导"></a>范围推导</h3><h4 id="float类型"><a href="#float类型" class="headerlink" title="float类型"></a>float类型</h4><p>首先看它的最大的情况，此时S&#x3D;0，F全部是0，指数域全部是1，此时32bit的值为：0111 1111 1000 0000 0000 0000 0000 0000。</p>
 <p>它的精确值为：<code>+1.0*2^128</code>，对应的十进制约为：<code>3.4*10^38</code>。</p>
 <p>负的无穷大就是当S&#x3D;1的时候，符号取负即可。</p>
-<h4 id="double类型"><a href="#double类型" class="headerlink" title="double类型"></a>double类型</h4><p>直接给出的数表示的范围：<code>−1.7*1 0^308 ∼ +1.7*1 0^308</code></p>
+<h4 id="double类型"><a href="#double类型" class="headerlink" title="double类型"></a>double类型</h4><p>直接给出的数表示的范围：<code>−1.7*10^308 ∼ +1.7*10^308</code></p>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>正常显示的只显示精度范围内的，但实际浮点类型可以存储相当大的数据，只是不会正常显示出来而已。</p>
 <p><img  
                      lazyload

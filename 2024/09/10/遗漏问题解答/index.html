@@ -26,14 +26,14 @@
     
         <meta name="description" content="正在持续更新中~">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于C语言学习的部分遗漏问题的解答">
+<meta property="og:title" content="关于C语言学习的部分遗漏问题解答">
 <meta property="og:url" content="https://blog.overlordzj.cn/2024/09/10/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="正在持续更新中~">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/90c1d403d3c66315cc03416f9374711.png">
 <meta property="article:published_time" content="2024-09-10T04:00:00.000Z">
-<meta property="article:modified_time" content="2024-09-10T17:29:51.717Z">
+<meta property="article:modified_time" content="2024-09-10T17:44:45.936Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="C语言">
 <meta name="twitter:card" content="summary">
@@ -49,7 +49,7 @@
     
     <title>
         
-            关于C语言学习的部分遗漏问题的解答 -
+            关于C语言学习的部分遗漏问题解答 -
         
         Overlord Blog
     </title>
@@ -611,7 +611,7 @@
         <div class="article-title relative w-full">
             
                 <div class="w-full flex items-center pt-6 justify-start">
-                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">关于C语言学习的部分遗漏问题的解答</h1>
+                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">关于C语言学习的部分遗漏问题解答</h1>
                 </div>
             
             </div>
@@ -639,8 +639,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-09-11 01:29:51</span>
-            <span class="mobile">2024-09-11 01:29:51</span>
+            <span class="desktop">2024-09-11 01:44:45</span>
+            <span class="mobile">2024-09-11 01:44:45</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -688,7 +688,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>329 Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>374 Words</span>
         </span>
     
     
@@ -712,7 +712,15 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h1 id="遗漏问题解答"><a href="#遗漏问题解答" class="headerlink" title="遗漏问题解答"></a>遗漏问题解答</h1><h2 id="浮点数的数值范围"><a href="#浮点数的数值范围" class="headerlink" title="浮点数的数值范围"></a>浮点数的数值范围</h2><h3 id="浮点格式"><a href="#浮点格式" class="headerlink" title="浮点格式"></a>浮点格式</h3><p>精度和范围与数据的存储格式密切相关，所以我们先来看一看它们的存储格式：<br>对于float类型的变量，其底层的存储格式为：</p>
+            <h1 id="遗漏问题解答"><a href="#遗漏问题解答" class="headerlink" title="遗漏问题解答"></a>遗漏问题解答</h1><p><a href="#%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E6%95%B0%E5%80%BC%E8%8C%83%E5%9B%B4">浮点数的数值范围</a></p>
+<p><a href="#%E8%B5%8B%E5%80%BC%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%8E%E8%B5%8B%E5%80%BC%E8%AF%AD%E5%8F%A5">赋值表达式与赋值语句</a></p>
+<p><a href="#%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E6%96%B9%E6%B3%95">基础排序方法</a></p>
+<p><a href="#%E6%B1%89%E8%AF%BA%E5%A1%94%E9%97%AE%E9%A2%98">汉诺塔问题</a></p>
+<p><a href="#%E6%95%B0%E7%BB%84%E8%B5%8B%E5%80%BC">数组赋值</a></p>
+<p><a href="#%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D">动态内存分配</a></p>
+<p><a href="#%E6%8C%87%E9%92%88%E9%93%BE%E8%A1%A8">指针链表</a></p>
+<p><a href="#%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C">文件操作</a></p>
+<h2 id="浮点数的数值范围"><a href="#浮点数的数值范围" class="headerlink" title="浮点数的数值范围"></a>浮点数的数值范围</h2><h3 id="浮点格式"><a href="#浮点格式" class="headerlink" title="浮点格式"></a>浮点格式</h3><p>精度和范围与数据的存储格式密切相关，所以我们先来看一看它们的存储格式：<br>对于float类型的变量，其底层的存储格式为：</p>
 <table>
 <thead>
 <tr>
@@ -746,7 +754,7 @@
 <h3 id="范围推导"><a href="#范围推导" class="headerlink" title="范围推导"></a>范围推导</h3><h4 id="float类型"><a href="#float类型" class="headerlink" title="float类型"></a>float类型</h4><p>首先看它的最大的情况，此时S&#x3D;0，F全部是0，指数域全部是1，此时32bit的值为：0111 1111 1000 0000 0000 0000 0000 0000。</p>
 <p>它的精确值为：<code>+1.0*2^128</code>，对应的十进制约为：<code>3.4*10^38</code>。</p>
 <p>负的无穷大就是当S&#x3D;1的时候，符号取负即可。</p>
-<h4 id="double类型"><a href="#double类型" class="headerlink" title="double类型"></a>double类型</h4><p>直接给出的数表示的范围：<code>−1.7*1 0^308 ∼ +1.7*1 0^308</code></p>
+<h4 id="double类型"><a href="#double类型" class="headerlink" title="double类型"></a>double类型</h4><p>直接给出的数表示的范围：<code>−1.7*10^308 ∼ +1.7*10^308</code></p>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>正常显示的只显示精度范围内的，但实际浮点类型可以存储相当大的数据，只是不会正常显示出来而已。</p>
 <p><img  
                      lazyload
@@ -761,14 +769,14 @@
             <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> 关于C语言学习的部分遗漏问题的解答</li>
+        <li><strong>Title:</strong> 关于C语言学习的部分遗漏问题解答</li>
         <li><strong>Author:</strong> ZJ</li>
         <li><strong>Created at
                 :</strong> 2024-09-10 12:00:00</li>
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-09-11 01:29:51
+                    :</strong> 2024-09-11 01:44:45
             </li>
         
         <li>
@@ -923,7 +931,7 @@
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">关于C语言学习的部分遗漏问题的解答</div>
+        <div class="page-title">关于C语言学习的部分遗漏问题解答</div>
         <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94"><span class="nav-text">遗漏问题解答</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E6%95%B0%E5%80%BC%E8%8C%83%E5%9B%B4"><span class="nav-text">浮点数的数值范围</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%AE%E7%82%B9%E6%A0%BC%E5%BC%8F"><span class="nav-text">浮点格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8C%83%E5%9B%B4%E6%8E%A8%E5%AF%BC"><span class="nav-text">范围推导</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#float%E7%B1%BB%E5%9E%8B"><span class="nav-text">float类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#double%E7%B1%BB%E5%9E%8B"><span class="nav-text">double类型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B5%8B%E5%80%BC%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%8E%E8%B5%8B%E5%80%BC%E8%AF%AD%E5%8F%A5"><span class="nav-text">赋值表达式与赋值语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E6%96%B9%E6%B3%95"><span class="nav-text">基础排序方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F"><span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F"><span class="nav-text">选择排序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B1%89%E8%AF%BA%E5%A1%94%E9%97%AE%E9%A2%98"><span class="nav-text">汉诺塔问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E8%B5%8B%E5%80%BC"><span class="nav-text">数组赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D"><span class="nav-text">动态内存分配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E9%92%88%E9%93%BE%E8%A1%A8"><span class="nav-text">指针链表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="nav-text">文件操作</span></a></li></ol></li></ol>
 
     </div>
@@ -961,7 +969,7 @@
                     </span>
                     
                         <span>
-                            475 words in total
+                            520 words in total
                         </span>
                     
                 </p>
