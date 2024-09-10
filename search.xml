@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2024/09/09/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
+      <categories>
+        <category>example</category>
+      </categories>
+      <tags>
+        <tag>example</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>测试密码访问</title>
     <url>/2024/09/09/test-passwd/</url>
     <content><![CDATA[
@@ -21,30 +45,6 @@ import {initHBE} from "/js/plugins/hbe.js";
   console.log("hexo-blog-encrypt: loaded.");
     initHBE();
 </script>
-]]></content>
-      <categories>
-        <category>example</category>
-      </categories>
-      <tags>
-        <tag>example</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2024/09/09/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 ]]></content>
       <categories>
         <category>example</category>
@@ -97,9 +97,51 @@ import {initHBE} from "/js/plugins/hbe.js";
       </tags>
   </entry>
   <entry>
-    <title>遗漏问题解答</title>
+    <title>关于C语言学习的部分遗漏问题的解答</title>
     <url>/2024/09/10/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/</url>
-    <content><![CDATA[<h1 id="遗漏问题解答"><a href="#遗漏问题解答" class="headerlink" title="遗漏问题解答"></a>遗漏问题解答</h1><h2 id="浮点数的数值范围"><a href="#浮点数的数值范围" class="headerlink" title="浮点数的数值范围"></a>浮点数的数值范围</h2><h2 id="赋值表达式与赋值语句"><a href="#赋值表达式与赋值语句" class="headerlink" title="赋值表达式与赋值语句"></a>赋值表达式与赋值语句</h2><h2 id="基础排序方法"><a href="#基础排序方法" class="headerlink" title="基础排序方法"></a>基础排序方法</h2><h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><h2 id="汉诺塔问题"><a href="#汉诺塔问题" class="headerlink" title="汉诺塔问题"></a>汉诺塔问题</h2><h2 id="数组赋值"><a href="#数组赋值" class="headerlink" title="数组赋值"></a>数组赋值</h2><h2 id="动态内存分配"><a href="#动态内存分配" class="headerlink" title="动态内存分配"></a>动态内存分配</h2><h2 id="指针链表"><a href="#指针链表" class="headerlink" title="指针链表"></a>指针链表</h2><h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2>]]></content>
+    <content><![CDATA[<h1 id="遗漏问题解答"><a href="#遗漏问题解答" class="headerlink" title="遗漏问题解答"></a>遗漏问题解答</h1><h2 id="浮点数的数值范围"><a href="#浮点数的数值范围" class="headerlink" title="浮点数的数值范围"></a>浮点数的数值范围</h2><h3 id="浮点格式"><a href="#浮点格式" class="headerlink" title="浮点格式"></a>浮点格式</h3><p>精度和范围与数据的存储格式密切相关，所以我们先来看一看它们的存储格式：<br>对于float类型的变量，其底层的存储格式为：</p>
+<table>
+<thead>
+<tr>
+<th>符号位（S）</th>
+<th>指数阶码（E）</th>
+<th>尾数（F）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1bit</td>
+<td>8bit</td>
+<td>23bit</td>
+</tr>
+</tbody></table>
+<p>对于double类型的变量，底层的存储格式为：</p>
+<table>
+<thead>
+<tr>
+<th>符号位（S）</th>
+<th>指数阶码（E）</th>
+<th>尾数（F）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1bit</td>
+<td>11bit</td>
+<td>52bit</td>
+</tr>
+</tbody></table>
+<p>存储格式为 (-1)^s * F * 2^E</p>
+<h3 id="范围推导"><a href="#范围推导" class="headerlink" title="范围推导"></a>范围推导</h3><h4 id="float类型"><a href="#float类型" class="headerlink" title="float类型"></a>float类型</h4><p>首先看它的最大的情况，此时S&#x3D;0，F全部是0，指数域全部是1，此时32bit的值为：0111 1111 1000 0000 0000 0000 0000 0000。</p>
+<p>它的精确值为：<code>+1.0*2^128</code>，对应的十进制约为：<code>3.4*10^38</code>。</p>
+<p>负的无穷大就是当S&#x3D;1的时候，符号取负即可。</p>
+<h4 id="double类型"><a href="#double类型" class="headerlink" title="double类型"></a>double类型</h4><p>直接给出的数表示的范围：<code>−1.7*1 0^308 ∼ +1.7*1 0^308</code></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>正常显示的只显示精度范围内的，但实际浮点类型可以存储相当大的数据，只是不会正常显示出来而已。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/90c1d403d3c66315cc03416f9374711.png"
+                      alt="90c1d403d3c66315cc03416f9374711"
+                ></p>
+<h2 id="赋值表达式与赋值语句"><a href="#赋值表达式与赋值语句" class="headerlink" title="赋值表达式与赋值语句"></a>赋值表达式与赋值语句</h2><h2 id="基础排序方法"><a href="#基础排序方法" class="headerlink" title="基础排序方法"></a>基础排序方法</h2><h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><h2 id="汉诺塔问题"><a href="#汉诺塔问题" class="headerlink" title="汉诺塔问题"></a>汉诺塔问题</h2><h2 id="数组赋值"><a href="#数组赋值" class="headerlink" title="数组赋值"></a>数组赋值</h2><h2 id="动态内存分配"><a href="#动态内存分配" class="headerlink" title="动态内存分配"></a>动态内存分配</h2><h2 id="指针链表"><a href="#指针链表" class="headerlink" title="指针链表"></a>指针链表</h2><h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2>]]></content>
       <categories>
         <category>C语言</category>
         <category>基础部分</category>
