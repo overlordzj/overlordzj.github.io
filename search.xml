@@ -1,30 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2024/09/09/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-]]></content>
-      <categories>
-        <category>example</category>
-      </categories>
-      <tags>
-        <tag>example</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>测试密码访问</title>
     <url>/2024/09/09/test-passwd/</url>
     <content><![CDATA[
@@ -54,15 +30,27 @@ import {initHBE} from "/js/plugins/hbe.js";
       </tags>
   </entry>
   <entry>
-    <title>遗漏问题解答</title>
-    <url>/2024/09/10/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/</url>
-    <content><![CDATA[<h1 id="遗漏问题解答"><a href="#遗漏问题解答" class="headerlink" title="遗漏问题解答"></a>遗漏问题解答</h1><h2 id="浮点数的数值范围"><a href="#浮点数的数值范围" class="headerlink" title="浮点数的数值范围"></a>浮点数的数值范围</h2><h2 id="赋值表达式与赋值语句"><a href="#赋值表达式与赋值语句" class="headerlink" title="赋值表达式与赋值语句"></a>赋值表达式与赋值语句</h2><h2 id="基础排序方法"><a href="#基础排序方法" class="headerlink" title="基础排序方法"></a>基础排序方法</h2><h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><h2 id="汉诺塔问题"><a href="#汉诺塔问题" class="headerlink" title="汉诺塔问题"></a>汉诺塔问题</h2><h2 id="数组赋值"><a href="#数组赋值" class="headerlink" title="数组赋值"></a>数组赋值</h2><h2 id="动态内存分配"><a href="#动态内存分配" class="headerlink" title="动态内存分配"></a>动态内存分配</h2><h2 id="指针链表"><a href="#指针链表" class="headerlink" title="指针链表"></a>指针链表</h2><h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2>]]></content>
+    <title>Hello World</title>
+    <url>/2024/09/09/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
       <categories>
-        <category>C语言</category>
-        <category>基础部分</category>
+        <category>example</category>
       </categories>
       <tags>
-        <tag>C语言</tag>
+        <tag>example</tag>
       </tags>
   </entry>
   <entry>
@@ -77,6 +65,47 @@ import {initHBE} from "/js/plugins/hbe.js";
       </categories>
       <tags>
         <tag>example</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>云服务器</title>
+    <url>/2024/09/10/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[
+<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="01623beed1f3152631c2404190b6f38ec45e5209015973c8234b812b3f302185">2c57a2851a68e9855f8788f6d6316468534e195ad74e87259f53b0c03bb99be47473a3f5f9e5e77c7fc153886505447ef95ba1bd306fe121bb7af72b2f151fe82083b308afa6edd9ad5ce1d9c755cfd176b9064c7f303d86dc65ef12eedeb23bcb2a5c88fe2baba53a67b1b7830cd243cd18dc10d2d19e3553e1ebee2a7aa63ec06a33ce56c2811fa97ec915d8b0228a04990e87e2b4e8504cbf1c1bb8a6056b1277c13a5515a0af51883ca0c09eae27608a5d5f7f1dbe54f8b358bc3720979fc1abc8e61f8e2b4061360ba191fe2abec8a119b1c51725c73c1a7817a3edbafe0a7f7fd2a23022cc11f79b0fc2fc430169b83ad498b6d47792c7edff4ad6eb52d680e5d318e91c91a754e71599631657f7c9e7d4b54d77b73a2ef3050e9df98a92068c863bebdd9de0c29b7b38cb6ddd72487e4081d782805d309c91e81466664a1d0c923ee6bb8bcabf8545dd8fda13de0fea1236d90ef8f80267f1fa8ca8ef953caec07faf4f1056bd1804b4c8aa1ccdc9c06980a0ccfa22ef6970211a9d56ed63dec6c95de3a9cf03eb83853b819a4060d8e92f9e3fd36840fd8e3ede22cd35a8800d4a38dcb81045f98c7b59f6e47d39f90754a887dc5b70f017382ff6040ab63a3a5663adb87ba6975176daa18251a8471bab979a737fa8517d3889f7b2af9d65c25b160056d99ec0728b3e4c742ae8c411f78a063f7a84bce14b4633141780db71813538e437ce3e16ecbe51375844ae6c9570b7516cf140904255c53a65fe7fb5c562a9b656038ead2c584e931e9cfb0b8abd01fbede4d66a441cc6f638a87ccbb4652ee8bd645402a0ab1c0214461bd3a306241f3ed0916af121f5e3</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<link href="/css/hbe.style.css" rel="stylesheet" type="text/css"><script data-swup-reload-script type="module" src="/js/plugins/hbe.js"></script>
+<script data-swup-reload-script type="module">
+import {initHBE} from "/js/plugins/hbe.js";
+  console.log("hexo-blog-encrypt: loaded.");
+    initHBE();
+</script>
+]]></content>
+      <categories>
+        <category>备忘录</category>
+      </categories>
+      <tags>
+        <tag>备忘录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>遗漏问题解答</title>
+    <url>/2024/09/10/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/</url>
+    <content><![CDATA[<h1 id="遗漏问题解答"><a href="#遗漏问题解答" class="headerlink" title="遗漏问题解答"></a>遗漏问题解答</h1><h2 id="浮点数的数值范围"><a href="#浮点数的数值范围" class="headerlink" title="浮点数的数值范围"></a>浮点数的数值范围</h2><h2 id="赋值表达式与赋值语句"><a href="#赋值表达式与赋值语句" class="headerlink" title="赋值表达式与赋值语句"></a>赋值表达式与赋值语句</h2><h2 id="基础排序方法"><a href="#基础排序方法" class="headerlink" title="基础排序方法"></a>基础排序方法</h2><h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><h2 id="汉诺塔问题"><a href="#汉诺塔问题" class="headerlink" title="汉诺塔问题"></a>汉诺塔问题</h2><h2 id="数组赋值"><a href="#数组赋值" class="headerlink" title="数组赋值"></a>数组赋值</h2><h2 id="动态内存分配"><a href="#动态内存分配" class="headerlink" title="动态内存分配"></a>动态内存分配</h2><h2 id="指针链表"><a href="#指针链表" class="headerlink" title="指针链表"></a>指针链表</h2><h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2>]]></content>
+      <categories>
+        <category>C语言</category>
+        <category>基础部分</category>
+      </categories>
+      <tags>
+        <tag>C语言</tag>
       </tags>
   </entry>
 </search>
