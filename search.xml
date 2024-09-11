@@ -1,22 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Blog网络不稳定访问方法</title>
+    <url>/2024/09/12/%E5%88%87%E6%8D%A2%E5%9B%BD%E5%86%85%E7%BD%91%E9%A1%B5/</url>
+    <content><![CDATA[<h1 id="Blog慢访问问题"><a href="#Blog慢访问问题" class="headerlink" title="Blog慢访问问题"></a>Blog慢访问问题</h1><h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><p>由于本博客是搭建在github pages上的，所以国内访问难免会有访问慢的时候，对此我在云服务器也搭建了一个同步的博客，方便加速访问</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p><a class="link"   href="https://blogback.overlordzj.cn/" >点击这个国内链接 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>即可访问</p>
+<p>或者通过主页右上角<code>link</code>菜单下的<code>domestic</code>进行访问</p>
+<h2 id="残留问题"><a href="#残留问题" class="headerlink" title="残留问题"></a>残留问题</h2><p>不知道为什么搭建在云服务器的博客没有评论的功能，留一个小坑等之后有时间和能力了来填坑</p>
+]]></content>
+      <tags>
+        <tag>待填坑</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试文章时效性</title>
+    <url>/2024/09/09/example/%E6%B5%8B%E8%AF%95%E6%97%B6%E6%95%88%E6%80%A7/</url>
+    <content><![CDATA[<h1 id="这是测试文字"><a href="#这是测试文字" class="headerlink" title="这是测试文字"></a>这是测试文字</h1><h2 id="这是测试文字-1"><a href="#这是测试文字-1" class="headerlink" title="这是测试文字"></a>这是测试文字</h2><h3 id="这是测试文字-2"><a href="#这是测试文字-2" class="headerlink" title="这是测试文字"></a>这是测试文字</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">这是测试文字</span><br></pre></td></tr></table></figure></div>
+
+<p>这是测试文字</p>
+]]></content>
+      <categories>
+        <category>example</category>
+      </categories>
+      <tags>
+        <tag>example</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
-    <url>/2024/09/09/hello-world/</url>
-    <content><![CDATA[<html><head></head><body><p>Welcome to <a class="link" href="https://hexo.io/">Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link" href="https://hexo.io/docs/">documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link" href="https://hexo.io/docs/troubleshooting.html">troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link" href="https://github.com/hexojs/hexo/issues">GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure></div>
+    <url>/2024/09/09/example/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link" href="https://hexo.io/docs/writing.html">Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure></div>
+<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link" href="https://hexo.io/docs/server.html">Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure></div>
+<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link" href="https://hexo.io/docs/generating.html">Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure></div>
+<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link" href="https://hexo.io/docs/one-command-deployment.html">Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-</body></html>]]></content>
+<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
       <categories>
         <category>example</category>
       </categories>
@@ -26,10 +52,10 @@
   </entry>
   <entry>
     <title>测试密码访问</title>
-    <url>/2024/09/09/test-passwd/</url>
+    <url>/2024/09/09/example/test-passwd/</url>
     <content><![CDATA[
 <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="5f666c70754970b4a8ad2a6cc8c5eab9406d04eec482e81ab26aeaa4b0285e10">b7d6aa4f9b0e255d1a59a9e7f2b85d1b157724498fe1a38510484ba233d8184a7b7ca3d04d45f026bf896aeab2eb499d6ea1f520bb9dbd83151713cc493a7a3f8ede064c60863076746fb52f3dfaf1a39337c85dfcfbba119f0a8d07fe58122526119e953b961a452829f26eb6a7bf9c66388496ac5e857dfdc74808ad172880c451d4adffce83052fa51df38d2b69ea2097048b75e24b61855c0033ccd9fa0064ff6cda4fe301cd4a1f9a0e91f83f1caaeda34e7681d47ba3cce05db06d5d8fca81d11157e39aa04b6d10cb433e38291b3c401bda04b626254d793bce3fd8ebe74130788c817406cea0c5174064bd1622d14051269a05880501e765e56ee669a48ce6008441c1247e46fb16de4da3ba263a45ebe43f13c58e4f1d8db5155ecb73b7b602d298b471eb01c43ec95bd08206664e801f775d8dd13375bf68f952286884197c4e02f2b66b9debb0b88440653938dde814a8b997b9009e69bae1ef09d10b68c9bb66b735ca3ebd68b9c1b60f84bc334cff356c76202b556088fc6c5980e4de3e924f09d7d3d96b6b5398ccb1c5e0d4b92533bb0ccf25206f22296fb2c91ffd821dfd9f516f770cf6f2f2834520c5f3f980fb2e3882ad93c3525729adc613bd9bb657d35dbe00239851ae5bcfcb1a1daaf9fa175b6e0c3a4aba39aa1858f20a12498a670a1fc43766b7fe0aba74a9ae0e3f5161fec2a85a5b10a39310c839c331c6ca0759ca6fd794286760d1d3c3531d623928faad72d9865d6fa49202ff2a1e5ffd17319908d1c88316de626c14698e14fd79129a0abd0f9b392e124c72a77ae2daaa40fcc0186401de9d54b750a515c0ea3ae1ca970d2997f23f4cd96a54f7103e91c290e250787786db987c6c050a4f0c7921bfe7b57c266e757caeef32cc60d837e9c2636afec338329b0784b64cb26ae31364f116aefb3dd2802543c3ac74f8f92d4afbc8162b80dcccee86e486120547d35cae7b6409b12f5805f9952cd74e6de65653202b55fcd25d5c0549df56a3fc8a23760851d9e82046a7de0191a880c255a25e92949a92b16a8bfc30f06995e5c9c70a71b6d48e47a0f717e80c153e19cb6ed4b38ebbe8abfe388733f6a35fea21b86b86c756eb6d41096ed30513810418f8d4e7a08fa4add98bf91cefbbdc727ac68fd5378aed6202871643dd918ba6d8349113e4723ab728b8d027b5b8ba759d2b42346c824ac803bbd635bba6eb3a0e7ea57b86417dfefa4a94ef488f00b94350e7c4e46686abfe7a1a5c990053ffd4c848d74718a75d54861f8efffef1d7ec17c76f9b673f7561</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="9c29d2ae8c9408ebabfe5502d542763af69160ec81974d9abe486a1990c0affe">b7d6aa4f9b0e255d1a59a9e7f2b85d1b1ed944caf21c7e84e4e7408bbf88993cf0d430a5b6e273a1f7a43f8b32eac3de82b6eeb75f7c346696330f8d36f5692a27b30c478d7b56d48dc56572de233ad0130e4a303c4df72a9b15befccec21c02e2aee8df667ff0af8266638f6e91eb6a3bca9f45e4922c6488c20e619887cb0056428b759e3198e95d178adb6800981b0db62870df36f8b0da4a902b04d0e8a6ceee478426bcb36ac1e5b28ae924677481c37900a1de536d7efaa30eb218ef7f223fa63e35f0e1c354d920d7d66d0826589b951e4c6908266586755cf8f9cad0a22961a9c6178b098261f1393913ea36e8dd3cdaf6397b637cdc3d67c1ae5cfd403201d724a44cd364b76a4ef929d18f092b7fef6599a6793491e4d7d652bca7d80798504f5eb9ef3cdaf80f3ebcc23b0cf08d33e0ad7f7409b25bfd41104b9857be0e80a0e2089aea9fc7cd8dcaaeb8d0869460e91bedebc63c8e79916d498bab50676f513b39265bee8b113e4959f44ed3f26f0e91e21e3562751b6e630e5b93e64d69c5d3eaf9c3088c67c59713170f93d18d3d1ca720924fccd220caea295921dbcb25828a70e0948f12124c4995c8c91bbef13371aa993f48558f53d23bfb6859de37901a7215a4219876e9cdf076e340760604fff3a1f813762e132f6ebf866ae10b7d00ab9d795337e5cca897a58550889be251f1cb763a63aead731534794db2feb7da838808a864b7560602b9702ac2cd75230437c7aabf3eaa7178d2f053c482843b3512dbc29c56373ef0f2d94b217ac8b4d3a31f6cb6a104d4483f2da79a75e75d0b66ecc0652c4579d4de9f0c9035d270fccd8552e091cacaf453212de088d7e30e6dee84903441a54774e5f69ad6753498a66b405ed67fa6faff788fe48a27d913199d7f0bb2374c7ebebf999efa28c23e276f42eab52a149b148ae4fbd9a1d1d2ce4f160d26ab160195598371cbac8d56b1ddeafb1089a1a77252986eb69ad798915b056b473116bbf9fcd05009b444ccdeffffbd6b9427b7edc8381965716b9759f5abe789ed3daeca3fa03a06e05494cfd5e75abd767d49b166da24c3e1f1473b9e2038e31d3545745984dd5cca808379572584243128ce2e15ddbc5b85863a6c46c378056b847b577a2616abdccc1a07ee1e52a15dad9e9e747e18efda1be6f421ebbc8a3751d85c6ac4d69b9b18f292314caa2b2a197c75dca9f9e682c0ab35628d707350395c</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
@@ -54,11 +80,62 @@ import {initHBE} from "/js/plugins/hbe.js";
       </tags>
   </entry>
   <entry>
+    <title>C语言的一些代码小技巧</title>
+    <url>/2024/09/11/C%E8%AF%AD%E8%A8%80/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<h1 id="C语言中的代码小技巧"><a href="#C语言中的代码小技巧" class="headerlink" title="C语言中的代码小技巧"></a>C语言中的代码小技巧</h1><h2 id="1、输出一个回车符号"><a href="#1、输出一个回车符号" class="headerlink" title="1、输出一个回车符号"></a>1、输出一个回车符号</h2><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">putchar</span>(<span class="number">10</span>);	<span class="comment">//表示输出一个回车符号</span></span><br></pre></td></tr></table></figure></div>
+
+<p>putchar()函数表示直接输出一个字符，（）内可以填写一个字符；也可以填写其ASCII码（一个整数），然后系统将其转化为字符输出</p>
+<p>而ASCII中的10对应的是line feed(换行)，所以改语句才实现了换行功能</p>
+<p>当然也可以直接</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br></pre></td></tr></table></figure></div>
+
+<p>或者</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">puts</span>();</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>解释</p>
+</blockquote>
+<p>putchar();输出的是字符，但不自带换行功能。</p>
+<p>puts();自带换行功能，将结尾\0换成\n。</p>
+<hr>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+      <categories>
+        <category>C语言</category>
+        <category>基础部分</category>
+      </categories>
+      <tags>
+        <tag>C语言</tag>
+        <tag>技巧</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>WriteUp</title>
+    <url>/2024/09/12/writeup/%E5%88%9D%E5%86%99writeup/</url>
+    <content><![CDATA[<h1 id="WriteUp"><a href="#WriteUp" class="headerlink" title="WriteUp"></a>WriteUp</h1><p>CTF题目传送门</p>
+<p>1.<br>2. <a href="/2024/09/09/example/hello-world/" title="Hello World">‘哈哈哈’</a></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这里收录了我在做的CTF题目，题目可能来自不同靶场，会有标识的，目前还在持续更新中~</p>
+<h2 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h2><p>本人是个大二学生，平时就是搞搞电脑，只要是和电脑有关的都感兴趣。</p>
+<p>（不怎么会自我介绍，就将就看看吧(๑◕ܫ￩๑)b ）</p>
+<p> 目前还属于CTF小白，略懂一二内网渗透。有了一点道行后听见学长们推荐写writeup来提升能力，所以就开始了我的wirteup之旅。写writeup文章时不时也会引用一些大佬的资料，希望大家能够一起共同进步，从入门到入土，或者你想从入门到入狱我也不拦你 ε&#x3D;ε&#x3D;ε&#x3D;ε&#x3D;ε&#x3D;ε&#x3D;┌(;￣◇￣)┘</p>
+<blockquote>
+<p>CTF在线靶场都是在线生成的动态flag，若要复现不要直接挪用flag哦，因为你是交不了的 ≖‿≖✧</p>
+</blockquote>
+<p>话不多说，去看看有没有你心动的WP吧٩(๑´0&#96;๑)۶ </p>
+]]></content>
+      <categories>
+        <category>ctf</category>
+        <category>writeup</category>
+      </categories>
+      <tags>
+        <tag>writeup</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>云服务器</title>
-    <url>/2024/09/10/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <url>/2024/09/10/%E5%A4%87%E5%BF%98%E5%BD%95/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
     <content><![CDATA[
 <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="e0c43777ae6357160e8bf216b6f4a8f7bbf8a517e5463af9b1a8cad5e53bc0ad">2c57a2851a68e9855f8788f6d6316468c2afc5552640aa20c64fdb6e1d3c5aac63ce3aaa1ee065501514a51f5443b88af6340de5620ccf18d5912379599a76b1ce1867269b9688b1a0a4a6560b4c97fe259d98151e8d09f9222fb99da77327ca432fb46e1ee49aa4736757f9920fd4a981b99304051a3f362b29586ef6d78f4fc00b7b96f804f0d8f337350a4de524f17d0015278f36bebf615897a276be9de6556d3b97b7535dcd8bb7d71e982a085c64e68707ff722c040016b428fa7203217a7a88b90ae2d23741067a68efa97e72c575252d33a8a35b13468ec393764ed48a864cdb7507bbc3230590fe426d5b94514b831a888c0e7383949aeea5116b07c1ef0771f03693f63d705199f5d2223e949613a65b85ae983f21b8e4cd8b8d64ef465cdb33f0f952e93ef8b9eefb14f787dfb26bb7537d00be75e5782b48ea3eac3efcb56402436752205383490fa584e001eab675db9e4346440f5501688d893857c1422870747fbcfcbb2e745d73ff013f826d52675fa64648be20c4ef335d8e1cbf1891b945c0b221c654c172c70e0cdbb20577b9c1826c51dc133f40a599bd5a7566a9302e1e1cc8fba8c88378575f69d1a118d31bd86c42579b0e04c7d8d4b913539845616c13c26b1bc4b545c504668572e4eff73f5b0d0edec07cb80c89fb0c351031914128159101b1468a8ced99c3a427915cc3b23bcc70b801154a8f9b1a8471a020e00aa0e61b58a799433730b5c12e752f26c017d2e6bd968bf9fa082728210dbc107d8ee08ddaf71df5f08fd9199a3ce956048df2b6910afd54389366c15e6b0bf1c1804b4ca662e0551984254579b9e733b261d9bd6b83fb4d84dc31877dd3f155ed03a0d8cae54e9746d49c1cc621e64baa4f342d2610f10a</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="01623beed1f3152631c2404190b6f38ec45e5209015973c8234b812b3f302185">2c57a2851a68e9855f8788f6d6316468534e195ad74e87259f53b0c03bb99be47473a3f5f9e5e77c7fc153886505447ef95ba1bd306fe121bb7af72b2f151fe82083b308afa6edd9ad5ce1d9c755cfd176b9064c7f303d86dc65ef12eedeb23bcb2a5c88fe2baba53a67b1b7830cd243cd18dc10d2d19e3553e1ebee2a7aa63ec06a33ce56c2811fa97ec915d8b0228a04990e87e2b4e8504cbf1c1bb8a6056b1277c13a5515a0af51883ca0c09eae27608a5d5f7f1dbe54f8b358bc3720979fc1abc8e61f8e2b4061360ba191fe2abec8a119b1c51725c73c1a7817a3edbafe0a7f7fd2a23022cc11f79b0fc2fc430169b83ad498b6d47792c7edff4ad6eb52d680e5d318e91c91a754e71599631657f7c9e7d4b54d77b73a2ef3050e9df98a92068c863bebdd9de0c29b7b38cb6ddd72487e4081d782805d309c91e81466664a1d0c923ee6bb8bcabf8545dd8fda13de0fea1236d90ef8f80267f1fa8ca8ef953caec07faf4f1056bd1804b4c8aa1ccdc9c06980a0ccfa22ef6970211a9d56ed63dec6c95de3a9cf03eb83853b819a4060d8e92f9e3fd36840fd8e3ede22cd35a8800d4a38dcb81045f98c7b59f6e47d39f90754a887dc5b70f017382ff6040ab63a3a5663adb87ba6975176daa18251a8471bab979a737fa8517d3889f7b2af9d65c25b160056d99ec0728b3e4c742ae8c411f78a063f7a84bce14b4633141780db71813538e437ce3e16ecbe51375844ae6c9570b7516cf140904255c53a65fe7fb5c562a9b656038ead2c584e931e9cfb0b8abd01fbede4d66a441cc6f638a87ccbb4652ee8bd645402a0ab1c0214461bd3a306241f3ed0916af121f5e3</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
@@ -83,38 +160,9 @@ import {initHBE} from "/js/plugins/hbe.js";
       </tags>
   </entry>
   <entry>
-    <title>C语言的一些代码小技巧</title>
-    <url>/2024/09/11/%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
-    <content><![CDATA[<html><head></head><body><h1 id="C语言中的代码小技巧"><a href="#C语言中的代码小技巧" class="headerlink" title="C语言中的代码小技巧"></a>C语言中的代码小技巧</h1><h2 id="1、输出一个回车符号"><a href="#1、输出一个回车符号" class="headerlink" title="1、输出一个回车符号"></a>1、输出一个回车符号</h2><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">putchar</span>(<span class="number">10</span>);	<span class="comment">//表示输出一个回车符号</span></span><br></pre></td></tr></tbody></table></figure></div>
-
-<p>putchar()函数表示直接输出一个字符，（）内可以填写一个字符；也可以填写其ASCII码（一个整数），然后系统将其转化为字符输出</p>
-<p>而ASCII中的10对应的是line feed(换行)，所以改语句才实现了换行功能</p>
-<p>当然也可以直接</p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br></pre></td></tr></tbody></table></figure></div>
-
-<p>或者</p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">puts</span>();</span><br></pre></td></tr></tbody></table></figure></div>
-
-<blockquote>
-<p>解释</p>
-</blockquote>
-<p>putchar();输出的是字符，但不自带换行功能。</p>
-<p>puts();自带换行功能，将结尾\0换成\n。</p>
-<hr>
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2></body></html>]]></content>
-      <categories>
-        <category>C语言</category>
-        <category>基础部分</category>
-      </categories>
-      <tags>
-        <tag>C语言</tag>
-        <tag>技巧</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>关于C语言学习的部分遗漏问题解答</title>
-    <url>/2024/09/10/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/</url>
-    <content><![CDATA[<html><head></head><body><h1 id="遗漏问题解答"><a href="#遗漏问题解答" class="headerlink" title="遗漏问题解答"></a>遗漏问题解答</h1><p><a href="#%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E6%95%B0%E5%80%BC%E8%8C%83%E5%9B%B4">浮点数的数值范围</a></p>
+    <url>/2024/09/10/C%E8%AF%AD%E8%A8%80/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/</url>
+    <content><![CDATA[<h1 id="遗漏问题解答"><a href="#遗漏问题解答" class="headerlink" title="遗漏问题解答"></a>遗漏问题解答</h1><p><a href="#%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E6%95%B0%E5%80%BC%E8%8C%83%E5%9B%B4">浮点数的数值范围</a></p>
 <p><a href="#%E8%B5%8B%E5%80%BC%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%8E%E8%B5%8B%E5%80%BC%E8%AF%AD%E5%8F%A5">赋值表达式与赋值语句</a></p>
 <p><a href="#%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E6%96%B9%E6%B3%95">基础排序方法</a></p>
 <p><a href="#%E6%B1%89%E8%AF%BA%E5%A1%94%E9%97%AE%E9%A2%98">汉诺塔问题</a></p>
@@ -152,56 +200,61 @@ import {initHBE} from "/js/plugins/hbe.js";
 </tr>
 </tbody></table>
 <p>存储格式为 <code>(-1)^s * F * 2^E</code></p>
-<h3 id="范围推导"><a href="#范围推导" class="headerlink" title="范围推导"></a>范围推导</h3><h4 id="float类型"><a href="#float类型" class="headerlink" title="float类型"></a>float类型</h4><p>首先看它的最大的情况，此时S=0，F全部是0，指数域全部是1，此时32bit的值为：0111 1111 1000 0000 0000 0000 0000 0000。</p>
+<h3 id="范围推导"><a href="#范围推导" class="headerlink" title="范围推导"></a>范围推导</h3><h4 id="float类型"><a href="#float类型" class="headerlink" title="float类型"></a>float类型</h4><p>首先看它的最大的情况，此时S&#x3D;0，F全部是0，指数域全部是1，此时32bit的值为：0111 1111 1000 0000 0000 0000 0000 0000。</p>
 <p>它的精确值为：<code>+1.0*2^128</code>，对应的十进制约为：<code>3.4*10^38</code>。</p>
-<p>负的无穷大就是当S=1的时候，符号取负即可。</p>
+<p>负的无穷大就是当S&#x3D;1的时候，符号取负即可。</p>
 <h4 id="double类型"><a href="#double类型" class="headerlink" title="double类型"></a>double类型</h4><p>直接给出的数表示的范围：<code>−1.7*10^308 ∼ +1.7*10^308</code></p>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><blockquote>
 <p>正常显示的只显示精度范围内的，但实际浮点类型可以存储相当大的数据，只是不会正常显示出来而已。</p>
 </blockquote>
-<p><img lazyload="" src="/images/loading.svg" data-src="/./images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/90c1d403d3c66315cc03416f9374711.png" alt="90c1d403d3c66315cc03416f9374711"></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../source/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/90c1d403d3c66315cc03416f9374711.png"
+                      alt="90c1d403d3c66315cc03416f9374711"
+                ></p>
 <hr>
-<h2 id="赋值表达式与赋值语句"><a href="#赋值表达式与赋值语句" class="headerlink" title="赋值表达式与赋值语句"></a>赋值表达式与赋值语句</h2><h3 id="赋值表达式"><a href="#赋值表达式" class="headerlink" title="赋值表达式"></a>赋值表达式</h3><p>简单赋值运算符和表达式:简单赋值运算符记为“=”。</p>
-<p>由“= ”连接的式子称为赋值表达式。其一般形式为：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">变量=表达式</span><br></pre></td></tr></tbody></table></figure></div>
+<h2 id="赋值表达式与赋值语句"><a href="#赋值表达式与赋值语句" class="headerlink" title="赋值表达式与赋值语句"></a>赋值表达式与赋值语句</h2><h3 id="赋值表达式"><a href="#赋值表达式" class="headerlink" title="赋值表达式"></a>赋值表达式</h3><p>简单赋值运算符和表达式:简单赋值运算符记为“&#x3D;”。</p>
+<p>由“&#x3D; ”连接的式子称为赋值表达式。其一般形式为：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">变量=表达式</span><br></pre></td></tr></table></figure></div>
 
 <p>例如：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">x=a+b</span><br><span class="line">w=sin(a)+sin(b)</span><br><span class="line">y=i++</span><br></pre></td></tr></tbody></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">x=a+b</span><br><span class="line">w=sin(a)+sin(b)</span><br><span class="line">y=i++</span><br></pre></td></tr></table></figure></div>
 
 <p>赋值表达式的功能是计算表达式的值再赋予左边的变量。赋值运算符具有右结合性。<br>因此</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">a=b=c=5</span><br></pre></td></tr></tbody></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">a=b=c=5</span><br></pre></td></tr></table></figure></div>
 
 <p>可理解为</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">a=(b=(c=5))</span><br></pre></td></tr></tbody></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">a=(b=(c=5))</span><br></pre></td></tr></table></figure></div>
 
 <p>在其它高级语言中，赋值构成了一个语句，称为赋值语句。</p>
-<p>而在 C 中，把“=”定义为运算符，从而组成赋值表达式。 凡是表达式可以出现的地方均可出现赋值表达式。<br>例如，式子:</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">x=(a=5)+(b=8)</span><br></pre></td></tr></tbody></table></figure></div>
+<p>而在 C 中，把“&#x3D;”定义为运算符，从而组成赋值表达式。 凡是表达式可以出现的地方均可出现赋值表达式。<br>例如，式子:</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">x=(a=5)+(b=8)</span><br></pre></td></tr></table></figure></div>
 
 <p>是合法的。它的意义是把 5 赋予 a，8 赋予 b，再把 a,b 相加，和赋予 x，故 x 应等于 13。<br>在Ｃ语言中也可以组成赋值语句，按照Ｃ语言规定，任何表达式在其未尾加上分号就构成为语句。<br>因此如<code>x=8;a=b=c=5；</code>都是赋值语句。</p>
 <h3 id="赋值语句"><a href="#赋值语句" class="headerlink" title="赋值语句"></a>赋值语句</h3><p>赋值语句是由赋值表达式再加上分号构成的表达式语句。</p>
 <p>其一般形式为： </p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">变量=表达式;</span><br></pre></td></tr></tbody></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">变量=表达式;</span><br></pre></td></tr></table></figure></div>
 
 <p>在赋值语句的使用中需要注意以下几点：</p>
 <ol>
-<li><p>由于在赋值符“=”右边的表达式也可以又是一个赋值表达式， 因此，下述形式 变量=(变量=表达式); 是成立的，从而形成 嵌套的情形。 其展开之后的一般形式为：变量=变量=…=表达式; 例如： a=b=c=d=e=5; 按照赋值运算符的右接合性，因此实际上等效于： e=5; d=e; c=d; b=c; a=b;</p>
+<li><p>由于在赋值符“&#x3D;”右边的表达式也可以又是一个赋值表达式， 因此，下述形式 变量&#x3D;(变量&#x3D;表达式); 是成立的，从而形成 嵌套的情形。 其展开之后的一般形式为：变量&#x3D;变量&#x3D;…&#x3D;表达式; 例如： a&#x3D;b&#x3D;c&#x3D;d&#x3D;e&#x3D;5; 按照赋值运算符的右接合性，因此实际上等效于： e&#x3D;5; d&#x3D;e; c&#x3D;d; b&#x3D;c; a&#x3D;b;</p>
 </li>
-<li><p>注意在变量说明中给变量赋初值和赋值语句的区别。 给变量赋初值是变量说明的一部分，赋初值后的变量与其后的其它同类变量之间仍必须用逗号间隔，而赋值语句则必须用分号结尾。 例如： int a=5,b,c;</p>
+<li><p>注意在变量说明中给变量赋初值和赋值语句的区别。 给变量赋初值是变量说明的一部分，赋初值后的变量与其后的其它同类变量之间仍必须用逗号间隔，而赋值语句则必须用分号结尾。 例如： int a&#x3D;5,b,c;</p>
 </li>
-<li><p>在变量说明中，不允许连续给多个变量赋初值。 如下述说明是错误的： int a=b=c=5 必须写为 int a=5,b=5,c=5; 而赋值语句允许连续赋值。</p>
+<li><p>在变量说明中，不允许连续给多个变量赋初值。 如下述说明是错误的： int a&#x3D;b&#x3D;c&#x3D;5 必须写为 int a&#x3D;5,b&#x3D;5,c&#x3D;5; 而赋值语句允许连续赋值。</p>
 </li>
 <li><p>注意赋值表达式和赋值语句的区别。 赋值表达式是一种表达式，它可以出现在任何允许表达式出现的地方，而赋值语句则不能。</p>
 </li>
 </ol>
 <p>下述语句是合法的：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">if((x=y+5)&gt;0) z=x;</span><br></pre></td></tr></tbody></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">if((x=y+5)&gt;0) z=x;</span><br></pre></td></tr></table></figure></div>
 
-<p>这里(x=y+5)是赋值表达式，语句的功能是，若表达式x=y+5大于0则z=x。</p>
+<p>这里(x&#x3D;y+5)是赋值表达式，语句的功能是，若表达式x&#x3D;y+5大于0则z&#x3D;x。</p>
 <p>下述语句是非法的：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">if((x=y+5;)&gt;0) z=x;</span><br></pre></td></tr></tbody></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">if((x=y+5;)&gt;0) z=x;</span><br></pre></td></tr></table></figure></div>
 
-<p>因为x=y+5;是语句，不能出现在表达式中。</p>
+<p>因为x&#x3D;y+5;是语句，不能出现在表达式中。</p>
 <hr>
 <h2 id="基础排序方法"><a href="#基础排序方法" class="headerlink" title="基础排序方法"></a>基础排序方法</h2><h3 id="冒泡排序（两两互换）"><a href="#冒泡排序（两两互换）" class="headerlink" title="冒泡排序（两两互换）"></a>冒泡排序（两两互换）</h3><p>冒泡排序是交换排序中一种简单的排序方法。</p>
 <p>它的基本思想是对所有相邻记录的关键字值进行比效，如果是逆顺（a[j]&gt;a[j+1]），则将其交换，最终达到有<br>序化;</p>
@@ -209,15 +262,15 @@ import {initHBE} from "/js/plugins/hbe.js";
 <p>（1）将整个待排序的记录序列划分成有序区和无序区，初始状态有序区为空，无序区包括所有待排序的记<br>录。 </p>
 <p>（2）对无序区从前向后依次将相邻记录的关键字进行比较，若逆序将其交换，从而使得关键字值小的记录向<br>上”飘浮”（左移），关键字值大的记录好像石块，向下“堕落”（右移）。 每经过一趟冒泡排序，都使无序区中<br>关键字值最大的记录进入有序区，对于由n个记录组成的记录序列，最多经过n-1趟冒泡排序，就可以将这n个记<br>录重新按关键字顺序排列。</p>
 <blockquote>
-<p>原始的冒泡排序算法 对由n个记录组成的记录序列，最多经过（n-1）趟冒泡排序，就可以使记录序列成为<br>有序序列，第一趟定位<strong>第n个</strong>记录，此时有序区只有一个记录；第二趟定位<strong>第n-1个</strong>记录，此时有序区有两个记<br>录；以此类推，算法框架为： for（i=n；i&gt;1；i—） { 定位第i个记录；}</p>
+<p>原始的冒泡排序算法 对由n个记录组成的记录序列，最多经过（n-1）趟冒泡排序，就可以使记录序列成为<br>有序序列，第一趟定位<strong>第n个</strong>记录，此时有序区只有一个记录；第二趟定位<strong>第n-1个</strong>记录，此时有序区有两个记<br>录；以此类推，算法框架为： for（i&#x3D;n；i&gt;1；i—） { 定位第i个记录；}</p>
 </blockquote>
 <p>代码如下：</p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">   <span class="type">int</span> data[<span class="number">5</span>];</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"请输入数据：\n"</span>);</span><br><span class="line">   <span class="type">int</span> i,j;</span><br><span class="line">   <span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; <span class="number">5</span>;i ++)</span><br><span class="line">   {</span><br><span class="line">   	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;data[i]);	<span class="comment">//输入数据 </span></span><br><span class="line">   }</span><br><span class="line"></span><br><span class="line">   <span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; <span class="number">5</span>;i ++)  <span class="comment">//采用双重循环 </span></span><br><span class="line">   {</span><br><span class="line">   	<span class="keyword">for</span>(j = <span class="number">0</span>;j &lt; <span class="number">5</span> - <span class="number">1</span> - i;j++)</span><br><span class="line">   	{</span><br><span class="line">   	  <span class="keyword">if</span>(data[j] &gt; data[j+<span class="number">1</span>])     <span class="comment">//这里默认采用升序来排列 </span></span><br><span class="line">		 {</span><br><span class="line">		 	<span class="type">int</span> temp;        <span class="comment">//定义一个临时值来存储数据，以此来达到交换数值的目的</span></span><br><span class="line">			temp = data[j];</span><br><span class="line">			data[j] = data[j+<span class="number">1</span>];</span><br><span class="line">			data[j+<span class="number">1</span>] = temp;</span><br><span class="line">		 }	</span><br><span class="line">	}</span><br><span class="line">   }</span><br><span class="line"></span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"排序好的数组为：\n"</span>);</span><br><span class="line">   <span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; <span class="number">5</span>;i ++)    <span class="comment">//用for循环来遍历并输出排序完成的数组 </span></span><br><span class="line">   {</span><br><span class="line">   	 <span class="built_in">printf</span>(<span class="string">"%d "</span>,data[i]);</span><br><span class="line">   }</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">} </span><br></pre></td></tr></tbody></table></figure></div>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">   <span class="type">int</span> data[<span class="number">5</span>];</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">&quot;请输入数据：\n&quot;</span>);</span><br><span class="line">   <span class="type">int</span> i,j;</span><br><span class="line">   <span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; <span class="number">5</span>;i ++)</span><br><span class="line">   &#123;</span><br><span class="line">   	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;data[i]);	<span class="comment">//输入数据 </span></span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; <span class="number">5</span>;i ++)  <span class="comment">//采用双重循环 </span></span><br><span class="line">   &#123;</span><br><span class="line">   	<span class="keyword">for</span>(j = <span class="number">0</span>;j &lt; <span class="number">5</span> - <span class="number">1</span> - i;j++)</span><br><span class="line">   	&#123;</span><br><span class="line">   	  <span class="keyword">if</span>(data[j] &gt; data[j+<span class="number">1</span>])     <span class="comment">//这里默认采用升序来排列 </span></span><br><span class="line">		 &#123;</span><br><span class="line">		 	<span class="type">int</span> temp;        <span class="comment">//定义一个临时值来存储数据，以此来达到交换数值的目的</span></span><br><span class="line">			temp = data[j];</span><br><span class="line">			data[j] = data[j+<span class="number">1</span>];</span><br><span class="line">			data[j+<span class="number">1</span>] = temp;</span><br><span class="line">		 &#125;	</span><br><span class="line">	&#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">&quot;排序好的数组为：\n&quot;</span>);</span><br><span class="line">   <span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; <span class="number">5</span>;i ++)    <span class="comment">//用for循环来遍历并输出排序完成的数组 </span></span><br><span class="line">   &#123;</span><br><span class="line">   	 <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,data[i]);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure></div>
 
 <h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><h4 id="一、什么是选择排序？"><a href="#一、什么是选择排序？" class="headerlink" title="一、什么是选择排序？"></a>一、什么是选择排序？</h4><p> 选择排序（Selection sort）是一种简单直观的排序算法。它的工作原理是：第一次从待排序的中数据元素选出最小（或最大）的一个元素，存放在序列的起始位置，然后再从剩余的未排序元素中寻找到最小（大）元素，然后放到已排序的序列的末尾。以此类推，直到全部待排序的数据元素的个数为零。选择排序是不稳定的排序方法。</p>
 <h4 id="二、选择排序思路"><a href="#二、选择排序思路" class="headerlink" title="二、选择排序思路"></a>二、选择排序思路</h4><p>首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置，然后，再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。以此类推，直到所有元素均排序完毕。</p>
-<h4 id="三、排序过程"><a href="#三、排序过程" class="headerlink" title="三、排序过程"></a>三、排序过程</h4><p>例：定义一个数组 int a[8] = {9，3，7，2，6，1，5，8}，要求利用选择排序的方法将数组从小到大排序。</p>
-<p>排序的次数：因为每排好一个元素，那么所需要排的元素个数减一，直到排到倒数第二个元素停止，将倒数第二个元素也排好后，整体数组排序就完成了。<strong>所以排序的次数 = 元素个数 - 1。(冒泡排序的排序次数与该排序的排序次数计算方法相同)</strong></p>
+<h4 id="三、排序过程"><a href="#三、排序过程" class="headerlink" title="三、排序过程"></a>三、排序过程</h4><p>例：定义一个数组 int a[8] &#x3D; {9，3，7，2，6，1，5，8}，要求利用选择排序的方法将数组从小到大排序。</p>
+<p>排序的次数：因为每排好一个元素，那么所需要排的元素个数减一，直到排到倒数第二个元素停止，将倒数第二个元素也排好后，整体数组排序就完成了。<strong>所以排序的次数 &#x3D; 元素个数 - 1。(冒泡排序的排序次数与该排序的排序次数计算方法相同)</strong></p>
 <blockquote>
 <p>9，3，7，2，6，1，5，8</p>
 </blockquote>
@@ -232,44 +285,49 @@ import {initHBE} from "/js/plugins/hbe.js";
 <p>1，2，7，3，6，9，5，8</p>
 </blockquote>
 <p>然后根据第一次排序和第二次排序的原理，最终的排序结果为：{1，2，3，5，6，7，8，9}</p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">arr_out</span><span class="params">(<span class="type">int</span> a[<span class="number">8</span>])</span><span class="comment">//输出函数</span></span><br><span class="line">{</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; <span class="number">8</span>;i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>,a[i]);</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">arr_sort</span><span class="params">(<span class="type">int</span> *p,<span class="type">int</span> n)</span></span><br><span class="line">{</span><br><span class="line">    <span class="type">int</span> i,j;</span><br><span class="line">    <span class="type">int</span> min = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; n - <span class="number">1</span>;i++)<span class="comment">//排序次数</span></span><br><span class="line">    {</span><br><span class="line">        min = i;</span><br><span class="line">        <span class="keyword">for</span>(j = i + <span class="number">1</span>;j &lt; n;j++)</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">if</span>(p[j] &lt; p[min])</span><br><span class="line">            {</span><br><span class="line">                min = j;<span class="comment">//记录交换的元素下标值</span></span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">if</span>(i != min)</span><br><span class="line">        {</span><br><span class="line">            <span class="type">int</span> temp = p[i];</span><br><span class="line">            p[i] = p[min];</span><br><span class="line">            p[min] = temp;</span><br><span class="line">        }  </span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">    <span class="type">int</span> a[<span class="number">8</span>] = {<span class="number">0</span>};</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; <span class="number">8</span>;i++)</span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">arr_sort(a,<span class="number">8</span>);<span class="comment">//排序函数</span></span><br><span class="line">arr_out(a);<span class="comment">//输出函数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">arr_out</span><span class="params">(<span class="type">int</span> a[<span class="number">8</span>])</span><span class="comment">//输出函数</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; <span class="number">8</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">arr_sort</span><span class="params">(<span class="type">int</span> *p,<span class="type">int</span> n)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i,j;</span><br><span class="line">    <span class="type">int</span> min = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; n - <span class="number">1</span>;i++)<span class="comment">//排序次数</span></span><br><span class="line">    &#123;</span><br><span class="line">        min = i;</span><br><span class="line">        <span class="keyword">for</span>(j = i + <span class="number">1</span>;j &lt; n;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(p[j] &lt; p[min])</span><br><span class="line">            &#123;</span><br><span class="line">                min = j;<span class="comment">//记录交换的元素下标值</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(i != min)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> temp = p[i];</span><br><span class="line">            p[i] = p[min];</span><br><span class="line">            p[min] = temp;</span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a[<span class="number">8</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; <span class="number">8</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">arr_sort(a,<span class="number">8</span>);<span class="comment">//排序函数</span></span><br><span class="line">arr_out(a);<span class="comment">//输出函数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
 
 
 <hr>
-<h2 id="汉诺塔问题"><a href="#汉诺塔问题" class="headerlink" title="汉诺塔问题"></a>汉诺塔问题</h2><p>==（递归）==</p>
+<h2 id="汉诺塔问题"><a href="#汉诺塔问题" class="headerlink" title="汉诺塔问题"></a>汉诺塔问题</h2><p>&#x3D;&#x3D;（递归）&#x3D;&#x3D;</p>
 <h3 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h3><p>汉诺塔问题是一个经典的问题。汉诺塔（Hanoi Tower），又称河内塔，源于印度一个古老传说。大梵天创造世界的时候做了三根金刚石柱子，在一根柱子上从下往上按照大小顺序摞着64片黄金圆盘。大梵天命令婆罗门把圆盘从下面开始按大小顺序重新摆放在另一根柱子上。并且规定，任何时候，在小圆盘上都不能放大圆盘，且在三根柱子之间一次只能移动一个圆盘。问应该如何操作？</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="/./images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/3962f9684ac18a8b980c9b2f2ce63bb6.png" alt="3962f9684ac18a8b980c9b2f2ce63bb6"></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../source/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/3962f9684ac18a8b980c9b2f2ce63bb6.png"
+                      alt="3962f9684ac18a8b980c9b2f2ce63bb6"
+                ></p>
 <h3 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h3><p>思路：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">使用的语言：C语言</span><br><span class="line">使用的编译器：vs2019</span><br><span class="line">参考书籍：谭浩强第四版</span><br><span class="line">主要使用的知识：函数的递归</span><br><span class="line">代码实现的思路主要分为三步：</span><br></pre></td></tr></tbody></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">使用的语言：C语言</span><br><span class="line">使用的编译器：vs2019</span><br><span class="line">参考书籍：谭浩强第四版</span><br><span class="line">主要使用的知识：函数的递归</span><br><span class="line">代码实现的思路主要分为三步：</span><br></pre></td></tr></table></figure></div>
 
 <p>假设总共需要移动n个盘子</p>
 <blockquote>
-<p>F(n)=2F(n-1)+1 可以推到出需要移动2^n-1^次</p>
+<p>F(n)&#x3D;2F(n-1)+1 可以推到出需要移动2^n-1^次</p>
 </blockquote>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">将A柱上的n-1个盘子借助C柱移向B柱</span><br><span class="line">将A柱上仅剩的最后一个盘子移向C柱</span><br><span class="line">将B柱上的n-1个盘子借助A柱移向C柱</span><br></pre></td></tr></tbody></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">将A柱上的n-1个盘子借助C柱移向B柱</span><br><span class="line">将A柱上仅剩的最后一个盘子移向C柱</span><br><span class="line">将B柱上的n-1个盘子借助A柱移向C柱</span><br></pre></td></tr></table></figure></div>
 
-<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">move</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span></span><br><span class="line">{</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%c-&gt;%c\n"</span>, x, y);</span><br><span class="line">}</span><br><span class="line"><span class="type">void</span> <span class="title function_">hanoi</span><span class="params">(<span class="type">int</span> n, <span class="type">char</span> a, <span class="type">char</span> b, <span class="type">char</span> c)</span></span><br><span class="line">{</span><br><span class="line">	<span class="keyword">if</span> (n == <span class="number">1</span>)</span><br><span class="line">	{</span><br><span class="line">		move(a, c);</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	{</span><br><span class="line">		hanoi(n - <span class="number">1</span>, a, c, b);<span class="comment">//将A座上的n-1个盘子借助C座移向B座</span></span><br><span class="line">		move(a, c);<span class="comment">//将A座上最后一个盘子移向C座</span></span><br><span class="line">		hanoi(n - <span class="number">1</span>, b, a, c);<span class="comment">//将B座上的n-1个盘子借助A座移向C座</span></span><br><span class="line">	} </span><br><span class="line">}</span><br><span class="line"><span class="comment">//move中的实参与hanoi函数中的形参相对应，而hanoi函数中形参a，b，c所对应的值也是在有规律的变化</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">	<span class="type">int</span> n = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">	hanoi(n, <span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">move</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%c-&gt;%c\n&quot;</span>, x, y);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">hanoi</span><span class="params">(<span class="type">int</span> n, <span class="type">char</span> a, <span class="type">char</span> b, <span class="type">char</span> c)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> (n == <span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		move(a, c);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		hanoi(n - <span class="number">1</span>, a, c, b);<span class="comment">//将A座上的n-1个盘子借助C座移向B座</span></span><br><span class="line">		move(a, c);<span class="comment">//将A座上最后一个盘子移向C座</span></span><br><span class="line">		hanoi(n - <span class="number">1</span>, b, a, c);<span class="comment">//将B座上的n-1个盘子借助A座移向C座</span></span><br><span class="line">	&#125; </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//move中的实参与hanoi函数中的形参相对应，而hanoi函数中形参a，b，c所对应的值也是在有规律的变化</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> n = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">	hanoi(n, <span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
 
 
 <hr>
 <h2 id="数组赋值"><a href="#数组赋值" class="headerlink" title="数组赋值"></a>数组赋值</h2><h3 id="直接赋值"><a href="#直接赋值" class="headerlink" title="直接赋值"></a>直接赋值</h3><p>数组赋值可以在定义的时候直接赋值，例：</p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">char</span> arr[]=<span class="string">'hello'</span>;</span><br><span class="line"><span class="type">char</span> arr[<span class="number">10</span>]=<span class="string">'world'</span>;</span><br></pre></td></tr></tbody></table></figure></div>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> arr[]=<span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line"><span class="type">char</span> arr[<span class="number">10</span>]=<span class="string">&#x27;world&#x27;</span>;</span><br></pre></td></tr></table></figure></div>
 
 <h3 id="循环赋值"><a href="#循环赋值" class="headerlink" title="循环赋值"></a>循环赋值</h3><p>在定义数组后，用循环进行对数组中的值进行赋值，例：</p>
-<h4 id="下标赋值"><a href="#下标赋值" class="headerlink" title="下标赋值"></a>下标赋值</h4><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">10</span>];</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)</span><br><span class="line">	{</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</span><br><span class="line">    }</span><br></pre></td></tr></tbody></table></figure></div>
+<h4 id="下标赋值"><a href="#下标赋值" class="headerlink" title="下标赋值"></a>下标赋值</h4><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">10</span>];</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i]);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></div>
 
 <h4 id="指针赋值"><a href="#指针赋值" class="headerlink" title="指针赋值"></a>指针赋值</h4><p>指针赋值结束后定义的指针会出现偏移而不是最开始指向的数组头地址，用<code>p = &amp;a[0];</code>将指针改回去</p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">10</span>];</span><br><span class="line"><span class="type">int</span> *p=a;	<span class="comment">//int *p=&amp;a[0];</span></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)</span><br><span class="line">	{</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,p++);</span><br><span class="line">    }</span><br></pre></td></tr></tbody></table></figure></div>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">10</span>];</span><br><span class="line"><span class="type">int</span> *p=a;	<span class="comment">//int *p=&amp;a[0];</span></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,p++);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></div>
 
-<h2 id="动态内存分配"><a href="#动态内存分配" class="headerlink" title="动态内存分配"></a>动态内存分配</h2><p><strong>（<a class="link" href="https://blog.csdn.net/TheWhiteFox/article/details/108502906">此处挪用CSDN博主的文章 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）</strong></p>
+<h2 id="动态内存分配"><a href="#动态内存分配" class="headerlink" title="动态内存分配"></a>动态内存分配</h2><p><strong>（<a class="link"   href="https://blog.csdn.net/TheWhiteFox/article/details/108502906" >此处挪用CSDN博主的文章 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）</strong></p>
 <h3 id="malloc"><a href="#malloc" class="headerlink" title="malloc()"></a>malloc()</h3><p>malloc（）找到可用内存中一个大小适合的块。<br>内存是匿名的；</p>
 <p>也就是说，malloc（）分配了内存，但没有为它指定名字。<br>然而，它却可以<code>返回那块内存第一个字节的地址</code>。<br>因此，可以把<code>那个地址赋值给一个指针变量</code>，并使用该指针来访问那块内存。<br>因为char代表一个字节，所以传统上曾将malloc（）定义为指向char的指针类型。</p>
 <p>然而，ANSIC标准使用了一个新类型：指向void的指针。这一类型被用作“通用指针”。<br>函数malloc（）可用来返回数组指针、结构指针等等，因此一般需要把返回值的类型指派为适当的类型。</p>
 <p>在ANSIC中，为了程序清晰应对指针进行类型指派，但将void 指针值赋值给其他类型的指针并不构成类型冲突。<br>如果malloc（）找不到所需的空间，它将返回空指针。<br>我们使用malloc（）来创建一个 数组。可以在程序运行时使用malloc（）请求一个存储块，另外还需要一个指针来存放该块在内存中的位置。</p>
 <p>例如，如下代码：</p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">double</span> * ptd;</span><br><span class="line">ptd = (<span class="type">double</span> * ) <span class="built_in">malloc</span> (<span class="number">30</span> * <span class="keyword">sizeof</span>(<span class="type">double</span>));</span><br></pre></td></tr></tbody></table></figure></div>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">double</span> * ptd;</span><br><span class="line">ptd = (<span class="type">double</span> * ) <span class="built_in">malloc</span> (<span class="number">30</span> * <span class="keyword">sizeof</span>(<span class="type">double</span>));</span><br></pre></td></tr></table></figure></div>
 
 <p><strong>这段代码请求30个double类型值的空间，并且把ptd指向该空间所在位置。</strong></p>
 <blockquote>
@@ -283,10 +341,10 @@ import {initHBE} from "/js/plugins/hbe.js";
 <p>使用第二种或第三种方法可以做一些用普通的数组声明做不到的事：</p>
 <p>创建一个动态数组（dynamic array），即一个在程序运行时才分配内存并可在程序运行时选择大小的数组。</p>
 <p>例如，假定n是一个整数量。在C99之前，不能这样做：</p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">double</span> item[n]：<span class="comment">/*如果n是一个变量，C99之前不允许这样做*/</span></span><br></pre></td></tr></tbody></table></figure></div>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">double</span> item[n]：<span class="comment">/*如果n是一个变量，C99之前不允许这样做*/</span></span><br></pre></td></tr></table></figure></div>
 
 <p>然而，即使在C99之前的编译器中，也可以这样做：</p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tbody><tr><td class="code"><pre><span class="line">ptd =（<span class="type">double</span>*）<span class="built_in">malloc</span>（n*<span class="keyword">sizeof</span>（<span class="type">double</span>））；<span class="comment">/*可以*/</span></span><br></pre></td></tr></tbody></table></figure></div>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line">ptd =（<span class="type">double</span>*）<span class="built_in">malloc</span>（n*<span class="keyword">sizeof</span>（<span class="type">double</span>））；<span class="comment">/*可以*/</span></span><br></pre></td></tr></table></figure></div>
 
 <p>这行得通，而且正如您将看到的那样，这样做比使用一个变长数组更灵活。</p>
 <p>一般地，对应每个malloc（）调用，应该调用一次free（）。<br><code>函数free（）的参数是先前malloc（）返问的地址</code>，它释放先前分配的内存。</p>
@@ -318,7 +376,7 @@ import {initHBE} from "/js/plugins/hbe.js";
 </blockquote>
 <h3 id="calloc"><a href="#calloc" class="headerlink" title="calloc()"></a>calloc()</h3><p>内存分配还可以使用calloc（）。</p>
 <p>典型的应用如下：</p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">long</span> * newmen;</span><br><span class="line">newmen = (<span class="type">long</span> *) <span class="built_in">calloc</span> (<span class="number">100</span>, <span class="keyword">sizeof</span>( <span class="type">long</span>)); </span><br></pre></td></tr></tbody></table></figure></div>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">long</span> * newmen;</span><br><span class="line">newmen = (<span class="type">long</span> *) <span class="built_in">calloc</span> (<span class="number">100</span>, <span class="keyword">sizeof</span>( <span class="type">long</span>)); </span><br></pre></td></tr></table></figure></div>
 
 <p>与 malloc（）类似，calloc（）在ANSI以前的版本中返回一个 char 指针，在ANSI中返回一个void指针。<br>如果要存储不同类型，应该使用类型指派运算符。<br>这个新函数接受两个参数，都应是无符号的整数（在ANSI中是size_t类型）。</p>
 <p>第一个参数是<code>所需内存单元的数量</code>，第二个参数是<code>每个单元以字节计的大小</code>。</p>
@@ -326,7 +384,7 @@ import {initHBE} from "/js/plugins/hbe.js";
 <p>使用 sizeof（long）而不是 4 使代码更具可易移植性。<br>它可在其他系统中运行，这些系统中 long不是4字节而是别的大小。</p>
 <p>函数calloc（）还有一个特性：相当于空数组初始化<br>它将块中的全部位都置为0（然而要注意，在某些硬件系统中，浮点值0不是用全部位为0来表示的）。</p>
 <h3 id="动态内存分配与变长数组"><a href="#动态内存分配与变长数组" class="headerlink" title="动态内存分配与变长数组"></a>动态内存分配与变长数组</h3><p><code>变长数组（Variable-Length Array，VLA）</code>与<code>malloc（）</code>在功能上有些一致。例如，它们都可以用来创建一个大小在运行时决定的数组：</p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">valmal</span><span class="params">()</span>{</span><br><span class="line">	<span class="type">int</span> n;</span><br><span class="line">	<span class="type">int</span> * pi;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line"></span><br><span class="line">pi = (<span class="type">int</span> *) <span class="built_in">malloc</span>(n*<span class="keyword">sizeof</span>(<span class="type">int</span>));</span><br><span class="line"><span class="type">int</span> ar[n];<span class="comment">//变长数组 </span></span><br><span class="line"></span><br><span class="line">pi[<span class="number">2</span>] = ar[<span class="number">2</span>] = <span class="number">-5</span>;</span><br><span class="line"></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">valmal</span><span class="params">()</span>&#123;</span><br><span class="line">	<span class="type">int</span> n;</span><br><span class="line">	<span class="type">int</span> * pi;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line"></span><br><span class="line">pi = (<span class="type">int</span> *) <span class="built_in">malloc</span>(n*<span class="keyword">sizeof</span>(<span class="type">int</span>));</span><br><span class="line"><span class="type">int</span> ar[n];<span class="comment">//变长数组 </span></span><br><span class="line"></span><br><span class="line">pi[<span class="number">2</span>] = ar[<span class="number">2</span>] = <span class="number">-5</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
 <p>一个区别在于 VLA 是自动存储的。</p>
 <p>自动存储的结果之一就是 VLA 所用内存空间在运行完定义部分之后会自动释放。</p>
@@ -334,9 +392,9 @@ import {initHBE} from "/js/plugins/hbe.js";
 <p>另一方面，使用由 malloc（）创建的数组不必局限在一个函数中。</p>
 <p>例如，函数可以创建一个数组并返回指针，供调用该函数的函数访问。<br>接着，后者可以在它结束时调用 free（）。<br>free（）可以使用不同于 malloc（）指针的指针变量：必须一致的是指针中存储的地址。</p>
 <p><code>VLA 对多维数组来说更方便。</code><br>您可以使用 malloc（）来定义一个二维数组，但语法很麻烦。<br>如果编译器不支持 VLA 特性，必须固定一维的大小，正如下面的函数调用：</p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span> n = <span class="number">5</span>;</span><br><span class="line"><span class="type">int</span> m = <span class="number">6</span>;</span><br><span class="line"><span class="type">int</span> ar2[n][m];<span class="comment">//n*m 的变长数组 </span></span><br><span class="line"><span class="type">int</span>(* p2) [<span class="number">6</span>];<span class="comment">//在c99之前可以使用 </span></span><br><span class="line"><span class="type">int</span>(* p3) [m];<span class="comment">//要求变长数组支持 </span></span><br><span class="line"></span><br><span class="line">p2 = (<span class="type">int</span> (*)<span class="number">6</span>) <span class="built_in">malloc</span> (n * <span class="number">6</span> * <span class="keyword">sizeof</span>(<span class="type">int</span>));<span class="comment">// n*6 数组 </span></span><br><span class="line">p3 = (<span class="type">int</span> (*)[m]) <span class="built_in">malloc</span> (n * m * <span class="keyword">sizeof</span>(<span class="type">int</span>));<span class="comment">// n*m 数组 </span></span><br><span class="line"><span class="comment">//上面的表达式也要求变长数组支持 </span></span><br><span class="line"></span><br><span class="line">ar2[<span class="number">1</span>][<span class="number">2</span>] = p2[<span class="number">1</span>][<span class="number">2</span>] = <span class="number">12</span>;</span><br></pre></td></tr></tbody></table></figure></div>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> n = <span class="number">5</span>;</span><br><span class="line"><span class="type">int</span> m = <span class="number">6</span>;</span><br><span class="line"><span class="type">int</span> ar2[n][m];<span class="comment">//n*m 的变长数组 </span></span><br><span class="line"><span class="type">int</span>(* p2) [<span class="number">6</span>];<span class="comment">//在c99之前可以使用 </span></span><br><span class="line"><span class="type">int</span>(* p3) [m];<span class="comment">//要求变长数组支持 </span></span><br><span class="line"></span><br><span class="line">p2 = (<span class="type">int</span> (*)<span class="number">6</span>) <span class="built_in">malloc</span> (n * <span class="number">6</span> * <span class="keyword">sizeof</span>(<span class="type">int</span>));<span class="comment">// n*6 数组 </span></span><br><span class="line">p3 = (<span class="type">int</span> (*)[m]) <span class="built_in">malloc</span> (n * m * <span class="keyword">sizeof</span>(<span class="type">int</span>));<span class="comment">// n*m 数组 </span></span><br><span class="line"><span class="comment">//上面的表达式也要求变长数组支持 </span></span><br><span class="line"></span><br><span class="line">ar2[<span class="number">1</span>][<span class="number">2</span>] = p2[<span class="number">1</span>][<span class="number">2</span>] = <span class="number">12</span>;</span><br></pre></td></tr></table></figure></div>
 <p>有必要查看一下指针声明。函数malloc（）返回一个指针，因此p2必须是适当类型的指针。<br>下面的声明：</p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span>(* p2) [<span class="number">6</span>];<span class="comment">//在c99之前可以使用</span></span><br></pre></td></tr></tbody></table></figure></div>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span>(* p2) [<span class="number">6</span>];<span class="comment">//在c99之前可以使用</span></span><br></pre></td></tr></table></figure></div>
 
 <p> 表明p2指向一个包含6个int值的数组。<br>这意味着p2将被解释为一个由6个整数构成的元素，p2[ i ][ j ]将是一个int值。</p>
 <p>第二个指针声明使用变量来指定p3所指数组的大小。<br>这意味着p3将被看作<code>一个指向 VLA 的指针</code>，这正是代码不能在C90标准中运行的原因。</p>
@@ -351,27 +409,13 @@ import {initHBE} from "/js/plugins/hbe.js";
 <p>由程序员而不是一系列固定的规则控制内存持续时间，因此内存块可在一个函数中创建，而在另一个函数中释放。(malloc 可以跨函数调用)</p>
 <p>由于这点，动态内存分配所用的内存部分可能变成碎片状，也就是说，在活动的内存块之间散布着未使用的字节片。</p>
 <p>不管怎样，使用动态内存往往导致进程比使用堆栈内存慢。</p>
-</body></html>]]></content>
+]]></content>
       <categories>
         <category>C语言</category>
         <category>基础部分</category>
       </categories>
       <tags>
         <tag>C语言</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>测试文章时效性</title>
-    <url>/2024/09/09/%E6%B5%8B%E8%AF%95%E6%97%B6%E6%95%88%E6%80%A7/</url>
-    <content><![CDATA[<html><head></head><body><h1 id="这是测试文字"><a href="#这是测试文字" class="headerlink" title="这是测试文字"></a>这是测试文字</h1><h2 id="这是测试文字-1"><a href="#这是测试文字-1" class="headerlink" title="这是测试文字"></a>这是测试文字</h2><h3 id="这是测试文字-2"><a href="#这是测试文字-2" class="headerlink" title="这是测试文字"></a>这是测试文字</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">这是测试文字</span><br></pre></td></tr></tbody></table></figure></div>
-
-<p>这是测试文字</p>
-</body></html>]]></content>
-      <categories>
-        <category>example</category>
-      </categories>
-      <tags>
-        <tag>example</tag>
       </tags>
   </entry>
 </search>
