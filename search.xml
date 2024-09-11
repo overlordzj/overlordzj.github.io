@@ -93,7 +93,7 @@ import {initHBE} from "/js/plugins/hbe.js";
 <div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br></pre></td></tr></table></figure></div>
 
 <p>或者</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">puts();</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">puts</span>();</span><br></pre></td></tr></table></figure></div>
 
 <blockquote>
 <p>解释</p>
@@ -176,7 +176,7 @@ import {initHBE} from "/js/plugins/hbe.js";
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/90c1d403d3c66315cc03416f9374711.png"
+                     data-src="/./images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/90c1d403d3c66315cc03416f9374711.png"
                       alt="90c1d403d3c66315cc03416f9374711"
                 ></p>
 <hr>
@@ -261,7 +261,7 @@ import {initHBE} from "/js/plugins/hbe.js";
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5Cimages%5C3962f9684ac18a8b980c9b2f2ce63bb6.png"
+                     data-src="/./images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/3962f9684ac18a8b980c9b2f2ce63bb6.png"
                       alt="3962f9684ac18a8b980c9b2f2ce63bb6"
                 ></p>
 <h3 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h3><p>思路：</p>
