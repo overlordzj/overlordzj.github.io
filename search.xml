@@ -66,49 +66,32 @@ import {initHBE} from "/js/plugins/hbe.js";
       </tags>
   </entry>
   <entry>
-    <title>测试文章时效性</title>
-    <url>/2024/09/09/example/%E6%B5%8B%E8%AF%95%E6%97%B6%E6%95%88%E6%80%A7/</url>
-    <content><![CDATA[<h1 id="这是测试文字"><a href="#这是测试文字" class="headerlink" title="这是测试文字"></a>这是测试文字</h1><h2 id="这是测试文字-1"><a href="#这是测试文字-1" class="headerlink" title="这是测试文字"></a>这是测试文字</h2><h3 id="这是测试文字-2"><a href="#这是测试文字-2" class="headerlink" title="这是测试文字"></a>这是测试文字</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">这是测试文字</span><br></pre></td></tr></table></figure></div>
+    <title>C语言的一些代码小技巧</title>
+    <url>/2024/09/11/C%E8%AF%AD%E8%A8%80/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<h1 id="C语言中的代码小技巧"><a href="#C语言中的代码小技巧" class="headerlink" title="C语言中的代码小技巧"></a>C语言中的代码小技巧</h1><h2 id="1、输出一个回车符号"><a href="#1、输出一个回车符号" class="headerlink" title="1、输出一个回车符号"></a>1、输出一个回车符号</h2><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">putchar</span>(<span class="number">10</span>);	<span class="comment">//表示输出一个回车符号</span></span><br></pre></td></tr></table></figure></div>
 
-<p>这是测试文字</p>
-]]></content>
-      <categories>
-        <category>example</category>
-      </categories>
-      <tags>
-        <tag>example</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>WriteUp</title>
-    <url>/2024/09/12/ctf/writeup/writeup/</url>
-    <content><![CDATA[<h1 id="WriteUp"><a href="#WriteUp" class="headerlink" title="WriteUp"></a>WriteUp</h1><p>CTF题目传送门</p>
-<ol>
-<li><a href="/2024/09/12/ctf/writeup/web/catalogue/" title="web安全目录">web安全</a></li>
-<li></li>
-<li></li>
-</ol>
-<p>推荐在线靶场传送门</p>
-<ol>
-<li><a class="link"   href="https://buuoj.cn/" >BUUCTF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li></li>
-</ol>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这里收录了我在做的CTF题目，题目可能来自不同靶场，会有标识的，目前还在持续更新中~</p>
-<h2 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h2><p>本人是个大二学生，平时就是搞搞电脑，只要是和电脑有关的都感兴趣。</p>
-<p>（不怎么会自我介绍，就将就看看吧(๑◕ܫ￩๑)b ）</p>
-<p> 目前还属于CTF小白，略懂一二内网渗透。有了一点道行后听见学长们推荐写writeup来提升能力，所以就开始了我的wirteup之旅。写writeup文章时不时也会引用一些大佬的资料，希望大家能够一起共同进步，从入门到入土，或者你想从入门到入狱我也不拦你 ε&#x3D;ε&#x3D;ε&#x3D;ε&#x3D;ε&#x3D;ε&#x3D;┌(;￣◇￣)┘</p>
+<p>putchar()函数表示直接输出一个字符，（）内可以填写一个字符；也可以填写其ASCII码（一个整数），然后系统将其转化为字符输出</p>
+<p>而ASCII中的10对应的是line feed(换行)，所以改语句才实现了换行功能</p>
+<p>当然也可以直接</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br></pre></td></tr></table></figure></div>
+
+<p>或者</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">puts</span>();</span><br></pre></td></tr></table></figure></div>
+
 <blockquote>
-<p>CTF在线靶场都是在线生成的动态flag，若要复现不要直接挪用flag哦，因为你是交不了的 ≖‿≖✧</p>
+<p>解释</p>
 </blockquote>
-<p>话不多说，去看看有没有你心动的WP吧٩(๑´0&#96;๑)۶ </p>
-]]></content>
+<p>putchar();输出的是字符，但不自带换行功能。</p>
+<p>puts();自带换行功能，将结尾\0换成\n。</p>
+<hr>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
       <categories>
-        <category>ctf</category>
-        <category>writeup</category>
+        <category>C语言</category>
+        <category>基础部分</category>
       </categories>
       <tags>
-        <tag>ctf</tag>
-        <tag>writeup</tag>
+        <tag>C语言</tag>
+        <tag>技巧</tag>
       </tags>
   </entry>
   <entry>
@@ -141,47 +124,17 @@ import {initHBE} from "/js/plugins/hbe.js";
       </tags>
   </entry>
   <entry>
-    <title>C语言的一些代码小技巧</title>
-    <url>/2024/09/11/C%E8%AF%AD%E8%A8%80/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
-    <content><![CDATA[<h1 id="C语言中的代码小技巧"><a href="#C语言中的代码小技巧" class="headerlink" title="C语言中的代码小技巧"></a>C语言中的代码小技巧</h1><h2 id="1、输出一个回车符号"><a href="#1、输出一个回车符号" class="headerlink" title="1、输出一个回车符号"></a>1、输出一个回车符号</h2><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">putchar</span>(<span class="number">10</span>);	<span class="comment">//表示输出一个回车符号</span></span><br></pre></td></tr></table></figure></div>
+    <title>测试文章时效性</title>
+    <url>/2024/09/09/example/%E6%B5%8B%E8%AF%95%E6%97%B6%E6%95%88%E6%80%A7/</url>
+    <content><![CDATA[<h1 id="这是测试文字"><a href="#这是测试文字" class="headerlink" title="这是测试文字"></a>这是测试文字</h1><h2 id="这是测试文字-1"><a href="#这是测试文字-1" class="headerlink" title="这是测试文字"></a>这是测试文字</h2><h3 id="这是测试文字-2"><a href="#这是测试文字-2" class="headerlink" title="这是测试文字"></a>这是测试文字</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">这是测试文字</span><br></pre></td></tr></table></figure></div>
 
-<p>putchar()函数表示直接输出一个字符，（）内可以填写一个字符；也可以填写其ASCII码（一个整数），然后系统将其转化为字符输出</p>
-<p>而ASCII中的10对应的是line feed(换行)，所以改语句才实现了换行功能</p>
-<p>当然也可以直接</p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br></pre></td></tr></table></figure></div>
-
-<p>或者</p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">puts</span>();</span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p>解释</p>
-</blockquote>
-<p>putchar();输出的是字符，但不自带换行功能。</p>
-<p>puts();自带换行功能，将结尾\0换成\n。</p>
-<hr>
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
-      <categories>
-        <category>C语言</category>
-        <category>基础部分</category>
-      </categories>
-      <tags>
-        <tag>C语言</tag>
-        <tag>技巧</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CTF-[极客大挑战 2019]Http</title>
-    <url>/2024/09/12/ctf/writeup/web/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98%202019%5DHttp/</url>
-    <content><![CDATA[<h1 id="极客大挑战-2019-Http"><a href="#极客大挑战-2019-Http" class="headerlink" title="[极客大挑战 2019]Http"></a>[极客大挑战 2019]Http</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>出自<a class="link"   href="https://buuoj.cn/" >BUUCTF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）</p>
+<p>这是测试文字</p>
 ]]></content>
       <categories>
-        <category>ctf</category>
-        <category>writeup</category>
-        <category>web</category>
+        <category>example</category>
       </categories>
       <tags>
-        <tag>ctf</tag>
-        <tag>writeup</tag>
+        <tag>example</tag>
       </tags>
   </entry>
   <entry>
@@ -444,10 +397,89 @@ import {initHBE} from "/js/plugins/hbe.js";
       </tags>
   </entry>
   <entry>
+    <title>CTF竞赛模式</title>
+    <url>/2024/09/12/ctf/data/%E7%AB%9E%E8%B5%9B%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<h1 id="竞赛模式"><a href="#竞赛模式" class="headerlink" title="竞赛模式"></a>竞赛模式</h1><p>CTF竞赛模式具体分为以下几类：</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="理论知识"><a href="#理论知识" class="headerlink" title="理论知识"></a>理论知识</h3><p>理论题多见于国内比赛，通常为选择题。包含单选及多选，选手需要根据自己所学的相关理论知识进行作答。最终得出分数。理论部分通常多见于初赛或是初赛之前的海选</p>
+<h3 id="Jeopardy-解题"><a href="#Jeopardy-解题" class="headerlink" title="Jeopardy-解题"></a>Jeopardy-解题</h3><p>参赛队伍可以通过互联网或者现场网络参与，参数队伍通过与在线环境交互或文件离线分析，解决网络安全技术挑战获取相应分值，类似于 ACM 编程竞赛、信息学奥林匹克赛，根据总分和时间来进行排名。</p>
+<p>不同的是这个解题模式一般会设置 一血(First Blood) 、 二血(Second Blood) 、 三血(Third Blood) ，也即最先完成的前三支队伍会获得额外分值，所以这不仅是对首先解出题目的队伍的分值鼓励，也是一种团队能力的间接体现。</p>
+<p>当然还有一种流行的计分规则是设置每道题目的初始分数后，根据该题的成功解答队伍数，来逐渐降低该题的分值，也就是说如果解答这道题的人数越多，那么这道题的分值就越低。最后会下降到一个保底分值后便不再下降。一般称之为<code>动态积分</code></p>
+<p>题目类型主要包含 Web 网络攻防 、 RE 逆向工程 、 Pwn 二进制漏洞利用 、 Crypto 密码攻击以及 Misc 安全杂项 这五个类别，个别比赛会根据题目类型进行扩展。</p>
+<h3 id="AwD-攻防模式"><a href="#AwD-攻防模式" class="headerlink" title="AwD-攻防模式"></a>AwD-攻防模式</h3><p><strong>A</strong>ttack <strong>w</strong>ith <strong>D</strong>efense(AwD)全称攻防模式，在攻防模式CTF赛制中，参赛队伍连接到同一个网络空间。主办方会预先为每个参赛队分配要防守的主机，该主机称之为<code>GameBox</code>，每个队伍之间的GameBox<code>配置及漏洞是完全一致</code>的，选手需要防护自己的GameBox不被攻击的同时挖掘漏洞并攻击对手服务来得分。在AwD中主办方会运行一个名为<code>Checker</code>的程序定时检测选手的GameBox的运行状态。若检测到状态不对则判定该GameBox宕机，按照规则扣除一定分数。攻防模式CTF赛制可以实时通过得分反映出比赛情况，最终也以得分直接分出胜负，是一种竞争激烈，具有很强观赏性和高度透明性的网络安全赛制。在这种赛制中，不仅仅是比参赛队员的智力和技术，也比体力（因为比赛一般都会持续24至48小时左右），同时也比团队之间的分工配合与合作。</p>
+<p>AwD通常仅包含<code>Web</code>及<code>Pwn</code>两种类型的题目。每个队伍可能会分到多个GameBox，随着比赛的进行，最早的GameBox可能会下线，同时会上线新的GameBox。</p>
+<h3 id="ADP-攻防增强"><a href="#ADP-攻防增强" class="headerlink" title="ADP-攻防增强"></a>ADP-攻防增强</h3><p><strong>A</strong>ttack <strong>D</strong>efense <strong>P</strong>lus(ADP)全称攻防增强模式，在该模式下中，参赛队伍连接到同一个网络空间。主办方会在平台上放置题目，选手需要登录到平台获得题目信息</p>
+<p>攻击模式下，平台会给出题目的访问链接，选手按照解题模式做题提交flag即可完成攻击，当完成攻击后， 每轮计算分数时均会计算该题目的攻击得分。</p>
+<p>防御模式下，选手需要自行挖掘题目的漏洞，并制作漏洞补丁包上传至平台，之后点击验证。验证时平台会新建一个完全干净的题目环境，使用预置的Exploit进行攻击，若攻击成功当验证通过之后（即已经完成修补），每轮计算分数均会认为该题目已防御。</p>
+<p>也就是说，对于每个题目，仅需要攻击成功一次，防御成功一次，该题就可以认为已完成，后续无需进行关注。</p>
+<p>ADP通常仅包含<code>Web</code>及<code>Pwn</code>两种类型的题目。随着比赛的进行，最早的题目可能会下线，后续也有可能会上线新的题目。</p>
+<p>ADP相较于AwD来说，选手无须编写批量攻击脚本，也无需关注题目的环境是否被攻击，是否服务异常等等，要做的只是攻击一次，防御一次，选手可以有更多的时间聚焦于还未完成的题目。从主办方的角度来说，大大减轻了比赛的硬件成本和运维成本。</p>
+<h3 id="RHG-自动化-AI自动化"><a href="#RHG-自动化-AI自动化" class="headerlink" title="RHG-自动化[AI自动化]"></a>RHG-自动化[AI自动化]</h3><p><strong>R</strong>obo <strong>H</strong>acking <strong>G</strong>ame(RHG)该利用人工智能或是AI或是自动化攻击程序来全自动的挖掘并利用漏洞，考验选手对于<code>漏洞理解</code>以及<code>工程化</code>能力。比赛开始前(一般为1-4周左右)主办方会给出测试环境以及相关接口文档。选手需要编写自动化程序来请求接口获取题目相关信息，该类程序通常称之为<code>bot</code>，在程序中<code>全自动</code>访问并挖掘目标漏洞，完成利用漏洞攻击并获取flag的过程。获取到的flag也由程序自动化提交。RHG因为是由bot全自动进行工作，所以比赛开始即可视为结束。剩下的一切全看参赛选手编写的自动化bot的工作情况。</p>
+<p>比赛过程中不允许选手对bot进行任何的操作(包括debug&#x2F;patch等等)。选手仅能看到自己的bot完成了哪些题。目前的得分情况等等。</p>
+<h3 id="RW-真实世界"><a href="#RW-真实世界" class="headerlink" title="RW-真实世界"></a>RW-真实世界</h3><p><strong>R</strong>eal <strong>W</strong>orld(RW) 首次于2018年<code>长亭科技</code>主办的RealWorldCTF中出现，该赛制着重考察选手在面对真实的环境下的漏洞挖掘与利用能力。通常RW模式出题也会围绕着能够应用于真实渗透攻击当中的漏洞，一般来说RW常见题型为VM&#x2F;Docker逃逸、针对浏览器的攻击、针对IoT&#x2F;Car等设备的攻击，Web类攻击等等<br>在RW赛制中会有一个<code>Show Time</code>，当选手认为自己已经可以完成题目时，选手可以在比赛平台上提交展示申请，由工作人员根据申请先后顺序进行展示排期。选手展示之前需要上台并连接相关网络，同时现场大屏会切换至目标的正常页面。选手确认连接并测试OK之后开始计时。一般情况下上台攻击的时间为<code>5分钟</code>，选手一旦完成攻击现场大屏幕会实时看到攻击的效果，此时裁判会根据效果是否符合题目要求来判定该题是否完成。如未在攻击时间内依然未能看到展示效果则认为本次攻击失败。现如今为了防止选手恶意排期。通常会有一个队伍总展示次数(例如在2019年数字经济云安全公测大赛中每个队伍只允许上台展示30次)，选手也需要尽可能保证上台之后攻击的成功率</p>
+<p>举个例子。题目要求需要攻击位于比赛网络中的某个网站并将首页替换为包含队伍名称的页面。题目给出该网站的一些信息(源代码&#x2F;数据库等等)，选手经过本地挖掘漏洞之后，提交展示申请，排期到了之后进行上台展示。注意，因为RW模式是以展示效果来作为题目是否完成的准则，所以在RW模式中并<code>不存在Flag</code>。</p>
+<h3 id="KoH-抢占山头"><a href="#KoH-抢占山头" class="headerlink" title="KoH-抢占山头"></a>KoH-抢占山头</h3><p><strong>K</strong>ing <strong>o</strong>f <strong>H</strong>ill(KoH)是近些年新衍生的一种赛制。该赛制有点类似于AwD，但是又和AwD有些不一样。选手面对的是一个黑盒的目标，需要先挖掘漏洞并利用漏洞控制目标。将自己的队伍标识(<code>队伍名称</code>或是<code>Token</code>之类)写入到指定文件。随后在该主机上进行加固等操作防止其他队伍攻击，主办方会定期去检查标识文件，根据文件中的队伍标识来判定本回合分数给予哪个队伍。可以看出KoH也是一种对抗极为激烈的赛制，同时考察选手的渗透能力及防御加固能力。</p>
+<h3 id="Mix-混合"><a href="#Mix-混合" class="headerlink" title="Mix[混合]"></a>Mix[混合]</h3><p>混合模式结合了以上多种模式，现如今单一的赛制已经无法满足比赛及选手的参赛需求，所以大部分比赛会同时以多个模式进行比赛。例如参赛队伍通过解题(Jeopardy)可以获取一些初始分数，然后通过攻防对抗(AwD)进行得分增减的零和游戏，最终以得分高低分出胜负。</p>
+<hr>
+<p>搬迁自<a class="link"   href="https://www.wolai.com/ctfhub/mmJYyc569kAXHvfam4qont" >CTF官方指导 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
+      <categories>
+        <category>ctf</category>
+        <category>data</category>
+      </categories>
+      <tags>
+        <tag>ctf</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>WriteUp</title>
+    <url>/2024/09/12/ctf/writeup/writeup/</url>
+    <content><![CDATA[<h1 id="WriteUp"><a href="#WriteUp" class="headerlink" title="WriteUp"></a>WriteUp</h1><p>CTF题目传送门</p>
+<ol>
+<li><a href="/2024/09/12/ctf/writeup/web/catalogue/" title="web安全目录">web安全</a></li>
+<li></li>
+<li></li>
+</ol>
+<p>推荐在线靶场传送门</p>
+<ol>
+<li><a class="link"   href="https://buuoj.cn/" >BUUCTF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li></li>
+</ol>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这里收录了我在做的CTF题目，题目可能来自不同靶场，会有标识的，目前还在持续更新中~</p>
+<h2 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h2><p>本人是个大二学生，平时就是搞搞电脑，只要是和电脑有关的都感兴趣。</p>
+<p>（不怎么会自我介绍，就将就看看吧(๑◕ܫ￩๑)b ）</p>
+<p> 目前还属于CTF小白，略懂一二内网渗透。有了一点道行后听见学长们推荐写writeup来提升能力，所以就开始了我的wirteup之旅。写writeup文章时不时也会引用一些大佬的资料，希望大家能够一起共同进步，从入门到入土，或者你想从入门到入狱我也不拦你 ε&#x3D;ε&#x3D;ε&#x3D;ε&#x3D;ε&#x3D;ε&#x3D;┌(;￣◇￣)┘</p>
+<blockquote>
+<p>CTF在线靶场都是在线生成的动态flag，若要复现不要直接挪用flag哦，因为你是交不了的 ≖‿≖✧</p>
+</blockquote>
+<p>话不多说，去看看有没有你心动的WP吧٩(๑´0&#96;๑)۶ </p>
+]]></content>
+      <categories>
+        <category>ctf</category>
+        <category>writeup</category>
+      </categories>
+      <tags>
+        <tag>ctf</tag>
+        <tag>writeup</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>web安全目录</title>
     <url>/2024/09/12/ctf/writeup/web/catalogue/</url>
     <content><![CDATA[<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>（根据上传顺序以及题目难度进行排序）</p>
-<p>1.<br>2. </p>
+<ol>
+<li>buuctf<ol>
+<li><a href="/2024/09/12/ctf/writeup/web/buuctf/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%982019%5DHttp/" title="极客大挑战2019 Http">[极客大挑战 2019]Http</a></li>
+<li><a href="/2024/09/12/ctf/writeup/web/buuctf/BUU-BURP-COURSE-1/" title="BUU BURP COURSE 1">BUU-BURP-COURSE-1</a></li>
+<li></li>
+</ol>
+</li>
+<li>ctfhub<ol>
+<li><a href="/2024/09/12/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2/" title="信息泄露-Git泄露-Log">信息泄露-Git泄露</a></li>
+<li></li>
+</ol>
+</li>
+<li></li>
+</ol>
 ]]></content>
       <categories>
         <category>ctf</category>
@@ -457,6 +489,396 @@ import {initHBE} from "/js/plugins/hbe.js";
       <tags>
         <tag>ctf</tag>
         <tag>writeup</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>BUU BURP COURSE 1</title>
+    <url>/2024/09/12/ctf/writeup/web/buuctf/BUU-BURP-COURSE-1/</url>
+    <content><![CDATA[<h1 id="BUU-BURP-COURSE-1"><a href="#BUU-BURP-COURSE-1" class="headerlink" title="BUU BURP COURSE 1"></a>BUU BURP COURSE 1</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>出自<a class="link"   href="https://buuoj.cn/" >BUUCTF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>开启靶场后，只有一行文字，查看F12也没有东西，我们就抓包来看看，这里用的BP</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/BUU-BURP-COURSE-1/image-20240912212137491.png"
+                      alt="image-20240912212137491"
+                ></p>
+<p>尝试使用<code>X-Forwarded-For</code>或者<code>X-Client</code>改包，返回这样的页面</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/BUU-BURP-COURSE-1/image-20240912212428190.png"
+                      alt="image-20240912212428190"
+                ></p>
+<p>查看网页源码可以看到密码，但其实没有什么用</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/BUU-BURP-COURSE-1/image-20240912212506652.png"
+                      alt="image-20240912212506652"
+                ></p>
+<p>我们直接点击登录继续抓包，加上上一步的伪造本地请求，即可得到flag</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/BUU-BURP-COURSE-1/image-20240912212702328.png"
+                      alt="image-20240912212702328"
+                ></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>新手试水题，水~</p>
+<p><a class="link"   href="https://buuoj.cn/challenges#BUU%20BURP%20COURSE%201" >题目在这里 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
+      <categories>
+        <category>ctf</category>
+        <category>writeup</category>
+        <category>web</category>
+        <category>buuctf</category>
+      </categories>
+      <tags>
+        <tag>writeup</tag>
+        <tag>http</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>web入门-粗心的小李</title>
+    <url>/2024/09/12/ctf/writeup/web/buuctf/%5Bweb%E5%85%A5%E9%97%A8%5D%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8F%E6%9D%8E/</url>
+    <content><![CDATA[<h1 id="web入门-粗心的小李"><a href="#web入门-粗心的小李" class="headerlink" title="[web入门]粗心的小李"></a>[web入门]粗心的小李</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>出自<a class="link"   href="https://buuoj.cn/" >BUUCTF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>打开靶场看到是Git泄露，首先就是检测再还原找flag</p>
+<p>会用到工具python2的<a class="link"   href="https://github.com/BugScanTeam/GitHack" >GitHack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>和python3的<a class="link"   href="https://github.com/lijiejie/GitHack" >GitHack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，需要提前准备，别问为什么两个都要下，接下来你就知道了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5Bweb%E5%85%A5%E9%97%A8%5D%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8F%E6%9D%8E/image-20240913013606873.png"
+                      alt="image-20240913013606873"
+                ></p>
+<p>检测可以通过加&#x2F;.git&#x2F;，若返回是403则说明有可能存在源码泄露；或者通过目录扫描工具检测</p>
+<p>检测出存在可能后使用工具python2的<a class="link"   href="https://github.com/BugScanTeam/GitHack" >GitHack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>进行恢复</p>
+<p>需要用到python2，建议直接kali，kali自带有python2和很多库</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">python2 GitHack.py 目标地址/.git</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5Bweb%E5%85%A5%E9%97%A8%5D%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8F%E6%9D%8E/image-20240913014316448.png"
+                      alt="image-20240913014316448"
+                ></p>
+<p>执行后会多出一些文件，既然.git都出来了，那就好说了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5Bweb%E5%85%A5%E9%97%A8%5D%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8F%E6%9D%8E/image-20240913014504812.png"
+                      alt="image-20240913014504812"
+                ></p>
+<p>但其实这里是没有我们需要的flag的</p>
+<p>对没错，又是一个坑，我的另一篇<a href="/2024/09/12/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2/" title="信息泄露-Git泄露-Log">writeup</a>中，用的这个python2环境才能实现，而这道题要用python3环境的githack，所以之后还是两个都走一遍吧，谁知道呢</p>
+<p>当我们用python3环境的githack时，目录中就有一些可以看得到的文件了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5Bweb%E5%85%A5%E9%97%A8%5D%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8F%E6%9D%8E/image-20240913015133582.png"
+                      alt="image-20240913015133582"
+                ></p>
+<p>进去看看，哦，一看我们的flag就出来了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5Bweb%E5%85%A5%E9%97%A8%5D%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8F%E6%9D%8E/image-20240913015202941.png"
+                      alt="image-20240913015202941"
+                ></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>对于文件使用后却和想要的结果完全不一样的时候，考虑一下版本问题以及查找资料，不要死磕（你又不是高手，啥都磕对身体不好๑乛◡乛๑）</p>
+<p><a class="link"   href="https://buuoj.cn/challenges#[%E7%AC%AC%E4%B8%80%E7%AB%A0%20web%E5%85%A5%E9%97%A8]%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8F%E6%9D%8E" >题目在这里 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
+      <categories>
+        <category>ctf</category>
+        <category>writeup</category>
+        <category>web</category>
+        <category>buuctf</category>
+      </categories>
+      <tags>
+        <tag>writeup</tag>
+        <tag>http</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>极客大挑战2019 Http</title>
+    <url>/2024/09/12/ctf/writeup/web/buuctf/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%982019%5DHttp/</url>
+    <content><![CDATA[<h1 id="极客大挑战-2019-Http"><a href="#极客大挑战-2019-Http" class="headerlink" title="[极客大挑战 2019]Http"></a>[极客大挑战 2019]Http</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>出自<a class="link"   href="https://buuoj.cn/" >BUUCTF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>开启靶场后，打开是一个普通页面</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98%202019%5DHttp/image-20240912182741453.png"
+                      alt="image-20240912182741453"
+                ></p>
+<p>上下翻找没有其他可利用的，直接上F12大法（或者crtl+U查看网页源代码）</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98%202019%5DHttp/image-20240912183001262.png"
+                      alt="image-20240912183001262"
+                ></p>
+<p>这里我是直接查看源代码，找到需要的<code>Secret.php</code>文件</p>
+<blockquote>
+<p>但有一个坑，这里需要左右拖动才能看到我们需要的</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98%202019%5DHttp/image-20240912183130513.png"
+                      alt="image-20240912183130513"
+                ></p>
+<p>点击后可以看到需要从指定的网页<code>https://Sycsecret.buuoj.cn</code>打开</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98%202019%5DHttp/image-20240912183337334.png"
+                      alt="image-20240912183337334"
+                ></p>
+<p>根据题目来看也是一个HTTP改包，可以通过<code>BurpSuite</code>来抓包（工具不限）</p>
+<p>根据提示抓包后，添加<code>Referer:https://Sycsecret.buuoj.cn</code>伪造访问来源</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98%202019%5DHttp/image-20240912184441621.png"
+                      alt="image-20240912184441621"
+                ></p>
+<p>Forward后看到还需要我们用<code>&quot;Syclover&quot;</code>浏览器，要有耐心，继续改包吧&#x3D;_&#x3D;，这次需要修改<code>User-Agent</code>来伪造访问，User-Agent协议表示的是用户访问的信息</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98%202019%5DHttp/image-20240912184518595.png"
+                      alt="image-20240912184518595"
+                ></p>
+<p>修改的位置随便，甚至可以把整个User-Agent删空再加一个Syclover，记得带上上一步修改的Referer协议</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98%202019%5DHttp/image-20240912184844862.png"
+                      alt="image-20240912184844862"
+                ></p>
+<p>然后会得到让我们用本地访问（127.0.0.1），可以添加<code>X-Forwarded-For:127.0.0.1</code>，也可以添加<code>X-Client</code></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98%202019%5DHttp/image-20240912184941281.png"
+                      alt="image-20240912184941281"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98%202019%5DHttp/image-20240912185221699.png"
+                      alt="image-20240912185221699"
+                ></p>
+<p>加上后再次返回，经过3次修改包，我们成功得到了flag</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98%202019%5DHttp/image-20240912185234356.png"
+                      alt="image-20240912185234356"
+                ></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这篇算是新手入门级别，成功水了一篇~</p>
+<p><a class="link"   href="https://buuoj.cn/challenges#[%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98%202019]Http" >题目在这里 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
+      <categories>
+        <category>ctf</category>
+        <category>writeup</category>
+        <category>web</category>
+        <category>buuctf</category>
+      </categories>
+      <tags>
+        <tag>writeup</tag>
+        <tag>http</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>信息泄露-SVN泄露</title>
+    <url>/2024/09/12/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-SVN%E6%B3%84%E9%9C%B2/</url>
+    <content><![CDATA[<h1 id="信息泄露-SVN泄露"><a href="#信息泄露-SVN泄露" class="headerlink" title="信息泄露-SVN泄露"></a>信息泄露-SVN泄露</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>出自<a class="link"   href="https://www.ctfhub.com/" >CTFHUB <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>练习场，比较官方的一个大型练习靶场。</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>当开发人员使用 SVN 进行版本控制，对站点自动部署。如果配置不当,可能会将.svn文件夹直接部署到线上环境。这就引起了 SVN 泄露漏洞。</p>
+<p>根据题目需要提前准备工具<a class="link"   href="https://github.com/admintony/svnExploit.git" >SVNExploit <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>打开靶场看到和题目提示一样，是一个SVN泄露</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-SVN%E6%B3%84%E9%9C%B2/image-20240913005004198.png"
+                      alt="image-20240913005004198"
+                ></p>
+<p>使用工具检测目标是否存在SVN工具（例行检查）</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">python SvnExploit.py -u 目标地址/.svn</span><br></pre></td></tr></table></figure></div>
+
+<p>初次使用会有报错，下载pip包就可以</p>
+<blockquote>
+<p>或者直接在kali里面使用工具，kali里面的py包很全面</p>
+</blockquote>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">pip install prettytable -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-SVN%E6%B3%84%E9%9C%B2/image-20240913005735686.png"
+                      alt="image-20240913005735686"
+                ></p>
+<p>再次运行之后可以看到有结果输出，证明有svn泄露</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-SVN%E6%B3%84%E9%9C%B2/image-20240913005921606.png"
+                      alt="image-20240913005921606"
+                ></p>
+<p>在原来的命令后面加上<code>--dump</code>参数，把源码下载下来</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">python SvnExploit.py -u 目标地址/.svn --dump</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-SVN%E6%B3%84%E9%9C%B2/image-20240913010130190.png"
+                      alt="image-20240913010130190"
+                ></p>
+<p>恢复的文件有一个<code>wc.db</code>，是一个数据库文件，可以查看到文件索引</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-SVN%E6%B3%84%E9%9C%B2/image-20240913012737667.png"
+                      alt="image-20240913012737667"
+                ></p>
+<p>使用curl命令访问可以文件检查网页源代码是否存在flag，检查均返回404</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">curl http://challenge-2465e7edfc335d47.sandbox.ctfhub.com:10800/index.html13523.txt</span><br><span class="line">curl http://challenge-2465e7edfc335d47.sandbox.ctfhub.com:10800/flag_135183523.txt</span><br></pre></td></tr></table></figure></div>
+
+<p>根据上面所示，并没有flag文件，也确实没有直接被下载下来，毕竟题上也写了是在旧版本里面，所以使用其他工具进行还原</p>
+<p><a class="link"   href="https://github.com/kost/dvcs-ripper" >dvsc-ripper <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>这个工具需要很多环境和包，所以建议在kali里面执行</p>
+<p>进入kali，安装工具所需依赖库</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install perl libio-socket-ssl-perl libdbd-sqlite3-perl libclass-dbi-perl libio-all-lwp-perl</span><br></pre></td></tr></table></figure></div>
+
+<p>安装完后，进入到工具目录，执行</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">./rip-svn.pl -v -u 目标地址/.svn </span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-SVN%E6%B3%84%E9%9C%B2/image-20240913011925973.png"
+                      alt="image-20240913011925973"
+                ></p>
+<p>既然是svn文件，那就会在.svn目录下面，低版本SVN具体路径为text-base目录，高版本SVN为pristine目录，然后层层往下查找，中途肯定会有找不到的时候，可以将文件放到实体机，用文件内容搜索工具搜索flag</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-SVN%E6%B3%84%E9%9C%B2/image-20240913012313165.png"
+                      alt="image-20240913012313165"
+                ></p>
+<p>最后flag被找出来，又解决了一道题</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这个题目虽然与git泄露类似，但因为是svn，所以恢复起来没那么常见，这个文件我也是在CSDN上面的writeup找到的，初学者遇到完全没思路或者已经行不通的时候就多去网上找找资料，慢慢培养能力</p>
+<p><a class="link"   href="https://www.ctfhub.com/#/skilltree" >题目在这里 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>路径为web-&gt;信息泄露-&gt;svn泄露</p>
+]]></content>
+      <categories>
+        <category>ctf</category>
+        <category>writeup</category>
+        <category>web</category>
+        <category>ctfhub</category>
+      </categories>
+      <tags>
+        <tag>writeup</tag>
+        <tag>信息泄露</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>信息泄露-Git泄露-Log</title>
+    <url>/2024/09/12/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2/</url>
+    <content><![CDATA[<h1 id="信息泄露-Git泄露"><a href="#信息泄露-Git泄露" class="headerlink" title="信息泄露-Git泄露"></a>信息泄露-Git泄露</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>出自<a class="link"   href="https://www.ctfhub.com/" >CTFHUB <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>练习场，比较官方的一个大型练习靶场。</p>
+<h2 id="题目-Log"><a href="#题目-Log" class="headerlink" title="题目-Log"></a>题目-Log</h2><p>当前大量开发人员使用git进行版本控制，对站点自动部署。如果配置不当,可能会将.git文件夹直接部署到线上环境。这就引起了git泄露漏洞。请尝试使用BugScanTeam的GitHack完成本题。</p>
+<p>根据题目提示，提前准备工具需要用到<a class="link"   href="https://github.com/BugScanTeam/GitHack" >GitHack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>打开靶场，页面上很空白，根据题目进行.git文件泄露的恢复操作</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2-Log/image-20240912213108044.png"
+                      alt="image-20240912213108044"
+                ></p>
+<p>尝试在网址后面添加&#x2F;.git&#x2F;，查看是否网页403或者其他特殊情况，方便我们直接用工具恢复，显然这道题没那么简单</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2-Log/image-20240912213235037.png"
+                      alt="image-20240912213235037"
+                ></p>
+<p>接下来用网站目录扫描工具，这里用的<a class="link"   href="https://github.com/maurosoria/dirsearch" >dirsearch <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（可以用御剑等等）</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">python dirsearch.py -u 目标地址</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2-Log/image-20240912213718118.png"
+                      alt="image-20240912213718118"
+                ></p>
+<p>不用扫描完，扫描到确实有.git的存在，我们就可以试试用工具恢复</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2-Log/image-20240912213911928.png"
+                      alt="image-20240912213911928"
+                ></p>
+<p>在工具包目录下面生成了一些文件</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2-Log/image-20240912213948091.png"
+                      alt="image-20240912213948091"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2-Log/image-20240912214334276.png"
+                      alt="image-20240912214334276"
+                ></p>
+<p>但是并没有什么有价值的文件，也没有.git文件</p>
+<blockquote>
+<p>这是一个坑，要用另一个GitHack.py，并且在python2的环境才可以，建议在kali下运行</p>
+<p><a class="link"   href="https://github.com/lijiejie/GitHack" >https://github.com/lijiejie/GitHack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 用于python3，但恢复效果一般</p>
+<p><a class="link"   href="https://github.com/BugScanTeam/GitHack" >https://github.com/BugScanTeam/GitHack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 用于python2，效果不错</p>
+</blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">python2 GitHack.py 目标地址/.git</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2/image-20240912215937518.png"
+                      alt="image-20240912215937518"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2-Log/image-20240912220043425.png"
+                      alt="image-20240912220043425"
+                ></p>
+<p>既然有.git，根据题目来看，可以通过查看日志获得一些信息，kali环境自带git，其他没有git环境的需要自己下载</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2-Log/image-20240912220103402.png"
+                      alt="image-20240912220103402"
+                ></p>
+<p>通过观察上面的日志信息，可以发生在第二次修改时<code>add flag</code>，说明我们所要的flag就在第二次修改时加入文件中，使用<code>git reset</code>版本回退命令来查看flag</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git reset --hard 对应版本的commit</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2-Log/image-20240912220806774.png"
+                      alt="image-20240912220806774"
+                ></p>
+<p>最终我们通过.git文件泄露，回退版本得到了flag</p>
+<h2 id="题目-Stash"><a href="#题目-Stash" class="headerlink" title="题目-Stash"></a>题目-Stash</h2><h2 id="题目-Index"><a href="#题目-Index" class="headerlink" title="题目-Index"></a>题目-Index</h2><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>做题时要根据题目来做题，半做半猜，不要盲目乱入手</p>
+<p>在实际做题时会遇到各种坑，需要多花耐心慢慢琢磨（由于本人也是新手，也花了好些时间搞这节。。。）</p>
+<p><a class="link"   href="https://www.ctfhub.com/#/skilltree" >题目在这里 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>路径为web-&gt;信息泄露-&gt;git泄露</p>
+]]></content>
+      <categories>
+        <category>ctf</category>
+        <category>writeup</category>
+        <category>web</category>
+        <category>ctfhub</category>
+      </categories>
+      <tags>
+        <tag>writeup</tag>
+        <tag>信息泄露</tag>
       </tags>
   </entry>
 </search>
