@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Blog网络不稳定访问方法</title>
+    <url>/2024/09/12/%E5%88%87%E6%8D%A2%E5%9B%BD%E5%86%85%E7%BD%91%E9%A1%B5/</url>
+    <content><![CDATA[<h1 id="Blog慢访问问题"><a href="#Blog慢访问问题" class="headerlink" title="Blog慢访问问题"></a>Blog慢访问问题</h1><h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><p>由于本博客是搭建在github pages上的，所以国内访问难免会有访问慢的时候，对此我在云服务器也搭建了一个同步的博客，方便加速访问</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p><a class="link"   href="https://blogback.overlordzj.cn/" >点击这个国内链接 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>即可访问</p>
+<p>或者通过主页右上角<code>link</code>菜单下的<code>domestic</code>进行访问</p>
+<h2 id="残留问题"><a href="#残留问题" class="headerlink" title="残留问题"></a>残留问题</h2><p>不知道为什么搭建在云服务器的博客没有评论的功能，留一个小坑等之后有时间和能力了来填坑</p>
+]]></content>
+      <tags>
+        <tag>待填坑</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2024/09/09/example/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
@@ -54,18 +66,6 @@ import {initHBE} from "/js/plugins/hbe.js";
       </tags>
   </entry>
   <entry>
-    <title>Blog网络不稳定访问方法</title>
-    <url>/2024/09/12/%E5%88%87%E6%8D%A2%E5%9B%BD%E5%86%85%E7%BD%91%E9%A1%B5/</url>
-    <content><![CDATA[<h1 id="Blog慢访问问题"><a href="#Blog慢访问问题" class="headerlink" title="Blog慢访问问题"></a>Blog慢访问问题</h1><h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><p>由于本博客是搭建在github pages上的，所以国内访问难免会有访问慢的时候，对此我在云服务器也搭建了一个同步的博客，方便加速访问</p>
-<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p><a class="link"   href="https://blogback.overlordzj.cn/" >点击这个国内链接 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>即可访问</p>
-<p>或者通过主页右上角<code>link</code>菜单下的<code>domestic</code>进行访问</p>
-<h2 id="残留问题"><a href="#残留问题" class="headerlink" title="残留问题"></a>残留问题</h2><p>不知道为什么搭建在云服务器的博客没有评论的功能，留一个小坑等之后有时间和能力了来填坑</p>
-]]></content>
-      <tags>
-        <tag>待填坑</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>云服务器</title>
     <url>/2024/09/10/%E5%A4%87%E5%BF%98%E5%BD%95/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
     <content><![CDATA[
@@ -92,6 +92,35 @@ import {initHBE} from "/js/plugins/hbe.js";
       </categories>
       <tags>
         <tag>备忘录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C语言的一些代码小技巧</title>
+    <url>/2024/09/11/C%E8%AF%AD%E8%A8%80/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<h1 id="C语言中的代码小技巧"><a href="#C语言中的代码小技巧" class="headerlink" title="C语言中的代码小技巧"></a>C语言中的代码小技巧</h1><h2 id="1、输出一个回车符号"><a href="#1、输出一个回车符号" class="headerlink" title="1、输出一个回车符号"></a>1、输出一个回车符号</h2><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">putchar</span>(<span class="number">10</span>);	<span class="comment">//表示输出一个回车符号</span></span><br></pre></td></tr></table></figure></div>
+
+<p>putchar()函数表示直接输出一个字符，（）内可以填写一个字符；也可以填写其ASCII码（一个整数），然后系统将其转化为字符输出</p>
+<p>而ASCII中的10对应的是line feed(换行)，所以改语句才实现了换行功能</p>
+<p>当然也可以直接</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br></pre></td></tr></table></figure></div>
+
+<p>或者</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">puts</span>();</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>解释</p>
+</blockquote>
+<p>putchar();输出的是字符，但不自带换行功能。</p>
+<p>puts();自带换行功能，将结尾\0换成\n。</p>
+<hr>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+      <categories>
+        <category>C语言</category>
+        <category>基础部分</category>
+      </categories>
+      <tags>
+        <tag>C语言</tag>
+        <tag>技巧</tag>
       </tags>
   </entry>
   <entry>
@@ -127,6 +156,22 @@ import {initHBE} from "/js/plugins/hbe.js";
       </tags>
   </entry>
   <entry>
+    <title>web安全目录</title>
+    <url>/2024/09/12/ctf/writeup/web/catalogue/</url>
+    <content><![CDATA[<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>（根据上传顺序以及题目难度进行排序）</p>
+<p>1.<br>2. </p>
+]]></content>
+      <categories>
+        <category>ctf</category>
+        <category>writeup</category>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>ctf</tag>
+        <tag>writeup</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>测试文章时效性</title>
     <url>/2024/09/09/example/%E6%B5%8B%E8%AF%95%E6%97%B6%E6%95%88%E6%80%A7/</url>
     <content><![CDATA[<h1 id="这是测试文字"><a href="#这是测试文字" class="headerlink" title="这是测试文字"></a>这是测试文字</h1><h2 id="这是测试文字-1"><a href="#这是测试文字-1" class="headerlink" title="这是测试文字"></a>这是测试文字</h2><h3 id="这是测试文字-2"><a href="#这是测试文字-2" class="headerlink" title="这是测试文字"></a>这是测试文字</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">这是测试文字</span><br></pre></td></tr></table></figure></div>
@@ -141,32 +186,18 @@ import {initHBE} from "/js/plugins/hbe.js";
       </tags>
   </entry>
   <entry>
-    <title>C语言的一些代码小技巧</title>
-    <url>/2024/09/11/C%E8%AF%AD%E8%A8%80/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
-    <content><![CDATA[<h1 id="C语言中的代码小技巧"><a href="#C语言中的代码小技巧" class="headerlink" title="C语言中的代码小技巧"></a>C语言中的代码小技巧</h1><h2 id="1、输出一个回车符号"><a href="#1、输出一个回车符号" class="headerlink" title="1、输出一个回车符号"></a>1、输出一个回车符号</h2><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">putchar</span>(<span class="number">10</span>);	<span class="comment">//表示输出一个回车符号</span></span><br></pre></td></tr></table></figure></div>
-
-<p>putchar()函数表示直接输出一个字符，（）内可以填写一个字符；也可以填写其ASCII码（一个整数），然后系统将其转化为字符输出</p>
-<p>而ASCII中的10对应的是line feed(换行)，所以改语句才实现了换行功能</p>
-<p>当然也可以直接</p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br></pre></td></tr></table></figure></div>
-
-<p>或者</p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">puts</span>();</span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p>解释</p>
-</blockquote>
-<p>putchar();输出的是字符，但不自带换行功能。</p>
-<p>puts();自带换行功能，将结尾\0换成\n。</p>
-<hr>
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+    <title>CTF-[极客大挑战 2019]Http</title>
+    <url>/2024/09/12/ctf/writeup/web/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98%202019%5DHttp/</url>
+    <content><![CDATA[<h1 id="极客大挑战-2019-Http"><a href="#极客大挑战-2019-Http" class="headerlink" title="[极客大挑战 2019]Http"></a>[极客大挑战 2019]Http</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>出自<a class="link"   href="https://buuoj.cn/" >BUUCTF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）</p>
+]]></content>
       <categories>
-        <category>C语言</category>
-        <category>基础部分</category>
+        <category>ctf</category>
+        <category>writeup</category>
+        <category>web</category>
       </categories>
       <tags>
-        <tag>C语言</tag>
-        <tag>技巧</tag>
+        <tag>ctf</tag>
+        <tag>writeup</tag>
       </tags>
   </entry>
   <entry>
@@ -426,37 +457,6 @@ import {initHBE} from "/js/plugins/hbe.js";
       </categories>
       <tags>
         <tag>C语言</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CTF-[极客大挑战 2019]Http</title>
-    <url>/2024/09/12/ctf/writeup/web/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98%202019%5DHttp/</url>
-    <content><![CDATA[<h1 id="极客大挑战-2019-Http"><a href="#极客大挑战-2019-Http" class="headerlink" title="[极客大挑战 2019]Http"></a>[极客大挑战 2019]Http</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>出自<a class="link"   href="https://buuoj.cn/" >BUUCTF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）</p>
-]]></content>
-      <categories>
-        <category>ctf</category>
-        <category>writeup</category>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>ctf</tag>
-        <tag>writeup</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>web安全目录</title>
-    <url>/2024/09/12/ctf/writeup/web/catalogue/</url>
-    <content><![CDATA[<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>（根据上传顺序以及题目难度进行排序）</p>
-<p>1.<br>2. </p>
-]]></content>
-      <categories>
-        <category>ctf</category>
-        <category>writeup</category>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>ctf</tag>
-        <tag>writeup</tag>
       </tags>
   </entry>
 </search>
