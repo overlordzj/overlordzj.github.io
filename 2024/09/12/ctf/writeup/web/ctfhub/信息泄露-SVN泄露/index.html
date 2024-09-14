@@ -24,12 +24,12 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="信息泄露-SVN泄露前言出自CTFHUB 练习场，比较官方的一个大型练习靶场。 题目当开发人员使用 SVN 进行版本控制，对站点自动部署。如果配置不当,可能会将.svn文件夹直接部署到线上环境。这就引起了 SVN 泄露漏洞。 根据题目需要提前准备工具SVNExploit  打开靶场看到和题目提示一样，是一个SVN泄露  使用工具检测目标是否存在SVN工具（例行检查） 1python SvnExpl">
+        <meta name="description" content="信息泄露-SVN泄露前言出自CTFHUB 练习场，比较官方的一个大型练习靶场 题目当开发人员使用 SVN 进行版本控制，对站点自动部署。如果配置不当,可能会将.svn文件夹直接部署到线上环境。这就引起了 SVN 泄露漏洞。 根据题目需要提前准备工具SVNExploit  打开靶场看到和题目提示一样，是一个SVN泄露  使用工具检测目标是否存在SVN工具（例行检查） 1python SvnExplo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="信息泄露-SVN泄露">
 <meta property="og:url" content="https://blog.overlordzj.cn/2024/09/12/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-SVN%E6%B3%84%E9%9C%B2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="信息泄露-SVN泄露前言出自CTFHUB 练习场，比较官方的一个大型练习靶场。 题目当开发人员使用 SVN 进行版本控制，对站点自动部署。如果配置不当,可能会将.svn文件夹直接部署到线上环境。这就引起了 SVN 泄露漏洞。 根据题目需要提前准备工具SVNExploit  打开靶场看到和题目提示一样，是一个SVN泄露  使用工具检测目标是否存在SVN工具（例行检查） 1python SvnExpl">
+<meta property="og:description" content="信息泄露-SVN泄露前言出自CTFHUB 练习场，比较官方的一个大型练习靶场 题目当开发人员使用 SVN 进行版本控制，对站点自动部署。如果配置不当,可能会将.svn文件夹直接部署到线上环境。这就引起了 SVN 泄露漏洞。 根据题目需要提前准备工具SVNExploit  打开靶场看到和题目提示一样，是一个SVN泄露  使用工具检测目标是否存在SVN工具（例行检查） 1python SvnExplo">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-SVN%E6%B3%84%E9%9C%B2/image-20240913005004198.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-SVN%E6%B3%84%E9%9C%B2/image-20240913005735686.png">
@@ -39,7 +39,7 @@
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-SVN%E6%B3%84%E9%9C%B2/image-20240913011925973.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-SVN%E6%B3%84%E9%9C%B2/image-20240913012313165.png">
 <meta property="article:published_time" content="2024-09-11T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-09-12T17:33:54.132Z">
+<meta property="article:modified_time" content="2024-09-14T14:37:00.415Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="writeup">
 <meta property="article:tag" content="信息泄露">
@@ -88,7 +88,7 @@
 
     <script id="hexo-configurations">
     window.config = {"hostname":"blog.overlordzj.cn","root":"/","language":"en","path":"search.xml"};
-    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":["Lv100"]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":6,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":true,"title":"看看这些文章吧( ૢ⁼̴̤̆ ꇴ ⁼̴̤̆ ૢ)~ෆ","limit":3,"mobile_limit":4,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":["/private/","/secret/"]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":true,"custom_message":null},"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Overlord Blog","subtitle":{"text":["Welcome my blog","Here are my own study materials and various writeups","Hoping it will be useful to you"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":80,"backing_speed":50,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":true,"type":"mini","audios":[{"name":"mystery-of-love","artist":"----------","url":"/musics/mystery-of-love.mp3","cover":"/images/mystery-of-love.jpg","lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.7.1","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"photo-album":{"icon":"fa-solid fa-image","path":"/masonry/"},"Github":{"path":"https://github.com/overlordzj/overlordzj.github.io","icon":"fa-brands fa-github"},"Links":{"icon":"fa-regular fa-link","submenus":{"tags":"/tags/","categories":"/categories/","docs":"https://redefine-docs.ohevan.com/","domestic":"https://blogback.overlordzj.cn/"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":{"Archives":{"path":"/archives/","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags/","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories/","icon":"fa-regular fa-folder"}}},"article_date_format":"YYYY-MM-DD","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/9/8 00:00:00"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":["Lv100"]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":6,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":true,"title":"看看这些文章吧( ૢ⁼̴̤̆ ꇴ ⁼̴̤̆ ૢ)~ෆ","limit":3,"mobile_limit":4,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":["/private/","/secret/","/备忘录/"]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":true,"custom_message":null},"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Overlord Blog","subtitle":{"text":["Welcome my blog","Here are my own study materials and various writeups","Hoping it will be useful to you"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":80,"backing_speed":50,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":true,"type":"mini","audios":[{"name":"mystery-of-love","artist":"----------","url":"/musics/mystery-of-love.mp3","cover":"/images/mystery-of-love.jpg","lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.7.1","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"photo-album":{"icon":"fa-solid fa-image","path":"/masonry/"},"Github":{"path":"https://github.com/overlordzj/overlordzj.github.io","icon":"fa-brands fa-github"},"Links":{"icon":"fa-regular fa-link","submenus":{"tags":"/tags/","categories":"/categories/","docs":"https://redefine-docs.ohevan.com/","domestic":"https://blogback.overlordzj.cn/"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":{"Archives":{"path":"/archives/","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags/","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories/","icon":"fa-regular fa-folder"}}},"article_date_format":"YYYY-MM-DD","excerpt_length":200,"categories":{"enable":true,"limit":4},"tags":{"enable":true,"limit":4}},"footerStart":"2024/9/8 00:00:00"};
     window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
     window.data = {"masonry":true};
   </script>
@@ -584,15 +584,15 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">9</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">19</div>
         <div class="label text-third-text-color text-sm">Tags</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">10</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">15</div>
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">15</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">29</div>
         <div class="label text-third-text-color text-sm">Posts</div>
     </a>
 </div>
@@ -646,8 +646,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-09-13 01:33:54</span>
-            <span class="mobile">2024-09-13 01:33:54</span>
+            <span class="desktop">2024-09-14 22:37</span>
+            <span class="mobile">2024-09-14 22:37</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -743,7 +743,7 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h1 id="信息泄露-SVN泄露"><a href="#信息泄露-SVN泄露" class="headerlink" title="信息泄露-SVN泄露"></a>信息泄露-SVN泄露</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>出自<a class="link"   target="_blank" rel="noopener" href="https://www.ctfhub.com/" >CTFHUB <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>练习场，比较官方的一个大型练习靶场。</p>
+            <h1 id="信息泄露-SVN泄露"><a href="#信息泄露-SVN泄露" class="headerlink" title="信息泄露-SVN泄露"></a>信息泄露-SVN泄露</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>出自<a class="link"   target="_blank" rel="noopener" href="https://www.ctfhub.com/" >CTFHUB <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>练习场，比较官方的一个大型练习靶场</p>
 <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>当开发人员使用 SVN 进行版本控制，对站点自动部署。如果配置不当,可能会将.svn文件夹直接部署到线上环境。这就引起了 SVN 泄露漏洞。</p>
 <p>根据题目需要提前准备工具<a class="link"   target="_blank" rel="noopener" href="https://github.com/admintony/svnExploit.git" >SVNExploit <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <p>打开靶场看到和题目提示一样，是一个SVN泄露</p>
@@ -832,7 +832,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-09-13 01:33:54
+                    :</strong> 2024-09-14 22:37:00
             </li>
         
         <li>
@@ -877,12 +877,12 @@
     <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/12/ctf/writeup/web/ctfhub/信息泄露-Git泄露/" title="信息泄露-Git泄露-Log" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="信息泄露-Git泄露-Log" class="!max-w-none">
   <span class="title">信息泄露-Git泄露-Log</span>
-</a><a class="recommended-article-item" href="/2024/09/12/ctf/writeup/web/buuctf/[web入门]粗心的小李/" title="web入门-粗心的小李" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="web入门-粗心的小李" class="!max-w-none">
-  <span class="title">web入门-粗心的小李</span>
-</a><a class="recommended-article-item" href="/2024/09/12/ctf/writeup/web/catalogue/" title="web安全目录" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="web安全目录" class="!max-w-none">
-  <span class="title">web安全目录</span>
+</a><a class="recommended-article-item" href="/2024/09/13/操作系统/kali/pip2安装/" title="kali环境下的pip2安装" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="kali环境下的pip2安装" class="!max-w-none">
+  <span class="title">kali环境下的pip2安装</span>
+</a><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/ctfhub/信息泄露-目录遍历/" title="信息泄露-目录遍历" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="信息泄露-目录遍历" class="!max-w-none">
+  <span class="title">信息泄露-目录遍历</span>
 </a></div>
    </div>
    <div class="recommended-mobile">
@@ -892,12 +892,12 @@
    <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/12/ctf/writeup/web/ctfhub/信息泄露-Git泄露/" title="信息泄露-Git泄露-Log" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="信息泄露-Git泄露-Log" class="!max-w-none">
   <span class="title">信息泄露-Git泄露-Log</span>
-</a><a class="recommended-article-item" href="/2024/09/12/ctf/writeup/web/buuctf/[web入门]粗心的小李/" title="web入门-粗心的小李" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="web入门-粗心的小李" class="!max-w-none">
-  <span class="title">web入门-粗心的小李</span>
-</a><a class="recommended-article-item" href="/2024/09/12/ctf/writeup/web/catalogue/" title="web安全目录" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="web安全目录" class="!max-w-none">
-  <span class="title">web安全目录</span>
+</a><a class="recommended-article-item" href="/2024/09/13/操作系统/kali/pip2安装/" title="kali环境下的pip2安装" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="kali环境下的pip2安装" class="!max-w-none">
+  <span class="title">kali环境下的pip2安装</span>
+</a><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/ctfhub/信息泄露-目录遍历/" title="信息泄露-目录遍历" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="信息泄露-目录遍历" class="!max-w-none">
+  <span class="title">信息泄露-目录遍历</span>
 </a></div>
    </div>
   </div>
@@ -908,13 +908,13 @@
                     <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="prev"
                         rel="prev"
-                        href="/2024/09/12/ctf/writeup/web/buuctf/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%982019%5DHttp/"
+                        href="/2024/09/12/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2/"
                         >
                             <span class="left arrow-icon flex justify-center items-center">
                                 <i class="fa-solid fa-chevron-left"></i>
                             </span>
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">极客大挑战2019 Http</span>
+                                <span class="post-nav-title-item">信息泄露-Git泄露-Log</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
@@ -924,10 +924,10 @@
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="next"
                         rel="next"
-                        href="/2024/09/12/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2/"
+                        href="/2024/09/12/ctf/writeup/web/buuctf/BUU-BURP-COURSE-1/"
                         >
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">信息泄露-Git泄露-Log</span>
+                                <span class="post-nav-title-item">BUU BURP COURSE 1</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex justify-center items-center">
@@ -1025,11 +1025,11 @@
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        15 posts in total
+                        29 posts in total
                     </span>
                     
                         <span>
-                            10.7k words in total
+                            15.1k words in total
                         </span>
                     
                 </p>
