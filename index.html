@@ -1101,27 +1101,20 @@ PHP文件包含漏洞利用思路与...
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/2024/09/14/ctf/writeup/web/ctfhub/RCE-eval%E6%89%A7%E8%A1%8C/">
-                            RCE-eval执行
+                        <a href="/2024/09/14/ctf/writeup/web/buuctf/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/">
+                            BJDCTF2020 ZJCTF，不过如此*
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            RCE-eval执行前言出自CTFHUB 练习场，比较官方的一个大型练习靶场
-题目打开靶场之前，题目的名字是eval执行，直接冲着eval执行漏洞去挖
-打开靶场，直接漏出源码，审计一下发现需要我们传入参数cmd，然后它会直接执行我们传入的参数
+                            [BJDCTF2020]ZJCTF，不过如此*前言出自BUUCTF 练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）
+题目打开靶场，这里直接给出了源码，接下来要做的第一步就是代码审计≡(▔﹏▔)≡
 
-直接传入system函数进行cmd命令输出
-查看目录文件
-1system(&quot;ls /&quot;);
-
-
-记得要在命令末尾加上;
-
-
-发现...
+根据源码(..•˘_˘•..)
+第一个if说明我们需要传入text=I have a dream才能进行下面的操作
+下面一个if说...
                         
                     </div>
 
@@ -1173,7 +1166,7 @@ PHP文件包含漏洞利用思路与...
                             <li>></li>
                         
                         <li>
-                            <a href="/categories/ctf/writeup/web/ctfhub/">ctfhub</a>&nbsp;
+                            <a href="/categories/ctf/writeup/web/buuctf/">buuctf</a>&nbsp;
                         </li>
                     
                     
@@ -1188,12 +1181,17 @@ PHP文件包含漏洞利用思路与...
                     
                         <li>
                             
+                            <a href="/tags/%E5%BE%85%E5%A1%AB%E5%9D%91/">待填坑</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
                             <a href="/tags/writeup/">writeup</a>&nbsp;
                         </li>
                     
                         <li>
                             | 
-                            <a href="/tags/rce/">rce</a>&nbsp;
+                            <a href="/tags/php/">php</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1201,7 +1199,7 @@ PHP文件包含漏洞利用思路与...
         
     </div>
 
-    <a href="/2024/09/14/ctf/writeup/web/ctfhub/RCE-eval%E6%89%A7%E8%A1%8C/">Read more<span class="seo-reader-text">RCE-eval执行</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2024/09/14/ctf/writeup/web/buuctf/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/">Read more<span class="seo-reader-text">BJDCTF2020 ZJCTF，不过如此*</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1311,6 +1309,121 @@ PHP文件包含漏洞利用思路与...
     </div>
 
     <a href="/2024/09/14/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-PHPINFO/">Read more<span class="seo-reader-text">信息泄露-PHPINFO</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2024/09/14/ctf/writeup/web/ctfhub/RCE-eval%E6%89%A7%E8%A1%8C/">
+                            RCE-eval执行
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            RCE-eval执行前言出自CTFHUB 练习场，比较官方的一个大型练习靶场
+题目打开靶场之前，题目的名字是eval执行，直接冲着eval执行漏洞去挖
+打开靶场，直接漏出源码，审计一下发现需要我们传入参数cmd，然后它会直接执行我们传入的参数
+
+直接传入system函数进行cmd命令输出
+查看目录文件
+1system(&quot;ls /&quot;);
+
+
+记得要在命令末尾加上;
+
+
+发现...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Sep 14 2024 00:00:00 GMT+0800">
+                
+                    2024-09-14
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/ctf/">ctf</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/ctf/writeup/">writeup</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/ctf/writeup/web/">web</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/ctf/writeup/web/ctfhub/">ctfhub</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/writeup/">writeup</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/rce/">rce</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/09/14/ctf/writeup/web/ctfhub/RCE-eval%E6%89%A7%E8%A1%8C/">Read more<span class="seo-reader-text">RCE-eval执行</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1437,119 +1550,6 @@ PHP文件包含漏洞利用思路与...
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/2024/09/14/ctf/writeup/web/buuctf/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/">
-                            BJDCTF2020 ZJCTF，不过如此*
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            [BJDCTF2020]ZJCTF，不过如此*前言出自BUUCTF 练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）
-题目打开靶场，这里直接给出了源码，接下来要做的第一步就是代码审计≡(▔﹏▔)≡
-
-根据源码(..•˘_˘•..)
-第一个if说明我们需要传入text=I have a dream才能进行下面的操作
-下面一个if说...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Sep 14 2024 00:00:00 GMT+0800">
-                
-                    2024-09-14
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/ctf/">ctf</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/ctf/writeup/">writeup</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/ctf/writeup/web/">web</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/ctf/writeup/web/buuctf/">buuctf</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E5%BE%85%E5%A1%AB%E5%9D%91/">待填坑</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/writeup/">writeup</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/php/">php</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2024/09/14/ctf/writeup/web/buuctf/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/">Read more<span class="seo-reader-text">BJDCTF2020 ZJCTF，不过如此*</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
                         <a href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/centos-linux/Tab%E9%94%AE%E8%AE%BE%E7%BD%AE/">
                             Linux系统Tab键相关设置
                         </a>
@@ -1634,19 +1634,16 @@ PHP文件包含漏洞利用思路与...
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/IP%E9%85%8D%E7%BD%AE/">
-                            kali的IP配置
+                        <a href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/">
+                            msf与cs派生会话
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            kali的IP配置静态IP1vim /etc/network/interfaces //进入ip修改环境
-
-
-在这两行下面输入
-123456auto eth0iface eth0 inet staticaddress 192.168.1.111	//根据自身ip地址自定义netmask 255.255.255.0gateway 192.168.1.1		//根据自身ip网关自定义//退出并保...
+                            msf与cs派生会话MSF转CS在CS中做好接口监听端口的准备
+在MSF中添加转接exploit1234567891011background                // 挂起会话use exploit/windows/local/payload_injectset payload windows/meterpreter/reverse_http	//payload各不相同，注意不要...
                         
                     </div>
 
@@ -1698,7 +1695,7 @@ PHP文件包含漏洞利用思路与...
                     
                         <li>
                             | 
-                            <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">环境配置</a>&nbsp;
+                            <a href="/tags/%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/">内网渗透</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1706,7 +1703,7 @@ PHP文件包含漏洞利用思路与...
         
     </div>
 
-    <a href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/IP%E9%85%8D%E7%BD%AE/">Read more<span class="seo-reader-text">kali的IP配置</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/">Read more<span class="seo-reader-text">msf与cs派生会话</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
