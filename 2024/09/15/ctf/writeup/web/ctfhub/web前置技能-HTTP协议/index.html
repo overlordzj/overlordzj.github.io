@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="ZJ">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://https://fonts.lug.ustc.edu.cn/">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+        
+        
+        
+            <link rel="preconnect" href="https://evan.beee.top" crossorigin>
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://blog.overlordzj.cn/2024/09/15/ctf/writeup/web/ctfhub/web前置技能-http协议/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="web前置技能-HTTP协议前言出自CTFHUB 练习场，比较官方的一个大型练习靶场 题目题目-请求方式题目-302跳转题目-Cookie题目-基础认证题目-响应包源代码题目-请求方式       HTTP 请求方法, HTTP&#x2F;1.1协议中共定义了八种方法（也叫动作）来以不同方式操作指定的资源      打开靶场，根据题目需要入手的是HTTP的请求方式 看到网页上显示HTTP的提交方式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web前置技能-HTTP协议">
+<meta property="og:url" content="https://blog.overlordzj.cn/2024/09/15/ctf/writeup/web/ctfhub/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="web前置技能-HTTP协议前言出自CTFHUB 练习场，比较官方的一个大型练习靶场 题目题目-请求方式题目-302跳转题目-Cookie题目-基础认证题目-响应包源代码题目-请求方式       HTTP 请求方法, HTTP&#x2F;1.1协议中共定义了八种方法（也叫动作）来以不同方式操作指定的资源      打开靶场，根据题目需要入手的是HTTP的请求方式 看到网页上显示HTTP的提交方式">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240915202012505.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240915202702082.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240915203925037.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240915203939085.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240915204346059.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240915205115281.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240915205435134.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240915205703202.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916005118438.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916005704097.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916005755371.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916005910601.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916010010509.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916010021706.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916010747334.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916010522890.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916020529442.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916010723083.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916011224974.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916011343770.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916011438064.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916012324649.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916011533984.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916012520071.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916021756299.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916013852023.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916013923711.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916014245240.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/10imageslim.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916020821868.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916020835063.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916022546590.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916022716123.png">
+<meta property="article:published_time" content="2024-09-14T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-09-17T08:59:39.093Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="writeup">
+<meta property="article:tag" content="信息泄露">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.overlordzj.cn/images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240915202012505.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/overlord_ico.ico" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/overlord_ico.ico">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/overlord_ico.ico">
+    <!--- Page Info-->
+    
+    <title>
+        
+            web前置技能-HTTP协议 -
+        
+        Overlord Blog
+    </title>
+
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/fonts/Chillax/chillax.css">
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/assets/build/styles.css">
+    
+
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/fonts/GeistMono/geist-mono.css">
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/fonts/Geist/geist.css">
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+        <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/anime.min.js"></script>
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"blog.overlordzj.cn","root":"/","language":"en","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":["Lv100"]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":6,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":true,"title":"看看这些文章吧( ૢ⁼̴̤̆ ꇴ ⁼̴̤̆ ૢ)~ෆ","limit":3,"mobile_limit":4,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":["/private/","/secret/","/备忘录/"]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":true,"custom_message":null},"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Overlord Blog","subtitle":{"text":["Welcome my blog","Here are my own study materials and various writeups","Hoping it will be useful to you"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":80,"backing_speed":50,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":true,"type":"mini","audios":[{"name":"mystery-of-love","artist":"----------","url":"/musics/mystery-of-love.mp3","cover":"/images/mystery-of-love.jpg","lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.7.1","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"photo-album":{"icon":"fa-solid fa-image","path":"/masonry/"},"Github":{"path":"https://github.com/overlordzj/overlordzj.github.io","icon":"fa-brands fa-github"},"Links":{"icon":"fa-regular fa-link","submenus":{"tags":"/tags/","categories":"/categories/","docs":"https://redefine-docs.ohevan.com/","domestic":"https://blogback.overlordzj.cn/"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":{"Archives":{"path":"/archives/","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags/","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories/","icon":"fa-regular fa-folder"}}},"article_date_format":"YYYY-MM-DD","excerpt_length":200,"categories":{"enable":true,"limit":4},"tags":{"enable":true,"limit":4}},"footerStart":"2024/9/8 00:00:00"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":true};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/fontawesome/regular.min.css">
+    
+    
+        <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/fontawesome/light.min.css">
+    
+    
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+
+    <style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    <h2 class="ml13">
+        Overlord Blog
+    </h2>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+        var animation = anime.timeline({loop: true})
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [40,0],
+                translateZ: 0,
+                opacity: [0,1],
+                filter: ['blur(5px)', 'blur(0px)'], // Starting from blurred to unblurred
+                easing: "easeOutExpo",
+                duration: 1400,
+                delay: (el, i) => 300 + 30 * i,
+            }).add({
+                targets: '.ml13 .letter',
+                translateY: [0,-40],
+                opacity: [1,0],
+                filter: ['blur(0px)', 'blur(5px)'], // Ending from unblurred to blurred
+                easing: "easeInExpo",
+                duration: 1200,
+                delay: (el, i) => 100 + 30 * i,
+                complete: function() {
+                    hidePreloader(); // Call hidePreloader after the animation completes
+                }
+            });
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(hidePreloader, 5000); // Call hidePreloader after 5000 milliseconds if not already called by animation
+        });
+
+        function hidePreloader() {
+            var preloader = document.querySelector('.preloader');
+            preloader.style.opacity = '0';
+            setTimeout(function () {
+                preloader.style.display = 'none';
+            }, 200);
+        }
+    </script>
+</div>
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container px-6 md:px-12">
+
+    <div class="navbar-content ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Overlord Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    ARCHIVES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/masonry/"
+                                        >
+                                    <i class="fa-solid fa-image fa-fw"></i>
+                                    PHOTO-ALBUM
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   target="_blank" rel="noopener" href="https://github.com/overlordzj/overlordzj.github.io"
+                                        >
+                                    <i class="fa-brands fa-github fa-fw"></i>
+                                    GITHUB
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-link fa-fw"></i>
+                                    LINKS
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/tags/">
+                                                    TAGS
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/categories/">
+                                                    CATEGORIES
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://redefine-docs.ohevan.com/">
+                                                    DOCS
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://blogback.overlordzj.cn/">
+                                                    DOMESTIC
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                ARCHIVES
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/masonry/"
+                        >
+                            <span>
+                                PHOTO-ALBUM
+                            </span>
+                            
+                                <i class="fa-solid fa-image fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           target="_blank" rel="noopener" href="https://github.com/overlordzj/overlordzj.github.io"
+                        >
+                            <span>
+                                GITHUB
+                            </span>
+                            
+                                <i class="fa-brands fa-github fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-Links"
+                        >
+                            <span>
+                                LINKS
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-Links">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/tags/">TAGS</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/categories/">CATEGORIES</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://redefine-docs.ohevan.com/">DOCS</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://blogback.overlordzj.cn/">DOMESTIC</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/tags/"
+                        >
+                            <span>Tags</span>
+                            <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/categories/"
+                        >
+                            <span>Categories</span>
+                            <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">19</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">18</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">32</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">web前置技能-HTTP协议</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/overlord.jpeg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">ZJ</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv100</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-09-15</span>
+        <span class="mobile">2024-09-15</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-09-17 16:59:39</span>
+            <span class="mobile">2024-09-17 16:59:39</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/ctf/">ctf</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/ctf/writeup/">writeup</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/ctf/writeup/web/">web</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/ctf/writeup/web/ctfhub/">ctfhub</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/writeup/">writeup</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/">信息泄露</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.6k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>5 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <h1 id="web前置技能-HTTP协议"><a href="#web前置技能-HTTP协议" class="headerlink" title="web前置技能-HTTP协议"></a>web前置技能-HTTP协议</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>出自<a class="link"   target="_blank" rel="noopener" href="https://www.ctfhub.com/" >CTFHUB <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>练习场，比较官方的一个大型练习靶场</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><div class="tabs" id="tab-web前置技能-http协议"><ul class="nav-tabs"><li class="tab active"><a class="#web前置技能-http协议-1">题目-请求方式</a></li><li class="tab"><a class="#web前置技能-http协议-2">题目-302跳转</a></li><li class="tab"><a class="#web前置技能-http协议-3">题目-Cookie</a></li><li class="tab"><a class="#web前置技能-http协议-4">题目-基础认证</a></li><li class="tab"><a class="#web前置技能-http协议-5">题目-响应包源代码</a></li></ul><div class="tab-content"><div class="tab-pane active" id="web前置技能-http协议-1"><h3 id="题目-请求方式"><a href="#题目-请求方式" class="headerlink" title="题目-请求方式"></a>题目-请求方式</h3>  <div class="note p-4 mb-4 rounded-small info">
+    <p>HTTP 请求方法, HTTP&#x2F;1.1协议中共定义了八种方法（也叫动作）来以不同方式操作指定的资源</p>
+
+  </div>
+
+<p>打开靶场，根据题目需要入手的是HTTP的请求方式</p>
+<p>看到网页上显示HTTP的提交方式是<code>CTFHUB</code>就会给我们flag，然后下面一行提示表示需要用<code>index.php</code>请求</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240915202012505.png"
+                      alt="image-20240915202012505"
+                ></p>
+<p>因为原页面就是<code>index.php</code>请求，所以直接抓包即可</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240915202702082.png"
+                      alt="image-20240915202702082"
+                ></p>
+<p>然后<code>GET</code>改为<code>CTFHUB</code></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240915203925037.png"
+                      alt="image-20240915203925037"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240915203939085.png"
+                      alt="image-20240915203939085"
+                ></p>
+<p>这样flag就直接出来了，确实是前置技能哈哈哈(ฅ´ω&#96;ฅ) </p></div><div class="tab-pane" id="web前置技能-http协议-2"><h3 id="题目-302跳转"><a href="#题目-302跳转" class="headerlink" title="题目-302跳转"></a>题目-302跳转</h3>  <div class="note p-4 mb-4 rounded-small info">
+    <p>HTTP临时重定向</p>
+
+  </div>
+
+<p>题目中提示需要用到302临时重定向跳转</p>
+<blockquote>
+<p>在HTTP协议中，302 Found是一种临时重定向状态码，它表示请求的资源已经被临时移动到了由Location头部给出的URL。这个URL可能是新的位置，也可能是请求的资源的另一个版本。这个状态码的主要目的是将用户的请求重定向到新的URL，以便他们能够获得完整的资源。</p>
+</blockquote>
+<p>打开靶场，点击<code>Give me Flag</code>会发现一直只跳转到本网页，就说明确实需要配合重定向来结解题</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240915204346059.png"
+                      alt="image-20240915204346059"
+                ></p>
+<p>先用F12（ctrl+U）大法看看网页源码</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240915205115281.png"
+                      alt="image-20240915205115281"
+                ></p>
+<p>看到链接应该是<code>Index.php</code>，但每次点击都只会跳转到<code>index.html</code>，只需要临时抓包不放包就可以防止网页302</p>
+<p>点击链接，我们用BP抓包，再发送给repeater（可以理解为发送包后又临时抓包但不返回到浏览器页面的功能）</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240915205435134.png"
+                      alt="image-20240915205435134"
+                ></p>
+<p>可以看到send后是一个302的请求，所以才会被重定向</p>
+<p>通过查询，还有另一种方式就是cmd命令里的curl命令</p>
+<p>在cmd中</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -v http://challenge-62083e00fdc21e52.sandbox.ctfhub.com:10800/index.php</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>注意是原本的网页.php</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240915205703202.png"
+                      alt="image-20240915205703202"
+                ></p>
+<p>然后就会返回原本的文件头，而不会被浏览器解析</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/u013514928/article/details/102810250" >curl命令用法 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p></div><div class="tab-pane" id="web前置技能-http协议-3"><h3 id="题目-Cookie"><a href="#题目-Cookie" class="headerlink" title="题目-Cookie"></a>题目-Cookie</h3>  <div class="note p-4 mb-4 rounded-small info">
+    <p>Cookie欺骗、认证、伪造</p>
+
+  </div>
+
+<p>打开靶场看到提示只有<code>admin</code>能够拿到flag，再根据题目是cookie的伪造，所以这道题从cookie下手</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916005118438.png"
+                      alt="image-20240916005118438"
+                ></p>
+<p>用BP抓包看看</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916005704097.png"
+                      alt="image-20240916005704097"
+                ></p>
+<p>很明显的看到cookie里面的admin为0，那把它改为1不就成了吗，恭喜，这道题你做出来了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916005755371.png"
+                      alt="image-20240916005755371"
+                ></p></div><div class="tab-pane" id="web前置技能-http协议-4"><h3 id="题目-基础认证"><a href="#题目-基础认证" class="headerlink" title="题目-基础认证"></a>题目-基础认证</h3>  <div class="note p-4 mb-4 rounded-small info">
+    <p>在HTTP中，基本认证（英语：Basic access authentication）是允许http用户代理（如：网页浏览器）在请求时，提供 用户名 和 密码 的一种方式。详情请查看 <a class="link"   target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/HTTP%E5%9F%BA%E6%9C%AC%E8%AE%A4%E8%AF%81" >https://zh.wikipedia.org/wiki/HTTP基本认证 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+
+  </div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916005910601.png"
+                      alt="image-20240916005910601"
+                ></p>
+<p>这道题给了我们一个附件，打开附件是一串字符，加上题目可以合理推测是用基础爆破来解题</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916010010509.png"
+                      alt="image-20240916010010509"
+                ></p>
+<p>打开靶场看到有链接，直接点开会，会弹出一个验证框叫我们输入账号密码</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916010021706.png"
+                      alt="image-20240916010021706"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916010747334.png"
+                      alt="image-20240916010747334"
+                ></p>
+<p>直接抓包看看</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916010522890.png"
+                      alt="image-20240916010522890"
+                ></p>
+<p>然后返回包的头部有提到admin用户，所以后续猜测使用admin用户进行爆破</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916020529442.png"
+                      alt="image-20240916020529442"
+                ></p>
+<p>里面有个<code>Authorization</code>，合理推断其值就是账号密码的加密形式，加密段的后面有<code>==</code>说明是<code>base64加密</code>，直接在线解密试试</p>
+<blockquote>
+<p>这里了解一下base64的加密规则，不够4个字节的用等号&#x3D;补充</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916010723083.png"
+                      alt="image-20240916010723083"
+                ></p>
+<p>和我输入的账号密码一样，那么我们就可以开始爆破了</p>
+<blockquote>
+<p>后面是关于BP软件的使用，如果没有用过的可以当提前预知，之后可以慢慢学，先做了解</p>
+</blockquote>
+<ul>
+<li>先把数据包发送到<code>intruder</code></li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916011224974.png"
+                      alt="image-20240916011224974"
+                ></p>
+<ul>
+<li>先clear工具默认的爆破点位</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916011343770.png"
+                      alt="image-20240916011343770"
+                ></p>
+<ul>
+<li>再选中字段添加爆破点</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916011438064.png"
+                      alt="image-20240916011438064"
+                ></p>
+<ul>
+<li><p>选择sniper攻击方式，因为我们只有一个攻击点，只有密码字典，合理猜测账号是<code>admin</code></p>
+<div class="note-large red">
+  <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
+    <p>BP攻击方式</p>
+
+  </div>
+  <div class="notel-content">
+    <p>Sniper 狙击手 – 只有一个攻击点</p></li>
+</ul>
+<p>Battering ram 攻城锤 – 两个攻击点，但传入的爆破参数相同</p>
+<p>Pitchfork 草叉 – 两个攻击点，传入两个爆破参数</p>
+<p>Cluster bomb 榴霰弹 – 具备前三种攻击方式，两个攻击点，爆破参数相互乘积即第二字典被反复使用或同一字典被反复使用（适合集中爆破–不清楚哪个该是密码还是账户）</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916012324649.png"
+                      alt="image-20240916012324649"
+                ></p>
+
+<pre><code>&lt;/div&gt;
+</code></pre>
+  </div>
+  
+<p>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916011533984.png"
+                      alt="image-20240916011533984"
+                ></p>
+<ul>
+<li>进入payloads页面传入字典</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916012520071.png"
+                      alt="image-20240916012520071"
+                ></p>
+<ul>
+<li><p>将密码的格式粘贴在这里</p>
+<details class="red" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>对于这个密码格式如何得到有多种方法 </summary>
+            <div class='content'>
+            <ol><li><p>用BP自带的功能，在<code>Payload Processing</code>的<code>Add</code>中的<code>Add Prefix</code>输入<code>admin:</code>，由于需要的是Base64加密，所以需要在下面对payload进行加密</p><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916021756299.png"
+                      alt="image-20240916021756299"
+                ></p><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916013852023.png"
+                      alt="image-20240916013852023"
+                ></p></li><li><p>用脚本直接一步到位，再复制到<code>paylaod settings</code></p><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;passwd.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">    lines = file.readlines()</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;base64.txt&#x27;</span>, <span class="string">&#x27;a&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        <span class="keyword">for</span> line <span class="keyword">in</span> lines:</span><br><span class="line">            line=base64.b64encode(line.encode()).decode()</span><br><span class="line">            f.write(<span class="string">f&#x27;<span class="subst">&#123;line&#125;</span>\n&#x27;</span>)</span><br></pre></td></tr></table></figure></div></li></ol>
+            </div>
+          </details>
+</li>
+<li><p>然后就可以开始爆破了</p>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916013923711.png"
+                      alt="image-20240916013923711"
+                ></p>
+<ul>
+<li>发现一个都跑不出来</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916014245240.png"
+                      alt="image-20240916014245240"
+                ></p>
+<blockquote>
+<p>网上有说是加密结果不能带有&#x3D;&#x3D;，其实并不是，只是因为在BP里面的&#x3D;会被转义而已，不要被误导了，不然你解一辈子都解不出来</p>
+<p>建议去看<a class="link"   target="_blank" rel="noopener" href="https://writeup.ctfhub.com/Skill/Web/Web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD/HTTP%E5%8D%8F%E8%AE%AE/3mSzAzbGydVT74nsq1gcVj.html" >官方的writeup <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，我是测试了半天最后去看官方的，真的服了网上的某些帖子了&#x3D;_&#x3D;</p>
+</blockquote>
+<ul>
+<li>需要关闭下面的<code>URL-encode</code>，不然你会看到 base64 之后的 <code>=</code> 会被转成 <code>%3d</code> ，你就算爆破到天荒地老也不会出来</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/10imageslim.png"
+                      alt="img"
+                ></p>
+<ul>
+<li>再次<code>Start Attack</code>后，按 <code>Status</code> 排序，看到状态码出现<code>200</code>，即爆破成功</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916020821868.png"
+                      alt="image-20240916020821868"
+                ></p>
+<ul>
+<li>可以看到下面正常返回了flag</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916020835063.png"
+                      alt="image-20240916020835063"
+                ></p></div><div class="tab-pane" id="web前置技能-http协议-5"><h3 id="题目-响应包源代码"><a href="#题目-响应包源代码" class="headerlink" title="题目-响应包源代码"></a>题目-响应包源代码</h3>  <div class="note p-4 mb-4 rounded-small info">
+    <p>HTTP响应包源代码查看</p>
+
+  </div>
+
+<p>打开靶场，根据题目要求我们查看源代码，靶场打开也是空白的，那就F12（ctrl+U）大法吧</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916022546590.png"
+                      alt="image-20240916022546590"
+                ></p>
+<p>然后就在源码里面很直白的告诉了你flag (๑•́ ₃•̀๑)  </p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916022716123.png"
+                      alt="image-20240916022716123"
+                ></p></div></div></div>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这一篇主要就是关于HTTP协议的几个点，从请求方式到网页响应码，再到cookie与加密认证，最后到网页源码，这些都是之后有可能遇到的小知识点，除了BP的使用可能比较困难，其他的确实算是入门级别的，继续加油吧，后面还有更有挑战性的题等着</p>
+
+  <div class="note p-4 mb-4 rounded-small red">
+    <p>不要放弃！！！有时候一道题做一天都有可能的！！！</p>
+
+  </div>
+
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.ctfhub.com/#/skilltree" >题目在这里 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>路径为web-&gt;web前置技能-&gt;HTTP协议</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> web前置技能-HTTP协议</li>
+        <li><strong>Author:</strong> ZJ</li>
+        <li><strong>Created at
+                :</strong> 2024-09-15 00:00:00</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2024-09-17 16:59:39
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://blog.overlordzj.cn/2024/09/15/ctf/writeup/web/ctfhub/web前置技能-HTTP协议/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/writeup/">#writeup</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/">#信息泄露</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+  <div class="recommended-article px-2 sm:px-6 md:px-8">
+   <div class="recommended-desktop">
+    <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>看看这些文章吧( ૢ⁼̴̤̆ ꇴ ⁼̴̤̆ ૢ)~ෆ</span>
+    </div>
+    <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/12/ctf/writeup/web/buuctf/BUU-BURP-COURSE-1/" title="BUU BURP COURSE 1" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="BUU BURP COURSE 1" class="!max-w-none">
+  <span class="title">BUU BURP COURSE 1</span>
+</a><a class="recommended-article-item" href="/2024/09/16/ctf/writeup/web/ctfhub/信息泄露-备份文件下载/" title="信息泄露-备份文件下载" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="信息泄露-备份文件下载" class="!max-w-none">
+  <span class="title">信息泄露-备份文件下载</span>
+</a><a class="recommended-article-item" href="/2024/09/12/ctf/writeup/web/buuctf/[极客大挑战2019]Http/" title="极客大挑战2019 Http" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="极客大挑战2019 Http" class="!max-w-none">
+  <span class="title">极客大挑战2019 Http</span>
+</a></div>
+   </div>
+   <div class="recommended-mobile">
+   <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>看看这些文章吧( ૢ⁼̴̤̆ ꇴ ⁼̴̤̆ ૢ)~ෆ</span>
+   </div>
+   <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/12/ctf/writeup/web/buuctf/BUU-BURP-COURSE-1/" title="BUU BURP COURSE 1" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="BUU BURP COURSE 1" class="!max-w-none">
+  <span class="title">BUU BURP COURSE 1</span>
+</a><a class="recommended-article-item" href="/2024/09/16/ctf/writeup/web/ctfhub/信息泄露-备份文件下载/" title="信息泄露-备份文件下载" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="信息泄露-备份文件下载" class="!max-w-none">
+  <span class="title">信息泄露-备份文件下载</span>
+</a><a class="recommended-article-item" href="/2024/09/12/ctf/writeup/web/buuctf/[极客大挑战2019]Http/" title="极客大挑战2019 Http" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="极客大挑战2019 Http" class="!max-w-none">
+  <span class="title">极客大挑战2019 Http</span>
+</a></div>
+   </div>
+  </div>
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2024/09/16/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">信息泄露-备份文件下载</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/09/14/ctf/data/web/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E5%8D%9A%E5%AE%A2%E6%96%87%E6%8E%A8%E8%8D%90/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">web安全学习资料博客文推荐</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        Comments
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://blogcomment.overlordzj.cn',
+          lang: 'zh-CN',
+          dark: 'body[class~="dark-mode"]',
+          reaction: true,
+          requiredMeta: ['nick', 'mail'],
+          emoji: ['//unpkg.com/@waline/emojis@1.2.0/qq'],
+          recaptchaV3Key: "wasd",
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">web前置技能-HTTP协议</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE"><span class="nav-text">web前置技能-HTTP协议</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-text">题目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE-%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F"><span class="nav-text">题目-请求方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE-302%E8%B7%B3%E8%BD%AC"><span class="nav-text">题目-302跳转</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE-Cookie"><span class="nav-text">题目-Cookie</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E8%AE%A4%E8%AF%81"><span class="nav-text">题目-基础认证</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE-%E5%93%8D%E5%BA%94%E5%8C%85%E6%BA%90%E4%BB%A3%E7%A0%81"><span class="nav-text">题目-响应包源代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-solid fa-sync fa-spin" style="color: #f54545"></i>&nbsp;&nbsp;<a href="/">ZJ</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        32 posts in total
+                    </span>
+                    
+                        <span>
+                            18.6k words in total
+                        </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.7.1</a></span>
+        </div>
+        
+            <div class="icp-info my-1"><a target="_blank" rel="nofollow" href="
+                
+                    http://beian.miit.gov.cn
+                
+                ">蜀ICP备2024084968号</a></div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+            <li class="right-bottom-tools tool-aplayer flex justify-center items-center">
+
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/Swup.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/SwupSlideTheme.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/SwupScriptsPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/SwupProgressPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/SwupScrollPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/SwupPreloadPlugin.min.js"></script>
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+<script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/tools/imageViewer.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/utils.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/main.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/layouts/navbarShrink.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/tools/scrollTopBottom.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/tools/lightDarkSwitch.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/layouts/categoryList.js"></script>
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/tools/localSearch.js"></script>
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/tools/codeBlock.js"></script>
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/layouts/lazyload.js"></script>
+
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/tools/runtime.js"></script>
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/odometer.min.js"></script>
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/assets/odometer-theme-minimal.css">
+
+
+
+  <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/Typed.min.js"></script>
+  <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/plugins/typed.js"></script>
+
+
+
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/minimasonry.min.js"></script>
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/plugins/masonry.js"></script>
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/tools/tocToggle.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/layouts/toc.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/plugins/tabs.js"></script>
+    
+</div>
+
+
+    <div id="aplayer"></div>
+<script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/APlayer.min.js"></script>
+<script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/plugins/aplayer.js"></script>
+
+</body>
+</html>

@@ -19,28 +19,18 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://blog.overlordzj.cn/2024/09/14/ctf/writeup/web/做题思路及方法/"/>
+    <link rel="canonical" href="https://blog.overlordzj.cn/archives/page/4/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="做题思路及方法思路 首先拿到题目，先看题目上是否有提示说明这个是关于哪一方面的，如果有，就针对这一方面进行测试和做题  例如这种题目上有明显提示的，就根据提示来下手   如果题目中没有给出细节，只给了一个页面网址，那么就要根据页面中的信息来了   例如这种的题目，就什么都没有，靶场点开就是一个页面的  先F12大法（ctrl+U也可以），查看有没有可以利用的信息 如果没有信息，再扫描目录文件">
-<meta property="og:type" content="article">
-<meta property="og:title" content="web安全的做题思路及方法">
-<meta property="og:url" content="https://blog.overlordzj.cn/2024/09/14/ctf/writeup/web/%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF%E5%8F%8A%E6%96%B9%E6%B3%95/index.html">
+        <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://blog.overlordzj.cn/archives/page/4/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="做题思路及方法思路 首先拿到题目，先看题目上是否有提示说明这个是关于哪一方面的，如果有，就针对这一方面进行测试和做题  例如这种题目上有明显提示的，就根据提示来下手   如果题目中没有给出细节，只给了一个页面网址，那么就要根据页面中的信息来了   例如这种的题目，就什么都没有，靶场点开就是一个页面的  先F12大法（ctrl+U也可以），查看有没有可以利用的信息 如果没有信息，再扫描目录文件">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF%E5%8F%8A%E6%96%B9%E6%B3%95/image-20240914164659161.png">
-<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF%E5%8F%8A%E6%96%B9%E6%B3%95/image-20240914164903900.png">
-<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF%E5%8F%8A%E6%96%B9%E6%B3%95/image-20240914164924736.png">
-<meta property="article:published_time" content="2024-09-13T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-09-14T10:32:50.629Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="writeup">
-<meta property="article:tag" content="总结">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://blog.overlordzj.cn/images/%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF%E5%8F%8A%E6%96%B9%E6%B3%95/image-20240914164659161.png">
     
     
     <!--- Icon Part-->
@@ -52,7 +42,7 @@
     
     <title>
         
-            web安全的做题思路及方法 -
+            Archive -
         
         Overlord Blog
     </title>
@@ -311,7 +301,7 @@
 
                             <li class="navbar-item">
                                 <!-- Menu -->
-                                <a class=""
+                                <a class="active"
                                    href="/archives"
                                         >
                                     <i class="fa-regular fa-archive fa-fw"></i>
@@ -451,7 +441,7 @@
 
                     <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
                         
-                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
                            href="/archives"
                         >
                             <span>
@@ -584,11 +574,11 @@
         <div class="label text-third-text-color text-sm">Tags</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">15</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">18</div>
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">29</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">32</div>
         <div class="label text-third-text-color text-sm">Posts</div>
     </a>
 </div>
@@ -608,343 +598,292 @@
             <div class="main-content">
 
                 
-                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
-    <div class="article-content-container">
-
-        <div class="article-title relative w-full">
-            
-                <div class="w-full flex items-center pt-6 justify-start">
-                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">web安全的做题思路及方法</h1>
-                </div>
-            
+                    <div class="archive-container shadow-none hover:shadow-none sm:shadow-redefine sm:hover:shadow-redefine-hover">
+    
+<div class="archive-list-container">
+    
+        <section class="archive-item mb-spacing-unit last:mb-0">
+            <div class="archive-item-header flex flex-row items-center mb-2">
+                <span class="archive-year font-semibold text-3xl mr-2">2024</span>
+                <span class="archive-year-post-count text-xs md:text-sm font-bold rounded-small bg-third-background-color py-[2px] px-[10px] border border-border-color">32</span>
             </div>
-
-        
-            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
-                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
-                    <img src="/images/overlord.jpeg">
-                </div>
-                <div class="info flex flex-col justify-between">
-                    <div class="author flex items-center">
-                        <span class="name text-default-text-color text-lg font-semibold">ZJ</span>
-                        
-                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv100</span>
-                        
-                    </div>
-                    <div class="meta-info">
-                        <div class="article-meta-info">
-    <span class="article-date article-meta-item">
-        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2024-09-14</span>
-        <span class="mobile">2024-09-14</span>
-        <span class="hover-info">Created</span>
-    </span>
-    
-        <span class="article-date article-meta-item">
-            <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-09-14 18:32:50</span>
-            <span class="mobile">2024-09-14 18:32:50</span>
-            <span class="hover-info">Updated</span>
-        </span>
-    
-
-    
-        <span class="article-categories article-meta-item">
-            <i class="fa-regular fa-folders"></i>&nbsp;
-            <ul>
-                
+            
+            <ul class="article-list pl-0 md:pl-8 text-lg leading-[1.5]">
                 
                     
-                        
-                        <li>
-                            <a href="/categories/ctf/">ctf</a>&nbsp;
-                        </li>
                     
+                         <!-- Close the previous LI if not the first item -->
+                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='09-17'>
+                    
+                    <a href="/2024/09/17/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-HG%E6%B3%84%E9%9C%B2/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">信息泄露-HG泄露</span>
+                    </a>
                     
                 
                     
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/ctf/writeup/">writeup</a>&nbsp;
-                        </li>
                     
+                        
+                            </li>
+                         <!-- Close the previous LI if not the first item -->
+                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='09-16'>
+                    
+                    <a href="/2024/09/16/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">信息泄露-备份文件下载</span>
+                    </a>
                     
                 
                     
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/ctf/writeup/web/">web</a>&nbsp;
-                        </li>
                     
+                        
+                            </li>
+                         <!-- Close the previous LI if not the first item -->
+                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='09-15'>
+                    
+                    <a href="/2024/09/15/ctf/writeup/web/ctfhub/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">web前置技能-HTTP协议</span>
+                    </a>
                     
                 
+                    
+                    
+                        
+                            </li>
+                         <!-- Close the previous LI if not the first item -->
+                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='09-14'>
+                    
+                    <a href="/2024/09/14/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">信息泄露-目录遍历</span>
+                    </a>
+                    
+                
+                    
+                    
+                    <a href="/2024/09/14/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-PHPINFO/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">信息泄露-PHPINFO</span>
+                    </a>
+                    
+                
+                    
+                    
+                    <a href="/2024/09/14/ctf/writeup/web/buuctf/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">BJDCTF2020 ZJCTF，不过如此*</span>
+                    </a>
+                    
+                
+                    
+                    
+                    <a href="/2024/09/14/ctf/writeup/web/ctfhub/RCE-eval%E6%89%A7%E8%A1%8C/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">RCE-eval执行</span>
+                    </a>
+                    
+                
+                    
+                    
+                    <a href="/2024/09/14/ctf/writeup/web/%E7%9B%AE%E5%BD%95/%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF%E5%8F%8A%E6%96%B9%E6%B3%95/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">web安全的做题思路及方法</span>
+                    </a>
+                    
+                
+                    
+                    
+                    <a href="/2024/09/14/ctf/data/web/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E5%8D%9A%E5%AE%A2%E6%96%87%E6%8E%A8%E8%8D%90/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">web安全学习资料博客文推荐</span>
+                    </a>
+                    
+                
+                    
+                    
+                        
+                            </li>
+                         <!-- Close the previous LI if not the first item -->
+                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='09-13'>
+                    
+                    <a href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/centos-linux/Tab%E9%94%AE%E8%AE%BE%E7%BD%AE/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">Linux系统Tab键相关设置</span>
+                    </a>
+                    
+                
+                    
+                    
+                    <a href="/2024/09/13/ctf/writeup/web/buuctf/%5BBJDCTF2020%5DMark-loves-cat/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">BJDCTF2020 Mark-loves-cat*</span>
+                    </a>
+                    
+                
+                    
+                    
+                    <a href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/IP%E9%85%8D%E7%BD%AE/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">kali的IP配置</span>
+                    </a>
+                    
+                
+                    
+                    
+                    <a href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/pip2%E5%AE%89%E8%A3%85/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">kali环境下的pip2安装</span>
+                    </a>
+                    
+                
+                    
+                    
+                    <a href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">msf与cs派生会话</span>
+                    </a>
+                    
+                
+                    
+                    
+                    <a href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/windows/%E4%BF%AE%E6%94%B9SID/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">windows系统修改系统SID</span>
+                    </a>
+                    
+                
+                    
+                    
+                    <a href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/windows/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E7%A8%8B%E5%BA%8F/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">windows系统右键菜单栏自定义添加程序</span>
+                    </a>
+                    
+                
+                    
+                    
+                    <a href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/windows/powershell%E8%BF%90%E8%A1%8C%E7%AD%96%E7%95%A5/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">windows系统powershell脚本运行策略</span>
+                    </a>
+                    
+                
+                    
+                    
+                        
+                            </li>
+                         <!-- Close the previous LI if not the first item -->
+                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='09-12'>
+                    
+                    <a href="/2024/09/12/%E5%88%87%E6%8D%A2%E5%9B%BD%E5%86%85%E7%BD%91%E9%A1%B5/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">Blog网络不稳定访问方法</span>
+                    </a>
+                    
+                
+                    
+                    
+                    <a href="/2024/09/12/ctf/writeup/web/buuctf/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%982019%5DHttp/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">极客大挑战2019 Http</span>
+                    </a>
+                    
+                
+                    
+                    
+                    <a href="/2024/09/12/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">信息泄露-Git泄露</span>
+                    </a>
+                    
+                
+                    
+                    
+                    <a href="/2024/09/12/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-SVN%E6%B3%84%E9%9C%B2/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">信息泄露-SVN泄露</span>
+                    </a>
+                    
+                
+                    
+                    
+                    <a href="/2024/09/12/ctf/writeup/web/buuctf/BUU-BURP-COURSE-1/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">BUU BURP COURSE 1</span>
+                    </a>
+                    
+                
+                    
+                    
+                    <a href="/2024/09/12/ctf/data/another/%E7%AB%9E%E8%B5%9B%E6%A8%A1%E5%BC%8F/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">CTF竞赛模式</span>
+                    </a>
+                    
+                
+                    
+                    
+                    <a href="/2024/09/12/ctf/writeup/web/%E7%9B%AE%E5%BD%95/catalogue/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">web安全目录</span>
+                    </a>
+                    
+                
+                    
+                    
+                    <a href="/2024/09/12/ctf/writeup/web/buuctf/%5Bweb%E5%85%A5%E9%97%A8%5D%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8F%E6%9D%8E/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">web入门-粗心的小李</span>
+                    </a>
+                    
+                
+                    
+                    
+                    <a href="/2024/09/12/ctf/writeup/%E7%9B%AE%E5%BD%95/writeup/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">WriteUp</span>
+                    </a>
+                    
+                
+                    
+                    
+                        
+                            </li>
+                         <!-- Close the previous LI if not the first item -->
+                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='09-11'>
+                    
+                    <a href="/2024/09/11/C%E8%AF%AD%E8%A8%80/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%B0%8F%E6%8A%80%E5%B7%A7/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">C语言的一些代码小技巧</span>
+                    </a>
+                    
+                
+                    
+                    
+                        
+                            </li>
+                         <!-- Close the previous LI if not the first item -->
+                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='09-10'>
+                    
+                    <a href="/2024/09/10/%E5%A4%87%E5%BF%98%E5%BD%95/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">云服务器</span>
+                    </a>
+                    
+                
+                    
+                    
+                    <a href="/2024/09/10/C%E8%AF%AD%E8%A8%80/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">关于C语言学习的部分遗漏问题解答</span>
+                    </a>
+                    
+                
+                    
+                    
+                        
+                            </li>
+                         <!-- Close the previous LI if not the first item -->
+                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='09-09'>
+                    
+                    <a href="/2024/09/09/example/%E6%B5%8B%E8%AF%95%E6%97%B6%E6%95%88%E6%80%A7/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">测试文章时效性</span>
+                    </a>
+                    
+                
+                    
+                    
+                    <a href="/2024/09/09/example/test-passwd/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">测试密码访问</span>
+                    </a>
+                    
+                
+                    
+                    
+                    <a href="/2024/09/09/example/hello-world/" class="block w-fit">
+                        <span class="article-title my-0.5 text-2xl">Hello World</span>
+                    </a>
+                    
+                
+                </li> <!-- Ensure the last item is properly closed -->
             </ul>
-        </span>
-    
-    
-        <span class="article-tags article-meta-item">
-            <i class="fa-regular fa-tags"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/tags/writeup/">writeup</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        | <a href="/tags/%E6%80%BB%E7%BB%93/">总结</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
-    
-
-    
-    
-        <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>167 Words</span>
-        </span>
-    
-    
-        <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
-        </span>
-    
-    
-        <span class="article-pv article-meta-item">
-            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
-        </span>
+        </section>
     
 </div>
 
-                    </div>
-                </div>
-            </div>
-        
-
-        
-
-
-        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h1 id="做题思路及方法"><a href="#做题思路及方法" class="headerlink" title="做题思路及方法"></a>做题思路及方法</h1><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ol>
-<li><h3 id="首先拿到题目，先看题目上是否有提示说明这个是关于哪一方面的，如果有，就针对这一方面进行测试和做题"><a href="#首先拿到题目，先看题目上是否有提示说明这个是关于哪一方面的，如果有，就针对这一方面进行测试和做题" class="headerlink" title="首先拿到题目，先看题目上是否有提示说明这个是关于哪一方面的，如果有，就针对这一方面进行测试和做题"></a>首先拿到题目，先看题目上是否有提示说明这个是关于哪一方面的，如果有，就针对这一方面进行测试和做题</h3><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../../images/%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF%E5%8F%8A%E6%96%B9%E6%B3%95/image-20240914164659161.png"
-                      alt="image-20240914164659161"
-                ></p>
-<ul>
-<li>例如这种题目上有明显提示的，就根据提示来下手</li>
-</ul>
-</li>
-<li><h3 id="如果题目中没有给出细节，只给了一个页面网址，那么就要根据页面中的信息来了"><a href="#如果题目中没有给出细节，只给了一个页面网址，那么就要根据页面中的信息来了" class="headerlink" title="如果题目中没有给出细节，只给了一个页面网址，那么就要根据页面中的信息来了"></a>如果题目中没有给出细节，只给了一个页面网址，那么就要根据页面中的信息来了</h3><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../../images/%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF%E5%8F%8A%E6%96%B9%E6%B3%95/image-20240914164903900.png"
-                      alt="image-20240914164903900"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../../images/%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF%E5%8F%8A%E6%96%B9%E6%B3%95/image-20240914164924736.png"
-                      alt="image-20240914164924736"
-                ></p>
-<ul>
-<li><p>例如这种的题目，就什么都没有，靶场点开就是一个页面的</p>
-<ul>
-<li>先F12大法（ctrl+U也可以），查看有没有可以利用的信息</li>
-<li>如果没有信息，再扫描目录文件</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-
-        </div>
-
-        
-            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
-                <div class="article-copyright-info-container">
-    <ul>
-        <li><strong>Title:</strong> web安全的做题思路及方法</li>
-        <li><strong>Author:</strong> ZJ</li>
-        <li><strong>Created at
-                :</strong> 2024-09-14 00:00:00</li>
-        
-            <li>
-                <strong>Updated at
-                    :</strong> 2024-09-14 18:32:50
-            </li>
-        
-        <li>
-            <strong>Link:</strong> https://blog.overlordzj.cn/2024/09/14/ctf/writeup/web/做题思路及方法/
-        </li>
-        <li>
-            <strong>
-                License:
-            </strong>
-            
-
-            
-                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
-            
-        </li>
-    </ul>
 </div>
-
-            </div>
-        
-
-        
-            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
-                
-                    <li class="tag-item mx-0.5">
-                        <a href="/tags/writeup/">#writeup</a>&nbsp;
-                    </li>
-                
-                    <li class="tag-item mx-0.5">
-                        <a href="/tags/%E6%80%BB%E7%BB%93/">#总结</a>&nbsp;
-                    </li>
-                
-            </ul>
-        
-
-        
-  <div class="recommended-article px-2 sm:px-6 md:px-8">
-   <div class="recommended-desktop">
-    <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
-     <i aria-hidden="true"></i><span>看看这些文章吧( ૢ⁼̴̤̆ ꇴ ⁼̴̤̆ ૢ)~ෆ</span>
-    </div>
-    <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/12/ctf/writeup/web/ctfhub/信息泄露-Git泄露/" title="信息泄露-Git泄露-Log" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="信息泄露-Git泄露-Log" class="!max-w-none">
-  <span class="title">信息泄露-Git泄露-Log</span>
-</a><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/ctfhub/信息泄露-PHPINFO/" title="信息泄露-PHPINFO" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="信息泄露-PHPINFO" class="!max-w-none">
-  <span class="title">信息泄露-PHPINFO</span>
-</a><a class="recommended-article-item" href="/2024/09/14/ctf/data/web/学习资料博客文推荐/" title="web安全学习资料博客文推荐" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="web安全学习资料博客文推荐" class="!max-w-none">
-  <span class="title">web安全学习资料博客文推荐</span>
-</a></div>
-   </div>
-   <div class="recommended-mobile">
-   <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
-     <i aria-hidden="true"></i><span>看看这些文章吧( ૢ⁼̴̤̆ ꇴ ⁼̴̤̆ ૢ)~ෆ</span>
-   </div>
-   <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/12/ctf/writeup/web/ctfhub/信息泄露-Git泄露/" title="信息泄露-Git泄露-Log" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="信息泄露-Git泄露-Log" class="!max-w-none">
-  <span class="title">信息泄露-Git泄露-Log</span>
-</a><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/ctfhub/信息泄露-PHPINFO/" title="信息泄露-PHPINFO" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="信息泄露-PHPINFO" class="!max-w-none">
-  <span class="title">信息泄露-PHPINFO</span>
-</a><a class="recommended-article-item" href="/2024/09/14/ctf/data/web/学习资料博客文推荐/" title="web安全学习资料博客文推荐" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="web安全学习资料博客文推荐" class="!max-w-none">
-  <span class="title">web安全学习资料博客文推荐</span>
-</a></div>
-   </div>
-  </div>
-
-        
-            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
-                
-                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-                        <a class="prev"
-                        rel="prev"
-                        href="/2024/09/14/ctf/data/web/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E5%8D%9A%E5%AE%A2%E6%96%87%E6%8E%A8%E8%8D%90/"
-                        >
-                            <span class="left arrow-icon flex justify-center items-center">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">web安全学习资料博客文推荐</span>
-                                <span class="post-nav-item">Prev posts</span>
-                            </span>
-                        </a>
-                    </div>
-                
-                
-                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-                        <a class="next"
-                        rel="next"
-                        href="/2024/09/14/ctf/writeup/web/buuctf/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/"
-                        >
-                            <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">BJDCTF2020 ZJCTF，不过如此*</span>
-                                <span class="post-nav-item">Next posts</span>
-                            </span>
-                            <span class="right arrow-icon flex justify-center items-center">
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </span>
-                        </a>
-                    </div>
-                
-            </div>
-        
-
-
-        
-            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
-                <div class="comments-container mt-10 w-full ">
-    <div id="comment-anchor" class="w-full h-2.5"></div>
-    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
-        Comments
-    </div>
-    
-
-        
-            
-    <div id="waline"></div>
-    <script type="module" data-swup-reload-script>
-      import { init } from '/js/libs/waline.mjs';
-
-      function loadWaline() {
-        init({
-          el: '#waline',
-          serverURL: 'https://blogcomment.overlordzj.cn',
-          lang: 'zh-CN',
-          dark: 'body[class~="dark-mode"]',
-          reaction: true,
-          requiredMeta: ['nick', 'mail'],
-          emoji: ['//unpkg.com/@waline/emojis@1.2.0/qq'],
-          recaptchaV3Key: "wasd",
-          
-        });
-      }
-
-      if (typeof swup !== 'undefined') {
-        loadWaline();
-      } else {
-        window.addEventListener('DOMContentLoaded', loadWaline);
-      }
-    </script>
-
-
-
-        
-    
-</div>
-
-            </div>
-        
-    </div>
-
-    
-        <div class="toc-content-container">
-            <div class="post-toc-wrap">
-    <div class="post-toc">
-        <div class="toc-title">On this page</div>
-        <div class="page-title">web安全的做题思路及方法</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF%E5%8F%8A%E6%96%B9%E6%B3%95"><span class="nav-text">做题思路及方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-text">思路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A6%96%E5%85%88%E6%8B%BF%E5%88%B0%E9%A2%98%E7%9B%AE%EF%BC%8C%E5%85%88%E7%9C%8B%E9%A2%98%E7%9B%AE%E4%B8%8A%E6%98%AF%E5%90%A6%E6%9C%89%E6%8F%90%E7%A4%BA%E8%AF%B4%E6%98%8E%E8%BF%99%E4%B8%AA%E6%98%AF%E5%85%B3%E4%BA%8E%E5%93%AA%E4%B8%80%E6%96%B9%E9%9D%A2%E7%9A%84%EF%BC%8C%E5%A6%82%E6%9E%9C%E6%9C%89%EF%BC%8C%E5%B0%B1%E9%92%88%E5%AF%B9%E8%BF%99%E4%B8%80%E6%96%B9%E9%9D%A2%E8%BF%9B%E8%A1%8C%E6%B5%8B%E8%AF%95%E5%92%8C%E5%81%9A%E9%A2%98"><span class="nav-text">首先拿到题目，先看题目上是否有提示说明这个是关于哪一方面的，如果有，就针对这一方面进行测试和做题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E6%9E%9C%E9%A2%98%E7%9B%AE%E4%B8%AD%E6%B2%A1%E6%9C%89%E7%BB%99%E5%87%BA%E7%BB%86%E8%8A%82%EF%BC%8C%E5%8F%AA%E7%BB%99%E4%BA%86%E4%B8%80%E4%B8%AA%E9%A1%B5%E9%9D%A2%E7%BD%91%E5%9D%80%EF%BC%8C%E9%82%A3%E4%B9%88%E5%B0%B1%E8%A6%81%E6%A0%B9%E6%8D%AE%E9%A1%B5%E9%9D%A2%E4%B8%AD%E7%9A%84%E4%BF%A1%E6%81%AF%E6%9D%A5%E4%BA%86"><span class="nav-text">如果题目中没有给出细节，只给了一个页面网址，那么就要根据页面中的信息来了</span></a></li></ol></li></ol></li></ol>
-
-    </div>
-</div>
-        </div>
-    
-</div>
-
-
 
                 
 
@@ -969,11 +908,11 @@
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        29 posts in total
+                        32 posts in total
                     </span>
                     
                         <span>
-                            15.1k words in total
+                            18.6k words in total
                         </span>
                     
                 </p>
@@ -1036,27 +975,6 @@
         </div>
     </div>
 
-    
-        <div class="post-tools">
-            <div class="post-tools-container">
-    <ul class="article-tools-list">
-        <!-- TOC aside toggle -->
-        
-            <li class="right-bottom-tools page-aside-toggle">
-                <i class="fa-regular fa-outdent"></i>
-            </li>
-        
-
-        <!-- go comment -->
-        
-            <li class="go-comment">
-                <i class="fa-regular fa-comments"></i>
-            </li>
-        
-    </ul>
-</div>
-
-        </div>
     
 
     <div class="right-side-tools-container">

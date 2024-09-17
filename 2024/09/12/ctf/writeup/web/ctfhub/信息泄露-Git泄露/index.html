@@ -24,12 +24,12 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="信息泄露-Git泄露前言出自CTFHUB 练习场，比较官方的一个大型练习靶场 题目-Log当前大量开发人员使用git进行版本控制，对站点自动部署。如果配置不当,可能会将.git文件夹直接部署到线上环境。这就引起了git泄露漏洞。请尝试使用BugScanTeam的GitHack完成本题。 根据题目提示，提前准备工具需要用到GitHack  打开靶场，页面上很空白，根据题目进行.git文件泄露的恢复操">
+        <meta name="description" content="信息泄露-Git泄露前言出自CTFHUB 练习场，比较官方的一个大型练习靶场 题目题目-Log题目-Stash题目-Index题目-Log       当前大量开发人员使用git进行版本控制，对站点自动部署。如果配置不当,可能会将.git文件夹直接部署到线上环境。这就引起了git泄露漏洞。请尝试使用BugScanTeam的GitHack完成本题。      根据题目提示，提前准备工具需要用到Git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="信息泄露-Git泄露-Log">
+<meta property="og:title" content="信息泄露-Git泄露">
 <meta property="og:url" content="https://blog.overlordzj.cn/2024/09/12/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="信息泄露-Git泄露前言出自CTFHUB 练习场，比较官方的一个大型练习靶场 题目-Log当前大量开发人员使用git进行版本控制，对站点自动部署。如果配置不当,可能会将.git文件夹直接部署到线上环境。这就引起了git泄露漏洞。请尝试使用BugScanTeam的GitHack完成本题。 根据题目提示，提前准备工具需要用到GitHack  打开靶场，页面上很空白，根据题目进行.git文件泄露的恢复操">
+<meta property="og:description" content="信息泄露-Git泄露前言出自CTFHUB 练习场，比较官方的一个大型练习靶场 题目题目-Log题目-Stash题目-Index题目-Log       当前大量开发人员使用git进行版本控制，对站点自动部署。如果配置不当,可能会将.git文件夹直接部署到线上环境。这就引起了git泄露漏洞。请尝试使用BugScanTeam的GitHack完成本题。      根据题目提示，提前准备工具需要用到Git">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2-Log/image-20240912213108044.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2-Log/image-20240912213235037.png">
@@ -41,8 +41,11 @@
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2-Log/image-20240912220043425.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2-Log/image-20240912220103402.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2-Log/image-20240912220806774.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2/image-20240917180019024.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2/image-20240917180115597.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2/image-20240917180700233.png">
 <meta property="article:published_time" content="2024-09-11T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-09-14T14:36:58.018Z">
+<meta property="article:modified_time" content="2024-09-17T10:08:48.591Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="writeup">
 <meta property="article:tag" content="信息泄露">
@@ -59,7 +62,7 @@
     
     <title>
         
-            信息泄露-Git泄露-Log -
+            信息泄露-Git泄露 -
         
         Overlord Blog
     </title>
@@ -591,11 +594,11 @@
         <div class="label text-third-text-color text-sm">Tags</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">15</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">18</div>
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">29</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">32</div>
         <div class="label text-third-text-color text-sm">Posts</div>
     </a>
 </div>
@@ -621,7 +624,7 @@
         <div class="article-title relative w-full">
             
                 <div class="w-full flex items-center pt-6 justify-start">
-                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">信息泄露-Git泄露-Log</h1>
+                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">信息泄露-Git泄露</h1>
                 </div>
             
             </div>
@@ -649,8 +652,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-09-14 22:36:58</span>
-            <span class="mobile">2024-09-14 22:36:58</span>
+            <span class="desktop">2024-09-17 18:08:48</span>
+            <span class="mobile">2024-09-17 18:08:48</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -722,12 +725,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>564 Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>838 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>3 Mins</span>
         </span>
     
     
@@ -747,7 +750,11 @@
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
             <h1 id="信息泄露-Git泄露"><a href="#信息泄露-Git泄露" class="headerlink" title="信息泄露-Git泄露"></a>信息泄露-Git泄露</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>出自<a class="link"   target="_blank" rel="noopener" href="https://www.ctfhub.com/" >CTFHUB <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>练习场，比较官方的一个大型练习靶场</p>
-<h2 id="题目-Log"><a href="#题目-Log" class="headerlink" title="题目-Log"></a>题目-Log</h2><p>当前大量开发人员使用git进行版本控制，对站点自动部署。如果配置不当,可能会将.git文件夹直接部署到线上环境。这就引起了git泄露漏洞。请尝试使用BugScanTeam的GitHack完成本题。</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><div class="tabs" id="tab-信息泄露-git泄露"><ul class="nav-tabs"><li class="tab active"><a class="#信息泄露-git泄露-1">题目-Log</a></li><li class="tab"><a class="#信息泄露-git泄露-2">题目-Stash</a></li><li class="tab"><a class="#信息泄露-git泄露-3">题目-Index</a></li></ul><div class="tab-content"><div class="tab-pane active" id="信息泄露-git泄露-1"><h3 id="题目-Log"><a href="#题目-Log" class="headerlink" title="题目-Log"></a>题目-Log</h3>  <div class="note p-4 mb-4 rounded-small info">
+    <p>当前大量开发人员使用git进行版本控制，对站点自动部署。如果配置不当,可能会将.git文件夹直接部署到线上环境。这就引起了git泄露漏洞。请尝试使用BugScanTeam的GitHack完成本题。</p>
+
+  </div>
+
 <p>根据题目提示，提前准备工具需要用到<a class="link"   target="_blank" rel="noopener" href="https://github.com/BugScanTeam/GitHack" >GitHack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <p>打开靶场，页面上很空白，根据题目进行.git文件泄露的恢复操作</p>
 <p><img  
@@ -764,7 +771,7 @@
                       alt="image-20240912213235037"
                 ></p>
 <p>接下来用网站目录扫描工具，这里用的<a class="link"   target="_blank" rel="noopener" href="https://github.com/maurosoria/dirsearch" >dirsearch <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（可以用御剑等等）</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python dirsearch.py -u 目标地址</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python dirsearch.py -u 目标地址</span><br></pre></td></tr></table></figure></div>
 
 <p><img  
                      lazyload
@@ -798,7 +805,7 @@
 <p><a class="link"   target="_blank" rel="noopener" href="https://github.com/lijiejie/GitHack" >https://github.com/lijiejie/GitHack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 用于python3，但恢复效果一般</p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://github.com/BugScanTeam/GitHack" >https://github.com/BugScanTeam/GitHack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 用于python2，效果不错</p>
 </blockquote>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python2 GitHack.py 目标地址/.git</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python2 GitHack.py 目标地址/.git</span><br></pre></td></tr></table></figure></div>
 
 <p><img  
                      lazyload
@@ -830,8 +837,51 @@
                      data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2-Log/image-20240912220806774.png"
                       alt="image-20240912220806774"
                 ></p>
-<p>最终我们通过.git文件泄露，回退版本得到了flag</p>
-<h2 id="题目-Stash"><a href="#题目-Stash" class="headerlink" title="题目-Stash"></a>题目-Stash</h2><h2 id="题目-Index"><a href="#题目-Index" class="headerlink" title="题目-Index"></a>题目-Index</h2><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>做题时要根据题目来做题，半做半猜，不要盲目乱入手</p>
+<p>最终我们通过.git文件泄露，回退版本得到了flag</p></div><div class="tab-pane" id="信息泄露-git泄露-2"><h3 id="题目-Stash"><a href="#题目-Stash" class="headerlink" title="题目-Stash"></a>题目-Stash</h3>  <div class="note p-4 mb-4 rounded-small info">
+    <p>当前大量开发人员使用git进行版本控制，对站点自动部署。如果配置不当,可能会将.git文件夹直接部署到线上环境。这就引起了git泄露漏洞。请尝试使用<code>BugScanTeam的GitHack</code>完成本题</p>
+
+  </div>
+
+<p>与log文件的恢复相同，仅有一点变化</p>
+<p>打开靶场，用工具<a class="link"   target="_blank" rel="noopener" href="https://github.com/BugScanTeam/GitHack" >GitHack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>进行.git文件恢复</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python2 GitHack.py http://你的靶场地址/.git</span><br></pre></td></tr></table></figure></div>
+
+<p>进入dist内生成的文件，输入</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git stash list</span><br><span class="line">git stash pop</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2/image-20240917180019024.png"
+                      alt="image-20240917180019024"
+                ></p>
+<p>成功恢复一个<code>.txt</code>文件，打开就可以得到<code>flag</code>了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2/image-20240917180115597.png"
+                      alt="image-20240917180115597"
+                ></p></div><div class="tab-pane" id="信息泄露-git泄露-3"><h3 id="题目-Index"><a href="#题目-Index" class="headerlink" title="题目-Index"></a>题目-Index</h3>  <div class="note p-4 mb-4 rounded-small info">
+    <p>当前大量开发人员使用git进行版本控制，对站点自动部署。如果配置不当,可能会将.git文件夹直接部署到线上环境。这就引起了git泄露漏洞。请尝试使用<code>BugScanTeam的GitHack</code>完成本题</p>
+
+  </div>
+
+<p>与前面也是一样的</p>
+<p>打开靶场，用工具<a class="link"   target="_blank" rel="noopener" href="https://github.com/BugScanTeam/GitHack" >GitHack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>进行.git文件恢复</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python2 GitHack.py http://你的靶场地址/.git</span><br></pre></td></tr></table></figure></div>
+
+<p>恢复后进入文件夹直接</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git show</span><br></pre></td></tr></table></figure></div>
+
+<p>flag就出来了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2/image-20240917180700233.png"
+                      alt="image-20240917180700233"
+                ></p></div></div></div>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>做题时要根据题目来做题，半做半猜，不要盲目乱入手</p>
 <p>在实际做题时会遇到各种坑，需要多花耐心慢慢琢磨（由于本人也是新手，也花了好些时间搞这节。。。）</p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://www.ctfhub.com/#/skilltree" >题目在这里 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>路径为web-&gt;信息泄露-&gt;git泄露</p>
 
@@ -841,14 +891,14 @@
             <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> 信息泄露-Git泄露-Log</li>
+        <li><strong>Title:</strong> 信息泄露-Git泄露</li>
         <li><strong>Author:</strong> ZJ</li>
         <li><strong>Created at
                 :</strong> 2024-09-12 00:00:00</li>
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-09-14 22:36:58
+                    :</strong> 2024-09-17 18:08:48
             </li>
         
         <li>
@@ -896,9 +946,9 @@
 </a><a class="recommended-article-item" href="/2024/09/12/ctf/writeup/web/ctfhub/信息泄露-SVN泄露/" title="信息泄露-SVN泄露" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="信息泄露-SVN泄露" class="!max-w-none">
   <span class="title">信息泄露-SVN泄露</span>
-</a><a class="recommended-article-item" href="/2024/09/13/ctf/writeup/web/buuctf/[BJDCTF2020]Mark-loves-cat/" title="BJDCTF2020 Mark-loves-cat*" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="BJDCTF2020 Mark-loves-cat*" class="!max-w-none">
-  <span class="title">BJDCTF2020 Mark-loves-cat*</span>
+</a><a class="recommended-article-item" href="/2024/09/17/ctf/writeup/web/ctfhub/信息泄露-HG泄露/" title="信息泄露-HG泄露" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="信息泄露-HG泄露" class="!max-w-none">
+  <span class="title">信息泄露-HG泄露</span>
 </a></div>
    </div>
    <div class="recommended-mobile">
@@ -911,9 +961,9 @@
 </a><a class="recommended-article-item" href="/2024/09/12/ctf/writeup/web/ctfhub/信息泄露-SVN泄露/" title="信息泄露-SVN泄露" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="信息泄露-SVN泄露" class="!max-w-none">
   <span class="title">信息泄露-SVN泄露</span>
-</a><a class="recommended-article-item" href="/2024/09/13/ctf/writeup/web/buuctf/[BJDCTF2020]Mark-loves-cat/" title="BJDCTF2020 Mark-loves-cat*" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="BJDCTF2020 Mark-loves-cat*" class="!max-w-none">
-  <span class="title">BJDCTF2020 Mark-loves-cat*</span>
+</a><a class="recommended-article-item" href="/2024/09/17/ctf/writeup/web/ctfhub/信息泄露-HG泄露/" title="信息泄露-HG泄露" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="信息泄露-HG泄露" class="!max-w-none">
+  <span class="title">信息泄露-HG泄露</span>
 </a></div>
    </div>
   </div>
@@ -924,13 +974,13 @@
                     <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="prev"
                         rel="prev"
-                        href="/2024/09/12/ctf/writeup/web/buuctf/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%982019%5DHttp/"
+                        href="/2024/09/12/ctf/writeup/web/buuctf/%5Bweb%E5%85%A5%E9%97%A8%5D%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8F%E6%9D%8E/"
                         >
                             <span class="left arrow-icon flex justify-center items-center">
                                 <i class="fa-solid fa-chevron-left"></i>
                             </span>
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">极客大挑战2019 Http</span>
+                                <span class="post-nav-title-item">web入门-粗心的小李</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
@@ -1007,8 +1057,8 @@
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">信息泄露-Git泄露-Log</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2"><span class="nav-text">信息泄露-Git泄露</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE-Log"><span class="nav-text">题目-Log</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE-Stash"><span class="nav-text">题目-Stash</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE-Index"><span class="nav-text">题目-Index</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></li></ol>
+        <div class="page-title">信息泄露-Git泄露</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2"><span class="nav-text">信息泄露-Git泄露</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-text">题目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE-Log"><span class="nav-text">题目-Log</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE-Stash"><span class="nav-text">题目-Stash</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE-Index"><span class="nav-text">题目-Index</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></li></ol>
 
     </div>
 </div>
@@ -1041,11 +1091,11 @@
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        29 posts in total
+                        32 posts in total
                     </span>
                     
                         <span>
-                            15.1k words in total
+                            18.6k words in total
                         </span>
                     
                 </p>

