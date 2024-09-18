@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.overlordzj.cn/2024/09/18/ctf/data/misc/%E9%9A%90%E5%86%99%E6%9C%AF/</loc>
+    <lastmod>2024-09-18</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.overlordzj.cn/2024/09/18/ctf/writeup/misc/buuctf/EXIF/</loc>
+    <lastmod>2024-09-18</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.overlordzj.cn/2024/09/18/ctf/writeup/misc/buuctf/%E5%9B%BE%E7%A7%8D/</loc>
+    <lastmod>2024-09-18</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.overlordzj.cn/2024/09/18/ctf/writeup/misc/buuctf/%E9%99%84%E5%8A%A0%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
+    <lastmod>2024-09-18</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.overlordzj.cn/2024/09/18/ctf/writeup/misc/%E7%9B%AE%E5%BD%95/catalogue/</loc>
+    <lastmod>2024-09-18</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.overlordzj.cn/2024/09/14/ctf/writeup/web/%E7%9B%AE%E5%BD%95/%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF%E5%8F%8A%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2024-09-18</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.overlordzj.cn/2024/09/12/ctf/data/another/%E7%AB%9E%E8%B5%9B%E6%A8%A1%E5%BC%8F/</loc>
+    <lastmod>2024-09-18</lastmod>
+  </url>
+  <url>
     <loc>https://blog.overlordzj.cn/2024/09/12/ctf/writeup/web/%E7%9B%AE%E5%BD%95/catalogue/</loc>
     <lastmod>2024-09-17</lastmod>
   </url>
@@ -23,14 +51,6 @@
   <url>
     <loc>https://blog.overlordzj.cn/2024/09/15/ctf/writeup/web/ctfhub/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/</loc>
     <lastmod>2024-09-17</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.overlordzj.cn/2024/09/12/ctf/data/another/%E7%AB%9E%E8%B5%9B%E6%A8%A1%E5%BC%8F/</loc>
-    <lastmod>2024-09-15</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.overlordzj.cn/2024/09/14/ctf/writeup/web/%E7%9B%AE%E5%BD%95/%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF%E5%8F%8A%E6%96%B9%E6%B3%95/</loc>
-    <lastmod>2024-09-15</lastmod>
   </url>
   <url>
     <loc>https://blog.overlordzj.cn/2024/09/14/ctf/writeup/web/buuctf/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/</loc>
