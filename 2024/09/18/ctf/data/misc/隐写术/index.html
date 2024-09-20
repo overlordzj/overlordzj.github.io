@@ -24,16 +24,17 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="隐写术隐写术即通过一定手段达到信息隐藏的目的，不让除预期的接收者之外的任何人知晓信息的传递事件或信息内容 工具介绍        提供的工具若未破解或链接已挂，请自行搜索破解版使用      010Editor  16进制编辑器 Binwalk  数据分离工具 stegsolve  LSB工具（windows） zsteg   LSB工具（linux） BlindWatermark  盲水印工具">
+        <meta name="description" content="隐写术隐写术即通过一定手段达到信息隐藏的目的，不让除预期的接收者之外的任何人知晓信息的传递事件或信息内容 前言这里会提供一些来自buuctf的案例，有需要还原的可以看我的博客的关于这一节的题目 工具介绍        提供的工具若未破解或链接已挂，请自行搜索破解版使用      010Editor  16进制编辑器 Binwalk  数据分离工具 stegsolve  LSB工具（windows）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="隐写术">
 <meta property="og:url" content="https://blog.overlordzj.cn/2024/09/18/ctf/data/misc/%E9%9A%90%E5%86%99%E6%9C%AF/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="隐写术隐写术即通过一定手段达到信息隐藏的目的，不让除预期的接收者之外的任何人知晓信息的传递事件或信息内容 工具介绍        提供的工具若未破解或链接已挂，请自行搜索破解版使用      010Editor  16进制编辑器 Binwalk  数据分离工具 stegsolve  LSB工具（windows） zsteg   LSB工具（linux） BlindWatermark  盲水印工具">
+<meta property="og:description" content="隐写术隐写术即通过一定手段达到信息隐藏的目的，不让除预期的接收者之外的任何人知晓信息的传递事件或信息内容 前言这里会提供一些来自buuctf的案例，有需要还原的可以看我的博客的关于这一节的题目 工具介绍        提供的工具若未破解或链接已挂，请自行搜索破解版使用      010Editor  16进制编辑器 Binwalk  数据分离工具 stegsolve  LSB工具（windows）">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240918234041568.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240918234142219.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240919002347396.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%5BNISACTF-2022%5Dhuaji/image-20240919192235889.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240919002338362.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240919002824284.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240919010102979.png">
@@ -42,8 +43,29 @@
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240919005329960.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240919010318218.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240919010356310.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240919174523222.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240919185229567.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240919185257272.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240919195226161.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240920005827975.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240920010735736.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240920012133437.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240920012648185.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240920012732399.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240920012745555.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%5B2019RoarCTF%5D%E9%BB%84%E9%87%916%E5%B9%B4/image-20240920015652851.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%5B2019RoarCTF%5D%E9%BB%84%E9%87%916%E5%B9%B4/atta044.jpg">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240920174326354.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240920174347322.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240920174442092.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240920180256951.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240921010247506.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240921010708361.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240921010741505.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240921010846336.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240921010909324.png">
 <meta property="article:published_time" content="2024-09-17T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-09-18T17:07:53.393Z">
+<meta property="article:modified_time" content="2024-09-20T18:02:40.550Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="ctf">
 <meta property="article:tag" content="data">
@@ -596,7 +618,7 @@
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">37</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">51</div>
         <div class="label text-third-text-color text-sm">Posts</div>
     </a>
 </div>
@@ -650,8 +672,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-09-19 01:07:53</span>
-            <span class="mobile">2024-09-19 01:07:53</span>
+            <span class="desktop">2024-09-21 02:02:40</span>
+            <span class="mobile">2024-09-21 02:02:40</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -713,12 +735,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>633 Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>2.2k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>8 Mins</span>
         </span>
     
     
@@ -738,9 +760,10 @@
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
             <h1 id="隐写术"><a href="#隐写术" class="headerlink" title="隐写术"></a>隐写术</h1><p>隐写术即通过一定手段达到信息隐藏的目的，不让除预期的接收者之外的任何人知晓信息的传递事件或信息内容</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这里会提供一些来自buuctf的案例，有需要还原的可以看我的博客的关于这一节的题目</p>
 <h2 id="工具介绍"><a href="#工具介绍" class="headerlink" title="工具介绍"></a>工具介绍</h2>
-  <div class="note p-4 mb-4 rounded-small warning">
-    <p>提供的工具若未破解或链接已挂，请自行搜索破解版使用</p>
+  <div class="note p-4 mb-4 rounded-small warning fa-solid icon-padding">
+    <i class="note-icon fa-solid fa-circle-exclamation"></i><p>提供的工具若未破解或链接已挂，请自行搜索破解版使用</p>
 
   </div>
 
@@ -749,6 +772,9 @@
 <p><a class="link"   target="_blank" rel="noopener" href="https://github.com/Giotino/stegsolve/tree/v.1.5" >stegsolve <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> LSB工具（windows）</p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://github.com/zed-0xff/zsteg" >zsteg <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>  LSB工具（linux）</p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://github.com/fire-keeper/BlindWatermark" >BlindWatermark <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 盲水印工具</p>
+<blockquote>
+<p>上面这个是新的，案例提供的是这个<a class="link"   target="_blank" rel="noopener" href="https://github.com/chishaxie/BlindWaterMark" >BlindWatermark <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</blockquote>
 <p><a class="link"   target="_blank" rel="noopener" href="https://www.audacityteam.org/post-download/" >Audacity <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 音频隐写工具</p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://www.petitcolas.net/steganography/mp3stego/" >MP3stego <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> MP3音频隐写工具</p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://www.watermark-software.com/video-to-picture/video-to-picture.html?ins5.3" >videotopicture <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 视频帧的分离工具</p>
@@ -763,57 +789,57 @@
 </thead>
 <tbody><tr>
 <td align="center"><strong>JPEG (jpg)</strong></td>
-<td align="center"><strong>FFD8FF</strong></td>
+<td align="center"><strong>FF D8 FF</strong></td>
 <td align="center"><strong>FF D9</strong></td>
 </tr>
 <tr>
 <td align="center"><strong>PNG (png)</strong></td>
-<td align="center"><strong>89504E4</strong></td>
+<td align="center"><strong>89 50 4E 47</strong></td>
 <td align="center"><strong>AE 42 60 82</strong></td>
 </tr>
 <tr>
 <td align="center"><strong>GIF (gif)</strong></td>
-<td align="center"><strong>47494638</strong></td>
+<td align="center"><strong>47 49 46 38</strong></td>
 <td align="center"><strong>00 3B</strong></td>
 </tr>
 <tr>
 <td align="center"><strong>ZIP Archive (zip)</strong></td>
-<td align="center"><strong>504B0304</strong></td>
+<td align="center"><strong>50 4B 03 04</strong></td>
 <td align="center"><strong>50 4B</strong></td>
 </tr>
 <tr>
 <td align="center"><strong>RAR Archive (rar)</strong></td>
-<td align="center"><strong>52617221</strong></td>
+<td align="center"><strong>52 61 72 21</strong></td>
 <td align="center"></td>
 </tr>
 <tr>
 <td align="center">Windows Bitmap (bmp)</td>
-<td align="center">424D</td>
+<td align="center">42 4D</td>
 <td align="center"></td>
 </tr>
 <tr>
 <td align="center">XML (xml)</td>
-<td align="center">3C3F786D6C</td>
+<td align="center">3C 3F 78 6D 6C</td>
 <td align="center"></td>
 </tr>
 <tr>
 <td align="center">HTML (html)</td>
-<td align="center">68746D6C3E</td>
+<td align="center">68 74 6D 6C 3E</td>
 <td align="center"></td>
 </tr>
 <tr>
 <td align="center">MS Word&#x2F;Excel (xls.or.doc)</td>
-<td align="center">D0CF11E0</td>
+<td align="center">D0 CF 11 E0</td>
 <td align="center"></td>
 </tr>
 <tr>
 <td align="center">Adobe Acrobat (pdf)</td>
-<td align="center">255044462D312E</td>
+<td align="center">25 50 44 46 2D 31 2E</td>
 <td align="center"></td>
 </tr>
 <tr>
 <td align="center">AVI (avi)</td>
-<td align="center">41564920</td>
+<td align="center">41 56 49 20</td>
 <td align="center"></td>
 </tr>
 </tbody></table>
@@ -863,6 +889,12 @@
     </div>
   </div>
 
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%5BNISACTF-2022%5Dhuaji/image-20240919192235889.png"
+                      alt="image-20240919192235889"
+                ></p>
 <p>使用工具<a class="link"   target="_blank" rel="noopener" href="https://github.com/ReFirmLabs/binwalk" >Binwalk <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（kali）使图种数据分离</p>
 <div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">binwalk -e atta.png --run-as=root</span><br></pre></td></tr></table></figure></div>
 
@@ -966,6 +998,309 @@
                       alt="image-20240919010356310"
                 ></p>
 <h4 id="最低有效位（LSB）"><a href="#最低有效位（LSB）" class="headerlink" title="最低有效位（LSB）"></a>最低有效位（LSB）</h4>
+  <div class="note-large blue">
+    <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
+      <p>原理</p>
+
+    </div>
+    <div class="notel-content">
+      <p>改变图片的RGB最低位，使其组合成我们想要隐藏的信息，由于变化太小肉眼无法看出，所以能隐写</p>
+
+    </div>
+  </div>
+
+<p>提取隐藏信息需要将RGB的最低位提取出来，重新组合成文件或字符串即可</p>
+<p>以下是windows系统的<a class="link"   target="_blank" rel="noopener" href="https://github.com/Giotino/stegsolve/tree/v.1.5" >stegsolve <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> LSB工具示例，可以看到多次尝试就可以拿到flag</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240919174523222.png"
+                      alt="image-20240919174523222"
+                ></p>
+<h4 id="盲水印"><a href="#盲水印" class="headerlink" title="盲水印"></a>盲水印</h4><p>这种隐写方式还原需要两张看起来几乎一样的图片，通过比较图片的MD5值或者图片大小可以发现实际是不同的两张图片</p>
+<p>使用工具<a class="link"   target="_blank" rel="noopener" href="https://github.com/fire-keeper/BlindWatermark" >BlindWatermark <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<blockquote>
+<p>上面的工具不是本案例提供的，请下载<a class="link"   target="_blank" rel="noopener" href="https://github.com/chishaxie/BlindWaterMark" >BlindWatermark <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</blockquote>
+
+  <div class="note p-4 mb-4 rounded-small red">
+    <p>我真的服《CTF实战 从入门到提升》这本书了，已经第几次因为提供的案例和工具对不上和浪费了很多时间，真的是作者就不能把工具给完吗，每次试错都搞得我头大（╬￣皿￣） </p>
+
+  </div>
+
+<p>参考系数</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>yuantu.png</td>
+<td>原来的没有水印的图片</td>
+</tr>
+<tr>
+<td>shuiyintu.png</td>
+<td>有水印的图片</td>
+</tr>
+<tr>
+<td>result_1.png</td>
+<td>合成的有水印的图片</td>
+</tr>
+<tr>
+<td>result_2.png</td>
+<td>提取的水印图片</td>
+</tr>
+</tbody></table>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 合成盲水印</span></span><br><span class="line">python2 bwm.py encode yuantu.png shuiyintu.png result_1.png</span><br><span class="line"><span class="comment"># 提取盲水印</span></span><br><span class="line">python2 bwm.py encode yuantu.png result_1.png result_2.png</span><br><span class="line"></span><br><span class="line"><span class="comment"># 合成盲水印</span></span><br><span class="line">python3 bwmforpy3.py encode yuantu.png shuiyintu.png result_1.png</span><br><span class="line"><span class="comment"># 提取盲水印</span></span><br><span class="line">python3 bwmforpy3.py encode yuantu.png result_1.png result_2.png</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240919185229567.png"
+                      alt="image-20240919185229567"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240919185257272.png"
+                      alt="image-20240919185257272"
+                ></p>
+<blockquote>
+<p>真的服这个作者了(╯‵□′)╯︵ ┴─┴ </p>
+</blockquote>
+<h3 id="音频隐写"><a href="#音频隐写" class="headerlink" title="音频隐写"></a>音频隐写</h3><h4 id="摩尔斯密码与音频隐写"><a href="#摩尔斯密码与音频隐写" class="headerlink" title="摩尔斯密码与音频隐写"></a>摩尔斯密码与音频隐写</h4><p>在MISC题中打开音频文件若是能听到“滴答”的声音，可以猜测是摩尔斯电码有关</p>
+
+  <div class="note p-4 mb-4 rounded-small warning fa-solid icon-padding">
+    <i class="note-icon fa-solid fa-circle-exclamation"></i><p>一般不会有这种题，因为没有技术含量还浪费时间</p>
+
+  </div>
+
+<p>使用工具<a class="link"   target="_blank" rel="noopener" href="https://www.audacityteam.org/post-download/" >Audacity <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>看音频长短，再对照摩斯密码进行还原</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240919195226161.png"
+                      alt="image-20240919195226161"
+                ></p>
+<p>提取出来内容为“..-.  .-..  .-  –.  ..  …  .-  ..  .-.  .-.  ..-  -..  -..  .  .-.”</p>
+<blockquote>
+<p>这里就不还原为英文字母了</p>
+</blockquote>
+<h4 id="MP3音频"><a href="#MP3音频" class="headerlink" title="MP3音频"></a>MP3音频</h4>
+  <div class="note-large blue">
+    <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
+      <p>原理</p>
+
+    </div>
+    <div class="notel-content">
+      <p>采用特殊的量化方法，将数据隐藏在MP3文件的奇偶校验块中</p>
+
+    </div>
+  </div>
+
+<p>使用工具<a class="link"   target="_blank" rel="noopener" href="https://www.petitcolas.net/steganography/mp3stego/" >MP3stego <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>进行加密解密（貌似只能加密，我没试出来解密的）</p>
+<blockquote>
+<p>没有密码只能爆破，密码过于复杂则无法破解</p>
+</blockquote>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># —E 读取隐藏信息文件的内容，-P 设置密码</span></span><br><span class="line"><span class="comment"># 加密</span></span><br><span class="line">decode.exe -E data.txt yuan.wav new.mp3</span><br><span class="line"><span class="comment"># data.txt是加密文件，yuan.wav是原始音频，new.mp3为输出文件</span></span><br><span class="line"><span class="comment"># 然后会需要输入加密的密码</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 解密</span></span><br><span class="line">encode.exe -E -P 123456 new.mp3</span><br><span class="line"><span class="comment"># 123456是解密的密码，new.mp3是需要解密的文件</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="波形图"><a href="#波形图" class="headerlink" title="波形图"></a>波形图</h4>
+  <div class="note-large blue">
+    <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
+      <p>原理</p>
+
+    </div>
+    <div class="notel-content">
+      <p>使用工具发现波形规律，将波形转化为01字符串，从而进行编码得到加密内容</p>
+
+    </div>
+  </div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240920005827975.png"
+                      alt="image-20240920005827975"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240920010735736.png"
+                      alt="image-20240920010735736"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240920012133437.png"
+                      alt="image-20240920012133437"
+                ></p>
+<p>根据正1负0编写二进制代码，再转化为ascii码即可</p>
+<p>这里提供一个脚本</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s=<span class="string">&#x27;your code&#x27;</span></span><br><span class="line">res=<span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="built_in">len</span>(s),<span class="number">7</span>):</span><br><span class="line">    res+=<span class="built_in">chr</span>(<span class="built_in">int</span>(s[i:i+<span class="number">7</span>],<span class="number">2</span>))</span><br><span class="line"><span class="built_in">print</span>(res)</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="频谱图"><a href="#频谱图" class="headerlink" title="频谱图"></a>频谱图</h4><p>音频是一段杂音或者比较刺耳，波形图也没有规律，则可能是频谱图隐写</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240920012648185.png"
+                      alt="image-20240920012648185"
+                ></p>
+<p>波形图不连续也没有规律，用频谱图看看</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240920012732399.png"
+                      alt="image-20240920012732399"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240920012745555.png"
+                      alt="image-20240920012745555"
+                ></p>
+<p>直接就得到flag了，可以作为一个日常判断来做题，拿到音频题就直接看一下频谱图，只需要用手点点就能发现意想不到的东西，岂不美哉≖‿≖✧ </p>
+<h3 id="视频隐写"><a href="#视频隐写" class="headerlink" title="视频隐写"></a>视频隐写</h3><h4 id="视频帧的分离"><a href="#视频帧的分离" class="headerlink" title="视频帧的分离"></a>视频帧的分离</h4>
+  <div class="note p-4 mb-4 rounded-small blue">
+    <p>一般用于综合题目</p>
+
+  </div>
+
+<p>视频题目里面往往会有些隐藏的东西，但由于可能只存在1-2帧的画面，所以单纯截屏或者肉眼是不行的</p>
+<p>借助工具<a class="link"   target="_blank" rel="noopener" href="https://www.watermark-software.com/video-to-picture/video-to-picture.html?ins5.3" >videotopicture <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>进行帧分离</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%5B2019RoarCTF%5D%E9%BB%84%E9%87%916%E5%B9%B4/image-20240920015652851.png"
+                      alt="image-20240920015652851"
+                ></p>
+<p>可以看到里面有包含二维码的图片</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%5B2019RoarCTF%5D%E9%BB%84%E9%87%916%E5%B9%B4/atta044.jpg"
+                      alt="atta044"
+                ></p>
+<h3 id="文档隐写"><a href="#文档隐写" class="headerlink" title="文档隐写"></a>文档隐写</h3><h4 id="Word文档隐写"><a href="#Word文档隐写" class="headerlink" title="Word文档隐写"></a>Word文档隐写</h4><h5 id="改变字体颜色进行隐藏"><a href="#改变字体颜色进行隐藏" class="headerlink" title="改变字体颜色进行隐藏"></a>改变字体颜色进行隐藏</h5>
+  <div class="note-large blue">
+    <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
+      <p>原理</p>
+
+    </div>
+    <div class="notel-content">
+      <p>将字体颜色修改为和底色（白色）一样的颜色</p>
+
+    </div>
+  </div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240920174326354.png"
+                      alt="image-20240920174326354"
+                ></p>
+<p>字体颜色设置为白色</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240920174347322.png"
+                      alt="image-20240920174347322"
+                ></p>
+<h5 id="勾选隐藏文字功能进行隐藏"><a href="#勾选隐藏文字功能进行隐藏" class="headerlink" title="勾选隐藏文字功能进行隐藏"></a>勾选隐藏文字功能进行隐藏</h5>
+  <div class="note-large blue">
+    <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
+      <p>原理</p>
+
+    </div>
+    <div class="notel-content">
+      <p>勾选隐藏文字功能</p>
+
+    </div>
+  </div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240920174442092.png"
+                      alt="image-20240920174442092"
+                ></p>
+<blockquote>
+<p>这样隐藏后不会被统计字数，但也不好找到隐藏的位置</p>
+<p>tips：可以全选然后取消隐藏</p>
+</blockquote>
+<h5 id="解压docx文档隐藏文件再压缩进行隐藏"><a href="#解压docx文档隐藏文件再压缩进行隐藏" class="headerlink" title="解压docx文档隐藏文件再压缩进行隐藏"></a>解压docx文档隐藏文件再压缩进行隐藏</h5><p>docx文档修改后缀为.zip或者其他格式的压缩包，解压后就可以看到里面是有文件的</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240920180256951.png"
+                      alt="image-20240920180256951"
+                ></p>
+<h4 id="PDF文档隐写"><a href="#PDF文档隐写" class="headerlink" title="PDF文档隐写"></a>PDF文档隐写</h4><p>对PDF文档的隐写需要用到工具<a class="link"   target="_blank" rel="noopener" href="https://www.bailer.at/wbstego/" >wbStego4.3open <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+
+  <div class="note-large blue">
+    <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
+      <p>原理</p>
+
+    </div>
+    <div class="notel-content">
+      <p>会将插入的数据中的每一个ASCII码转换为二进制形式，并将其中的0替换成十六进制的20，1替换弄成十六进制中的09，最终将这些转换后的十六进制数据嵌入PDF中</p>
+<p>用16进制打开PDF文件发现里面有很多09或者20的字符，可以猜测是PDF隐写</p>
+
+    </div>
+  </div>
+
+
+  <div class="note p-4 mb-4 rounded-small warning fa-solid icon-padding">
+    <i class="note-icon fa-solid fa-circle-exclamation"></i><p>使用工具进行隐写和解密，需要知道对应的密码，如果题目中没有得到有关密码的提示，则无法进行解密</p>
+
+  </div>
+
+<blockquote>
+<p>使用时可能会报错</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240921010247506.png"
+                      alt="image-20240921010247506"
+                ></p>
+<p>当出现上面的情况时，表示数据执行保护被拦截，需要加载打开（原本是为了避免病毒的）</p>
+<p>找到“我的电脑”，右击找到“属性”，打开“高级系统设置”，找到“高级”里面的“性能”，打开“设置”，找到“数据执行保护”，根据图中提示，添加“wbStego4.3open.exe”，最后需要重启电脑</p>
+
+  <div class="note p-4 mb-4 rounded-small info fa-solid icon-padding">
+    <i class="note-icon fa-solid fa-circle-info"></i><p>做完题之后可以改回去，需要一直使用请在虚拟机操作</p>
+
+  </div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240921010708361.png"
+                      alt="image-20240921010708361"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240921010741505.png"
+                      alt="image-20240921010741505"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240921010846336.png"
+                      alt="image-20240921010846336"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240921010909324.png"
+                      alt="image-20240921010909324"
+                ></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.bailer.at/wbstego/" >wbStego4.3open <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>工具不会用的可以参考<a href="/2024/09/20/ctf/writeup/misc/buuctf/%5BPDF%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99%5Dpdf%E9%9A%90%E5%86%99/" title="PDF文档隐写-pdf隐写">[PDF文档隐写]pdf隐写</a></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>隐写术是一个比较混杂的misc安全类，做题时基本是用作其他题型的附加难度，如果题目不提示用隐写术，一定要对图片，音频，视频和文档敏感，不然拿到手都入不了方向</p>
+<a href="/2024/09/18/ctf/writeup/misc/%E7%9B%AE%E5%BD%95/catalogue/" title="misc安全目录">参考题目目录</a>
+
         </div>
 
         
@@ -979,7 +1314,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-09-19 01:07:53
+                    :</strong> 2024-09-21 02:02:40
             </li>
         
         <li>
@@ -1021,36 +1356,51 @@
     <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
      <i aria-hidden="true"></i><span>看看这些文章吧( ૢ⁼̴̤̆ ꇴ ⁼̴̤̆ ૢ)~ෆ</span>
     </div>
-    <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/18/ctf/writeup/misc/buuctf/图种/" title="图种" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="图种" class="!max-w-none">
-  <span class="title">图种</span>
-</a><a class="recommended-article-item" href="/2024/09/18/ctf/writeup/misc/buuctf/EXIF/" title="EXIF" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="EXIF" class="!max-w-none">
-  <span class="title">EXIF</span>
-</a><a class="recommended-article-item" href="/2024/09/18/ctf/writeup/misc/buuctf/附加字符串/" title="附加字符串" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="附加字符串" class="!max-w-none">
-  <span class="title">附加字符串</span>
+    <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/19/ctf/writeup/misc/buuctf/盲水印/" title="盲水印" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="盲水印" class="!max-w-none">
+  <span class="title">盲水印</span>
+</a><a class="recommended-article-item" href="/2024/09/20/ctf/writeup/misc/buuctf/[PDF文档隐写]pdf隐写/" title="PDF文档隐写-pdf隐写" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="PDF文档隐写-pdf隐写" class="!max-w-none">
+  <span class="title">PDF文档隐写-pdf隐写</span>
+</a><a class="recommended-article-item" href="/2024/09/20/ctf/writeup/misc/buuctf/[UTCTF2020]docx/" title="UTCTF2020-docx" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="UTCTF2020-docx" class="!max-w-none">
+  <span class="title">UTCTF2020-docx</span>
 </a></div>
    </div>
    <div class="recommended-mobile">
    <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
      <i aria-hidden="true"></i><span>看看这些文章吧( ૢ⁼̴̤̆ ꇴ ⁼̴̤̆ ૢ)~ෆ</span>
    </div>
-   <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/18/ctf/writeup/misc/buuctf/图种/" title="图种" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="图种" class="!max-w-none">
-  <span class="title">图种</span>
-</a><a class="recommended-article-item" href="/2024/09/18/ctf/writeup/misc/buuctf/EXIF/" title="EXIF" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="EXIF" class="!max-w-none">
-  <span class="title">EXIF</span>
-</a><a class="recommended-article-item" href="/2024/09/18/ctf/writeup/misc/buuctf/附加字符串/" title="附加字符串" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="附加字符串" class="!max-w-none">
-  <span class="title">附加字符串</span>
+   <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/19/ctf/writeup/misc/buuctf/盲水印/" title="盲水印" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="盲水印" class="!max-w-none">
+  <span class="title">盲水印</span>
+</a><a class="recommended-article-item" href="/2024/09/20/ctf/writeup/misc/buuctf/[PDF文档隐写]pdf隐写/" title="PDF文档隐写-pdf隐写" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="PDF文档隐写-pdf隐写" class="!max-w-none">
+  <span class="title">PDF文档隐写-pdf隐写</span>
+</a><a class="recommended-article-item" href="/2024/09/20/ctf/writeup/misc/buuctf/[UTCTF2020]docx/" title="UTCTF2020-docx" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="UTCTF2020-docx" class="!max-w-none">
+  <span class="title">UTCTF2020-docx</span>
 </a></div>
    </div>
   </div>
 
         
             <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2024/09/19/ctf/writeup/misc/buuctf/%E8%8E%AB%E5%B0%94%E6%96%AF%E7%94%B5%E7%A0%81/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">莫尔斯电码</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
                 
                 
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
@@ -1124,7 +1474,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">隐写术</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9A%90%E5%86%99%E6%9C%AF"><span class="nav-text">隐写术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D"><span class="nav-text">工具介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B%E5%8F%8A%E8%AF%86%E5%88%AB"><span class="nav-text">文件结构类型及识别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%96%87%E4%BB%B6%E5%A4%B4%E5%92%8C%E6%96%87%E4%BB%B6%E5%B0%BE"><span class="nav-text">常见文件头和文件尾</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%99"><span class="nav-text">图片隐写</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%99%84%E5%8A%A0%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-text">附加字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%9B%BE%E7%A7%8D"><span class="nav-text">图种</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#EXIF"><span class="nav-text">EXIF</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E5%AE%BD%E9%AB%98"><span class="nav-text">图片宽高</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%80%E4%BD%8E%E6%9C%89%E6%95%88%E4%BD%8D%EF%BC%88LSB%EF%BC%89"><span class="nav-text">最低有效位（LSB）</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9A%90%E5%86%99%E6%9C%AF"><span class="nav-text">隐写术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D"><span class="nav-text">工具介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B%E5%8F%8A%E8%AF%86%E5%88%AB"><span class="nav-text">文件结构类型及识别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%96%87%E4%BB%B6%E5%A4%B4%E5%92%8C%E6%96%87%E4%BB%B6%E5%B0%BE"><span class="nav-text">常见文件头和文件尾</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%99"><span class="nav-text">图片隐写</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%99%84%E5%8A%A0%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-text">附加字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%9B%BE%E7%A7%8D"><span class="nav-text">图种</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#EXIF"><span class="nav-text">EXIF</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E5%AE%BD%E9%AB%98"><span class="nav-text">图片宽高</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%80%E4%BD%8E%E6%9C%89%E6%95%88%E4%BD%8D%EF%BC%88LSB%EF%BC%89"><span class="nav-text">最低有效位（LSB）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%9B%B2%E6%B0%B4%E5%8D%B0"><span class="nav-text">盲水印</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99"><span class="nav-text">音频隐写</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%91%A9%E5%B0%94%E6%96%AF%E5%AF%86%E7%A0%81%E4%B8%8E%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99"><span class="nav-text">摩尔斯密码与音频隐写</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MP3%E9%9F%B3%E9%A2%91"><span class="nav-text">MP3音频</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B3%A2%E5%BD%A2%E5%9B%BE"><span class="nav-text">波形图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%91%E8%B0%B1%E5%9B%BE"><span class="nav-text">频谱图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%86%E9%A2%91%E9%9A%90%E5%86%99"><span class="nav-text">视频隐写</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%86%E9%A2%91%E5%B8%A7%E7%9A%84%E5%88%86%E7%A6%BB"><span class="nav-text">视频帧的分离</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99"><span class="nav-text">文档隐写</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Word%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99"><span class="nav-text">Word文档隐写</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%94%B9%E5%8F%98%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2%E8%BF%9B%E8%A1%8C%E9%9A%90%E8%97%8F"><span class="nav-text">改变字体颜色进行隐藏</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8B%BE%E9%80%89%E9%9A%90%E8%97%8F%E6%96%87%E5%AD%97%E5%8A%9F%E8%83%BD%E8%BF%9B%E8%A1%8C%E9%9A%90%E8%97%8F"><span class="nav-text">勾选隐藏文字功能进行隐藏</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%A7%A3%E5%8E%8Bdocx%E6%96%87%E6%A1%A3%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%E5%86%8D%E5%8E%8B%E7%BC%A9%E8%BF%9B%E8%A1%8C%E9%9A%90%E8%97%8F"><span class="nav-text">解压docx文档隐藏文件再压缩进行隐藏</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PDF%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99"><span class="nav-text">PDF文档隐写</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></li></ol>
 
     </div>
 </div>
@@ -1157,11 +1507,11 @@
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        37 posts in total
+                        51 posts in total
                     </span>
                     
                         <span>
-                            19.7k words in total
+                            25k words in total
                         </span>
                     
                 </p>
