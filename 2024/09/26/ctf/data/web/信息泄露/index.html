@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="ZJ">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://https://fonts.lug.ustc.edu.cn/">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+        
+        
+        
+            <link rel="preconnect" href="https://evan.beee.top" crossorigin>
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://blog.overlordzj.cn/2024/09/26/ctf/data/web/信息泄露/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="web信息泄露        在网站开发者开发网站的时候，或多或少会残留一些敏感信息或者文件，特别是对于备份文件和版本控制系统源码泄露尤其常见      前言这里会提供一些来自ctfhub的案例，有需要还原的可以看我的博客的关于这一节的题目 参考题目目录  工具介绍        提供的工具若未破解或链接已挂，请自行搜索破解版使用      dirsearch  网站目录扫描工具 GitHack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web信息泄露">
+<meta property="og:url" content="https://blog.overlordzj.cn/2024/09/26/ctf/data/web/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="web信息泄露        在网站开发者开发网站的时候，或多或少会残留一些敏感信息或者文件，特别是对于备份文件和版本控制系统源码泄露尤其常见      前言这里会提供一些来自ctfhub的案例，有需要还原的可以看我的博客的关于这一节的题目 参考题目目录  工具介绍        提供的工具若未破解或链接已挂，请自行搜索破解版使用      dirsearch  网站目录扫描工具 GitHack">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/image-20240916154942458.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/image-20240917172655327.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240912213718118.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240912213911928.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240912213948091.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240912214334276.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240912215937518.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/image-20240912220043425.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240913005004198.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240913005735686.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240913005921606.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240913010130190.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240913012737667.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240913011925973.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240913012313165.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240917182029336.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240917182149228.png">
+<meta property="article:published_time" content="2024-09-25T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-09-26T16:11:44.383Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="ctf">
+<meta property="article:tag" content="data">
+<meta property="article:tag" content="web">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/image-20240916154942458.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/overlord_ico.ico" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/overlord_ico.ico">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/overlord_ico.ico">
+    <!--- Page Info-->
+    
+    <title>
+        
+            web信息泄露 -
+        
+        Overlord Blog
+    </title>
+
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/fonts/Chillax/chillax.css">
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/assets/build/styles.css">
+    
+
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/fonts/GeistMono/geist-mono.css">
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/fonts/Geist/geist.css">
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+        <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/anime.min.js"></script>
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"blog.overlordzj.cn","root":"/","language":"en","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":["Lv100"]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":6,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":true,"title":"看看这些文章吧( ૢ⁼̴̤̆ ꇴ ⁼̴̤̆ ૢ)~ෆ","limit":3,"mobile_limit":4,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":["/private/","/secret/","/备忘录/"]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":true,"custom_message":null},"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Overlord Blog","subtitle":{"text":["Welcome my blog","Here are my own study materials and various writeups","Hoping it will be useful to you"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":80,"backing_speed":50,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":true,"type":"mini","audios":[{"name":"mystery-of-love","artist":"----------","url":"/musics/mystery-of-love.mp3","cover":"/images/mystery-of-love.jpg","lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.7.1","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"photo-album":{"icon":"fa-solid fa-image","path":"/masonry/"},"Github":{"path":"https://github.com/overlordzj/overlordzj.github.io","icon":"fa-brands fa-github"},"Links":{"icon":"fa-regular fa-link","submenus":{"tags":"/tags/","categories":"/categories/","docs":"https://redefine-docs.ohevan.com/","domestic":"https://blogback.overlordzj.cn/"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":{"Archives":{"path":"/archives/","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags/","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories/","icon":"fa-regular fa-folder"}}},"article_date_format":"YYYY-MM-DD","excerpt_length":200,"categories":{"enable":true,"limit":4},"tags":{"enable":true,"limit":4}},"footerStart":"2024/9/8 00:00:00"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":true};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/fontawesome/regular.min.css">
+    
+    
+        <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/fontawesome/light.min.css">
+    
+    
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+
+    <style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    <h2 class="ml13">
+        Overlord Blog
+    </h2>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+        var animation = anime.timeline({loop: true})
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [40,0],
+                translateZ: 0,
+                opacity: [0,1],
+                filter: ['blur(5px)', 'blur(0px)'], // Starting from blurred to unblurred
+                easing: "easeOutExpo",
+                duration: 1400,
+                delay: (el, i) => 300 + 30 * i,
+            }).add({
+                targets: '.ml13 .letter',
+                translateY: [0,-40],
+                opacity: [1,0],
+                filter: ['blur(0px)', 'blur(5px)'], // Ending from unblurred to blurred
+                easing: "easeInExpo",
+                duration: 1200,
+                delay: (el, i) => 100 + 30 * i,
+                complete: function() {
+                    hidePreloader(); // Call hidePreloader after the animation completes
+                }
+            });
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(hidePreloader, 5000); // Call hidePreloader after 5000 milliseconds if not already called by animation
+        });
+
+        function hidePreloader() {
+            var preloader = document.querySelector('.preloader');
+            preloader.style.opacity = '0';
+            setTimeout(function () {
+                preloader.style.display = 'none';
+            }, 200);
+        }
+    </script>
+</div>
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container px-6 md:px-12">
+
+    <div class="navbar-content ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Overlord Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    ARCHIVES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/masonry/"
+                                        >
+                                    <i class="fa-solid fa-image fa-fw"></i>
+                                    PHOTO-ALBUM
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   target="_blank" rel="noopener" href="https://github.com/overlordzj/overlordzj.github.io"
+                                        >
+                                    <i class="fa-brands fa-github fa-fw"></i>
+                                    GITHUB
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-link fa-fw"></i>
+                                    LINKS
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/tags/">
+                                                    TAGS
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/categories/">
+                                                    CATEGORIES
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://redefine-docs.ohevan.com/">
+                                                    DOCS
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://blogback.overlordzj.cn/">
+                                                    DOMESTIC
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                ARCHIVES
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/masonry/"
+                        >
+                            <span>
+                                PHOTO-ALBUM
+                            </span>
+                            
+                                <i class="fa-solid fa-image fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           target="_blank" rel="noopener" href="https://github.com/overlordzj/overlordzj.github.io"
+                        >
+                            <span>
+                                GITHUB
+                            </span>
+                            
+                                <i class="fa-brands fa-github fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-Links"
+                        >
+                            <span>
+                                LINKS
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-Links">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/tags/">TAGS</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/categories/">CATEGORIES</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://redefine-docs.ohevan.com/">DOCS</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://blogback.overlordzj.cn/">DOMESTIC</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/tags/"
+                        >
+                            <span>Tags</span>
+                            <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/categories/"
+                        >
+                            <span>Categories</span>
+                            <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">23</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">23</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">56</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">web信息泄露</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/overlord.jpeg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">ZJ</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv100</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-09-26</span>
+        <span class="mobile">2024-09-26</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-09-27 00:11:44</span>
+            <span class="mobile">2024-09-27 00:11:44</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/ctf/">ctf</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/ctf/data/">data</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/ctf/data/web/">web</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/ctf/">ctf</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/data/">data</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/web/">web</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.6k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>7 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <h1 id="web信息泄露"><a href="#web信息泄露" class="headerlink" title="web信息泄露"></a>web信息泄露</h1>
+  <div class="note p-4 mb-4 rounded-small info">
+    <p>在网站开发者开发网站的时候，或多或少会残留一些敏感信息或者文件，特别是对于备份文件和版本控制系统源码泄露尤其常见</p>
+
+  </div>
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这里会提供一些来自ctfhub的案例，有需要还原的可以看我的博客的关于这一节的题目</p>
+<a href="/2024/09/12/ctf/writeup/web/%E7%9B%AE%E5%BD%95/catalogue/" title="web安全WP目录">参考题目目录</a>
+
+<h2 id="工具介绍"><a href="#工具介绍" class="headerlink" title="工具介绍"></a>工具介绍</h2>
+  <div class="note p-4 mb-4 rounded-small warning fa-solid icon-padding">
+    <i class="note-icon fa-solid fa-circle-exclamation"></i><p>提供的工具若未破解或链接已挂，请自行搜索破解版使用</p>
+
+  </div>
+
+<p><a class="link"   target="_blank" rel="noopener" href="https://github.com/maurosoria/dirsearch" >dirsearch <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 网站目录扫描工具</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://github.com/lijiejie/GitHack" >GitHack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> git文件恢复，用于python3，恢复效果一般</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://github.com/BugScanTeam/GitHack" >GitHack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> git文件恢复，用于python2，效果不错</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://github.com/admintony/svnExploit.git" >SVNExploit <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> .svn文件恢复，用于python3</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://github.com/kost/dvcs-ripper" >dvsc-ripper <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> .svn与.hg文件辅助恢复（kali）</p>
+<h2 id="备份文件泄露"><a href="#备份文件泄露" class="headerlink" title="备份文件泄露"></a>备份文件泄露</h2><h3 id="网站源码泄露"><a href="#网站源码泄露" class="headerlink" title="网站源码泄露"></a>网站源码泄露</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/image-20240916154942458.png"
+                      alt="image-20240916154942458"
+                ></p>
+<p>使用<a class="link"   target="_blank" rel="noopener" href="https://github.com/VMsec/ihoneyBakFileScan_Modify" >ihoneyBakFileScan_Modify <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>工具或者自编写脚本遍历请求网站目录</p>
+<p>这里提供一个本人自己的脚本</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> concurrent.futures <span class="keyword">import</span> ThreadPoolExecutor</span><br><span class="line"></span><br><span class="line"><span class="comment"># url为被扫描地址，后不加‘/’</span></span><br><span class="line"></span><br><span class="line">url1 = <span class="string">&#x27;http://xxx&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 常见的网站源码备份文件名</span></span><br><span class="line"></span><br><span class="line">list1 = [<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;127.0.0.1&#x27;</span>, <span class="string">&#x27;2010&#x27;</span>, <span class="string">&#x27;2011&#x27;</span>, <span class="string">&#x27;2012&#x27;</span>, <span class="string">&#x27;2013&#x27;</span>, <span class="string">&#x27;2014&#x27;</span>, <span class="string">&#x27;2015&#x27;</span>, <span class="string">&#x27;2016&#x27;</span>, <span class="string">&#x27;2017&#x27;</span>, <span class="string">&#x27;2018&#x27;</span>, <span class="string">&#x27;2019&#x27;</span>,</span><br><span class="line">                    <span class="string">&#x27;2020&#x27;</span>, <span class="string">&#x27;2021&#x27;</span>, <span class="string">&#x27;2022&#x27;</span>, <span class="string">&#x27;2023&#x27;</span>, <span class="string">&#x27;2024&#x27;</span>, <span class="string">&#x27;2025&#x27;</span>, <span class="string">&#x27;admin&#x27;</span>, <span class="string">&#x27;archive&#x27;</span>, <span class="string">&#x27;asp&#x27;</span>, <span class="string">&#x27;aspx&#x27;</span>, <span class="string">&#x27;auth&#x27;</span>, <span class="string">&#x27;back&#x27;</span>,</span><br><span class="line">                    <span class="string">&#x27;backup&#x27;</span>, <span class="string">&#x27;backups&#x27;</span>, <span class="string">&#x27;bak&#x27;</span>, <span class="string">&#x27;bbs&#x27;</span>, <span class="string">&#x27;bin&#x27;</span>, <span class="string">&#x27;clients&#x27;</span>, <span class="string">&#x27;code&#x27;</span>, <span class="string">&#x27;com&#x27;</span>, <span class="string">&#x27;customers&#x27;</span>, <span class="string">&#x27;dat&#x27;</span>, <span class="string">&#x27;data&#x27;</span>,</span><br><span class="line">                    <span class="string">&#x27;database&#x27;</span>, <span class="string">&#x27;db&#x27;</span>, <span class="string">&#x27;dump&#x27;</span>, <span class="string">&#x27;engine&#x27;</span>, <span class="string">&#x27;error_log&#x27;</span>, <span class="string">&#x27;faisunzip&#x27;</span>, <span class="string">&#x27;files&#x27;</span>, <span class="string">&#x27;forum&#x27;</span>, <span class="string">&#x27;home&#x27;</span>, <span class="string">&#x27;html&#x27;</span>,</span><br><span class="line">                    <span class="string">&#x27;index&#x27;</span>, <span class="string">&#x27;joomla&#x27;</span>, <span class="string">&#x27;js&#x27;</span>, <span class="string">&#x27;jsp&#x27;</span>, <span class="string">&#x27;local&#x27;</span>, <span class="string">&#x27;localhost&#x27;</span>, <span class="string">&#x27;master&#x27;</span>, <span class="string">&#x27;media&#x27;</span>, <span class="string">&#x27;members&#x27;</span>, <span class="string">&#x27;my&#x27;</span>, <span class="string">&#x27;mysql&#x27;</span>,</span><br><span class="line">                    <span class="string">&#x27;new&#x27;</span>, <span class="string">&#x27;old&#x27;</span>, <span class="string">&#x27;orders&#x27;</span>, <span class="string">&#x27;php&#x27;</span>, <span class="string">&#x27;sales&#x27;</span>, <span class="string">&#x27;site&#x27;</span>, <span class="string">&#x27;sql&#x27;</span>, <span class="string">&#x27;store&#x27;</span>, <span class="string">&#x27;tar&#x27;</span>, <span class="string">&#x27;test&#x27;</span>, <span class="string">&#x27;user&#x27;</span>, <span class="string">&#x27;users&#x27;</span>,</span><br><span class="line">                    <span class="string">&#x27;vb&#x27;</span>, <span class="string">&#x27;web&#x27;</span>, <span class="string">&#x27;website&#x27;</span>, <span class="string">&#x27;wordpress&#x27;</span>, <span class="string">&#x27;wp&#x27;</span>, <span class="string">&#x27;www&#x27;</span>, <span class="string">&#x27;wwwroot&#x27;</span>, <span class="string">&#x27;root&#x27;</span>, <span class="string">&#x27;log&#x27;</span>, <span class="string">&#x27;web&#x27;</span>, <span class="string">&#x27;website&#x27;</span>,</span><br><span class="line">                    <span class="string">&#x27;backup&#x27;</span>, <span class="string">&#x27;back&#x27;</span>, <span class="string">&#x27;www&#x27;</span>, <span class="string">&#x27;wwwroot&#x27;</span>, <span class="string">&#x27;temp&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 常见的网站源码备份文件后缀</span></span><br><span class="line"></span><br><span class="line">list2 = [<span class="string">&#x27;.zip&#x27;</span>, <span class="string">&#x27;.rar&#x27;</span>, <span class="string">&#x27;.tar.gz&#x27;</span>, <span class="string">&#x27;.tgz&#x27;</span>, <span class="string">&#x27;.tar.bz2&#x27;</span>, <span class="string">&#x27;.tar&#x27;</span>, <span class="string">&#x27;.jar&#x27;</span>, <span class="string">&#x27;.war&#x27;</span>, <span class="string">&#x27;.7z&#x27;</span>, <span class="string">&#x27;.bak&#x27;</span>, <span class="string">&#x27;.sql&#x27;</span>,</span><br><span class="line">                        <span class="string">&#x27;.gz&#x27;</span>, <span class="string">&#x27;.sql.gz&#x27;</span>, <span class="string">&#x27;.tar.tgz&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个函数来进行请求，并检查状态码</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">check_url</span>(<span class="params">file_name</span>):</span><br><span class="line">    url = <span class="string">f&quot;<span class="subst">&#123;url1&#125;</span>/<span class="subst">&#123;file_name&#125;</span>&quot;</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        response = requests.get(url)</span><br><span class="line">        <span class="keyword">if</span> response.status_code == <span class="number">200</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;file_name&#125;</span>\n&quot;</span>, end=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    <span class="keyword">except</span> requests.exceptions.RequestException <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;Error accessing <span class="subst">&#123;url&#125;</span>: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用多线程执行URL请求</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">scan_backup_files</span>():</span><br><span class="line">    <span class="keyword">with</span> ThreadPoolExecutor(max_workers=<span class="number">50</span>) <span class="keyword">as</span> executor:  <span class="comment"># 创建50个线程</span></span><br><span class="line">        <span class="comment"># 构造所有的文件名并提交给线程池</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> list1:</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> list2:</span><br><span class="line">                back = <span class="string">f&quot;<span class="subst">&#123;i&#125;</span><span class="subst">&#123;j&#125;</span>&quot;</span>  <span class="comment"># 组合文件名</span></span><br><span class="line">                executor.submit(check_url, back)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行扫描</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;能够访问到的网站后缀有:&quot;</span>)</span><br><span class="line">scan_backup_files()</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="bak文件泄露"><a href="#bak文件泄露" class="headerlink" title="bak文件泄露"></a>bak文件泄露</h3><p>尝试直接访问<code>index.php.bak</code>，有文件提示能下载即成功</p>
+<h3 id="vim缓存泄露"><a href="#vim缓存泄露" class="headerlink" title="vim缓存泄露"></a>vim缓存泄露</h3><p>尝试访问<code>/.index.php.swp</code>，有文件提示能下载即成功</p>
+
+  <div class="note p-4 mb-4 rounded-small warning">
+    <p>隐藏文件，记得加点访问</p>
+
+  </div>
+
+<blockquote>
+<p>vim的备份文件后缀位.swp，并且需要用<code>vim 文件名（无.swp）</code>来重新访问，windows直接打开是16进制的，更换编码格式为UTF-8，或者用linux系统打开</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/image-20240917172655327.png"
+                      alt="image-20240917172655327"
+                ></p>
+<h3 id="DS-Store文件泄露"><a href="#DS-Store文件泄露" class="headerlink" title=".DS_Store文件泄露"></a>.DS_Store文件泄露</h3><p>尝试直接访问<code>.DS_Store</code>，有文件提示能下载即成功</p>
+<blockquote>
+<p>文件需要在linux系统打开，或者在windows系统用UTF-8&#x2F;UTF-16格式打开</p>
+</blockquote>
+<h2 id="Git泄露"><a href="#Git泄露" class="headerlink" title="Git泄露"></a>Git泄露</h2><p>用网站目录扫描工具，这里演示用的<a class="link"   target="_blank" rel="noopener" href="https://github.com/maurosoria/dirsearch" >dirsearch <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（可以用御剑等等）</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python dirsearch.py -u 目标地址</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240912213718118.png"
+                      alt="image-20240912213718118"
+                ></p>
+<p>不用扫描完，扫描到确实有.git的存在，我们就可以试试用工具恢复</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240912213911928.png"
+                      alt="image-20240912213911928"
+                ></p>
+<p>在工具包目录下面生成了一些文件</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240912213948091.png"
+                      alt="image-20240912213948091"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240912214334276.png"
+                      alt="image-20240912214334276"
+                ></p>
+<p>但是并没有什么有价值的文件，也没有.git文件</p>
+<blockquote>
+<p>这是一个坑，要用另一个GitHack.py，并且在python2的环境才可以，建议在kali下运行</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://github.com/lijiejie/GitHack" >https://github.com/lijiejie/GitHack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 用于python3，但恢复效果一般</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://github.com/BugScanTeam/GitHack" >https://github.com/BugScanTeam/GitHack <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 用于python2，效果不错</p>
+</blockquote>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python2 GitHack.py 目标地址/.git</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240912215937518.png"
+                      alt="image-20240912215937518"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/image-20240912220043425.png"
+                      alt="image-20240912220043425"
+                ></p>
+<h2 id="SVN泄露"><a href="#SVN泄露" class="headerlink" title="SVN泄露"></a>SVN泄露</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240913005004198.png"
+                      alt="image-20240913005004198"
+                ></p>
+<p>使用工具<a class="link"   target="_blank" rel="noopener" href="https://github.com/admintony/svnExploit.git" >SVNExploit <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>检测目标是否存在SVN泄露（例行检查）</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python SvnExploit.py -u 目标地址/.svn</span><br></pre></td></tr></table></figure></div>
+
+<p>初次使用会有报错，下载pip包就可以</p>
+<blockquote>
+<p>或者直接在kali里面使用工具，kali里面的py包很全面</p>
+</blockquote>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install prettytable -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240913005735686.png"
+                      alt="image-20240913005735686"
+                ></p>
+<p>再次运行之后可以看到有结果输出，证明有svn泄露</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240913005921606.png"
+                      alt="image-20240913005921606"
+                ></p>
+<p>在原来的命令后面加上<code>--dump</code>参数，把源码下载下来</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python SvnExploit.py -u 目标地址/.svn --dump</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240913010130190.png"
+                      alt="image-20240913010130190"
+                ></p>
+<p>恢复的文件有一个<code>wc.db</code>，是一个数据库文件，可以查看到文件索引</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240913012737667.png"
+                      alt="image-20240913012737667"
+                ></p>
+<p>使用curl命令访问可以文件检查网页源代码是否存在flag，检查均返回404</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl http://challenge-2465e7edfc335d47.sandbox.ctfhub.com:10800/index.html13523.txt</span><br><span class="line">curl http://challenge-2465e7edfc335d47.sandbox.ctfhub.com:10800/flag_135183523.txt</span><br></pre></td></tr></table></figure></div>
+
+<p>根据上面所示，并没有flag文件，也确实没有直接被下载下来，毕竟题上也写了是在旧版本里面，所以使用其他工具进行还原</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://github.com/kost/dvcs-ripper" >dvsc-ripper <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>这个工具需要很多环境和包，所以建议在kali里面执行</p>
+<p>进入kali，安装工具所需依赖库</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install perl libio-socket-ssl-perl libdbd-sqlite3-perl libclass-dbi-perl libio-all-lwp-perl</span><br></pre></td></tr></table></figure></div>
+
+<p>安装完后，进入到工具目录，执行</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./rip-svn.pl -v -u 目标地址/.svn </span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240913011925973.png"
+                      alt="image-20240913011925973"
+                ></p>
+<p>既然是svn文件，那就会在.svn目录下面，低版本SVN具体路径为text-base目录，高版本SVN为pristine目录，然后层层往下查找，中途肯定会有找不到的时候，可以将文件放到实体机，用文件内容搜索工具搜索flag</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240913012313165.png"
+                      alt="image-20240913012313165"
+                ></p>
+<h2 id="HG泄露"><a href="#HG泄露" class="headerlink" title="HG泄露"></a>HG泄露</h2><p>和.SVN一样的恢复方式</p>
+<p>使用工具，<a class="link"   target="_blank" rel="noopener" href="https://github.com/kost/dvcs-ripper" >dvsc-ripper <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>这个工具需要很多环境和包，所以建议在kali里面执行</p>
+<p>进入kali，安装工具所需依赖库</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install perl libio-socket-ssl-perl libdbd-sqlite3-perl libclass-dbi-perl libio-all-lwp-perl</span><br></pre></td></tr></table></figure></div>
+
+<p>安装完后，进入到工具目录，执行</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./rip-hg.pl -v -u 地址/.hg/</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240917182029336.png"
+                      alt="image-20240917182029336"
+                ></p>
+<p>进入.hg文件，深度查找flag文件</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../../../images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240917182149228.png"
+                      alt="image-20240917182149228"
+                ></p>
+<p>回到靶场添加目录文件即可得到flag</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> web信息泄露</li>
+        <li><strong>Author:</strong> ZJ</li>
+        <li><strong>Created at
+                :</strong> 2024-09-26 00:00:00</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2024-09-27 00:11:44
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://blog.overlordzj.cn/2024/09/26/ctf/data/web/信息泄露/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/ctf/">#ctf</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/data/">#data</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/web/">#web</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+  <div class="recommended-article px-2 sm:px-6 md:px-8">
+   <div class="recommended-desktop">
+    <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>看看这些文章吧( ૢ⁼̴̤̆ ꇴ ⁼̴̤̆ ૢ)~ෆ</span>
+    </div>
+    <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/ctfhub/信息泄露/" title="信息泄露" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="信息泄露" class="!max-w-none">
+  <span class="title">信息泄露</span>
+</a><a class="recommended-article-item" href="/2024/09/12/ctf/writeup/web/buuctf/[web入门]粗心的小李/" title="web入门-粗心的小李" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="web入门-粗心的小李" class="!max-w-none">
+  <span class="title">web入门-粗心的小李</span>
+</a><a class="recommended-article-item" href="/2024/09/13/操作系统/kali/pip2安装/" title="kali环境下的pip2安装" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="kali环境下的pip2安装" class="!max-w-none">
+  <span class="title">kali环境下的pip2安装</span>
+</a></div>
+   </div>
+   <div class="recommended-mobile">
+   <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>看看这些文章吧( ૢ⁼̴̤̆ ꇴ ⁼̴̤̆ ૢ)~ෆ</span>
+   </div>
+   <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/ctfhub/信息泄露/" title="信息泄露" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="信息泄露" class="!max-w-none">
+  <span class="title">信息泄露</span>
+</a><a class="recommended-article-item" href="/2024/09/12/ctf/writeup/web/buuctf/[web入门]粗心的小李/" title="web入门-粗心的小李" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="web入门-粗心的小李" class="!max-w-none">
+  <span class="title">web入门-粗心的小李</span>
+</a><a class="recommended-article-item" href="/2024/09/13/操作系统/kali/pip2安装/" title="kali环境下的pip2安装" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="kali环境下的pip2安装" class="!max-w-none">
+  <span class="title">kali环境下的pip2安装</span>
+</a></div>
+   </div>
+  </div>
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2024/09/26/ctf/data/web/PHP%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">PHP相关知识</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/09/26/ctf/data/misc/%E7%9B%AE%E5%BD%95/catalogue/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">misc安全data目录</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        Comments
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://blogcomment.overlordzj.cn',
+          lang: 'zh-CN',
+          dark: 'body[class~="dark-mode"]',
+          reaction: true,
+          requiredMeta: ['nick', 'mail'],
+          emoji: ['//unpkg.com/@waline/emojis@1.2.0/qq'],
+          recaptchaV3Key: "wasd",
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">web信息泄露</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#web%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2"><span class="nav-text">web信息泄露</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D"><span class="nav-text">工具介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E6%B3%84%E9%9C%B2"><span class="nav-text">备份文件泄露</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%AB%99%E6%BA%90%E7%A0%81%E6%B3%84%E9%9C%B2"><span class="nav-text">网站源码泄露</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bak%E6%96%87%E4%BB%B6%E6%B3%84%E9%9C%B2"><span class="nav-text">bak文件泄露</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vim%E7%BC%93%E5%AD%98%E6%B3%84%E9%9C%B2"><span class="nav-text">vim缓存泄露</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DS-Store%E6%96%87%E4%BB%B6%E6%B3%84%E9%9C%B2"><span class="nav-text">.DS_Store文件泄露</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git%E6%B3%84%E9%9C%B2"><span class="nav-text">Git泄露</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SVN%E6%B3%84%E9%9C%B2"><span class="nav-text">SVN泄露</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HG%E6%B3%84%E9%9C%B2"><span class="nav-text">HG泄露</span></a></li></ol></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-solid fa-sync fa-spin" style="color: #f54545"></i>&nbsp;&nbsp;<a href="/">ZJ</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        56 posts in total
+                    </span>
+                    
+                        <span>
+                            39.6k words in total
+                        </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.7.1</a></span>
+        </div>
+        
+            <div class="icp-info my-1"><a target="_blank" rel="nofollow" href="
+                
+                    http://beian.miit.gov.cn
+                
+                ">蜀ICP备2024084968号</a></div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+            <li class="right-bottom-tools tool-aplayer flex justify-center items-center">
+
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/Swup.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/SwupSlideTheme.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/SwupScriptsPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/SwupProgressPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/SwupScrollPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/SwupPreloadPlugin.min.js"></script>
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+<script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/tools/imageViewer.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/utils.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/main.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/layouts/navbarShrink.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/tools/scrollTopBottom.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/tools/lightDarkSwitch.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/layouts/categoryList.js"></script>
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/tools/localSearch.js"></script>
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/tools/codeBlock.js"></script>
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/layouts/lazyload.js"></script>
+
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/tools/runtime.js"></script>
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/odometer.min.js"></script>
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/assets/odometer-theme-minimal.css">
+
+
+
+  <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/Typed.min.js"></script>
+  <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/plugins/typed.js"></script>
+
+
+
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/minimasonry.min.js"></script>
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/plugins/masonry.js"></script>
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/tools/tocToggle.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/layouts/toc.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/plugins/tabs.js"></script>
+    
+</div>
+
+
+    <div id="aplayer"></div>
+<script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/APlayer.min.js"></script>
+<script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/plugins/aplayer.js"></script>
+
+</body>
+</html>

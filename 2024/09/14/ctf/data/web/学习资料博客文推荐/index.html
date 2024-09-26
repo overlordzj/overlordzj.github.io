@@ -24,16 +24,17 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="学习资料博客文推荐web安全里面有很多各种各样的ctf习题，在遇到一些不会的题的时候往往会去网上查资料，这里盘点了一些做题时遇得到的知识点，可以结合网上资料一起再整理自己的笔记，毕竟自己记过一遍也会更有印象 PHP文件包含漏洞思路与Bypass总结 PHP文件包含漏洞利用思路与Bypass总结手册（一）  PHP文件包含漏洞利用思路与Bypass总结手册（二）  PHP文件包含漏洞利用思路与Byp">
+        <meta name="description" content="web学习资料博客文推荐web安全里面有很多各种各样的ctf习题，在遇到一些不会的题的时候往往会去网上查资料，这里盘点了一些做题时遇得到的知识点，可以结合网上资料一起再整理自己的笔记，毕竟自己记过一遍也会更有印象 PHP文件包含漏洞思路与Bypass总结 PHP文件包含漏洞利用思路与Bypass总结手册（一）  PHP文件包含漏洞利用思路与Bypass总结手册（二）  PHP文件包含漏洞利用思路与">
 <meta property="og:type" content="article">
 <meta property="og:title" content="web安全学习资料博客文推荐">
 <meta property="og:url" content="https://blog.overlordzj.cn/2024/09/14/ctf/data/web/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E5%8D%9A%E5%AE%A2%E6%96%87%E6%8E%A8%E8%8D%90/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="学习资料博客文推荐web安全里面有很多各种各样的ctf习题，在遇到一些不会的题的时候往往会去网上查资料，这里盘点了一些做题时遇得到的知识点，可以结合网上资料一起再整理自己的笔记，毕竟自己记过一遍也会更有印象 PHP文件包含漏洞思路与Bypass总结 PHP文件包含漏洞利用思路与Bypass总结手册（一）  PHP文件包含漏洞利用思路与Bypass总结手册（二）  PHP文件包含漏洞利用思路与Byp">
+<meta property="og:description" content="web学习资料博客文推荐web安全里面有很多各种各样的ctf习题，在遇到一些不会的题的时候往往会去网上查资料，这里盘点了一些做题时遇得到的知识点，可以结合网上资料一起再整理自己的笔记，毕竟自己记过一遍也会更有印象 PHP文件包含漏洞思路与Bypass总结 PHP文件包含漏洞利用思路与Bypass总结手册（一）  PHP文件包含漏洞利用思路与Bypass总结手册（二）  PHP文件包含漏洞利用思路与">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-09-13T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-09-14T14:03:30.181Z">
+<meta property="article:modified_time" content="2024-09-26T12:45:53.153Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="ctf">
 <meta property="article:tag" content="data">
 <meta property="article:tag" content="web">
 <meta name="twitter:card" content="summary">
@@ -576,15 +577,15 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">20</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">23</div>
         <div class="label text-third-text-color text-sm">Tags</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">22</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">23</div>
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">51</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">56</div>
         <div class="label text-third-text-color text-sm">Posts</div>
     </a>
 </div>
@@ -638,8 +639,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-09-14 22:03:30</span>
-            <span class="mobile">2024-09-14 22:03:30</span>
+            <span class="desktop">2024-09-26 20:45:53</span>
+            <span class="mobile">2024-09-26 20:45:53</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -687,7 +688,11 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/data/">data</a>&nbsp;
+                        <a href="/tags/ctf/">ctf</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/data/">data</a>&nbsp;
                     </li>
                 
                     <li>
@@ -725,7 +730,7 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h1 id="学习资料博客文推荐"><a href="#学习资料博客文推荐" class="headerlink" title="学习资料博客文推荐"></a>学习资料博客文推荐</h1><p>web安全里面有很多各种各样的ctf习题，在遇到一些不会的题的时候往往会去网上查资料，这里盘点了一些做题时遇得到的知识点，可以结合网上资料一起再整理自己的笔记，毕竟自己记过一遍也会更有印象</p>
+            <h1 id="web学习资料博客文推荐"><a href="#web学习资料博客文推荐" class="headerlink" title="web学习资料博客文推荐"></a>web学习资料博客文推荐</h1><p>web安全里面有很多各种各样的ctf习题，在遇到一些不会的题的时候往往会去网上查资料，这里盘点了一些做题时遇得到的知识点，可以结合网上资料一起再整理自己的笔记，毕竟自己记过一遍也会更有印象</p>
 <h2 id="PHP文件包含漏洞思路与Bypass总结"><a href="#PHP文件包含漏洞思路与Bypass总结" class="headerlink" title="PHP文件包含漏洞思路与Bypass总结"></a>PHP文件包含漏洞思路与Bypass总结</h2><ol>
 <li><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_38154820/article/details/105839776" >PHP文件包含漏洞利用思路与Bypass总结手册（一） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
 <li><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_38154820/article/details/106330268?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522A78DF7D0-FFA4-48BA-80E6-B49EF580AC22%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=A78DF7D0-FFA4-48BA-80E6-B49EF580AC22&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_ecpm_v1~rank_v31_ecpm-4-106330268-null-null.nonecase&utm_term=PHP%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8%E6%80%9D%E8%B7%AF%E4%B8%8EBypass%E6%80%BB%E7%BB%93%E6%89%8B%E5%86%8C&spm=1018.2226.3001.4450" >PHP文件包含漏洞利用思路与Bypass总结手册（二） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
@@ -746,7 +751,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-09-14 22:03:30
+                    :</strong> 2024-09-26 20:45:53
             </li>
         
         <li>
@@ -772,6 +777,10 @@
             <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
                 
                     <li class="tag-item mx-0.5">
+                        <a href="/tags/ctf/">#ctf</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item mx-0.5">
                         <a href="/tags/data/">#data</a>&nbsp;
                     </li>
                 
@@ -788,30 +797,30 @@
     <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
      <i aria-hidden="true"></i><span>看看这些文章吧( ૢ⁼̴̤̆ ꇴ ⁼̴̤̆ ૢ)~ෆ</span>
     </div>
-    <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/目录/做题思路及方法/" title="web安全的做题思路及方法" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="web安全的做题思路及方法" class="!max-w-none">
-  <span class="title">web安全的做题思路及方法</span>
+    <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/26/ctf/data/web/PHP相关知识/" title="PHP相关知识" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="PHP相关知识" class="!max-w-none">
+  <span class="title">PHP相关知识</span>
 </a><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/buuctf/[BJDCTF2020]ZJCTF-不过如此/" title="BJDCTF2020 ZJCTF，不过如此*" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="BJDCTF2020 ZJCTF，不过如此*" class="!max-w-none">
   <span class="title">BJDCTF2020 ZJCTF，不过如此*</span>
-</a><a class="recommended-article-item" href="/2024/09/12/ctf/data/another/竞赛模式/" title="CTF竞赛模式" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="CTF竞赛模式" class="!max-w-none">
-  <span class="title">CTF竞赛模式</span>
+</a><a class="recommended-article-item" href="/2024/09/12/ctf/writeup/web/目录/catalogue/" title="web安全WP目录" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="web安全WP目录" class="!max-w-none">
+  <span class="title">web安全WP目录</span>
 </a></div>
    </div>
    <div class="recommended-mobile">
    <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
      <i aria-hidden="true"></i><span>看看这些文章吧( ૢ⁼̴̤̆ ꇴ ⁼̴̤̆ ૢ)~ෆ</span>
    </div>
-   <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/目录/做题思路及方法/" title="web安全的做题思路及方法" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="web安全的做题思路及方法" class="!max-w-none">
-  <span class="title">web安全的做题思路及方法</span>
+   <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/26/ctf/data/web/PHP相关知识/" title="PHP相关知识" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="PHP相关知识" class="!max-w-none">
+  <span class="title">PHP相关知识</span>
 </a><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/buuctf/[BJDCTF2020]ZJCTF-不过如此/" title="BJDCTF2020 ZJCTF，不过如此*" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="BJDCTF2020 ZJCTF，不过如此*" class="!max-w-none">
   <span class="title">BJDCTF2020 ZJCTF，不过如此*</span>
-</a><a class="recommended-article-item" href="/2024/09/12/ctf/data/another/竞赛模式/" title="CTF竞赛模式" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="CTF竞赛模式" class="!max-w-none">
-  <span class="title">CTF竞赛模式</span>
+</a><a class="recommended-article-item" href="/2024/09/12/ctf/writeup/web/目录/catalogue/" title="web安全WP目录" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="web安全WP目录" class="!max-w-none">
+  <span class="title">web安全WP目录</span>
 </a></div>
    </div>
   </div>
@@ -838,10 +847,10 @@
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="next"
                         rel="next"
-                        href="/2024/09/14/ctf/writeup/web/ctfhub/RCE-eval%E6%89%A7%E8%A1%8C/"
+                        href="/2024/09/14/ctf/writeup/web/buuctf/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/"
                         >
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">RCE-eval执行</span>
+                                <span class="post-nav-title-item">BJDCTF2020 ZJCTF，不过如此*</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex justify-center items-center">
@@ -906,7 +915,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">web安全学习资料博客文推荐</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E5%8D%9A%E5%AE%A2%E6%96%87%E6%8E%A8%E8%8D%90"><span class="nav-text">学习资料博客文推荐</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E%E6%80%9D%E8%B7%AF%E4%B8%8EBypass%E6%80%BB%E7%BB%93"><span class="nav-text">PHP文件包含漏洞思路与Bypass总结</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#web%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E5%8D%9A%E5%AE%A2%E6%96%87%E6%8E%A8%E8%8D%90"><span class="nav-text">web学习资料博客文推荐</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E%E6%80%9D%E8%B7%AF%E4%B8%8EBypass%E6%80%BB%E7%BB%93"><span class="nav-text">PHP文件包含漏洞思路与Bypass总结</span></a></li></ol></li></ol>
 
     </div>
 </div>
@@ -939,11 +948,11 @@
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        51 posts in total
+                        56 posts in total
                     </span>
                     
                         <span>
-                            25k words in total
+                            39.6k words in total
                         </span>
                     
                 </p>

@@ -24,12 +24,12 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="隐写术隐写术即通过一定手段达到信息隐藏的目的，不让除预期的接收者之外的任何人知晓信息的传递事件或信息内容 前言这里会提供一些来自buuctf的案例，有需要还原的可以看我的博客的关于这一节的题目 工具介绍        提供的工具若未破解或链接已挂，请自行搜索破解版使用      010Editor  16进制编辑器 Binwalk  数据分离工具 stegsolve  LSB工具（windows）">
+        <meta name="description" content="隐写术隐写术即通过一定手段达到信息隐藏的目的，不让除预期的接收者之外的任何人知晓信息的传递事件或信息内容 前言这里会提供一些来自buuctf的案例，有需要还原的可以看我的博客的关于这一节的题目 参考题目目录  工具介绍        提供的工具若未破解或链接已挂，请自行搜索破解版使用      010Editor  16进制编辑器（新链 ） TrlDNet  文件识别工具 Binwalk  数据分">
 <meta property="og:type" content="article">
 <meta property="og:title" content="隐写术">
 <meta property="og:url" content="https://blog.overlordzj.cn/2024/09/18/ctf/data/misc/%E9%9A%90%E5%86%99%E6%9C%AF/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="隐写术隐写术即通过一定手段达到信息隐藏的目的，不让除预期的接收者之外的任何人知晓信息的传递事件或信息内容 前言这里会提供一些来自buuctf的案例，有需要还原的可以看我的博客的关于这一节的题目 工具介绍        提供的工具若未破解或链接已挂，请自行搜索破解版使用      010Editor  16进制编辑器 Binwalk  数据分离工具 stegsolve  LSB工具（windows）">
+<meta property="og:description" content="隐写术隐写术即通过一定手段达到信息隐藏的目的，不让除预期的接收者之外的任何人知晓信息的传递事件或信息内容 前言这里会提供一些来自buuctf的案例，有需要还原的可以看我的博客的关于这一节的题目 参考题目目录  工具介绍        提供的工具若未破解或链接已挂，请自行搜索破解版使用      010Editor  16进制编辑器（新链 ） TrlDNet  文件识别工具 Binwalk  数据分">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240918234041568.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240918234142219.png">
@@ -65,10 +65,11 @@
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240921010846336.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240921010909324.png">
 <meta property="article:published_time" content="2024-09-17T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-09-20T18:02:40.550Z">
+<meta property="article:modified_time" content="2024-09-26T15:51:31.506Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="ctf">
 <meta property="article:tag" content="data">
+<meta property="article:tag" content="misc">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://blog.overlordzj.cn/images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240918234041568.png">
     
@@ -610,15 +611,15 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">20</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">23</div>
         <div class="label text-third-text-color text-sm">Tags</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">22</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">23</div>
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">51</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">56</div>
         <div class="label text-third-text-color text-sm">Posts</div>
     </a>
 </div>
@@ -672,8 +673,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-09-21 02:02:40</span>
-            <span class="mobile">2024-09-21 02:02:40</span>
+            <span class="desktop">2024-09-26 23:51:31</span>
+            <span class="mobile">2024-09-26 23:51:31</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -728,6 +729,10 @@
                         | <a href="/tags/data/">data</a>&nbsp;
                     </li>
                 
+                    <li>
+                        | <a href="/tags/misc/">misc</a>&nbsp;
+                    </li>
+                
             </ul>
         </span>
     
@@ -761,13 +766,16 @@
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
             <h1 id="隐写术"><a href="#隐写术" class="headerlink" title="隐写术"></a>隐写术</h1><p>隐写术即通过一定手段达到信息隐藏的目的，不让除预期的接收者之外的任何人知晓信息的传递事件或信息内容</p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这里会提供一些来自buuctf的案例，有需要还原的可以看我的博客的关于这一节的题目</p>
+<a href="/2024/09/18/ctf/writeup/misc/%E7%9B%AE%E5%BD%95/catalogue/" title="misc安全WP目录">参考题目目录</a>
+
 <h2 id="工具介绍"><a href="#工具介绍" class="headerlink" title="工具介绍"></a>工具介绍</h2>
   <div class="note p-4 mb-4 rounded-small warning fa-solid icon-padding">
     <i class="note-icon fa-solid fa-circle-exclamation"></i><p>提供的工具若未破解或链接已挂，请自行搜索破解版使用</p>
 
   </div>
 
-<p><a class="link"   target="_blank" rel="noopener" href="https://www.52pojie.cn/thread-1863194-1-1.html" >010Editor <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 16进制编辑器</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.52pojie.cn/thread-1863194-1-1.html" >010Editor <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 16进制编辑器（<a class="link"   target="_blank" rel="noopener" href="https://www.puresys.net/2133.html#:~:text=010%20Editor" >新链 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://softmall.net/apps/1498#google_vignette" >TrlDNet <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 文件识别工具</p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://github.com/ReFirmLabs/binwalk" >Binwalk <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 数据分离工具</p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://github.com/Giotino/stegsolve/tree/v.1.5" >stegsolve <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> LSB工具（windows）</p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://github.com/zed-0xff/zsteg" >zsteg <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>  LSB工具（linux）</p>
@@ -844,7 +852,7 @@
 </tr>
 </tbody></table>
 <blockquote>
-<p>在linux中用file命令查看文件类型，windows中用TrlDNET工具进行查看</p>
+<p>在linux中用file命令查看文件类型，windows中用<a class="link"   target="_blank" rel="noopener" href="https://softmall.net/apps/1498#google_vignette" >TrlDNET <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>工具进行查看</p>
 </blockquote>
 <p><img  
                      lazyload
@@ -858,7 +866,7 @@
                      data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240918234142219.png"
                       alt="image-20240918234142219"
                 ></p>
-<h3 id="图片隐写"><a href="#图片隐写" class="headerlink" title="图片隐写"></a>图片隐写</h3><h4 id="附加字符串"><a href="#附加字符串" class="headerlink" title="附加字符串"></a>附加字符串</h4>
+<h2 id="图片隐写"><a href="#图片隐写" class="headerlink" title="图片隐写"></a>图片隐写</h2><h3 id="附加字符串"><a href="#附加字符串" class="headerlink" title="附加字符串"></a>附加字符串</h3>
   <div class="note-large blue">
     <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
       <p>原理</p>
@@ -877,7 +885,7 @@
                      data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240919002347396.png"
                       alt="image-20240919002347396"
                 ></p>
-<h5 id="图种"><a href="#图种" class="headerlink" title="图种"></a>图种</h5>
+<h4 id="图种"><a href="#图种" class="headerlink" title="图种"></a>图种</h4>
   <div class="note-large blue">
     <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
       <p>原理</p>
@@ -904,7 +912,7 @@
                      data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240919002338362.png"
                       alt="image-20240919002338362"
                 ></p>
-<h5 id="EXIF"><a href="#EXIF" class="headerlink" title="EXIF"></a>EXIF</h5>
+<h4 id="EXIF"><a href="#EXIF" class="headerlink" title="EXIF"></a>EXIF</h4>
   <div class="note-large blue">
     <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
       <p>原理</p>
@@ -922,7 +930,7 @@
                      data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240919002824284.png"
                       alt="image-20240919002824284"
                 ></p>
-<h4 id="图片宽高"><a href="#图片宽高" class="headerlink" title="图片宽高"></a>图片宽高</h4><p>对于图片，通过<a class="link"   target="_blank" rel="noopener" href="https://www.52pojie.cn/thread-1863194-1-1.html" >010Editor <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>打开可以直接修改宽高，但如果要恢复原始比例就需要用到CRC校验码了，涉及到CRC撞库，需要写脚本来实现，并且当源文件过大，则难以枚举</p>
+<h3 id="图片宽高"><a href="#图片宽高" class="headerlink" title="图片宽高"></a>图片宽高</h3><p>对于图片，通过<a class="link"   target="_blank" rel="noopener" href="https://www.52pojie.cn/thread-1863194-1-1.html" >010Editor <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>打开可以直接修改宽高，但如果要恢复原始比例就需要用到CRC校验码了，涉及到CRC撞库，需要写脚本来实现，并且当源文件过大，则难以枚举</p>
 <table>
 <thead>
 <tr>
@@ -997,7 +1005,7 @@
                      data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240919010356310.png"
                       alt="image-20240919010356310"
                 ></p>
-<h4 id="最低有效位（LSB）"><a href="#最低有效位（LSB）" class="headerlink" title="最低有效位（LSB）"></a>最低有效位（LSB）</h4>
+<h3 id="最低有效位（LSB）"><a href="#最低有效位（LSB）" class="headerlink" title="最低有效位（LSB）"></a>最低有效位（LSB）</h3>
   <div class="note-large blue">
     <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
       <p>原理</p>
@@ -1017,7 +1025,7 @@
                      data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240919174523222.png"
                       alt="image-20240919174523222"
                 ></p>
-<h4 id="盲水印"><a href="#盲水印" class="headerlink" title="盲水印"></a>盲水印</h4><p>这种隐写方式还原需要两张看起来几乎一样的图片，通过比较图片的MD5值或者图片大小可以发现实际是不同的两张图片</p>
+<h3 id="盲水印"><a href="#盲水印" class="headerlink" title="盲水印"></a>盲水印</h3><p>这种隐写方式还原需要两张看起来几乎一样的图片，通过比较图片的MD5值或者图片大小可以发现实际是不同的两张图片</p>
 <p>使用工具<a class="link"   target="_blank" rel="noopener" href="https://github.com/fire-keeper/BlindWatermark" >BlindWatermark <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <blockquote>
 <p>上面的工具不是本案例提供的，请下载<a class="link"   target="_blank" rel="noopener" href="https://github.com/chishaxie/BlindWaterMark" >BlindWatermark <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
@@ -1070,7 +1078,7 @@
 <blockquote>
 <p>真的服这个作者了(╯‵□′)╯︵ ┴─┴ </p>
 </blockquote>
-<h3 id="音频隐写"><a href="#音频隐写" class="headerlink" title="音频隐写"></a>音频隐写</h3><h4 id="摩尔斯密码与音频隐写"><a href="#摩尔斯密码与音频隐写" class="headerlink" title="摩尔斯密码与音频隐写"></a>摩尔斯密码与音频隐写</h4><p>在MISC题中打开音频文件若是能听到“滴答”的声音，可以猜测是摩尔斯电码有关</p>
+<h2 id="音频隐写"><a href="#音频隐写" class="headerlink" title="音频隐写"></a>音频隐写</h2><h3 id="摩尔斯密码与音频隐写"><a href="#摩尔斯密码与音频隐写" class="headerlink" title="摩尔斯密码与音频隐写"></a>摩尔斯密码与音频隐写</h3><p>在MISC题中打开音频文件若是能听到“滴答”的声音，可以猜测是摩尔斯电码有关</p>
 
   <div class="note p-4 mb-4 rounded-small warning fa-solid icon-padding">
     <i class="note-icon fa-solid fa-circle-exclamation"></i><p>一般不会有这种题，因为没有技术含量还浪费时间</p>
@@ -1088,7 +1096,7 @@
 <blockquote>
 <p>这里就不还原为英文字母了</p>
 </blockquote>
-<h4 id="MP3音频"><a href="#MP3音频" class="headerlink" title="MP3音频"></a>MP3音频</h4>
+<h3 id="MP3音频"><a href="#MP3音频" class="headerlink" title="MP3音频"></a>MP3音频</h3>
   <div class="note-large blue">
     <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
       <p>原理</p>
@@ -1106,7 +1114,7 @@
 </blockquote>
 <div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># —E 读取隐藏信息文件的内容，-P 设置密码</span></span><br><span class="line"><span class="comment"># 加密</span></span><br><span class="line">decode.exe -E data.txt yuan.wav new.mp3</span><br><span class="line"><span class="comment"># data.txt是加密文件，yuan.wav是原始音频，new.mp3为输出文件</span></span><br><span class="line"><span class="comment"># 然后会需要输入加密的密码</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 解密</span></span><br><span class="line">encode.exe -E -P 123456 new.mp3</span><br><span class="line"><span class="comment"># 123456是解密的密码，new.mp3是需要解密的文件</span></span><br></pre></td></tr></table></figure></div>
 
-<h4 id="波形图"><a href="#波形图" class="headerlink" title="波形图"></a>波形图</h4>
+<h3 id="波形图"><a href="#波形图" class="headerlink" title="波形图"></a>波形图</h3>
   <div class="note-large blue">
     <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
       <p>原理</p>
@@ -1140,7 +1148,7 @@
 <p>这里提供一个脚本</p>
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s=<span class="string">&#x27;your code&#x27;</span></span><br><span class="line">res=<span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="built_in">len</span>(s),<span class="number">7</span>):</span><br><span class="line">    res+=<span class="built_in">chr</span>(<span class="built_in">int</span>(s[i:i+<span class="number">7</span>],<span class="number">2</span>))</span><br><span class="line"><span class="built_in">print</span>(res)</span><br></pre></td></tr></table></figure></div>
 
-<h4 id="频谱图"><a href="#频谱图" class="headerlink" title="频谱图"></a>频谱图</h4><p>音频是一段杂音或者比较刺耳，波形图也没有规律，则可能是频谱图隐写</p>
+<h3 id="频谱图"><a href="#频谱图" class="headerlink" title="频谱图"></a>频谱图</h3><p>音频是一段杂音或者比较刺耳，波形图也没有规律，则可能是频谱图隐写</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
@@ -1161,7 +1169,7 @@
                       alt="image-20240920012745555"
                 ></p>
 <p>直接就得到flag了，可以作为一个日常判断来做题，拿到音频题就直接看一下频谱图，只需要用手点点就能发现意想不到的东西，岂不美哉≖‿≖✧ </p>
-<h3 id="视频隐写"><a href="#视频隐写" class="headerlink" title="视频隐写"></a>视频隐写</h3><h4 id="视频帧的分离"><a href="#视频帧的分离" class="headerlink" title="视频帧的分离"></a>视频帧的分离</h4>
+<h2 id="视频隐写"><a href="#视频隐写" class="headerlink" title="视频隐写"></a>视频隐写</h2><h3 id="视频帧的分离"><a href="#视频帧的分离" class="headerlink" title="视频帧的分离"></a>视频帧的分离</h3>
   <div class="note p-4 mb-4 rounded-small blue">
     <p>一般用于综合题目</p>
 
@@ -1182,7 +1190,7 @@
                      data-src="/./../../../../images/%5B2019RoarCTF%5D%E9%BB%84%E9%87%916%E5%B9%B4/atta044.jpg"
                       alt="atta044"
                 ></p>
-<h3 id="文档隐写"><a href="#文档隐写" class="headerlink" title="文档隐写"></a>文档隐写</h3><h4 id="Word文档隐写"><a href="#Word文档隐写" class="headerlink" title="Word文档隐写"></a>Word文档隐写</h4><h5 id="改变字体颜色进行隐藏"><a href="#改变字体颜色进行隐藏" class="headerlink" title="改变字体颜色进行隐藏"></a>改变字体颜色进行隐藏</h5>
+<h2 id="文档隐写"><a href="#文档隐写" class="headerlink" title="文档隐写"></a>文档隐写</h2><h3 id="Word文档隐写"><a href="#Word文档隐写" class="headerlink" title="Word文档隐写"></a>Word文档隐写</h3><h4 id="改变字体颜色进行隐藏"><a href="#改变字体颜色进行隐藏" class="headerlink" title="改变字体颜色进行隐藏"></a>改变字体颜色进行隐藏</h4>
   <div class="note-large blue">
     <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
       <p>原理</p>
@@ -1207,7 +1215,7 @@
                      data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240920174347322.png"
                       alt="image-20240920174347322"
                 ></p>
-<h5 id="勾选隐藏文字功能进行隐藏"><a href="#勾选隐藏文字功能进行隐藏" class="headerlink" title="勾选隐藏文字功能进行隐藏"></a>勾选隐藏文字功能进行隐藏</h5>
+<h4 id="勾选隐藏文字功能进行隐藏"><a href="#勾选隐藏文字功能进行隐藏" class="headerlink" title="勾选隐藏文字功能进行隐藏"></a>勾选隐藏文字功能进行隐藏</h4>
   <div class="note-large blue">
     <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
       <p>原理</p>
@@ -1229,14 +1237,14 @@
 <p>这样隐藏后不会被统计字数，但也不好找到隐藏的位置</p>
 <p>tips：可以全选然后取消隐藏</p>
 </blockquote>
-<h5 id="解压docx文档隐藏文件再压缩进行隐藏"><a href="#解压docx文档隐藏文件再压缩进行隐藏" class="headerlink" title="解压docx文档隐藏文件再压缩进行隐藏"></a>解压docx文档隐藏文件再压缩进行隐藏</h5><p>docx文档修改后缀为.zip或者其他格式的压缩包，解压后就可以看到里面是有文件的</p>
+<h4 id="解压docx文档隐藏文件再压缩进行隐藏"><a href="#解压docx文档隐藏文件再压缩进行隐藏" class="headerlink" title="解压docx文档隐藏文件再压缩进行隐藏"></a>解压docx文档隐藏文件再压缩进行隐藏</h4><p>docx文档修改后缀为.zip或者其他格式的压缩包，解压后就可以看到里面是有文件的</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="/./../../../../images/%E9%9A%90%E5%86%99%E6%9C%AF/image-20240920180256951.png"
                       alt="image-20240920180256951"
                 ></p>
-<h4 id="PDF文档隐写"><a href="#PDF文档隐写" class="headerlink" title="PDF文档隐写"></a>PDF文档隐写</h4><p>对PDF文档的隐写需要用到工具<a class="link"   target="_blank" rel="noopener" href="https://www.bailer.at/wbstego/" >wbStego4.3open <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="PDF文档隐写"><a href="#PDF文档隐写" class="headerlink" title="PDF文档隐写"></a>PDF文档隐写</h3><p>对PDF文档的隐写需要用到工具<a class="link"   target="_blank" rel="noopener" href="https://www.bailer.at/wbstego/" >wbStego4.3open <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 
   <div class="note-large blue">
     <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
@@ -1299,7 +1307,7 @@
                 ></p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://www.bailer.at/wbstego/" >wbStego4.3open <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>工具不会用的可以参考<a href="/2024/09/20/ctf/writeup/misc/buuctf/%5BPDF%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99%5Dpdf%E9%9A%90%E5%86%99/" title="PDF文档隐写-pdf隐写">[PDF文档隐写]pdf隐写</a></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>隐写术是一个比较混杂的misc安全类，做题时基本是用作其他题型的附加难度，如果题目不提示用隐写术，一定要对图片，音频，视频和文档敏感，不然拿到手都入不了方向</p>
-<a href="/2024/09/18/ctf/writeup/misc/%E7%9B%AE%E5%BD%95/catalogue/" title="misc安全目录">参考题目目录</a>
+<a href="/2024/09/18/ctf/writeup/misc/%E7%9B%AE%E5%BD%95/catalogue/" title="misc安全WP目录">参考题目目录</a>
 
         </div>
 
@@ -1314,7 +1322,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-09-21 02:02:40
+                    :</strong> 2024-09-26 23:51:31
             </li>
         
         <li>
@@ -1345,6 +1353,10 @@
                 
                     <li class="tag-item mx-0.5">
                         <a href="/tags/data/">#data</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/misc/">#misc</a>&nbsp;
                     </li>
                 
             </ul>
@@ -1390,13 +1402,13 @@
                     <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="prev"
                         rel="prev"
-                        href="/2024/09/19/ctf/writeup/misc/buuctf/%E8%8E%AB%E5%B0%94%E6%96%AF%E7%94%B5%E7%A0%81/"
+                        href="/2024/09/19/ctf/writeup/misc/buuctf/%E9%A2%91%E8%B0%B1%E5%9B%BE/"
                         >
                             <span class="left arrow-icon flex justify-center items-center">
                                 <i class="fa-solid fa-chevron-left"></i>
                             </span>
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">莫尔斯电码</span>
+                                <span class="post-nav-title-item">频谱图</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
@@ -1474,7 +1486,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">隐写术</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9A%90%E5%86%99%E6%9C%AF"><span class="nav-text">隐写术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D"><span class="nav-text">工具介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B%E5%8F%8A%E8%AF%86%E5%88%AB"><span class="nav-text">文件结构类型及识别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%96%87%E4%BB%B6%E5%A4%B4%E5%92%8C%E6%96%87%E4%BB%B6%E5%B0%BE"><span class="nav-text">常见文件头和文件尾</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%99"><span class="nav-text">图片隐写</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%99%84%E5%8A%A0%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-text">附加字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%9B%BE%E7%A7%8D"><span class="nav-text">图种</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#EXIF"><span class="nav-text">EXIF</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E5%AE%BD%E9%AB%98"><span class="nav-text">图片宽高</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%80%E4%BD%8E%E6%9C%89%E6%95%88%E4%BD%8D%EF%BC%88LSB%EF%BC%89"><span class="nav-text">最低有效位（LSB）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%9B%B2%E6%B0%B4%E5%8D%B0"><span class="nav-text">盲水印</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99"><span class="nav-text">音频隐写</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%91%A9%E5%B0%94%E6%96%AF%E5%AF%86%E7%A0%81%E4%B8%8E%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99"><span class="nav-text">摩尔斯密码与音频隐写</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MP3%E9%9F%B3%E9%A2%91"><span class="nav-text">MP3音频</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B3%A2%E5%BD%A2%E5%9B%BE"><span class="nav-text">波形图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%91%E8%B0%B1%E5%9B%BE"><span class="nav-text">频谱图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%86%E9%A2%91%E9%9A%90%E5%86%99"><span class="nav-text">视频隐写</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%86%E9%A2%91%E5%B8%A7%E7%9A%84%E5%88%86%E7%A6%BB"><span class="nav-text">视频帧的分离</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99"><span class="nav-text">文档隐写</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Word%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99"><span class="nav-text">Word文档隐写</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%94%B9%E5%8F%98%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2%E8%BF%9B%E8%A1%8C%E9%9A%90%E8%97%8F"><span class="nav-text">改变字体颜色进行隐藏</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8B%BE%E9%80%89%E9%9A%90%E8%97%8F%E6%96%87%E5%AD%97%E5%8A%9F%E8%83%BD%E8%BF%9B%E8%A1%8C%E9%9A%90%E8%97%8F"><span class="nav-text">勾选隐藏文字功能进行隐藏</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%A7%A3%E5%8E%8Bdocx%E6%96%87%E6%A1%A3%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%E5%86%8D%E5%8E%8B%E7%BC%A9%E8%BF%9B%E8%A1%8C%E9%9A%90%E8%97%8F"><span class="nav-text">解压docx文档隐藏文件再压缩进行隐藏</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PDF%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99"><span class="nav-text">PDF文档隐写</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9A%90%E5%86%99%E6%9C%AF"><span class="nav-text">隐写术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D"><span class="nav-text">工具介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B%E5%8F%8A%E8%AF%86%E5%88%AB"><span class="nav-text">文件结构类型及识别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%96%87%E4%BB%B6%E5%A4%B4%E5%92%8C%E6%96%87%E4%BB%B6%E5%B0%BE"><span class="nav-text">常见文件头和文件尾</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%99"><span class="nav-text">图片隐写</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%99%84%E5%8A%A0%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-text">附加字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BE%E7%A7%8D"><span class="nav-text">图种</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#EXIF"><span class="nav-text">EXIF</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E5%AE%BD%E9%AB%98"><span class="nav-text">图片宽高</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E4%BD%8E%E6%9C%89%E6%95%88%E4%BD%8D%EF%BC%88LSB%EF%BC%89"><span class="nav-text">最低有效位（LSB）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B2%E6%B0%B4%E5%8D%B0"><span class="nav-text">盲水印</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99"><span class="nav-text">音频隐写</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%91%A9%E5%B0%94%E6%96%AF%E5%AF%86%E7%A0%81%E4%B8%8E%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99"><span class="nav-text">摩尔斯密码与音频隐写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MP3%E9%9F%B3%E9%A2%91"><span class="nav-text">MP3音频</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A2%E5%BD%A2%E5%9B%BE"><span class="nav-text">波形图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%91%E8%B0%B1%E5%9B%BE"><span class="nav-text">频谱图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%86%E9%A2%91%E9%9A%90%E5%86%99"><span class="nav-text">视频隐写</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%86%E9%A2%91%E5%B8%A7%E7%9A%84%E5%88%86%E7%A6%BB"><span class="nav-text">视频帧的分离</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99"><span class="nav-text">文档隐写</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Word%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99"><span class="nav-text">Word文档隐写</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%94%B9%E5%8F%98%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2%E8%BF%9B%E8%A1%8C%E9%9A%90%E8%97%8F"><span class="nav-text">改变字体颜色进行隐藏</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8B%BE%E9%80%89%E9%9A%90%E8%97%8F%E6%96%87%E5%AD%97%E5%8A%9F%E8%83%BD%E8%BF%9B%E8%A1%8C%E9%9A%90%E8%97%8F"><span class="nav-text">勾选隐藏文字功能进行隐藏</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E5%8E%8Bdocx%E6%96%87%E6%A1%A3%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%E5%86%8D%E5%8E%8B%E7%BC%A9%E8%BF%9B%E8%A1%8C%E9%9A%90%E8%97%8F"><span class="nav-text">解压docx文档隐藏文件再压缩进行隐藏</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PDF%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99"><span class="nav-text">PDF文档隐写</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></li></ol>
 
     </div>
 </div>
@@ -1507,11 +1519,11 @@
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        51 posts in total
+                        56 posts in total
                     </span>
                     
                         <span>
-                            25k words in total
+                            39.6k words in total
                         </span>
                     
                 </p>
