@@ -1245,12 +1245,12 @@ PHP文件包含漏洞利用...
                     
                         <li>
                             
-                            <a href="/tags/writeup/">writeup</a>&nbsp;
+                            <a href="/tags/%E5%BE%85%E5%A1%AB%E5%9D%91/">待填坑</a>&nbsp;
                         </li>
                     
                         <li>
                             | 
-                            <a href="/tags/%E5%BE%85%E5%A1%AB%E5%9D%91/">待填坑</a>&nbsp;
+                            <a href="/tags/writeup/">writeup</a>&nbsp;
                         </li>
                     
                         <li>
@@ -1592,100 +1592,19 @@ PHP文件包含漏洞利用...
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/">
-                            msf与cs派生会话
+                        <a href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/IP%E9%85%8D%E7%BD%AE/">
+                            kali的IP配置
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            msf与cs派生会话MSF转CS在CS中做好接口监听端口的准备
-在MSF中添加转接exploit1234567891011background                // 挂起会话use exploit/windows/local/payload_injectset payload windows/meterpreter/reverse_http	//payload各不相同，注意不要...
-                        
-                    </div>
+                            kali的IP配置静态IP1vim /etc/network/interfaces //进入ip修改环境
 
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Sep 13 2024 00:00:00 GMT+0800">
-                
-                    2024-09-13
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/">kali</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/kali/">kali</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/">内网渗透</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
 
-    <a href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/">Read more<span class="seo-reader-text">msf与cs派生会话</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/pip2%E5%AE%89%E8%A3%85/">
-                            kali环境下的pip2安装
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            pip2安装前言有些工具需要用到python2，但又需要pip下载包，而kali并没有自带pip2命令，所以需要手动安装pip2
-1、安装setuptools-18.5（路径随便）12wget https://pypi.python.org/packages/source/s/setuptools/setuptools-18.5.tar.gz //安装文件包//（可能会比较慢，可以通过物理机...
+在这两行下面输入
+123456auto eth0iface eth0 inet staticaddress 192.168.1.111	//根据自身ip地址自定义netmask 255.255.255.0gateway 192.168.1.1		//根据自身ip网关自定义//退出并保...
                         
                     </div>
 
@@ -1745,7 +1664,91 @@ PHP文件包含漏洞利用...
         
     </div>
 
-    <a href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/pip2%E5%AE%89%E8%A3%85/">Read more<span class="seo-reader-text">kali环境下的pip2安装</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/IP%E9%85%8D%E7%BD%AE/">Read more<span class="seo-reader-text">kali的IP配置</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/windows/powershell%E8%BF%90%E8%A1%8C%E7%AD%96%E7%95%A5/">
+                            windows系统powershell脚本运行策略
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            powershell脚本运行策略Powershell一般初始化情况下都会禁止脚本执行。脚本能否执行取决于Powershell的执行策略
+查看权限1Get-ExecutionPolicy 
+
+Unrestricted:权限最高，可以不受限制执行任何脚本
+Default:为Powershell默认的策略
+Restricted，不允许任何脚本执行
+AllSigned：所有脚本都必须经过签名才能在运...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Sep 13 2024 00:00:00 GMT+0800">
+                
+                    2024-09-13
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/windows/">windows</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/windows/">windows</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/windows/powershell%E8%BF%90%E8%A1%8C%E7%AD%96%E7%95%A5/">Read more<span class="seo-reader-text">windows系统powershell脚本运行策略</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
