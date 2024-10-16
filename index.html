@@ -625,15 +625,15 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">23</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">25</div>
         <div class="label text-third-text-color text-sm">Tags</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">23</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">24</div>
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">56</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">57</div>
         <div class="label text-third-text-color text-sm">Posts</div>
     </a>
 </div>
@@ -703,15 +703,15 @@
 </div>
                 <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">23</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">25</div>
         <div class="label text-third-text-color text-sm">Tags</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">23</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">24</div>
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">56</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">57</div>
         <div class="label text-third-text-color text-sm">Posts</div>
     </a>
 </div>
@@ -894,30 +894,37 @@ CTFHub
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/2024/09/26/ctf/data/reverse/%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E5%9F%BA%E7%A1%80/">
-                            逆向分析基础
+                        <a href="/2024/10/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/">
+                            关于常见基础问题应对算法的总结
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            逆向分析基础前言工具介绍
-  
-    提供的工具若未破解或链接已挂，请自行搜索破解版使用
+                            关于常见基础问题应对算法的总结前言以下将会以遇到的问题的对应解答方法进行算法实例
+字符串匹配
+
+朴素模式匹配算法（暴力解决）原理主串长度为n，模式串长度为 m将主串所有长度为m的子串依次与模式串对比，直到找到一个完全匹配的子串或所有的子串都不匹配为止
 
   
+    最多有n-m+1个子串
 
+  
 
+代码实现
+时间复杂度
+
+KMP算法原理根据next数组，不经过回溯主串指针达到减小时间复杂度...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Thu Sep 26 2024 00:00:00 GMT+0800">
+            <span class="home-article-date" data-date="Tue Oct 15 2024 00:00:00 GMT+0800">
                 
-                    2024-09-26
+                    2024-10-15
                 
             </span>
         </span>
@@ -930,27 +937,7 @@ CTFHub
                     
                         
                         <li>
-                            <a href="/categories/ctf/">ctf</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/ctf/data/">data</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/ctf/data/reverse/">reverse</a>&nbsp;
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
                         </li>
                     
                     
@@ -965,12 +952,12 @@ CTFHub
                     
                         <li>
                             
-                            <a href="/tags/ctf/">ctf</a>&nbsp;
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
                         </li>
                     
                         <li>
                             | 
-                            <a href="/tags/data/">data</a>&nbsp;
+                            <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -978,7 +965,7 @@ CTFHub
         
     </div>
 
-    <a href="/2024/09/26/ctf/data/reverse/%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E5%9F%BA%E7%A1%80/">Read more<span class="seo-reader-text">逆向分析基础</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2024/10/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/">Read more<span class="seo-reader-text">关于常见基础问题应对算法的总结</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1107,111 +1094,6 @@ GET
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/2024/09/26/ctf/data/web/PHP%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/">
-                            PHP相关知识
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            PHP相关知识前言这里会提供一些来自buuctf的案例，有需要还原的可以看我的博客的关于这一节的题目
-参考题目目录
-
-PHP的弱类型特征强类型与弱类型强类型语言——Python&#x2F;Java等
-弱类型语言——PHP&#x2F;JavaScript等
-强类型语言不会根据条件“随机应变”，而弱类型会
-比如案例 &#39;1&#39;+1=?
-对于强类型会直接报错，而对于弱类型来说会“随机应...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Thu Sep 26 2024 00:00:00 GMT+0800">
-                
-                    2024-09-26
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/ctf/">ctf</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/ctf/data/">data</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/ctf/data/web/">web</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/ctf/">ctf</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/data/">data</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/web/">web</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2024/09/26/ctf/data/web/PHP%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/">Read more<span class="seo-reader-text">PHP相关知识</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
                         <a href="/2024/09/26/ctf/data/web/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/">
                             web信息泄露
                         </a>
@@ -1312,6 +1194,210 @@ GitHa...
     </div>
 
     <a href="/2024/09/26/ctf/data/web/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/">Read more<span class="seo-reader-text">web信息泄露</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2024/09/26/ctf/data/reverse/%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E5%9F%BA%E7%A1%80/">
+                            逆向分析基础
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            逆向分析基础前言工具介绍
+  
+    提供的工具若未破解或链接已挂，请自行搜索破解版使用
+
+  
+
+
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Sep 26 2024 00:00:00 GMT+0800">
+                
+                    2024-09-26
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/ctf/">ctf</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/ctf/data/">data</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/ctf/data/reverse/">reverse</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/ctf/">ctf</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/data/">data</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/09/26/ctf/data/reverse/%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E5%9F%BA%E7%A1%80/">Read more<span class="seo-reader-text">逆向分析基础</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2024/09/26/ctf/data/web/PHP%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/">
+                            PHP相关知识
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            PHP相关知识前言这里会提供一些来自buuctf的案例，有需要还原的可以看我的博客的关于这一节的题目
+参考题目目录
+
+PHP的弱类型特征强类型与弱类型强类型语言——Python&#x2F;Java等
+弱类型语言——PHP&#x2F;JavaScript等
+强类型语言不会根据条件“随机应变”，而弱类型会
+比如案例 &#39;1&#39;+1=?
+对于强类型会直接报错，而对于弱类型来说会“随机应...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Sep 26 2024 00:00:00 GMT+0800">
+                
+                    2024-09-26
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/ctf/">ctf</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/ctf/data/">data</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/ctf/data/web/">web</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/ctf/">ctf</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/data/">data</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/web/">web</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/09/26/ctf/data/web/PHP%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/">Read more<span class="seo-reader-text">PHP相关知识</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1655,114 +1741,6 @@ ext3grep 恢复工具（kali-e...
                 </div>
             </li>
         
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/09/23/ctf/data/misc/%E5%8E%8B%E7%BC%A9%E5%8C%85%E5%88%86%E6%9E%90/">
-                            压缩包分析
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            压缩包分析根据压缩包文件的内容和结构存在着多种破解方式，如暴力破解，字典攻击与明文攻击等方法
-前言这里会提供一些来自buuctf的案例，但这章比较简单，题目就自行前往靶场去试试吧，就不再写WP了
-工具介绍
-  
-    提供的工具若未破解或链接已挂，请自行搜索破解版使用
-
-  
-
-010Editor  16进制编辑器
-ARCHPR  多种压缩格式密码爆破
-Ziperello  ZIP格式的密...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Sep 23 2024 00:00:00 GMT+0800">
-                
-                    2024-09-23
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/ctf/">ctf</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/ctf/data/">data</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/ctf/data/misc/">misc</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/ctf/">ctf</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/data/">data</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/misc/">misc</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2024/09/23/ctf/data/misc/%E5%8E%8B%E7%BC%A9%E5%8C%85%E5%88%86%E6%9E%90/">Read more<span class="seo-reader-text">压缩包分析</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
     </ul>
 
     <div class="home-paginator px-7 py-5">
@@ -1797,11 +1775,11 @@ Ziperello  ZIP格式的密...
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        56 posts in total
+                        57 posts in total
                     </span>
                     
                         <span>
-                            39.6k words in total
+                            43.8k words in total
                         </span>
                     
                 </p>

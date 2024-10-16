@@ -1,0 +1,2496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="ZJ">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://https://fonts.lug.ustc.edu.cn/">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+        
+        
+        
+            <link rel="preconnect" href="https://evan.beee.top" crossorigin>
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://blog.overlordzj.cn/2024/10/15/数据结构/常见算法归纳/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="关于常见基础问题应对算法的总结前言以下将会以遇到的问题的对应解答方法进行算法实例 字符串匹配  朴素模式匹配算法（暴力解决）原理主串长度为n，模式串长度为 m将主串所有长度为m的子串依次与模式串对比，直到找到一个完全匹配的子串或所有的子串都不匹配为止         最多有n-m+1个子串      代码实现 时间复杂度  KMP算法原理根据next数组，不经过回溯主串指针达到减小时间复杂度  代">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于常见基础问题应对算法的总结">
+<meta property="og:url" content="https://blog.overlordzj.cn/2024/10/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="关于常见基础问题应对算法的总结前言以下将会以遇到的问题的对应解答方法进行算法实例 字符串匹配  朴素模式匹配算法（暴力解决）原理主串长度为n，模式串长度为 m将主串所有长度为m的子串依次与模式串对比，直到找到一个完全匹配的子串或所有的子串都不匹配为止         最多有n-m+1个子串      代码实现 时间复杂度  KMP算法原理根据next数组，不经过回溯主串指针达到减小时间复杂度  代">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015001746389.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015002049555.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015002108960.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015002436924.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015002518468.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015002610032.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015000602373.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241014234729896.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241014234807642.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241014234904830.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241014235001262.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015000338410.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241014235743359.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241014235755337.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241014235844715.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241014235856083.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241014235940173.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015000004968-1728921605532-1.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015000106584.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015000403547.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015000338410.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015000403547.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015000511989.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015000808214.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015000917252.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015001101608.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015004510040.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015004914940.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015005350067.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015005845139.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015005944334.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015010038493.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015010118386.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015010144200.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015010203220.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015010226097.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015010352720.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015004933257.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015005141879.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015010522668.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015011230339.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015011405355.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015011426396.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015011520661.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241015234132897.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241015234213068.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241015233118807.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241015233500830.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241015233405791.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241015233612606.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241015235050753.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241015235114678.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241015235547535.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241015235731665.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016000343108.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016001133712.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016001221740.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016001323297.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016000736311.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016000828138.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016001347343.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016001902659.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016002645953.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016003320841.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016003359815.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016003410658.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016003511188.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016003829552.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016004213562.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016004335732.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016004701665.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016005357333.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016005406555.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016005420708.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016011204188.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016011348911.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016011515718.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016011608949.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016011728126.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016011749147.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016141027788.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016141206656.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016141238767.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016141359300.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016141440006.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016141307309.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016141828444.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016142630111.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016142751853.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016141805536.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016143209908.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016143259508.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016143335964.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016143354271.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016143432781.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016143850696.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016232030976.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016234113590.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016234133167.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017000028731.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017000116578.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017000320572.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017000348610.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017000519250.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017000543103.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017000615260.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017000743507.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017000805432.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017000933364.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017000924229.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017000959176.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017001035943.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017001101355.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017001337664.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017001345969.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017001402995.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017001642875.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017001655227.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017002033596.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017002052910.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017002134567.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017002205170.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017002329095.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017002345193.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017002358598.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017002439058.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017001910348.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017003151571.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017003311320.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017003404496.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017003720421.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017003756331.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017003810669.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017003821400.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017003912731.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017003925235.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017003951671.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017004004516.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017004346727.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017004425394.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017004549079.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017004703834.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017005207221.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017005356091.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017005505987.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017005938195.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017010055682.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017010139572.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017010323937.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017004733011.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017010633101.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017010816319.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017011736753.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017011853919.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017011813942.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017012101117.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017012133495.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017012324271.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017012436895.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017012636241.png">
+<meta property="article:published_time" content="2024-10-14T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-10-16T17:27:17.249Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="数据结构">
+<meta property="article:tag" content="算法">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015001746389.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/overlord_ico.ico" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/overlord_ico.ico">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/overlord_ico.ico">
+    <!--- Page Info-->
+    
+    <title>
+        
+            关于常见基础问题应对算法的总结 -
+        
+        Overlord Blog
+    </title>
+
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/fonts/Chillax/chillax.css">
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/assets/build/styles.css">
+    
+
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/fonts/GeistMono/geist-mono.css">
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/fonts/Geist/geist.css">
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+        <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/anime.min.js"></script>
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"blog.overlordzj.cn","root":"/","language":"en","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":["Lv100"]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":6,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":true,"title":"看看这些文章吧( ૢ⁼̴̤̆ ꇴ ⁼̴̤̆ ૢ)~ෆ","limit":3,"mobile_limit":4,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":["/private/","/secret/","/备忘录/"]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":true,"custom_message":null},"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Overlord Blog","subtitle":{"text":["Welcome my blog","Here are my own study materials and various writeups","Hoping it will be useful to you"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":80,"backing_speed":50,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":true,"type":"mini","audios":[{"name":"mystery-of-love","artist":"----------","url":"/musics/mystery-of-love.mp3","cover":"/images/mystery-of-love.jpg","lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.7.1","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"photo-album":{"icon":"fa-solid fa-image","path":"/masonry/"},"Github":{"path":"https://github.com/overlordzj/overlordzj.github.io","icon":"fa-brands fa-github"},"Links":{"icon":"fa-regular fa-link","submenus":{"tags":"/tags/","categories":"/categories/","docs":"https://redefine-docs.ohevan.com/","domestic":"https://blogback.overlordzj.cn/"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":{"Archives":{"path":"/archives/","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags/","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories/","icon":"fa-regular fa-folder"}}},"article_date_format":"YYYY-MM-DD","excerpt_length":200,"categories":{"enable":true,"limit":4},"tags":{"enable":true,"limit":4}},"footerStart":"2024/9/8 00:00:00"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":true};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/fontawesome/regular.min.css">
+    
+    
+        <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/fontawesome/light.min.css">
+    
+    
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+
+    <style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    <h2 class="ml13">
+        Overlord Blog
+    </h2>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+        var animation = anime.timeline({loop: true})
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [40,0],
+                translateZ: 0,
+                opacity: [0,1],
+                filter: ['blur(5px)', 'blur(0px)'], // Starting from blurred to unblurred
+                easing: "easeOutExpo",
+                duration: 1400,
+                delay: (el, i) => 300 + 30 * i,
+            }).add({
+                targets: '.ml13 .letter',
+                translateY: [0,-40],
+                opacity: [1,0],
+                filter: ['blur(0px)', 'blur(5px)'], // Ending from unblurred to blurred
+                easing: "easeInExpo",
+                duration: 1200,
+                delay: (el, i) => 100 + 30 * i,
+                complete: function() {
+                    hidePreloader(); // Call hidePreloader after the animation completes
+                }
+            });
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(hidePreloader, 5000); // Call hidePreloader after 5000 milliseconds if not already called by animation
+        });
+
+        function hidePreloader() {
+            var preloader = document.querySelector('.preloader');
+            preloader.style.opacity = '0';
+            setTimeout(function () {
+                preloader.style.display = 'none';
+            }, 200);
+        }
+    </script>
+</div>
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container px-6 md:px-12">
+
+    <div class="navbar-content ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Overlord Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    ARCHIVES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/masonry/"
+                                        >
+                                    <i class="fa-solid fa-image fa-fw"></i>
+                                    PHOTO-ALBUM
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   target="_blank" rel="noopener" href="https://github.com/overlordzj/overlordzj.github.io"
+                                        >
+                                    <i class="fa-brands fa-github fa-fw"></i>
+                                    GITHUB
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-link fa-fw"></i>
+                                    LINKS
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/tags/">
+                                                    TAGS
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/categories/">
+                                                    CATEGORIES
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://redefine-docs.ohevan.com/">
+                                                    DOCS
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://blogback.overlordzj.cn/">
+                                                    DOMESTIC
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                ARCHIVES
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/masonry/"
+                        >
+                            <span>
+                                PHOTO-ALBUM
+                            </span>
+                            
+                                <i class="fa-solid fa-image fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           target="_blank" rel="noopener" href="https://github.com/overlordzj/overlordzj.github.io"
+                        >
+                            <span>
+                                GITHUB
+                            </span>
+                            
+                                <i class="fa-brands fa-github fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-Links"
+                        >
+                            <span>
+                                LINKS
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-Links">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/tags/">TAGS</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/categories/">CATEGORIES</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://redefine-docs.ohevan.com/">DOCS</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://blogback.overlordzj.cn/">DOMESTIC</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/tags/"
+                        >
+                            <span>Tags</span>
+                            <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/categories/"
+                        >
+                            <span>Categories</span>
+                            <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">25</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">24</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">57</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">关于常见基础问题应对算法的总结</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/overlord.jpeg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">ZJ</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv100</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-10-15</span>
+        <span class="mobile">2024-10-15</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-10-17 01:27:17</span>
+            <span class="mobile">2024-10-17 01:27:17</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>2.9k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>10 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <h1 id="关于常见基础问题应对算法的总结"><a href="#关于常见基础问题应对算法的总结" class="headerlink" title="关于常见基础问题应对算法的总结"></a>关于常见基础问题应对算法的总结</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>以下将会以遇到的问题的对应解答方法进行算法实例</p>
+<h2 id="字符串匹配"><a href="#字符串匹配" class="headerlink" title="字符串匹配"></a>字符串匹配</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015001746389.png"
+                      alt="image-20241015001746389"
+                ></p>
+<hr>
+<h3 id="朴素模式匹配算法（暴力解决）"><a href="#朴素模式匹配算法（暴力解决）" class="headerlink" title="朴素模式匹配算法（暴力解决）"></a>朴素模式匹配算法（暴力解决）</h3><h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>主串长度为n，模式串长度为 m<br>将主串所有长度为m的子串依次与模式串对比，直到找到一个完全匹配的子串或所有的子串都不匹配为止</p>
+
+  <div class="note p-4 mb-4 rounded-small warning">
+    <p>最多有n-m+1个子串</p>
+
+  </div>
+
+<h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015002049555.png"
+                      alt="image-20241015002049555"
+                ></p>
+<h4 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015002108960.png"
+                      alt="image-20241015002108960"
+                ></p>
+<hr>
+<h3 id="KMP算法"><a href="#KMP算法" class="headerlink" title="KMP算法"></a>KMP算法</h3><h4 id="原理-1"><a href="#原理-1" class="headerlink" title="原理"></a>原理</h4><p>根据next数组，不经过回溯主串指针达到减小时间复杂度</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015002436924.png"
+                      alt="image-20241015002436924"
+                ></p>
+<h4 id="代码实现-1"><a href="#代码实现-1" class="headerlink" title="代码实现"></a>代码实现</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015002518468.png"
+                      alt="image-20241015002518468"
+                ></p>
+<h4 id="求next数组"><a href="#求next数组" class="headerlink" title="求next数组"></a>求next数组</h4><h5 id="手算"><a href="#手算" class="headerlink" title="手算"></a>手算</h5><p>根据当前字符的前端进行查找</p>
+<table>
+<thead>
+<tr>
+<th><strong>下标j</strong></th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>模式串</strong></td>
+<td>a</td>
+<td>b</td>
+<td>a</td>
+<td>a</td>
+<td>b</td>
+<td>c</td>
+<td>a</td>
+<td>b</td>
+<td>a</td>
+</tr>
+<tr>
+<td><strong>next[j]</strong></td>
+<td>-1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>0</td>
+<td>1</td>
+<td>3</td>
+</tr>
+</tbody></table>
+<p>始终满足next[0]&#x3D;-1;next[1]&#x3D;0</p>
+<p>计算next看前面的字符串和离自己最近的几个有相同的</p>
+<p>next[2]看前面的”ab”，b没有和前面匹配的，则连1都没有</p>
+<p>next[3]看前面的”aba”，a有相同的能够匹配</p>
+<p>next[4]看前面的”abaa”，a有相同的能够匹配，但是aa没有能匹配的</p>
+<p>next[5]看前面的”abaab”，b有相同的能够匹配，ab也有能匹配的，但aab没有能匹配的</p>
+<p>next[6]看前面的”abaabc”，c没有能匹配的，则连1都没有</p>
+<p>next[7]看前面的”abaabca”，a有相同的能够匹配，但是ca没有能匹配的</p>
+<p>next[8]看前面的”abaabcab”，b有相同的能够匹配，ab也有能匹配的，但cab没有能匹配的</p>
+<p>next[9]看前面的”abaabcaba”，a有相同的能够匹配，ba也有能匹配的，aba也有能匹配的，但caba没有能匹配的</p>
+<p><strong>注意：”ababa”的next值为3，后面的aba与前面的aba能够匹配</strong></p>
+<h5 id="机算"><a href="#机算" class="headerlink" title="机算"></a>机算</h5><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">GetNext</span><span class="params">(<span class="type">char</span>* t, <span class="type">int</span>* next)</span> &#123;</span><br><span class="line">    <span class="type">int</span> j = <span class="number">0</span>, k = <span class="number">-1</span>;</span><br><span class="line">    next[<span class="number">0</span>] = <span class="number">-1</span>;</span><br><span class="line">    <span class="type">int</span> t_len = <span class="built_in">strlen</span>(t);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (j &lt; t_len - <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (k == <span class="number">-1</span> || t[j] == t[k]) &#123;</span><br><span class="line">            j++;</span><br><span class="line">            k++;</span><br><span class="line">            <span class="keyword">if</span> (t[j] != t[k])</span><br><span class="line">                next[j] = k;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                next[j] = next[k]; <span class="comment">// 优化</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            k = next[k];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 输出next数组</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;next数组: &quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; t_len; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, next[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h4 id="算法优化"><a href="#算法优化" class="headerlink" title="算法优化"></a>算法优化</h4><p>将next值进行替换，减少不必要的时间，得到nextval数组再进行匹配</p>
+<table>
+<thead>
+<tr>
+<th><strong>下标j</strong></th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>模式串</strong></td>
+<td>a</td>
+<td>b</td>
+<td>a</td>
+<td>a</td>
+<td>b</td>
+<td>c</td>
+<td>a</td>
+<td>b</td>
+<td>a</td>
+</tr>
+<tr>
+<td><strong>next[j]</strong></td>
+<td>-1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>0</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>nextval[j]</strong></td>
+<td>-1</td>
+<td>0</td>
+<td>-1</td>
+<td>1</td>
+<td>0</td>
+<td>2</td>
+<td>-1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<p>从后往前看（从前往后也可以），next[8]值为3，找到j为3，若二者的模式串字符相等，则将next[8]该改为next[3]，以此类推，得到优化有的nextval数组</p>
+<hr>
+<h3 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015002610032.png"
+                      alt="image-20241015002610032"
+                ></p>
+<h2 id="求最小生成树"><a href="#求最小生成树" class="headerlink" title="求最小生成树"></a>求最小生成树</h2>
+  <div class="note p-4 mb-4 rounded-small warning">
+    <p>最小生成树不止一种</p>
+
+  </div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015000602373.png"
+                      alt="image-20241015000602373"
+                ></p>
+<hr>
+<h3 id="Prim算法（普里姆算法）"><a href="#Prim算法（普里姆算法）" class="headerlink" title="Prim算法（普里姆算法）"></a>Prim算法（普里姆算法）</h3><h4 id="简单记忆：根据节点找权值"><a href="#简单记忆：根据节点找权值" class="headerlink" title="简单记忆：根据节点找权值"></a>简单记忆：根据节点找权值</h4><h4 id="原理-2"><a href="#原理-2" class="headerlink" title="原理"></a>原理</h4><p>从某一个顶点开始构建生成树;每次将代价最小的新顶点纳入生成树，直到所有顶点都纳入为止</p>
+<h4 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h4><p>开始选中一点，找到距离其代价最小的顶点纳入树中，再找到这两个点的下一个最优点并纳入树中，知道全部纳入为止</p>
+<h4 id="图实例"><a href="#图实例" class="headerlink" title="图实例"></a>图实例</h4><p>1、最开始只有一个“P城”点</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241014234729896.png"
+                      alt="image-20241014234729896"
+                ></p>
+<p>2、找到距离其代价最小的顶点纳入树中</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241014234807642.png"
+                      alt="image-20241014234807642"
+                ></p>
+<p>如此往复继续查找这两个点所有代价中最小代价的点并纳入树中</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241014234904830.png"
+                      alt="image-20241014234904830"
+                ></p>
+<p>直到最后找完即可（最小生成树不只一种）</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241014235001262.png"
+                      alt="image-20241014235001262"
+                ></p>
+<h4 id="时间复杂度-1"><a href="#时间复杂度-1" class="headerlink" title="时间复杂度"></a>时间复杂度</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015000338410.png"
+                      alt="image-20241015000338410"
+                ></p>
+<hr>
+<h3 id="Kruskal算法（克鲁斯卡尔算法）"><a href="#Kruskal算法（克鲁斯卡尔算法）" class="headerlink" title="Kruskal算法（克鲁斯卡尔算法）"></a>Kruskal算法（克鲁斯卡尔算法）</h3><h4 id="简单记忆：根据权值画节点"><a href="#简单记忆：根据权值画节点" class="headerlink" title="简单记忆：根据权值画节点"></a>简单记忆：根据权值画节点</h4><h4 id="原理-3"><a href="#原理-3" class="headerlink" title="原理"></a>原理</h4><p>每次选择一条权值最小的边，使这条边的两头连通(原本已经连通的就不选)，直到所有结点都连通</p>
+<h4 id="理解-1"><a href="#理解-1" class="headerlink" title="理解"></a>理解</h4><p>找到整个体系中权值最小的边，将该边的两头纳入树中，再选择剩下的权值最小的边将该边的两头纳入树中，如果出现一边的两头已纳入的情况则忽略该边，直到所有结点都连通</p>
+<h4 id="图示例"><a href="#图示例" class="headerlink" title="图示例"></a>图示例</h4><p>找到整个体系中权值最小的边</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241014235743359.png"
+                      alt="image-20241014235743359"
+                ></p>
+<p>将该边的两头纳入树中</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241014235755337.png"
+                      alt="image-20241014235755337"
+                ></p>
+<p>再选择剩下的权值最小的边将该边的两头纳入树中</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241014235844715.png"
+                      alt="image-20241014235844715"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241014235856083.png"
+                      alt="image-20241014235856083"
+                ></p>
+<p>剩余的连接需要看是否连通（间接连通也是连通了）</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241014235940173.png"
+                      alt="image-20241014235940173"
+                ></p>
+<p>若没有连通则进行连通</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015000004968-1728921605532-1.png"
+                      alt="image-20241015000004968"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015000106584.png"
+                      alt="image-20241015000106584"
+                ></p>
+<h4 id="时间复杂度-2"><a href="#时间复杂度-2" class="headerlink" title="时间复杂度"></a>时间复杂度</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015000403547.png"
+                      alt="image-20241015000403547"
+                ></p>
+<hr>
+<h3 id="比较-1"><a href="#比较-1" class="headerlink" title="比较"></a>比较</h3><p>Prim算法时间复杂度为O(|V|^2^)——适合边稠密图，即|E|大的</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015000338410.png"
+                      alt="image-20241015000338410"
+                ></p>
+<p>Kruskal算法时间复杂度为O(|E|log<del>2</del>|E|)——适合边稀疏图，即|E|小的</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015000403547.png"
+                      alt="image-20241015000403547"
+                ></p>
+<hr>
+<h2 id="最短路径问题"><a href="#最短路径问题" class="headerlink" title="最短路径问题"></a>最短路径问题</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015000511989.png"
+                      alt="image-20241015000511989"
+                ></p>
+<hr>
+<h3 id="BFS算法（广度优先算法）"><a href="#BFS算法（广度优先算法）" class="headerlink" title="BFS算法（广度优先算法）"></a>BFS算法（广度优先算法）</h3><h4 id="无权图"><a href="#无权图" class="headerlink" title="无权图"></a>无权图</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015000808214.png"
+                      alt="image-20241015000808214"
+                ></p>
+<h4 id="代码实现-2"><a href="#代码实现-2" class="headerlink" title="代码实现"></a>代码实现</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015000917252.png"
+                      alt="image-20241015000917252"
+                ></p>
+<h4 id="核心思想"><a href="#核心思想" class="headerlink" title="核心思想"></a>核心思想</h4><p>利用队列对图进行层次遍历，加上pre前驱指针找到最短路径</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015001101608.png"
+                      alt="image-20241015001101608"
+                ></p>
+<h4 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015004510040.png"
+                      alt="image-20241015004510040"
+                ></p>
+<hr>
+<h3 id="Dijkstra算法（迪杰斯特拉算法）"><a href="#Dijkstra算法（迪杰斯特拉算法）" class="headerlink" title="Dijkstra算法（迪杰斯特拉算法）"></a>Dijkstra算法（迪杰斯特拉算法）</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015004914940.png"
+                      alt="image-20241015004914940"
+                ></p>
+<h4 id="图示例-1"><a href="#图示例-1" class="headerlink" title="图示例"></a>图示例</h4><p>1、初始化3个数组，最短路径找不到就存为无穷，且其前驱设为-1表示没有前驱</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015005350067.png"
+                      alt="image-20241015005350067"
+                ></p>
+<p>2、遍历所有结点，找到还没有确定最短路径的点，且其dist值最小的点，将其标记为找到最短路径了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015005845139.png"
+                      alt="image-20241015005845139"
+                ></p>
+<p>3、检查所有邻接自V的顶点，若其 final 值为false,则更新 dist 和 path 信息</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015005944334.png"
+                      alt="image-20241015005944334"
+                ></p>
+<p>4、遍历所有结点，找到还没有确定最短路径的点，且其dist值最小的点，将其标记为找到最短路径了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015010038493.png"
+                      alt="image-20241015010038493"
+                ></p>
+<p>5、检查所有邻接自V的顶点，若其 final 值为false,则更新 dist 和 path 信息</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015010118386.png"
+                      alt="image-20241015010118386"
+                ></p>
+<p>6、遍历所有结点，找到还没有确定最短路径的点，且其dist值最小的点，将其标记为找到最短路径了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015010144200.png"
+                      alt="image-20241015010144200"
+                ></p>
+<p>7、检查所有邻接自V的顶点，若其 final 值为false,则更新 dist 和 path 信息</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015010203220.png"
+                      alt="image-20241015010203220"
+                ></p>
+<p>8、遍历所有结点，找到还没有确定最短路径的点，且其dist值最小的点，将其标记为找到最短路径了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015010226097.png"
+                      alt="image-20241015010226097"
+                ></p>
+<p><strong>算法结束</strong></p>
+<h4 id="代码实现-3"><a href="#代码实现-3" class="headerlink" title="代码实现"></a>代码实现</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015010352720.png"
+                      alt="image-20241015010352720"
+                ></p>
+<h4 id="时间复杂度-3"><a href="#时间复杂度-3" class="headerlink" title="时间复杂度"></a>时间复杂度</h4><p>与Prim算法类似</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015004933257.png"
+                      alt="image-20241015004933257"
+                ></p>
+<h4 id="局限性-1"><a href="#局限性-1" class="headerlink" title="局限性"></a>局限性</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015005141879.png"
+                      alt="image-20241015005141879"
+                ></p>
+<hr>
+<h3 id="Floyd算法（弗洛伊德算法——动态规划）"><a href="#Floyd算法（弗洛伊德算法——动态规划）" class="headerlink" title="Floyd算法（弗洛伊德算法——动态规划）"></a>Floyd算法（弗洛伊德算法——动态规划）</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015010522668.png"
+                      alt="image-20241015010522668"
+                ></p>
+<h4 id="图示例-2"><a href="#图示例-2" class="headerlink" title="图示例"></a>图示例</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015011230339.png"
+                      alt="image-20241015011230339"
+                ></p>
+<h4 id="代码实现-4"><a href="#代码实现-4" class="headerlink" title="代码实现"></a>代码实现</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015011405355.png"
+                      alt="image-20241015011405355"
+                ></p>
+<h4 id="时间、空间复杂度"><a href="#时间、空间复杂度" class="headerlink" title="时间、空间复杂度"></a>时间、空间复杂度</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015011426396.png"
+                      alt="image-20241015011426396"
+                ></p>
+<hr>
+<h3 id="比较-2"><a href="#比较-2" class="headerlink" title="比较"></a>比较</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015011520661.png"
+                      alt="image-20241015011520661"
+                ></p>
+<h2 id="查找算法与数据结构"><a href="#查找算法与数据结构" class="headerlink" title="查找算法与数据结构"></a>查找算法与数据结构</h2><h3 id="ASL概念"><a href="#ASL概念" class="headerlink" title="ASL概念"></a>ASL概念</h3><h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><p><strong>查找算法的评价指标</strong></p>
+<h4 id="查找成功"><a href="#查找成功" class="headerlink" title="查找成功"></a>查找成功</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241015234132897.png"
+                      alt="image-20241015234132897"
+                ></p>
+<h4 id="查找失败"><a href="#查找失败" class="headerlink" title="查找失败"></a>查找失败</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241015234213068.png"
+                      alt="image-20241015234213068"
+                ></p>
+<hr>
+<h3 id="顺序查找"><a href="#顺序查找" class="headerlink" title="顺序查找"></a>顺序查找</h3><h4 id="原理-4"><a href="#原理-4" class="headerlink" title="原理"></a>原理</h4><p>顺序查找，又叫“线性查找”，通常用于线性表。<br>就是将整个数据结构进行遍历，从头到尾或者从尾到头</p>
+<h4 id="代码实现-5"><a href="#代码实现-5" class="headerlink" title="代码实现"></a>代码实现</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241015233118807.png"
+                      alt="image-20241015233118807"
+                ></p>
+<h4 id="算法优化-1"><a href="#算法优化-1" class="headerlink" title="算法优化"></a>算法优化</h4><h5 id="原理-5"><a href="#原理-5" class="headerlink" title="原理"></a>原理</h5><p>设置“哨兵”元素，无需判断是否越界，执行效率更高</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241015233500830.png"
+                      alt="image-20241015233500830"
+                ></p>
+<h5 id="代码实现-6"><a href="#代码实现-6" class="headerlink" title="代码实现"></a>代码实现</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241015233405791.png"
+                      alt="image-20241015233405791"
+                ></p>
+<h4 id="ASL"><a href="#ASL" class="headerlink" title="ASL"></a>ASL</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241015233612606.png"
+                      alt="image-20241015233612606"
+                ></p>
+<h4 id="顺序查找有序表优化"><a href="#顺序查找有序表优化" class="headerlink" title="顺序查找有序表优化"></a>顺序查找有序表优化</h4><h5 id="原理-6"><a href="#原理-6" class="headerlink" title="原理"></a>原理</h5><p>对有序表进行的顺序查找</p>
+<h5 id="ASL-1"><a href="#ASL-1" class="headerlink" title="ASL"></a>ASL</h5><p><strong>查找失败</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241015235050753.png"
+                      alt="image-20241015235050753"
+                ></p>
+<p><strong>查找成功</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241015235114678.png"
+                      alt="image-20241015235114678"
+                ></p>
+<h4 id="顺序查找被查概率不相等优化"><a href="#顺序查找被查概率不相等优化" class="headerlink" title="顺序查找被查概率不相等优化"></a>顺序查找被查概率不相等优化</h4>
+  <div class="note p-4 mb-4 rounded-small info">
+    <p>查找失败也是从头到尾全部遍历——根据实际应用查找的情况来考虑</p>
+
+  </div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241015235547535.png"
+                      alt="image-20241015235547535"
+                ></p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241015235731665.png"
+                      alt="image-20241015235731665"
+                ></p>
+<hr>
+<h3 id="折半查找（二分查找）"><a href="#折半查找（二分查找）" class="headerlink" title="折半查找（二分查找）"></a>折半查找（二分查找）</h3><h4 id="原理-7"><a href="#原理-7" class="headerlink" title="原理"></a>原理</h4><p>对半砍来查找，但只适用于有顺序的，不然无法进行二分查找</p>
+<p>简单来说就是<strong>数字炸弹</strong></p>
+<p>例：找78-&gt;<code>0~100(50)-&gt;50~100(75)-&gt;75~100(87)-&gt;75~87(81)-&gt;75-&gt;81(78)-&gt;78</code></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016000343108.png"
+                      alt="image-20241016000343108"
+                ></p>
+<h4 id="折半查找判定树"><a href="#折半查找判定树" class="headerlink" title="折半查找判定树"></a>折半查找判定树</h4><h5 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016001133712.png"
+                      alt="image-20241016001133712"
+                ></p>
+<h5 id="失败结点"><a href="#失败结点" class="headerlink" title="失败结点"></a>失败结点</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016001221740.png"
+                      alt="image-20241016001221740"
+                ></p>
+<h5 id="ASL-2"><a href="#ASL-2" class="headerlink" title="ASL"></a>ASL</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016001323297.png"
+                      alt="image-20241016001323297"
+                ></p>
+<h4 id="代码实现-7"><a href="#代码实现-7" class="headerlink" title="代码实现"></a>代码实现</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016000736311.png"
+                      alt="image-20241016000736311"
+                ></p>
+<h4 id="ASL-3"><a href="#ASL-3" class="headerlink" title="ASL"></a>ASL</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016000828138.png"
+                      alt="image-20241016000828138"
+                ></p>
+<h4 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016001347343.png"
+                      alt="image-20241016001347343"
+                ></p>
+<hr>
+<h3 id="分块查找"><a href="#分块查找" class="headerlink" title="分块查找"></a>分块查找</h3><h4 id="原理-8"><a href="#原理-8" class="headerlink" title="原理"></a>原理</h4>
+  <div class="note p-4 mb-4 rounded-small info">
+    <p>将需要查找的原始表进行分块，构造索引表</p>
+
+  </div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016001902659.png"
+                      alt="image-20241016001902659"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016002645953.png"
+                      alt="image-20241016002645953"
+                ></p>
+<h4 id="ASL-4"><a href="#ASL-4" class="headerlink" title="ASL"></a>ASL</h4><h5 id="已知情况"><a href="#已知情况" class="headerlink" title="已知情况"></a>已知情况</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016003320841.png"
+                      alt="image-20241016003320841"
+                ></p>
+<h5 id="未知情况"><a href="#未知情况" class="headerlink" title="未知情况"></a>未知情况</h5><p><strong>顺序查找常考</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016003359815.png"
+                      alt="image-20241016003359815"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016003410658.png"
+                      alt="image-20241016003410658"
+                ></p>
+<h4 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a>总结</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016003511188.png"
+                      alt="image-20241016003511188"
+                ></p>
+<hr>
+<h3 id="BST（二叉排序树）"><a href="#BST（二叉排序树）" class="headerlink" title="BST（二叉排序树）"></a>BST（二叉排序树）</h3><h4 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h4><p>一个二叉树满足<code>左子树结点数值&lt;根结点数值&lt;右子树结点数值</code></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016003829552.png"
+                      alt="image-20241016003829552"
+                ></p>
+<h4 id="查找操作"><a href="#查找操作" class="headerlink" title="查找操作"></a>查找操作</h4><h5 id="非递归代码实现"><a href="#非递归代码实现" class="headerlink" title="非递归代码实现"></a>非递归代码实现</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016004213562.png"
+                      alt="image-20241016004213562"
+                ></p>
+<h5 id="递归代码实现"><a href="#递归代码实现" class="headerlink" title="递归代码实现"></a>递归代码实现</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016004335732.png"
+                      alt="image-20241016004335732"
+                ></p>
+<h5 id="比较-3"><a href="#比较-3" class="headerlink" title="比较"></a>比较</h5><p>由于递归调用函数会在函数调用栈里面多分配空间，会浪费更多空间，所以一般使用非递归调用</p>
+<h4 id="插入操作"><a href="#插入操作" class="headerlink" title="插入操作"></a>插入操作</h4><p><strong>插入后的新结点一定是叶子结点</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016004701665.png"
+                      alt="image-20241016004701665"
+                ></p>
+<h4 id="删除操作"><a href="#删除操作" class="headerlink" title="删除操作"></a>删除操作</h4><h5 id="删除结点为叶子结点"><a href="#删除结点为叶子结点" class="headerlink" title="删除结点为叶子结点"></a>删除结点为叶子结点</h5><p><strong>直接删除，不会破坏二叉排序树的性质</strong></p>
+<h5 id="删除结点只有一棵左子树或者右子树"><a href="#删除结点只有一棵左子树或者右子树" class="headerlink" title="删除结点只有一棵左子树或者右子树"></a>删除结点只有一棵左子树或者右子树</h5><p><strong>让z的子树成为z父结点的子树，替代z的位置</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016005357333.png"
+                      alt="image-20241016005357333"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016005406555.png"
+                      alt="image-20241016005406555"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016005420708.png"
+                      alt="image-20241016005420708"
+                ></p>
+<h5 id="删除结点有左右子树"><a href="#删除结点有左右子树" class="headerlink" title="删除结点有左右子树"></a>删除结点有左右子树</h5><p><strong>若结点z有左、右两棵子树，则令z的直接后继(或直接前驱)替代z然后从二叉排序树中删去这个直接后继(或直接前驱)，这样就转换成了第一或第二种情况</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016011204188.png"
+                      alt="image-20241016011204188"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016011348911.png"
+                      alt="image-20241016011348911"
+                ></p>
+<h4 id="ASL-5"><a href="#ASL-5" class="headerlink" title="ASL"></a>ASL</h4><h5 id="查找成功-1"><a href="#查找成功-1" class="headerlink" title="查找成功"></a>查找成功</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016011515718.png"
+                      alt="image-20241016011515718"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016011608949.png"
+                      alt="image-20241016011608949"
+                ></p>
+<h5 id="查找失败-1"><a href="#查找失败-1" class="headerlink" title="查找失败"></a>查找失败</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016011728126.png"
+                      alt="image-20241016011728126"
+                ></p>
+<h4 id="总结-3"><a href="#总结-3" class="headerlink" title="总结"></a>总结</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016011749147.png"
+                      alt="image-20241016011749147"
+                ></p>
+<hr>
+<h3 id="AVL（平衡二叉树）"><a href="#AVL（平衡二叉树）" class="headerlink" title="AVL（平衡二叉树）"></a>AVL（平衡二叉树）</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016141027788.png"
+                      alt="image-20241016141027788"
+                ></p>
+<h4 id="调整最小不平衡二叉树"><a href="#调整最小不平衡二叉树" class="headerlink" title="调整最小不平衡二叉树"></a>调整最小不平衡二叉树</h4><h5 id="LL（左孩子右上旋）"><a href="#LL（左孩子右上旋）" class="headerlink" title="LL（左孩子右上旋）"></a>LL（左孩子右上旋）</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016141206656.png"
+                      alt="image-20241016141206656"
+                ></p>
+<h5 id="RR（右孩子左上旋）"><a href="#RR（右孩子左上旋）" class="headerlink" title="RR（右孩子左上旋）"></a>RR（右孩子左上旋）</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016141238767.png"
+                      alt="image-20241016141238767"
+                ></p>
+<h5 id="LR（左孩子的右孩子先左上旋再右上旋）"><a href="#LR（左孩子的右孩子先左上旋再右上旋）" class="headerlink" title="LR（左孩子的右孩子先左上旋再右上旋）"></a>LR（左孩子的右孩子先左上旋再右上旋）</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016141359300.png"
+                      alt="image-20241016141359300"
+                ></p>
+<h5 id="RL（右孩子的左孩子先右上旋再左上旋）"><a href="#RL（右孩子的左孩子先右上旋再左上旋）" class="headerlink" title="RL（右孩子的左孩子先右上旋再左上旋）"></a>RL（右孩子的左孩子先右上旋再左上旋）</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016141440006.png"
+                      alt="image-20241016141440006"
+                ></p>
+<h5 id="代码实现-8"><a href="#代码实现-8" class="headerlink" title="代码实现"></a>代码实现</h5><p><strong>LL与RR</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016141307309.png"
+                      alt="image-20241016141307309"
+                ></p>
+<h5 id="总结-4"><a href="#总结-4" class="headerlink" title="总结"></a>总结</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016141828444.png"
+                      alt="image-20241016141828444"
+                ></p>
+<h4 id="平衡二叉树的删除"><a href="#平衡二叉树的删除" class="headerlink" title="平衡二叉树的删除"></a>平衡二叉树的删除</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016142630111.png"
+                      alt="image-20241016142630111"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016142751853.png"
+                      alt="image-20241016142751853"
+                ></p>
+<h4 id="ASL-6"><a href="#ASL-6" class="headerlink" title="ASL"></a>ASL</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016141805536.png"
+                      alt="image-20241016141805536"
+                ></p>
+<hr>
+<h3 id="RBT（红黑树）"><a href="#RBT（红黑树）" class="headerlink" title="RBT（红黑树）"></a>RBT（红黑树）</h3><h4 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h4><p><strong>红黑树更适合需要频繁进行修改的场景</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016143209908.png"
+                      alt="image-20241016143209908"
+                ></p>
+<h4 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016143259508.png"
+                      alt="image-20241016143259508"
+                ></p>
+<h4 id="性质-1"><a href="#性质-1" class="headerlink" title="性质"></a>性质</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016143335964.png"
+                      alt="image-20241016143335964"
+                ></p>
+<h4 id="时间复杂度-4"><a href="#时间复杂度-4" class="headerlink" title="时间复杂度"></a>时间复杂度</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016143354271.png"
+                      alt="image-20241016143354271"
+                ></p>
+<h4 id="插入操作-1"><a href="#插入操作-1" class="headerlink" title="插入操作"></a>插入操作</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016143432781.png"
+                      alt="image-20241016143432781"
+                ></p>
+
+  <div class="note-large info">
+    <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
+      <p>提示</p>
+
+    </div>
+    <div class="notel-content">
+      <p><strong>染色对应前面的具体结点</strong></p>
+<p>比如父换爷＋染色——对应就是原本的父节点和爷结点进行染色</p>
+<p><strong>变新</strong>意思为将该叔结点经过染色后再当做是新插入的结点再将其以插入操作从上到下进行操作</p>
+
+    </div>
+  </div>
+
+<h4 id="总结-5"><a href="#总结-5" class="headerlink" title="总结"></a>总结</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016143850696.png"
+                      alt="image-20241016143850696"
+                ></p>
+<h3 id="B树"><a href="#B树" class="headerlink" title="B树"></a>B树</h3><h4 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a>定义</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016232030976.png"
+                      alt="image-20241016232030976"
+                ></p>
+<h4 id="特征性质"><a href="#特征性质" class="headerlink" title="特征性质"></a>特征性质</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016234113590.png"
+                      alt="image-20241016234113590"
+                ></p>
+<h4 id="高度范围"><a href="#高度范围" class="headerlink" title="高度范围"></a>高度范围</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241016234133167.png"
+                      alt="image-20241016234133167"
+                ></p>
+<h4 id="插入操作-2"><a href="#插入操作-2" class="headerlink" title="插入操作"></a>插入操作</h4><h5 id="前提要求"><a href="#前提要求" class="headerlink" title="前提要求"></a>前提要求</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017000028731.png"
+                      alt="image-20241017000028731"
+                ></p>
+<h5 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h5><p>1、通过B树的查找，确定插入的位置，只能是终端节点</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017000116578.png"
+                      alt="image-20241017000116578"
+                ></p>
+<p>2、若关键字个数超出范围，则将中间位置（<code>[m/2]</code>向上取整）向上提，其后面的关键字放到新的结点中去</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017000320572.png"
+                      alt="image-20241017000320572"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017000348610.png"
+                      alt="image-20241017000348610"
+                ></p>
+<p>3、若父节点的关键字个数超了，也同上一样提中间数其后关键字放新结点</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017000519250.png"
+                      alt="image-20241017000519250"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017000543103.png"
+                      alt="image-20241017000543103"
+                ></p>
+<h5 id="小总结"><a href="#小总结" class="headerlink" title="小总结"></a>小总结</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017000615260.png"
+                      alt="image-20241017000615260"
+                ></p>
+<h4 id="删除操作-1"><a href="#删除操作-1" class="headerlink" title="删除操作"></a>删除操作</h4><h5 id="过程-1"><a href="#过程-1" class="headerlink" title="过程"></a>过程</h5><p>1、若被删除关键字在终端节点，则直接删除（注意：不能低于B数要求下限）</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017000743507.png"
+                      alt="image-20241017000743507"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017000805432.png"
+                      alt="image-20241017000805432"
+                ></p>
+<p>2、若被删除关键字在非终端节点，则用其前驱或者后继来替代其位置</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017000933364.png"
+                      alt="image-20241017000933364"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017000924229.png"
+                      alt="image-20241017000924229"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017000959176.png"
+                      alt="image-20241017000959176"
+                ></p>
+<p><strong>后继</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017001035943.png"
+                      alt="image-20241017001035943"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017001101355.png"
+                      alt="image-20241017001101355"
+                ></p>
+<p>3、若被删除关键字在终端节点，且此时低于B树下限，则拉父提兄（将父节点拉下来，兄弟节点提上去）</p>
+<h6 id="拉右兄弟"><a href="#拉右兄弟" class="headerlink" title="拉右兄弟"></a>拉右兄弟</h6><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017001337664.png"
+                      alt="image-20241017001337664"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017001345969.png"
+                      alt="image-20241017001345969"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017001402995.png"
+                      alt="image-20241017001402995"
+                ></p>
+<h6 id="拉左兄弟"><a href="#拉左兄弟" class="headerlink" title="拉左兄弟"></a>拉左兄弟</h6><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017001642875.png"
+                      alt="image-20241017001642875"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017001655227.png"
+                      alt="image-20241017001655227"
+                ></p>
+<p>4、若被删除关键字在终端节点，且兄弟都不富裕，则进行合并操作</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017002033596.png"
+                      alt="image-20241017002033596"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017002052910.png"
+                      alt="image-20241017002052910"
+                ></p>
+<p><strong>合并操作</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017002134567.png"
+                      alt="image-20241017002134567"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017002205170.png"
+                      alt="image-20241017002205170"
+                ></p>
+<p><strong>若合并拉父后，父节点不满足B树，则继续进行拉父提兄，若兄依旧不足，则同样进行合并操作</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017002329095.png"
+                      alt="image-20241017002329095"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017002345193.png"
+                      alt="image-20241017002345193"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017002358598.png"
+                      alt="image-20241017002358598"
+                ></p>
+<p><strong>小总结</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017002439058.png"
+                      alt="image-20241017002439058"
+                ></p>
+<h4 id="插入删除操作总结"><a href="#插入删除操作总结" class="headerlink" title="插入删除操作总结"></a>插入删除操作总结</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017001910348.png"
+                      alt="image-20241017001910348"
+                ></p>
+<hr>
+<h3 id="B-树"><a href="#B-树" class="headerlink" title="B+树"></a>B+树</h3><h4 id="定义-3"><a href="#定义-3" class="headerlink" title="定义"></a>定义</h4><p>类似于分块查找</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017003151571.png"
+                      alt="image-20241017003151571"
+                ></p>
+<h4 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h4><h5 id="多路查找"><a href="#多路查找" class="headerlink" title="多路查找"></a>多路查找</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017003311320.png"
+                      alt="image-20241017003311320"
+                ></p>
+<h5 id="顺序查找-1"><a href="#顺序查找-1" class="headerlink" title="顺序查找"></a>顺序查找</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017003404496.png"
+                      alt="image-20241017003404496"
+                ></p>
+<h4 id="对比B树"><a href="#对比B树" class="headerlink" title="对比B树"></a>对比B树</h4><h5 id="关键字对应分叉不同"><a href="#关键字对应分叉不同" class="headerlink" title="关键字对应分叉不同"></a>关键字对应分叉不同</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017003720421.png"
+                      alt="image-20241017003720421"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017003756331.png"
+                      alt="image-20241017003756331"
+                ></p>
+<h5 id="节点关键字范围不同"><a href="#节点关键字范围不同" class="headerlink" title="节点关键字范围不同"></a>节点关键字范围不同</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017003810669.png"
+                      alt="image-20241017003810669"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017003821400.png"
+                      alt="image-20241017003821400"
+                ></p>
+<h5 id="叶子结点与关键字的关系"><a href="#叶子结点与关键字的关系" class="headerlink" title="叶子结点与关键字的关系"></a>叶子结点与关键字的关系</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017003912731.png"
+                      alt="image-20241017003912731"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017003925235.png"
+                      alt="image-20241017003925235"
+                ></p>
+<h5 id="节点作用"><a href="#节点作用" class="headerlink" title="节点作用"></a>节点作用</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017003951671.png"
+                      alt="image-20241017003951671"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017004004516.png"
+                      alt="image-20241017004004516"
+                ></p>
+<h5 id="存储本质区别"><a href="#存储本质区别" class="headerlink" title="存储本质区别"></a>存储本质区别</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017004346727.png"
+                      alt="image-20241017004346727"
+                ></p>
+<h4 id="总结对比"><a href="#总结对比" class="headerlink" title="总结对比"></a>总结对比</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017004425394.png"
+                      alt="image-20241017004425394"
+                ></p>
+<hr>
+<h3 id="散列查找（空间换时间）"><a href="#散列查找（空间换时间）" class="headerlink" title="散列查找（空间换时间）"></a>散列查找（空间换时间）</h3><h4 id="概念-2"><a href="#概念-2" class="headerlink" title="概念"></a>概念</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017004549079.png"
+                      alt="image-20241017004549079"
+                ></p>
+<h4 id="散列函数"><a href="#散列函数" class="headerlink" title="散列函数"></a>散列函数</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017004703834.png"
+                      alt="image-20241017004703834"
+                ></p>
+<h4 id="ASL-7"><a href="#ASL-7" class="headerlink" title="ASL"></a>ASL</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017005207221.png"
+                      alt="image-20241017005207221"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017005356091.png"
+                      alt="image-20241017005356091"
+                ></p>
+<h4 id="装填因子"><a href="#装填因子" class="headerlink" title="装填因子"></a>装填因子</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017005505987.png"
+                      alt="image-20241017005505987"
+                ></p>
+<h4 id="常见散列函数设计方法（哈希函数）"><a href="#常见散列函数设计方法（哈希函数）" class="headerlink" title="常见散列函数设计方法（哈希函数）"></a>常见散列函数设计方法（哈希函数）</h4><h5 id="除留余数法"><a href="#除留余数法" class="headerlink" title="除留余数法"></a>除留余数法</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017005938195.png"
+                      alt="image-20241017005938195"
+                ></p>
+<h5 id="直接定址法"><a href="#直接定址法" class="headerlink" title="直接定址法"></a>直接定址法</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017010055682.png"
+                      alt="image-20241017010055682"
+                ></p>
+<h5 id="数字分析法"><a href="#数字分析法" class="headerlink" title="数字分析法"></a>数字分析法</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017010139572.png"
+                      alt="image-20241017010139572"
+                ></p>
+<h5 id="平方取中法"><a href="#平方取中法" class="headerlink" title="平方取中法"></a>平方取中法</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017010323937.png"
+                      alt="image-20241017010323937"
+                ></p>
+<h4 id="处理冲突方法"><a href="#处理冲突方法" class="headerlink" title="处理冲突方法"></a>处理冲突方法</h4><h5 id="拉链法"><a href="#拉链法" class="headerlink" title="拉链法"></a>拉链法</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017004733011.png"
+                      alt="image-20241017004733011"
+                ></p>
+<h5 id="开放定址法"><a href="#开放定址法" class="headerlink" title="开放定址法"></a>开放定址法</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017010633101.png"
+                      alt="image-20241017010633101"
+                ></p>
+<h6 id="线性探测法"><a href="#线性探测法" class="headerlink" title="线性探测法"></a>线性探测法</h6><p><strong>探测该位置后续位置是否有冲突</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017010816319.png"
+                      alt="image-20241017010816319"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017011736753.png"
+                      alt="image-20241017011736753"
+                ></p>
+<p><strong>查找操作</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017011853919.png"
+                      alt="image-20241017011853919"
+                ></p>
+<p><strong>删除操作</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017011813942.png"
+                      alt="image-20241017011813942"
+                ></p>
+<h6 id="平方探测法"><a href="#平方探测法" class="headerlink" title="平方探测法"></a>平方探测法</h6><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017012101117.png"
+                      alt="image-20241017012101117"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017012133495.png"
+                      alt="image-20241017012133495"
+                ></p>
+<h6 id="伪随机序列法"><a href="#伪随机序列法" class="headerlink" title="伪随机序列法"></a>伪随机序列法</h6><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017012324271.png"
+                      alt="image-20241017012324271"
+                ></p>
+<h5 id="再散列法（再哈希法）"><a href="#再散列法（再哈希法）" class="headerlink" title="再散列法（再哈希法）"></a>再散列法（再哈希法）</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017012436895.png"
+                      alt="image-20241017012436895"
+                ></p>
+<h4 id="总结-6"><a href="#总结-6" class="headerlink" title="总结"></a>总结</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241017012636241.png"
+                      alt="image-20241017012636241"
+                ></p>
+<hr>
+<h2 id="排序算法与数据结构"><a href="#排序算法与数据结构" class="headerlink" title="排序算法与数据结构"></a>排序算法与数据结构</h2><hr>
+<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>以上示例图来自<a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1b7411N798/" >王道数据结构 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>&#x3D;&#x3D;本博客所有内容均为学习所用，未经允许不可进行商业转载&#x3D;&#x3D;</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> 关于常见基础问题应对算法的总结</li>
+        <li><strong>Author:</strong> ZJ</li>
+        <li><strong>Created at
+                :</strong> 2024-10-15 00:00:00</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2024-10-17 01:27:17
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://blog.overlordzj.cn/2024/10/15/数据结构/常见算法归纳/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">#数据结构</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+  <div class="recommended-article px-2 sm:px-6 md:px-8">
+   <div class="recommended-desktop">
+    <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>看看这些文章吧( ૢ⁼̴̤̆ ꇴ ⁼̴̤̆ ૢ)~ෆ</span>
+    </div>
+    <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/10/C语言/基础部分/遗漏问题解答/" title="关于C语言学习的部分遗漏问题解答" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="关于C语言学习的部分遗漏问题解答" class="!max-w-none">
+  <span class="title">关于C语言学习的部分遗漏问题解答</span>
+</a><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/buuctf/[BJDCTF2020]ZJCTF-不过如此/" title="BJDCTF2020 ZJCTF，不过如此*" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="BJDCTF2020 ZJCTF，不过如此*" class="!max-w-none">
+  <span class="title">BJDCTF2020 ZJCTF，不过如此*</span>
+</a><a class="recommended-article-item" href="/2024/09/18/ctf/data/misc/隐写术/" title="隐写术" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="隐写术" class="!max-w-none">
+  <span class="title">隐写术</span>
+</a></div>
+   </div>
+   <div class="recommended-mobile">
+   <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>看看这些文章吧( ૢ⁼̴̤̆ ꇴ ⁼̴̤̆ ૢ)~ෆ</span>
+   </div>
+   <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/10/C语言/基础部分/遗漏问题解答/" title="关于C语言学习的部分遗漏问题解答" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="关于C语言学习的部分遗漏问题解答" class="!max-w-none">
+  <span class="title">关于C语言学习的部分遗漏问题解答</span>
+</a><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/buuctf/[BJDCTF2020]ZJCTF-不过如此/" title="BJDCTF2020 ZJCTF，不过如此*" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="BJDCTF2020 ZJCTF，不过如此*" class="!max-w-none">
+  <span class="title">BJDCTF2020 ZJCTF，不过如此*</span>
+</a><a class="recommended-article-item" href="/2024/09/18/ctf/data/misc/隐写术/" title="隐写术" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="隐写术" class="!max-w-none">
+  <span class="title">隐写术</span>
+</a></div>
+   </div>
+  </div>
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/09/26/ctf/data/web/HTTP%E7%9B%B8%E5%85%B3%E5%9F%BA%E7%A1%80%E8%B5%84%E6%96%99/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">HTTP相关基础资料</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        Comments
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://blogcomment.overlordzj.cn',
+          lang: 'zh-CN',
+          dark: 'body[class~="dark-mode"]',
+          reaction: true,
+          requiredMeta: ['nick', 'mail'],
+          emoji: ['//unpkg.com/@waline/emojis@1.2.0/qq'],
+          recaptchaV3Key: "wasd",
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">关于常见基础问题应对算法的总结</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E5%B8%B8%E8%A7%81%E5%9F%BA%E7%A1%80%E9%97%AE%E9%A2%98%E5%BA%94%E5%AF%B9%E7%AE%97%E6%B3%95%E7%9A%84%E6%80%BB%E7%BB%93"><span class="nav-text">关于常见基础问题应对算法的总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D"><span class="nav-text">字符串匹配</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%B4%E7%B4%A0%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95%EF%BC%88%E6%9A%B4%E5%8A%9B%E8%A7%A3%E5%86%B3%EF%BC%89"><span class="nav-text">朴素模式匹配算法（暴力解决）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%9F%E7%90%86"><span class="nav-text">原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-text">代码实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-text">时间复杂度</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#KMP%E7%AE%97%E6%B3%95"><span class="nav-text">KMP算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%9F%E7%90%86-1"><span class="nav-text">原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-1"><span class="nav-text">代码实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B1%82next%E6%95%B0%E7%BB%84"><span class="nav-text">求next数组</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%89%8B%E7%AE%97"><span class="nav-text">手算</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9C%BA%E7%AE%97"><span class="nav-text">机算</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E4%BC%98%E5%8C%96"><span class="nav-text">算法优化</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%94%E8%BE%83"><span class="nav-text">比较</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B1%82%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91"><span class="nav-text">求最小生成树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Prim%E7%AE%97%E6%B3%95%EF%BC%88%E6%99%AE%E9%87%8C%E5%A7%86%E7%AE%97%E6%B3%95%EF%BC%89"><span class="nav-text">Prim算法（普里姆算法）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BF%86%EF%BC%9A%E6%A0%B9%E6%8D%AE%E8%8A%82%E7%82%B9%E6%89%BE%E6%9D%83%E5%80%BC"><span class="nav-text">简单记忆：根据节点找权值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%9F%E7%90%86-2"><span class="nav-text">原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%90%86%E8%A7%A3"><span class="nav-text">理解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BE%E5%AE%9E%E4%BE%8B"><span class="nav-text">图实例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6-1"><span class="nav-text">时间复杂度</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kruskal%E7%AE%97%E6%B3%95%EF%BC%88%E5%85%8B%E9%B2%81%E6%96%AF%E5%8D%A1%E5%B0%94%E7%AE%97%E6%B3%95%EF%BC%89"><span class="nav-text">Kruskal算法（克鲁斯卡尔算法）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BF%86%EF%BC%9A%E6%A0%B9%E6%8D%AE%E6%9D%83%E5%80%BC%E7%94%BB%E8%8A%82%E7%82%B9"><span class="nav-text">简单记忆：根据权值画节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%9F%E7%90%86-3"><span class="nav-text">原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%90%86%E8%A7%A3-1"><span class="nav-text">理解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BE%E7%A4%BA%E4%BE%8B"><span class="nav-text">图示例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6-2"><span class="nav-text">时间复杂度</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%94%E8%BE%83-1"><span class="nav-text">比较</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98"><span class="nav-text">最短路径问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#BFS%E7%AE%97%E6%B3%95%EF%BC%88%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E7%AE%97%E6%B3%95%EF%BC%89"><span class="nav-text">BFS算法（广度优先算法）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%A0%E6%9D%83%E5%9B%BE"><span class="nav-text">无权图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-2"><span class="nav-text">代码实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3"><span class="nav-text">核心思想</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B1%80%E9%99%90%E6%80%A7"><span class="nav-text">局限性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dijkstra%E7%AE%97%E6%B3%95%EF%BC%88%E8%BF%AA%E6%9D%B0%E6%96%AF%E7%89%B9%E6%8B%89%E7%AE%97%E6%B3%95%EF%BC%89"><span class="nav-text">Dijkstra算法（迪杰斯特拉算法）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BE%E7%A4%BA%E4%BE%8B-1"><span class="nav-text">图示例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-3"><span class="nav-text">代码实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6-3"><span class="nav-text">时间复杂度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B1%80%E9%99%90%E6%80%A7-1"><span class="nav-text">局限性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Floyd%E7%AE%97%E6%B3%95%EF%BC%88%E5%BC%97%E6%B4%9B%E4%BC%8A%E5%BE%B7%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%89"><span class="nav-text">Floyd算法（弗洛伊德算法——动态规划）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BE%E7%A4%BA%E4%BE%8B-2"><span class="nav-text">图示例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-4"><span class="nav-text">代码实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E3%80%81%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-text">时间、空间复杂度</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%94%E8%BE%83-2"><span class="nav-text">比较</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="nav-text">查找算法与数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ASL%E6%A6%82%E5%BF%B5"><span class="nav-text">ASL概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5"><span class="nav-text">概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E6%88%90%E5%8A%9F"><span class="nav-text">查找成功</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E5%A4%B1%E8%B4%A5"><span class="nav-text">查找失败</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE"><span class="nav-text">顺序查找</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%9F%E7%90%86-4"><span class="nav-text">原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-5"><span class="nav-text">代码实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E4%BC%98%E5%8C%96-1"><span class="nav-text">算法优化</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8E%9F%E7%90%86-5"><span class="nav-text">原理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-6"><span class="nav-text">代码实现</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ASL"><span class="nav-text">ASL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE%E6%9C%89%E5%BA%8F%E8%A1%A8%E4%BC%98%E5%8C%96"><span class="nav-text">顺序查找有序表优化</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8E%9F%E7%90%86-6"><span class="nav-text">原理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ASL-1"><span class="nav-text">ASL</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE%E8%A2%AB%E6%9F%A5%E6%A6%82%E7%8E%87%E4%B8%8D%E7%9B%B8%E7%AD%89%E4%BC%98%E5%8C%96"><span class="nav-text">顺序查找被查概率不相等优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8A%98%E5%8D%8A%E6%9F%A5%E6%89%BE%EF%BC%88%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%EF%BC%89"><span class="nav-text">折半查找（二分查找）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%9F%E7%90%86-7"><span class="nav-text">原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8A%98%E5%8D%8A%E6%9F%A5%E6%89%BE%E5%88%A4%E5%AE%9A%E6%A0%91"><span class="nav-text">折半查找判定树</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%80%A7%E8%B4%A8"><span class="nav-text">性质</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A4%B1%E8%B4%A5%E7%BB%93%E7%82%B9"><span class="nav-text">失败结点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ASL-2"><span class="nav-text">ASL</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-7"><span class="nav-text">代码实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ASL-3"><span class="nav-text">ASL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-1"><span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E5%9D%97%E6%9F%A5%E6%89%BE"><span class="nav-text">分块查找</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%9F%E7%90%86-8"><span class="nav-text">原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ASL-4"><span class="nav-text">ASL</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B7%B2%E7%9F%A5%E6%83%85%E5%86%B5"><span class="nav-text">已知情况</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9C%AA%E7%9F%A5%E6%83%85%E5%86%B5"><span class="nav-text">未知情况</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-2"><span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BST%EF%BC%88%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91%EF%BC%89"><span class="nav-text">BST（二叉排序树）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5-1"><span class="nav-text">概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E6%93%8D%E4%BD%9C"><span class="nav-text">查找操作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9D%9E%E9%80%92%E5%BD%92%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-text">非递归代码实现</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-text">递归代码实现</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%AF%94%E8%BE%83-3"><span class="nav-text">比较</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E6%93%8D%E4%BD%9C"><span class="nav-text">插入操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9C"><span class="nav-text">删除操作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E7%BB%93%E7%82%B9%E4%B8%BA%E5%8F%B6%E5%AD%90%E7%BB%93%E7%82%B9"><span class="nav-text">删除结点为叶子结点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E7%BB%93%E7%82%B9%E5%8F%AA%E6%9C%89%E4%B8%80%E6%A3%B5%E5%B7%A6%E5%AD%90%E6%A0%91%E6%88%96%E8%80%85%E5%8F%B3%E5%AD%90%E6%A0%91"><span class="nav-text">删除结点只有一棵左子树或者右子树</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E7%BB%93%E7%82%B9%E6%9C%89%E5%B7%A6%E5%8F%B3%E5%AD%90%E6%A0%91"><span class="nav-text">删除结点有左右子树</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ASL-5"><span class="nav-text">ASL</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E6%88%90%E5%8A%9F-1"><span class="nav-text">查找成功</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E5%A4%B1%E8%B4%A5-1"><span class="nav-text">查找失败</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-3"><span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AVL%EF%BC%88%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%89"><span class="nav-text">AVL（平衡二叉树）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-text">定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B0%83%E6%95%B4%E6%9C%80%E5%B0%8F%E4%B8%8D%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-text">调整最小不平衡二叉树</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#LL%EF%BC%88%E5%B7%A6%E5%AD%A9%E5%AD%90%E5%8F%B3%E4%B8%8A%E6%97%8B%EF%BC%89"><span class="nav-text">LL（左孩子右上旋）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#RR%EF%BC%88%E5%8F%B3%E5%AD%A9%E5%AD%90%E5%B7%A6%E4%B8%8A%E6%97%8B%EF%BC%89"><span class="nav-text">RR（右孩子左上旋）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#LR%EF%BC%88%E5%B7%A6%E5%AD%A9%E5%AD%90%E7%9A%84%E5%8F%B3%E5%AD%A9%E5%AD%90%E5%85%88%E5%B7%A6%E4%B8%8A%E6%97%8B%E5%86%8D%E5%8F%B3%E4%B8%8A%E6%97%8B%EF%BC%89"><span class="nav-text">LR（左孩子的右孩子先左上旋再右上旋）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#RL%EF%BC%88%E5%8F%B3%E5%AD%A9%E5%AD%90%E7%9A%84%E5%B7%A6%E5%AD%A9%E5%AD%90%E5%85%88%E5%8F%B3%E4%B8%8A%E6%97%8B%E5%86%8D%E5%B7%A6%E4%B8%8A%E6%97%8B%EF%BC%89"><span class="nav-text">RL（右孩子的左孩子先右上旋再左上旋）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-8"><span class="nav-text">代码实现</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-4"><span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%88%A0%E9%99%A4"><span class="nav-text">平衡二叉树的删除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ASL-6"><span class="nav-text">ASL</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RBT%EF%BC%88%E7%BA%A2%E9%BB%91%E6%A0%91%EF%BC%89"><span class="nav-text">RBT（红黑树）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8C%BA%E5%88%AB"><span class="nav-text">区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-1"><span class="nav-text">定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%A7%E8%B4%A8-1"><span class="nav-text">性质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6-4"><span class="nav-text">时间复杂度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E6%93%8D%E4%BD%9C-1"><span class="nav-text">插入操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-5"><span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#B%E6%A0%91"><span class="nav-text">B树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-2"><span class="nav-text">定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E5%BE%81%E6%80%A7%E8%B4%A8"><span class="nav-text">特征性质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%AB%98%E5%BA%A6%E8%8C%83%E5%9B%B4"><span class="nav-text">高度范围</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E6%93%8D%E4%BD%9C-2"><span class="nav-text">插入操作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%89%8D%E6%8F%90%E8%A6%81%E6%B1%82"><span class="nav-text">前提要求</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%BF%87%E7%A8%8B"><span class="nav-text">过程</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B0%8F%E6%80%BB%E7%BB%93"><span class="nav-text">小总结</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9C-1"><span class="nav-text">删除操作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%BF%87%E7%A8%8B-1"><span class="nav-text">过程</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%8B%89%E5%8F%B3%E5%85%84%E5%BC%9F"><span class="nav-text">拉右兄弟</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%8B%89%E5%B7%A6%E5%85%84%E5%BC%9F"><span class="nav-text">拉左兄弟</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9C%E6%80%BB%E7%BB%93"><span class="nav-text">插入删除操作总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#B-%E6%A0%91"><span class="nav-text">B+树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-3"><span class="nav-text">定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE"><span class="nav-text">查找</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A4%9A%E8%B7%AF%E6%9F%A5%E6%89%BE"><span class="nav-text">多路查找</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE-1"><span class="nav-text">顺序查找</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%B9%E6%AF%94B%E6%A0%91"><span class="nav-text">对比B树</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%85%B3%E9%94%AE%E5%AD%97%E5%AF%B9%E5%BA%94%E5%88%86%E5%8F%89%E4%B8%8D%E5%90%8C"><span class="nav-text">关键字对应分叉不同</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%8A%82%E7%82%B9%E5%85%B3%E9%94%AE%E5%AD%97%E8%8C%83%E5%9B%B4%E4%B8%8D%E5%90%8C"><span class="nav-text">节点关键字范围不同</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8F%B6%E5%AD%90%E7%BB%93%E7%82%B9%E4%B8%8E%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-text">叶子结点与关键字的关系</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%8A%82%E7%82%B9%E4%BD%9C%E7%94%A8"><span class="nav-text">节点作用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E6%9C%AC%E8%B4%A8%E5%8C%BA%E5%88%AB"><span class="nav-text">存储本质区别</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%BB%E7%BB%93%E5%AF%B9%E6%AF%94"><span class="nav-text">总结对比</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%A3%E5%88%97%E6%9F%A5%E6%89%BE%EF%BC%88%E7%A9%BA%E9%97%B4%E6%8D%A2%E6%97%B6%E9%97%B4%EF%BC%89"><span class="nav-text">散列查找（空间换时间）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5-2"><span class="nav-text">概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%A3%E5%88%97%E5%87%BD%E6%95%B0"><span class="nav-text">散列函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ASL-7"><span class="nav-text">ASL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A3%85%E5%A1%AB%E5%9B%A0%E5%AD%90"><span class="nav-text">装填因子</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%95%A3%E5%88%97%E5%87%BD%E6%95%B0%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0%EF%BC%89"><span class="nav-text">常见散列函数设计方法（哈希函数）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%99%A4%E7%95%99%E4%BD%99%E6%95%B0%E6%B3%95"><span class="nav-text">除留余数法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%9B%B4%E6%8E%A5%E5%AE%9A%E5%9D%80%E6%B3%95"><span class="nav-text">直接定址法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%95%B0%E5%AD%97%E5%88%86%E6%9E%90%E6%B3%95"><span class="nav-text">数字分析法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B9%B3%E6%96%B9%E5%8F%96%E4%B8%AD%E6%B3%95"><span class="nav-text">平方取中法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E5%86%B2%E7%AA%81%E6%96%B9%E6%B3%95"><span class="nav-text">处理冲突方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8B%89%E9%93%BE%E6%B3%95"><span class="nav-text">拉链法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BC%80%E6%94%BE%E5%AE%9A%E5%9D%80%E6%B3%95"><span class="nav-text">开放定址法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E6%8E%A2%E6%B5%8B%E6%B3%95"><span class="nav-text">线性探测法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%B9%B3%E6%96%B9%E6%8E%A2%E6%B5%8B%E6%B3%95"><span class="nav-text">平方探测法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E4%BC%AA%E9%9A%8F%E6%9C%BA%E5%BA%8F%E5%88%97%E6%B3%95"><span class="nav-text">伪随机序列法</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%86%8D%E6%95%A3%E5%88%97%E6%B3%95%EF%BC%88%E5%86%8D%E5%93%88%E5%B8%8C%E6%B3%95%EF%BC%89"><span class="nav-text">再散列法（再哈希法）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-6"><span class="nav-text">总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="nav-text">排序算法与数据结构</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A3%B0%E6%98%8E"><span class="nav-text">声明</span></a></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-solid fa-sync fa-spin" style="color: #f54545"></i>&nbsp;&nbsp;<a href="/">ZJ</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        57 posts in total
+                    </span>
+                    
+                        <span>
+                            43.8k words in total
+                        </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.7.1</a></span>
+        </div>
+        
+            <div class="icp-info my-1"><a target="_blank" rel="nofollow" href="
+                
+                    http://beian.miit.gov.cn
+                
+                ">蜀ICP备2024084968号</a></div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+            <li class="right-bottom-tools tool-aplayer flex justify-center items-center">
+
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/Swup.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/SwupSlideTheme.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/SwupScriptsPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/SwupProgressPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/SwupScrollPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/SwupPreloadPlugin.min.js"></script>
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+<script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/tools/imageViewer.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/utils.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/main.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/layouts/navbarShrink.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/tools/scrollTopBottom.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/tools/lightDarkSwitch.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/layouts/categoryList.js"></script>
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/tools/localSearch.js"></script>
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/tools/codeBlock.js"></script>
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/layouts/lazyload.js"></script>
+
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/tools/runtime.js"></script>
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/odometer.min.js"></script>
+    <link rel="stylesheet" href="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/assets/odometer-theme-minimal.css">
+
+
+
+  <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/Typed.min.js"></script>
+  <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/plugins/typed.js"></script>
+
+
+
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/minimasonry.min.js"></script>
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/plugins/masonry.js"></script>
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/tools/tocToggle.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/layouts/toc.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/plugins/tabs.js"></script>
+    
+</div>
+
+
+    <div id="aplayer"></div>
+<script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/libs/APlayer.min.js"></script>
+<script src="https://evan.beee.top/projects/hexo-theme-redefine@2.7.1/source/js/plugins/aplayer.js"></script>
+
+</body>
+</html>

