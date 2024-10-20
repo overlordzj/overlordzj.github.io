@@ -1158,21 +1158,30 @@ wireshark用wireshark 打开并导入sslkey....
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/2024/09/20/ctf/writeup/misc/buuctf/%5BWord%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99%5D%E8%A7%A3%E5%8E%8B1/">
-                            Word文档隐写-解压1
+                        <a href="/2024/09/20/ctf/writeup/misc/buuctf/%5BPDF%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99%5Dpdf%E9%9A%90%E5%86%99/">
+                            PDF文档隐写-pdf隐写
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            [Word文档隐写]解压1前言出自BUUCTF 练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）
-题目打开靶场，会给一个word的附件，另存为下来
+                            [PDF文档隐写]pdf隐写前言出自BUUCTF 练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）
+题目打开靶场，会给一个pdf的附件，另存为下来
 
-根据题目提示是要以压缩包的形式打开word文档
-修改文档后缀为.zip，并解压
 
-这里可以每个手动去查找，也可以借用工具直接查找文本内容，这里提供文件搜索工具 FileLocato...
+使用工具wbStego4.3open 进行解密
+
+  
+    这里是需要先知道密码的，由于是书本上面的例题，所以直接给了密码air123
+
+  
+
+
+使用时可能会报错
+
+
+当出...
                         
                     </div>
 
@@ -1252,7 +1261,7 @@ wireshark用wireshark 打开并导入sslkey....
         
     </div>
 
-    <a href="/2024/09/20/ctf/writeup/misc/buuctf/%5BWord%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99%5D%E8%A7%A3%E5%8E%8B1/">Read more<span class="seo-reader-text">Word文档隐写-解压1</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2024/09/20/ctf/writeup/misc/buuctf/%5BPDF%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99%5Dpdf%E9%9A%90%E5%86%99/">Read more<span class="seo-reader-text">PDF文档隐写-pdf隐写</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1382,30 +1391,25 @@ wireshark用wireshark 打开并导入sslkey....
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/2024/09/20/ctf/writeup/misc/buuctf/%5BPDF%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99%5Dpdf%E9%9A%90%E5%86%99/">
-                            PDF文档隐写-pdf隐写
+                        <a href="/2024/09/20/ctf/writeup/misc/buuctf/%5BWord%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99%5D%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2/">
+                            Word文档隐写-字体颜色
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            [PDF文档隐写]pdf隐写前言出自BUUCTF 练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）
-题目打开靶场，会给一个pdf的附件，另存为下来
+                            [Word文档隐写]字体颜色前言出自BUUCTF 练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）
+题目打开靶场，会给一个word的附件，另存为下来
+
+打开文档，发现是空白的，根据题目是有关字体颜色的隐写，直接全选文字，看看有何猫腻
+
+表明这里可能存在着文字框
+
+将其放大并选中黑色字体即可得到flag
 
 
-使用工具wbStego4.3open 进行解密
-
-  
-    这里是需要先知道密码的，由于是书本上面的例题，所以直接给了密码air123
-
-  
-
-
-使用时可能会报错
-
-
-当出...
+总结一篇小水文~ε٩(...
                         
                     </div>
 
@@ -1485,7 +1489,7 @@ wireshark用wireshark 打开并导入sslkey....
         
     </div>
 
-    <a href="/2024/09/20/ctf/writeup/misc/buuctf/%5BPDF%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99%5Dpdf%E9%9A%90%E5%86%99/">Read more<span class="seo-reader-text">PDF文档隐写-pdf隐写</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2024/09/20/ctf/writeup/misc/buuctf/%5BWord%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99%5D%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2/">Read more<span class="seo-reader-text">Word文档隐写-字体颜色</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1500,24 +1504,21 @@ wireshark用wireshark 打开并导入sslkey....
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/2024/09/20/ctf/writeup/misc/buuctf/%5BWord%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99%5D%E9%9A%90%E8%97%8F%E6%96%87%E5%AD%97/">
-                            Word文档隐写-隐藏文字
+                        <a href="/2024/09/20/ctf/writeup/misc/buuctf/%5BWord%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99%5D%E8%A7%A3%E5%8E%8B1/">
+                            Word文档隐写-解压1
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            [Word文档隐写]隐藏文字前言出自BUUCTF 练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）
+                            [Word文档隐写]解压1前言出自BUUCTF 练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）
 题目打开靶场，会给一个word的附件，另存为下来
 
-打开文档，发现是空白的，根据题目是有关隐藏文字隐写，直接全选文字，取消整体隐藏文字
+根据题目提示是要以压缩包的形式打开word文档
+修改文档后缀为.zip，并解压
 
-
-
-
-可以看到很简单就拿到了flag
-总结又是一篇小水文~ε٩(๑&gt; ₃ &lt;)۶...
+这里可以每个手动去查找，也可以借用工具直接查找文本内容，这里提供文件搜索工具 FileLocato...
                         
                     </div>
 
@@ -1597,7 +1598,7 @@ wireshark用wireshark 打开并导入sslkey....
         
     </div>
 
-    <a href="/2024/09/20/ctf/writeup/misc/buuctf/%5BWord%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99%5D%E9%9A%90%E8%97%8F%E6%96%87%E5%AD%97/">Read more<span class="seo-reader-text">Word文档隐写-隐藏文字</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2024/09/20/ctf/writeup/misc/buuctf/%5BWord%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99%5D%E8%A7%A3%E5%8E%8B1/">Read more<span class="seo-reader-text">Word文档隐写-解压1</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1721,25 +1722,24 @@ wireshark用wireshark 打开并导入sslkey....
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/2024/09/20/ctf/writeup/misc/buuctf/%5BWord%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99%5D%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2/">
-                            Word文档隐写-字体颜色
+                        <a href="/2024/09/20/ctf/writeup/misc/buuctf/%5BWord%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99%5D%E9%9A%90%E8%97%8F%E6%96%87%E5%AD%97/">
+                            Word文档隐写-隐藏文字
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            [Word文档隐写]字体颜色前言出自BUUCTF 练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）
+                            [Word文档隐写]隐藏文字前言出自BUUCTF 练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）
 题目打开靶场，会给一个word的附件，另存为下来
 
-打开文档，发现是空白的，根据题目是有关字体颜色的隐写，直接全选文字，看看有何猫腻
-
-表明这里可能存在着文字框
-
-将其放大并选中黑色字体即可得到flag
+打开文档，发现是空白的，根据题目是有关隐藏文字隐写，直接全选文字，取消整体隐藏文字
 
 
-总结一篇小水文~ε٩(...
+
+
+可以看到很简单就拿到了flag
+总结又是一篇小水文~ε٩(๑&gt; ₃ &lt;)۶...
                         
                     </div>
 
@@ -1819,7 +1819,7 @@ wireshark用wireshark 打开并导入sslkey....
         
     </div>
 
-    <a href="/2024/09/20/ctf/writeup/misc/buuctf/%5BWord%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99%5D%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2/">Read more<span class="seo-reader-text">Word文档隐写-字体颜色</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2024/09/20/ctf/writeup/misc/buuctf/%5BWord%E6%96%87%E6%A1%A3%E9%9A%90%E5%86%99%5D%E9%9A%90%E8%97%8F%E6%96%87%E5%AD%97/">Read more<span class="seo-reader-text">Word文档隐写-隐藏文字</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1863,7 +1863,7 @@ wireshark用wireshark 打开并导入sslkey....
                     </span>
                     
                         <span>
-                            43.8k words in total
+                            45.2k words in total
                         </span>
                     
                 </p>
