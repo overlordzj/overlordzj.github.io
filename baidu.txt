@@ -1,3 +1,4 @@
+https://blog.overlordzj.cn/2024/10/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/
 https://blog.overlordzj.cn/2024/09/12/ctf/writeup/web/%E7%9B%AE%E5%BD%95/catalogue/
 https://blog.overlordzj.cn/2024/09/15/ctf/writeup/web/ctfhub/web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD-HTTP%E5%8D%8F%E8%AE%AE/
 https://blog.overlordzj.cn/2024/09/14/ctf/writeup/web/ctfhub/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/
@@ -7,7 +8,6 @@ https://blog.overlordzj.cn/2024/09/12/ctf/writeup/web/buuctf/[web%E5%85%A5%E9%97
 https://blog.overlordzj.cn/2024/09/14/ctf/writeup/web/buuctf/[BJDCTF2020]ZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/
 https://blog.overlordzj.cn/2024/09/12/ctf/writeup/web/buuctf/[%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%982019]Http/
 https://blog.overlordzj.cn/2024/09/13/ctf/writeup/web/buuctf/[BJDCTF2020]Mark-loves-cat/
-https://blog.overlordzj.cn/2024/10/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/
 https://blog.overlordzj.cn/2024/09/18/ctf/data/misc/%E9%9A%90%E5%86%99%E6%9C%AF/
 https://blog.overlordzj.cn/2024/09/26/ctf/data/web/PHP%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/
 https://blog.overlordzj.cn/2024/09/26/ctf/data/web/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/
