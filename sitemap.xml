@@ -2,18 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.overlordzj.cn/2024/10/22/C++/C++%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/</loc>
+    <loc>https://blog.overlordzj.cn/2024/10/25/C++/%E6%8F%90%E9%AB%98%E9%83%A8%E5%88%86%E6%80%BB%E7%BB%93/</loc>
     
-    <lastmod>2024-10-21</lastmod>
+    <lastmod>2024-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.overlordzj.cn/2024/10/21/C++/C++%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</loc>
+    <loc>https://blog.overlordzj.cn/2024/10/26/C++/C++%E6%8F%90%E9%AB%98%E7%BC%96%E7%A8%8B/</loc>
     
-    <lastmod>2024-10-21</lastmod>
+    <lastmod>2024-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.overlordzj.cn/2024/10/22/C++/C++%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/</loc>
+    
+    <lastmod>2024-10-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.overlordzj.cn/2024/10/23/C++/%E6%A0%B8%E5%BF%83%E9%83%A8%E5%88%86%E6%80%BB%E7%BB%93/</loc>
+    
+    <lastmod>2024-10-25</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,7 +40,16 @@
   <url>
     <loc>https://blog.overlordzj.cn/2024/10/21/C++/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86%E6%80%BB%E7%BB%93/</loc>
     
-    <lastmod>2024-10-21</lastmod>
+    <lastmod>2024-10-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.overlordzj.cn/2024/10/21/C++/C++%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</loc>
+    
+    <lastmod>2024-10-23</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -571,197 +598,197 @@
 
   <url>
     <loc>https://blog.overlordzj.cn/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://blog.overlordzj.cn/tags/%E5%BE%85%E5%A1%AB%E5%9D%91/</loc>
-    <lastmod>2024-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.overlordzj.cn/tags/C/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.overlordzj.cn/tags/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.overlordzj.cn/tags/%E5%BE%85%E5%A1%AB%E5%9D%91/</loc>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.overlordzj.cn/tags/data/</loc>
-    <lastmod>2024-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.overlordzj.cn/tags/ctf/</loc>
-    <lastmod>2024-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.overlordzj.cn/tags/writeup/</loc>
-    <lastmod>2024-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.overlordzj.cn/tags/catalogue/</loc>
-    <lastmod>2024-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.overlordzj.cn/tags/%E5%A4%87%E5%BF%98%E5%BD%95/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.overlordzj.cn/tags/example/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.overlordzj.cn/tags/linux/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <loc>https://blog.overlordzj.cn/tags/ctf/</loc>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.overlordzj.cn/tags/C%E8%AF%AD%E8%A8%80/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <loc>https://blog.overlordzj.cn/tags/writeup/</loc>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.overlordzj.cn/tags/%E6%8A%80%E5%B7%A7/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <loc>https://blog.overlordzj.cn/tags/catalogue/</loc>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.overlordzj.cn/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.overlordzj.cn/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.overlordzj.cn/tags/kali/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <loc>https://blog.overlordzj.cn/tags/C%E8%AF%AD%E8%A8%80/</loc>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.overlordzj.cn/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <loc>https://blog.overlordzj.cn/tags/%E6%8A%80%E5%B7%A7/</loc>
+    <lastmod>2024-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.overlordzj.cn/tags/%E5%A4%87%E5%BF%98%E5%BD%95/</loc>
+    <lastmod>2024-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.overlordzj.cn/tags/linux/</loc>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.overlordzj.cn/tags/windows/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.overlordzj.cn/tags/%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.overlordzj.cn/tags/kali/</loc>
+    <lastmod>2024-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.overlordzj.cn/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.overlordzj.cn/tags/misc/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.overlordzj.cn/tags/web/</loc>
-    <lastmod>2024-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.overlordzj.cn/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/</loc>
-    <lastmod>2024-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.overlordzj.cn/tags/php/</loc>
-    <lastmod>2024-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.overlordzj.cn/tags/http/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.overlordzj.cn/tags/%E9%9A%90%E5%86%99%E6%9C%AF/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.overlordzj.cn/tags/%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.overlordzj.cn/tags/%E5%8F%96%E8%AF%81%E5%88%86%E6%9E%90/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.overlordzj.cn/tags/http/</loc>
+    <lastmod>2024-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.overlordzj.cn/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/</loc>
+    <lastmod>2024-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.overlordzj.cn/tags/php/</loc>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.overlordzj.cn/tags/rce/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -770,175 +797,175 @@
   
   <url>
     <loc>https://blog.overlordzj.cn/categories/C/</loc>
-    <lastmod>2024-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.overlordzj.cn/categories/ctf/</loc>
-    <lastmod>2024-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.overlordzj.cn/categories/%E5%A4%87%E5%BF%98%E5%BD%95/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.overlordzj.cn/categories/example/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.overlordzj.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2024-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.overlordzj.cn/categories/C%E8%AF%AD%E8%A8%80/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <loc>https://blog.overlordzj.cn/categories/ctf/</loc>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.overlordzj.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.overlordzj.cn/categories/ctf/data/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <loc>https://blog.overlordzj.cn/categories/C%E8%AF%AD%E8%A8%80/</loc>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.overlordzj.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux-centos/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <loc>https://blog.overlordzj.cn/categories/%E5%A4%87%E5%BF%98%E5%BD%95/</loc>
+    <lastmod>2024-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.overlordzj.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.overlordzj.cn/categories/C%E8%AF%AD%E8%A8%80/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.overlordzj.cn/categories/ctf/writeup/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <loc>https://blog.overlordzj.cn/categories/ctf/data/</loc>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.overlordzj.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <loc>https://blog.overlordzj.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux-centos/</loc>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.overlordzj.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/windows/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.overlordzj.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/</loc>
+    <lastmod>2024-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.overlordzj.cn/categories/ctf/writeup/</loc>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.overlordzj.cn/categories/ctf/data/another/</loc>
-    <lastmod>2024-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.overlordzj.cn/categories/ctf/data/misc/</loc>
-    <lastmod>2024-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.overlordzj.cn/categories/ctf/data/web/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.overlordzj.cn/categories/ctf/data/reverse/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.overlordzj.cn/categories/ctf/data/misc/</loc>
+    <lastmod>2024-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.overlordzj.cn/categories/ctf/data/web/</loc>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.overlordzj.cn/categories/ctf/writeup/misc/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.overlordzj.cn/categories/ctf/writeup/web-writeup/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.overlordzj.cn/categories/ctf/writeup/misc/%E7%9B%AE%E5%BD%95/</loc>
-    <lastmod>2024-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.overlordzj.cn/categories/ctf/writeup/web-writeup/%E7%9B%AE%E5%BD%95/</loc>
-    <lastmod>2024-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.overlordzj.cn/categories/ctf/data/misc/%E7%9B%AE%E5%BD%95/</loc>
-    <lastmod>2024-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.overlordzj.cn/categories/ctf/writeup/web-writeup/buuctf/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.overlordzj.cn/categories/ctf/writeup/misc/buuctf/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.overlordzj.cn/categories/ctf/data/misc/%E7%9B%AE%E5%BD%95/</loc>
+    <lastmod>2024-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.overlordzj.cn/categories/ctf/writeup/web-writeup/buuctf/</loc>
+    <lastmod>2024-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.overlordzj.cn/categories/ctf/writeup/web-writeup/%E7%9B%AE%E5%BD%95/</loc>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.overlordzj.cn/categories/ctf/writeup/web-writeup/ctfhub/</loc>
-    <lastmod>2024-10-22</lastmod>
+    <lastmod>2024-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

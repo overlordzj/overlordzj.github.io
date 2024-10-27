@@ -630,7 +630,7 @@
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">60</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">63</div>
         <div class="label text-third-text-color text-sm">Posts</div>
     </a>
 </div>
@@ -708,7 +708,7 @@
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">60</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">63</div>
         <div class="label text-third-text-color text-sm">Posts</div>
     </a>
 </div>
@@ -735,39 +735,115 @@
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/2024/09/12/ctf/writeup/web/%E7%9B%AE%E5%BD%95/catalogue/">
-                            web安全WP目录
+                        <a href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/IP%E9%85%8D%E7%BD%AE/">
+                            kali的IP配置
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            目录（根据上传顺序以及题目难度进行排序）
-ctfhub
-buuctf
-ctfhub
-信息泄露
-RCE-eval执行
-web前置技能-HTTP协议
-
-buuctf
-[极客大挑战 2019]Http
-BUU-BURP-COURSE-1
-[web入门]粗心的小李
-[BJDCTF2020]Mark-loves-cat
-[BJDCTF2020]ZJCTF-不过如此
+                            kali的IP配置静态IP1vim /etc/network/interfaces //进入ip修改环境
 
 
+在这两行下面输入
+123456auto eth0iface eth0 inet staticaddress 192.168.1.111	//根据自身ip地址自定义netmask 255.255.255.0gateway 192.168.1.1		//根据自身ip网关自定义//退出并保...
                         
                     </div>
 
                     <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Thu Sep 12 2024 00:00:00 GMT+0800">
+            <span class="home-article-date" data-date="Fri Sep 13 2024 00:00:00 GMT+0800">
                 
-                    2024-09-12
+                    2024-09-13
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/">kali</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/kali/">kali</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">环境配置</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/IP%E9%85%8D%E7%BD%AE/">Read more<span class="seo-reader-text">kali的IP配置</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2024/09/13/ctf/writeup/web/buuctf/%5BBJDCTF2020%5DMark-loves-cat/">
+                            BJDCTF2020-Mark-loves-cat*
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            [BJDCTF2020]Mark loves cat*前言出自BUUCTF 练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）
+题目打开靶场，可以看到一个前段页面
+
+上下翻找在页面上并没有什么提示和能入手的，那就做一下目录扫描等信息收集，这里我用的dirsearch ，我新建了一个示例文件存放扫描目录，正常情况扫描需要花好些时间
+...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Sep 13 2024 00:00:00 GMT+0800">
+                
+                    2024-09-13
                 
             </span>
         </span>
@@ -810,7 +886,7 @@ BUU-BURP-COURSE-1
                             <li>></li>
                         
                         <li>
-                            <a href="/categories/ctf/writeup/web-writeup/%E7%9B%AE%E5%BD%95/">目录</a>&nbsp;
+                            <a href="/categories/ctf/writeup/web-writeup/buuctf/">buuctf</a>&nbsp;
                         </li>
                     
                     
@@ -825,17 +901,17 @@ BUU-BURP-COURSE-1
                     
                         <li>
                             
-                            <a href="/tags/ctf/">ctf</a>&nbsp;
+                            <a href="/tags/writeup/">writeup</a>&nbsp;
                         </li>
                     
                         <li>
                             | 
-                            <a href="/tags/catalogue/">catalogue</a>&nbsp;
+                            <a href="/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/">信息泄露</a>&nbsp;
                         </li>
                     
                         <li>
                             | 
-                            <a href="/tags/web/">web</a>&nbsp;
+                            <a href="/tags/php/">php</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -843,7 +919,102 @@ BUU-BURP-COURSE-1
         
     </div>
 
-    <a href="/2024/09/12/ctf/writeup/web/%E7%9B%AE%E5%BD%95/catalogue/">Read more<span class="seo-reader-text">web安全WP目录</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2024/09/13/ctf/writeup/web/buuctf/%5BBJDCTF2020%5DMark-loves-cat/">Read more<span class="seo-reader-text">BJDCTF2020-Mark-loves-cat*</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2024/09/12/ctf/data/another/%E7%AB%9E%E8%B5%9B%E6%A8%A1%E5%BC%8F/">
+                            CTF竞赛模式
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            竞赛模式CTF竞赛模式具体分为以下几类：
+正文理论知识理论题多见于国内比赛，通常为选择题。包含单选及多选，选手需要根据自己所学的相关理论知识进行作答。最终得出分数。理论部分通常多见于初赛或是初赛之前的海选
+Jeopardy-解题参赛队伍可以通过互联网或者现场网络参与，参数队伍通过与在线环境交互或文件离线分析，解决网络安全技术挑战获取相应分值，类似于 ACM 编程竞赛、信息学奥林匹克赛，根据总...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Sep 12 2024 00:00:00 GMT+0800">
+                
+                    2024-09-12
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/ctf/">ctf</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/ctf/data/">data</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/ctf/data/another/">another</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/data/">data</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/ctf/">ctf</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/09/12/ctf/data/another/%E7%AB%9E%E8%B5%9B%E6%A8%A1%E5%BC%8F/">Read more<span class="seo-reader-text">CTF竞赛模式</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -968,6 +1139,116 @@ BUU-BURP-COURSE-1
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
+                        <a href="/2024/09/12/ctf/writeup/web/buuctf/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%982019%5DHttp/">
+                            极客大挑战2019 Http
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            [极客大挑战 2019]Http前言出自BUUCTF 练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）
+题目开启靶场后，打开是一个普通页面
+
+上下翻找没有其他可利用的，直接上F12大法（或者crtl+U查看网页源代码）
+
+这里我是直接查看源代码，找到需要的Secret.php文件
+
+但有一个坑，这里需要左右拖动才能看到我们需要的...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Sep 12 2024 00:00:00 GMT+0800">
+                
+                    2024-09-12
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/ctf/">ctf</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/ctf/writeup/">writeup</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/ctf/writeup/web-writeup/">web-writeup</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/ctf/writeup/web-writeup/buuctf/">buuctf</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/writeup/">writeup</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/http/">http</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/09/12/ctf/writeup/web/buuctf/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%982019%5DHttp/">Read more<span class="seo-reader-text">极客大挑战2019 Http</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
                         <a href="/2024/09/12/ctf/writeup/web/buuctf/%5Bweb%E5%85%A5%E9%97%A8%5D%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8F%E6%9D%8E/">
                             web入门-粗心的小李
                         </a>
@@ -1075,22 +1356,30 @@ BUU-BURP-COURSE-1
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/2024/09/12/ctf/writeup/web/buuctf/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%982019%5DHttp/">
-                            极客大挑战2019 Http
+                        <a href="/2024/09/12/ctf/writeup/web/%E7%9B%AE%E5%BD%95/catalogue/">
+                            web安全WP目录
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            [极客大挑战 2019]Http前言出自BUUCTF 练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）
-题目开启靶场后，打开是一个普通页面
+                            目录（根据上传顺序以及题目难度进行排序）
+ctfhub
+buuctf
+ctfhub
+信息泄露
+RCE-eval执行
+web前置技能-HTTP协议
 
-上下翻找没有其他可利用的，直接上F12大法（或者crtl+U查看网页源代码）
+buuctf
+[极客大挑战 2019]Http
+BUU-BURP-COURSE-1
+[web入门]粗心的小李
+[BJDCTF2020]Mark-loves-cat
+[BJDCTF2020]ZJCTF-不过如此
 
-这里我是直接查看源代码，找到需要的Secret.php文件
 
-但有一个坑，这里需要左右拖动才能看到我们需要的...
                         
                     </div>
 
@@ -1142,7 +1431,7 @@ BUU-BURP-COURSE-1
                             <li>></li>
                         
                         <li>
-                            <a href="/categories/ctf/writeup/web-writeup/buuctf/">buuctf</a>&nbsp;
+                            <a href="/categories/ctf/writeup/web-writeup/%E7%9B%AE%E5%BD%95/">目录</a>&nbsp;
                         </li>
                     
                     
@@ -1157,12 +1446,17 @@ BUU-BURP-COURSE-1
                     
                         <li>
                             
-                            <a href="/tags/writeup/">writeup</a>&nbsp;
+                            <a href="/tags/ctf/">ctf</a>&nbsp;
                         </li>
                     
                         <li>
                             | 
-                            <a href="/tags/http/">http</a>&nbsp;
+                            <a href="/tags/catalogue/">catalogue</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/web/">web</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1170,7 +1464,7 @@ BUU-BURP-COURSE-1
         
     </div>
 
-    <a href="/2024/09/12/ctf/writeup/web/buuctf/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%982019%5DHttp/">Read more<span class="seo-reader-text">极客大挑战2019 Http</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2024/09/12/ctf/writeup/web/%E7%9B%AE%E5%BD%95/catalogue/">Read more<span class="seo-reader-text">web安全WP目录</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1439,218 +1733,11 @@ putchar()函数表示直接输出一个字符，（）内可以填写一个字�
                 </div>
             </li>
         
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/09/09/example/%E6%B5%8B%E8%AF%95%E6%97%B6%E6%95%88%E6%80%A7/">
-                            测试文章时效性
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            这是测试文字这是测试文字这是测试文字1这是测试文字
-
-这是测试文字
-
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Sep 09 2024 12:00:00 GMT+0800">
-                
-                    2024-09-09
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/example/">example</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/example/">example</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2024/09/09/example/%E6%B5%8B%E8%AF%95%E6%97%B6%E6%95%88%E6%80%A7/">Read more<span class="seo-reader-text">测试文章时效性</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/09/09/example/test-passwd/">
-                            测试密码访问
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            <p>Here’s something encrypted, password is required to continue reading.</p>
-
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Sep 09 2024 09:00:00 GMT+0800">
-                
-                    2024-09-09
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/example/">example</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/example/">example</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2024/09/09/example/test-passwd/">Read more<span class="seo-reader-text">测试密码访问</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/09/09/example/hello-world/">
-                            Hello World
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            Welcome to Hexo ! This is your very first post. Check documentation  for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting  or you can ask me on GitHub ...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Sep 09 2024 09:00:00 GMT+0800">
-                
-                    2024-09-09
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/example/">example</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/example/">example</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2024/09/09/example/hello-world/">Read more<span class="seo-reader-text">Hello World</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
     </ul>
 
     <div class="home-paginator px-7 py-5">
         <div class="paginator">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa-regular fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa-regular fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/7/"><i class="fa-regular fa-angle-right"></i></a>
 </div>
 
     </div>
@@ -1680,11 +1767,11 @@ putchar()函数表示直接输出一个字符，（）内可以填写一个字�
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        60 posts in total
+                        63 posts in total
                     </span>
                     
                         <span>
-                            77.2k words in total
+                            120.9k words in total
                         </span>
                     
                 </p>

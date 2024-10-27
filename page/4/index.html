@@ -630,7 +630,7 @@
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">60</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">63</div>
         <div class="label text-third-text-color text-sm">Posts</div>
     </a>
 </div>
@@ -708,7 +708,7 @@
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">60</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">63</div>
         <div class="label text-third-text-color text-sm">Posts</div>
     </a>
 </div>
@@ -735,22 +735,22 @@
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/2024/09/19/ctf/writeup/misc/buuctf/%E6%B3%A2%E5%BD%A2%E5%9B%BE/">
-                            波形图
+                        <a href="/2024/09/19/ctf/writeup/misc/buuctf/%E7%9B%B2%E6%B0%B4%E5%8D%B0/">
+                            盲水印
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            波形图前言出自BUUCTF 练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）
-题目打开靶场，会给一个音频的附件，另存为下来
+                            盲水印前言出自BUUCTF 练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）
+题目打开靶场，会给一个压缩包的附件，另存为下来
 
-用Audacity 将其打开，对于波形图的题来说一般隐藏文件会存在开端或者结尾，不然选手很难找到
+压缩包会给两个图片，一看blind2就大一点，也就是有盲水印在里面
 
-隐藏文件在最最最前面，放大去看看
+用工具进行还原BlindWatermark 
 
-根据这段奇怪的波形图，将正值写为1，负值写为0，会得到一串二进制码，...
+不要去github搜索下成BlindWatermark 了，这个是新的，需要看red...
                         
                     </div>
 
@@ -830,7 +830,340 @@
         
     </div>
 
-    <a href="/2024/09/19/ctf/writeup/misc/buuctf/%E6%B3%A2%E5%BD%A2%E5%9B%BE/">Read more<span class="seo-reader-text">波形图</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2024/09/19/ctf/writeup/misc/buuctf/%E7%9B%B2%E6%B0%B4%E5%8D%B0/">Read more<span class="seo-reader-text">盲水印</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2024/09/19/ctf/writeup/misc/buuctf/%E6%9C%80%E4%BD%8E%E6%9C%89%E6%95%88%E4%BD%8D%EF%BC%88LSB%EF%BC%89/">
+                            最低有效位（LSB）
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            最低有效位（LSB）前言出自BUUCTF 练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）
+题目打开靶场，会给一个图片的附件，将图片另存为下来
+
+根据题目LSB隐写，使用工具stegsolve 对其进行提取
+
+工具需要java环境
+
+
+通过各种尝试，导出最后的文件，拿到flag
+
+总结隐写题根据题目用工具多次尝试即可，主要在于实...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Sep 19 2024 00:00:00 GMT+0800">
+                
+                    2024-09-19
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/ctf/">ctf</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/ctf/writeup/">writeup</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/ctf/writeup/misc/">misc</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/ctf/writeup/misc/buuctf/">buuctf</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/writeup/">writeup</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E9%9A%90%E5%86%99%E6%9C%AF/">隐写术</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/09/19/ctf/writeup/misc/buuctf/%E6%9C%80%E4%BD%8E%E6%9C%89%E6%95%88%E4%BD%8D%EF%BC%88LSB%EF%BC%89/">Read more<span class="seo-reader-text">最低有效位（LSB）</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2024/09/19/ctf/writeup/misc/buuctf/%E8%8E%AB%E5%B0%94%E6%96%AF%E7%94%B5%E7%A0%81/">
+                            莫尔斯电码
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            莫尔斯电码前言出自BUUCTF 练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）
+题目打开靶场，会给一个音频的附件，另存为下来
+
+试听一下能发现是滴答的感觉，那就可以从莫斯密码入手了
+使用工具Audacity 看音频长短，再对照摩斯密码进行还原
+
+整个的提取出来是
+12345..-.  .-..  .-  --. ..  ......
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Sep 19 2024 00:00:00 GMT+0800">
+                
+                    2024-09-19
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/ctf/">ctf</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/ctf/writeup/">writeup</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/ctf/writeup/misc/">misc</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/ctf/writeup/misc/buuctf/">buuctf</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/writeup/">writeup</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E9%9A%90%E5%86%99%E6%9C%AF/">隐写术</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/09/19/ctf/writeup/misc/buuctf/%E8%8E%AB%E5%B0%94%E6%96%AF%E7%94%B5%E7%A0%81/">Read more<span class="seo-reader-text">莫尔斯电码</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2024/09/19/ctf/writeup/misc/buuctf/%E9%A2%91%E8%B0%B1%E5%9B%BE/">
+                            频谱图
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            频谱图前言出自BUUCTF 练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）
+题目打开靶场，会给一个音频的附件，另存为下来
+
+用Audacity 将其打开，对于频谱图的题来说可以随手打开频谱图看看，万一就是呢
+
+只需要用手点点就能发现意想不到的东西，岂不美哉≖‿≖✧ 
+
+音频是一段杂音或者比较刺耳，波形图也没有规律，则可能是频谱...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Sep 19 2024 00:00:00 GMT+0800">
+                
+                    2024-09-19
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/ctf/">ctf</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/ctf/writeup/">writeup</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/ctf/writeup/misc/">misc</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/ctf/writeup/misc/buuctf/">buuctf</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/writeup/">writeup</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E9%9A%90%E5%86%99%E6%9C%AF/">隐写术</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/09/19/ctf/writeup/misc/buuctf/%E9%A2%91%E8%B0%B1%E5%9B%BE/">Read more<span class="seo-reader-text">频谱图</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1517,341 +1850,11 @@ EXIF
                 </div>
             </li>
         
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/09/14/ctf/data/web/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E5%8D%9A%E5%AE%A2%E6%96%87%E6%8E%A8%E8%8D%90/">
-                            web安全学习资料博客文推荐
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            web学习资料博客文推荐web安全里面有很多各种各样的ctf习题，在遇到一些不会的题的时候往往会去网上查资料，这里盘点了一些做题时遇得到的知识点，可以结合网上资料一起再整理自己的笔记，毕竟自己记过一遍也会更有印象
-PHP文件包含漏洞思路与Bypass总结
-PHP文件包含漏洞利用思路与Bypass总结手册（一） 
-PHP文件包含漏洞利用思路与Bypass总结手册（二） 
-PHP文件包含漏洞利用...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Sep 14 2024 00:00:00 GMT+0800">
-                
-                    2024-09-14
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/ctf/">ctf</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/ctf/data/">data</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/ctf/data/web/">web</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/data/">data</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/ctf/">ctf</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/web/">web</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2024/09/14/ctf/data/web/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E5%8D%9A%E5%AE%A2%E6%96%87%E6%8E%A8%E8%8D%90/">Read more<span class="seo-reader-text">web安全学习资料博客文推荐</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/09/14/ctf/writeup/web/buuctf/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/">
-                            BJDCTF2020 ZJCTF，不过如此*
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            [BJDCTF2020]ZJCTF，不过如此*前言出自BUUCTF 练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）
-题目打开靶场，这里直接给出了源码，接下来要做的第一步就是代码审计≡(▔﹏▔)≡
-
-根据源码(..•˘_˘•..)
-第一个if说明我们需要传入text=I have a dream才能进行下面的操作
-下面一个if说...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Sep 14 2024 00:00:00 GMT+0800">
-                
-                    2024-09-14
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/ctf/">ctf</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/ctf/writeup/">writeup</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/ctf/writeup/web-writeup/">web-writeup</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/ctf/writeup/web-writeup/buuctf/">buuctf</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E5%BE%85%E5%A1%AB%E5%9D%91/">待填坑</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/writeup/">writeup</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/php/">php</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2024/09/14/ctf/writeup/web/buuctf/%5BBJDCTF2020%5DZJCTF-%E4%B8%8D%E8%BF%87%E5%A6%82%E6%AD%A4/">Read more<span class="seo-reader-text">BJDCTF2020 ZJCTF，不过如此*</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/09/14/ctf/writeup/web/ctfhub/RCE-eval%E6%89%A7%E8%A1%8C/">
-                            RCE-eval执行
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            RCE-eval执行前言出自CTFHUB 练习场，比较官方的一个大型练习靶场
-题目打开靶场之前，题目的名字是eval执行，直接冲着eval执行漏洞去挖
-打开靶场，直接漏出源码，审计一下发现需要我们传入参数cmd，然后它会直接执行我们传入的参数
-
-直接传入system函数进行cmd命令输出
-查看目录文件
-1system(&quot;ls /&quot;);
-
-
-记得要在命令末尾加上;
-
-
-发现...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Sep 14 2024 00:00:00 GMT+0800">
-                
-                    2024-09-14
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/ctf/">ctf</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/ctf/writeup/">writeup</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/ctf/writeup/web-writeup/">web-writeup</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/ctf/writeup/web-writeup/ctfhub/">ctfhub</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/writeup/">writeup</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/rce/">rce</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2024/09/14/ctf/writeup/web/ctfhub/RCE-eval%E6%89%A7%E8%A1%8C/">Read more<span class="seo-reader-text">RCE-eval执行</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
     </ul>
 
     <div class="home-paginator px-7 py-5">
         <div class="paginator">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa-regular fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/"><i class="fa-regular fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa-regular fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/"><i class="fa-regular fa-angle-right"></i></a>
 </div>
 
     </div>
@@ -1881,11 +1884,11 @@ PHP文件包含漏洞利用...
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        60 posts in total
+                        63 posts in total
                     </span>
                     
                         <span>
-                            77.2k words in total
+                            120.9k words in total
                         </span>
                     
                 </p>
