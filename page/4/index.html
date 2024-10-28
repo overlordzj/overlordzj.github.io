@@ -845,25 +845,22 @@
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/2024/09/19/ctf/writeup/misc/buuctf/%E6%9C%80%E4%BD%8E%E6%9C%89%E6%95%88%E4%BD%8D%EF%BC%88LSB%EF%BC%89/">
-                            最低有效位（LSB）
+                        <a href="/2024/09/19/ctf/writeup/misc/buuctf/%E6%B3%A2%E5%BD%A2%E5%9B%BE/">
+                            波形图
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
                             
-                            最低有效位（LSB）前言出自BUUCTF 练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）
-题目打开靶场，会给一个图片的附件，将图片另存为下来
+                            波形图前言出自BUUCTF 练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）
+题目打开靶场，会给一个音频的附件，另存为下来
 
-根据题目LSB隐写，使用工具stegsolve 对其进行提取
+用Audacity 将其打开，对于波形图的题来说一般隐藏文件会存在开端或者结尾，不然选手很难找到
 
-工具需要java环境
+隐藏文件在最最最前面，放大去看看
 
-
-通过各种尝试，导出最后的文件，拿到flag
-
-总结隐写题根据题目用工具多次尝试即可，主要在于实...
+根据这段奇怪的波形图，将正值写为1，负值写为0，会得到一串二进制码，...
                         
                     </div>
 
@@ -943,7 +940,7 @@
         
     </div>
 
-    <a href="/2024/09/19/ctf/writeup/misc/buuctf/%E6%9C%80%E4%BD%8E%E6%9C%89%E6%95%88%E4%BD%8D%EF%BC%88LSB%EF%BC%89/">Read more<span class="seo-reader-text">最低有效位（LSB）</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2024/09/19/ctf/writeup/misc/buuctf/%E6%B3%A2%E5%BD%A2%E5%9B%BE/">Read more<span class="seo-reader-text">波形图</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>

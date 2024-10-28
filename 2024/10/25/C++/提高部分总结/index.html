@@ -898,7 +898,7 @@
 <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> <span class="title class_">T1</span>, <span class="keyword">class</span> <span class="title class_">T2</span>&gt;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>;</span><br><span class="line"><span class="comment">//函数模板的实现</span></span><br><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T1,<span class="keyword">class</span> T2&gt;</span></span><br><span class="line"><span class="function"><span class="title">printPerson2</span><span class="params">(Person&lt;T1,T2&gt;p)</span></span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;类外实现 ---- 姓名： &quot;</span> &lt;&lt; p.m_Name &lt;&lt; <span class="string">&quot; 年龄：&quot;</span> &lt;&lt; p.m_Age &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//以上为提前告诉编译器的东西</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> <span class="title class_">T1</span>, <span class="keyword">class</span> <span class="title class_">T2</span>&gt;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//2、全局函数配合友元  类外实现</span></span><br><span class="line">    <span class="comment">//普通函数的声明</span></span><br><span class="line">	<span class="function"><span class="keyword">friend</span> <span class="type">void</span> <span class="title">printPerson2</span><span class="params">(Person&lt;T1, T2&gt; &amp; p)</span></span>;</span><br><span class="line">    <span class="comment">//函数模板的声明</span></span><br><span class="line">	<span class="keyword">friend</span> <span class="type">void</span> printPerson2&lt;&gt;(Person&lt;T1, T2&gt; &amp; p);</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">	<span class="built_in">Person</span>(T1 name, T2 age)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">this</span>-&gt;m_Name = name;</span><br><span class="line">		<span class="keyword">this</span>-&gt;m_Age = age;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	T1 m_Name;</span><br><span class="line">	T2 m_Age;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test02</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Person &lt;string, <span class="type">int</span> &gt;<span class="built_in">p</span>(<span class="string">&quot;Jerry&quot;</span>, <span class="number">30</span>);</span><br><span class="line">	<span class="built_in">printPerson2</span>(p);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
 </ul>
 <h2 id="具体提高部分引入"><a href="#具体提高部分引入" class="headerlink" title="具体提高部分引入"></a>具体提高部分引入</h2><p>这里是<strong>黑马程序员</strong>的免费资料，本人从网盘中下载下来了，要学习完整C++基础资料的可以访问下面链接，链接为我的博客（搬运过来了），里面也有C++基础资料的网盘分享</p>
-<a href="/2024/10/26/C++/C++%E6%8F%90%E9%AB%98%E7%BC%96%E7%A8%8B/" title="C++&#x2F;C++提高编程">C++提高编程</a>
+<a href="/2024/10/26/C++/C++%E6%8F%90%E9%AB%98%E7%BC%96%E7%A8%8B/" title="C++提高编程">C++提高编程</a>
 
 
         </div>
@@ -962,9 +962,9 @@
 </a><a class="recommended-article-item" href="/2024/10/23/C++/核心部分总结/" title="C++核心编程部分总结" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="C++核心编程部分总结" class="!max-w-none">
   <span class="title">C++核心编程部分总结</span>
-</a><a class="recommended-article-item" href="/2024/10/26/C++/C++提高编程/" title="undefined" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="undefined" class="!max-w-none">
-  <span class="title">undefined</span>
+</a><a class="recommended-article-item" href="/2024/10/26/C++/C++提高编程/" title="C++提高编程" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="C++提高编程" class="!max-w-none">
+  <span class="title">C++提高编程</span>
 </a></div>
    </div>
    <div class="recommended-mobile">
@@ -977,9 +977,9 @@
 </a><a class="recommended-article-item" href="/2024/10/23/C++/核心部分总结/" title="C++核心编程部分总结" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="C++核心编程部分总结" class="!max-w-none">
   <span class="title">C++核心编程部分总结</span>
-</a><a class="recommended-article-item" href="/2024/10/26/C++/C++提高编程/" title="undefined" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="undefined" class="!max-w-none">
-  <span class="title">undefined</span>
+</a><a class="recommended-article-item" href="/2024/10/26/C++/C++提高编程/" title="C++提高编程" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="C++提高编程" class="!max-w-none">
+  <span class="title">C++提高编程</span>
 </a></div>
    </div>
   </div>
@@ -996,7 +996,7 @@
                                 <i class="fa-solid fa-chevron-left"></i>
                             </span>
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item"></span>
+                                <span class="post-nav-title-item">C++提高编程</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
