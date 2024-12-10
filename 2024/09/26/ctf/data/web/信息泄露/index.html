@@ -24,12 +24,12 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="web信息泄露        在网站开发者开发网站的时候，或多或少会残留一些敏感信息或者文件，特别是对于备份文件和版本控制系统源码泄露尤其常见      前言这里会提供一些来自ctfhub的案例，有需要还原的可以看我的博客的关于这一节的题目 参考题目目录  工具介绍        提供的工具若未破解或链接已挂，请自行搜索破解版使用      dirsearch  网站目录扫描工具 GitHack">
+        <meta name="description" content="在网站开发者开发网站的时候，或多或少会残留一些敏感信息或者文件，特别是对于备份文件和版本控制系统源码泄露尤其常见      前言这里会提供一些来自ctfhub的案例，有需要还原的可以看我的博客的关于这一节的题目 参考题目目录  工具介绍        提供的工具若未破解或链接已挂，请自行搜索破解版使用      dirsearch  网站目录扫描工具 GitHack  git文件恢">
 <meta property="og:type" content="article">
 <meta property="og:title" content="web信息泄露">
 <meta property="og:url" content="https://blog.overlordzj.cn/2024/09/26/ctf/data/web/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="web信息泄露        在网站开发者开发网站的时候，或多或少会残留一些敏感信息或者文件，特别是对于备份文件和版本控制系统源码泄露尤其常见      前言这里会提供一些来自ctfhub的案例，有需要还原的可以看我的博客的关于这一节的题目 参考题目目录  工具介绍        提供的工具若未破解或链接已挂，请自行搜索破解版使用      dirsearch  网站目录扫描工具 GitHack">
+<meta property="og:description" content="在网站开发者开发网站的时候，或多或少会残留一些敏感信息或者文件，特别是对于备份文件和版本控制系统源码泄露尤其常见      前言这里会提供一些来自ctfhub的案例，有需要还原的可以看我的博客的关于这一节的题目 参考题目目录  工具介绍        提供的工具若未破解或链接已挂，请自行搜索破解版使用      dirsearch  网站目录扫描工具 GitHack  git文件恢">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/image-20240916154942458.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2-%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/image-20240917172655327.png">
@@ -49,7 +49,7 @@
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240917182029336.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/image-20240917182149228.png">
 <meta property="article:published_time" content="2024-09-25T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-09-26T16:11:44.383Z">
+<meta property="article:modified_time" content="2024-12-10T17:16:48.800Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="data">
 <meta property="article:tag" content="ctf">
@@ -676,8 +676,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-09-27 00:11:44</span>
-            <span class="mobile">2024-09-27 00:11:44</span>
+            <span class="desktop">2024-12-11 01:16:48</span>
+            <span class="mobile">2024-12-11 01:16:48</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -748,7 +748,7 @@
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>7 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>6 Mins</span>
         </span>
     
     
@@ -767,14 +767,14 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h1 id="web信息泄露"><a href="#web信息泄露" class="headerlink" title="web信息泄露"></a>web信息泄露</h1>
+            
   <div class="note p-4 mb-4 rounded-small info">
     <p>在网站开发者开发网站的时候，或多或少会残留一些敏感信息或者文件，特别是对于备份文件和版本控制系统源码泄露尤其常见</p>
 
   </div>
 
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这里会提供一些来自ctfhub的案例，有需要还原的可以看我的博客的关于这一节的题目</p>
-<a href="/2024/09/12/ctf/writeup/web/%E7%9B%AE%E5%BD%95/catalogue/" title="web安全WP目录">参考题目目录</a>
+<a href="/2024/09/12/ctf/writeup/web/%E7%9B%AE%E5%BD%95/catalogue/" title="web安全-WP目录">参考题目目录</a>
 
 <h2 id="工具介绍"><a href="#工具介绍" class="headerlink" title="工具介绍"></a>工具介绍</h2>
   <div class="note p-4 mb-4 rounded-small warning fa-solid icon-padding">
@@ -971,7 +971,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-09-27 00:11:44
+                    :</strong> 2024-12-11 01:16:48
             </li>
         
         <li>
@@ -1017,9 +1017,9 @@
     <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
      <i aria-hidden="true"></i><span>看看这些文章吧( ૢ⁼̴̤̆ ꇴ ⁼̴̤̆ ૢ)~ෆ</span>
     </div>
-    <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/ctfhub/信息泄露/" title="信息泄露" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="信息泄露" class="!max-w-none">
-  <span class="title">信息泄露</span>
+    <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/ctfhub/信息泄露/" title="web-信息泄露" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="web-信息泄露" class="!max-w-none">
+  <span class="title">web-信息泄露</span>
 </a><a class="recommended-article-item" href="/2024/09/12/ctf/writeup/web/buuctf/[web入门]粗心的小李/" title="web入门-粗心的小李" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="web入门-粗心的小李" class="!max-w-none">
   <span class="title">web入门-粗心的小李</span>
@@ -1032,9 +1032,9 @@
    <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
      <i aria-hidden="true"></i><span>看看这些文章吧( ૢ⁼̴̤̆ ꇴ ⁼̴̤̆ ૢ)~ෆ</span>
    </div>
-   <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/ctfhub/信息泄露/" title="信息泄露" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="信息泄露" class="!max-w-none">
-  <span class="title">信息泄露</span>
+   <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/ctfhub/信息泄露/" title="web-信息泄露" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="web-信息泄露" class="!max-w-none">
+  <span class="title">web-信息泄露</span>
 </a><a class="recommended-article-item" href="/2024/09/12/ctf/writeup/web/buuctf/[web入门]粗心的小李/" title="web入门-粗心的小李" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="web入门-粗心的小李" class="!max-w-none">
   <span class="title">web入门-粗心的小李</span>
@@ -1057,7 +1057,7 @@
                                 <i class="fa-solid fa-chevron-left"></i>
                             </span>
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">PHP相关知识</span>
+                                <span class="post-nav-title-item">web-PHP相关知识</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
@@ -1067,10 +1067,10 @@
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="next"
                         rel="next"
-                        href="/2024/09/26/ctf/data/reverse/%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E5%9F%BA%E7%A1%80/"
+                        href="/2024/09/26/ctf/writeup/misc/buuctf/%5Bvolatility%E4%BB%8B%E7%BB%8D%5D%E5%86%85%E5%AD%98%E5%8F%96%E8%AF%81/"
                         >
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">逆向分析基础</span>
+                                <span class="post-nav-title-item">volatility介绍-内存取证*</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex justify-center items-center">
@@ -1135,7 +1135,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">web信息泄露</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#web%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2"><span class="nav-text">web信息泄露</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D"><span class="nav-text">工具介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E6%B3%84%E9%9C%B2"><span class="nav-text">备份文件泄露</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%AB%99%E6%BA%90%E7%A0%81%E6%B3%84%E9%9C%B2"><span class="nav-text">网站源码泄露</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bak%E6%96%87%E4%BB%B6%E6%B3%84%E9%9C%B2"><span class="nav-text">bak文件泄露</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vim%E7%BC%93%E5%AD%98%E6%B3%84%E9%9C%B2"><span class="nav-text">vim缓存泄露</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DS-Store%E6%96%87%E4%BB%B6%E6%B3%84%E9%9C%B2"><span class="nav-text">.DS_Store文件泄露</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git%E6%B3%84%E9%9C%B2"><span class="nav-text">Git泄露</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SVN%E6%B3%84%E9%9C%B2"><span class="nav-text">SVN泄露</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HG%E6%B3%84%E9%9C%B2"><span class="nav-text">HG泄露</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D"><span class="nav-text">工具介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E6%B3%84%E9%9C%B2"><span class="nav-text">备份文件泄露</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%AB%99%E6%BA%90%E7%A0%81%E6%B3%84%E9%9C%B2"><span class="nav-text">网站源码泄露</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bak%E6%96%87%E4%BB%B6%E6%B3%84%E9%9C%B2"><span class="nav-text">bak文件泄露</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vim%E7%BC%93%E5%AD%98%E6%B3%84%E9%9C%B2"><span class="nav-text">vim缓存泄露</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DS-Store%E6%96%87%E4%BB%B6%E6%B3%84%E9%9C%B2"><span class="nav-text">.DS_Store文件泄露</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git%E6%B3%84%E9%9C%B2"><span class="nav-text">Git泄露</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SVN%E6%B3%84%E9%9C%B2"><span class="nav-text">SVN泄露</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HG%E6%B3%84%E9%9C%B2"><span class="nav-text">HG泄露</span></a></li></ol>
 
     </div>
 </div>
@@ -1172,7 +1172,7 @@
                     </span>
                     
                         <span>
-                            120.9k words in total
+                            120.7k words in total
                         </span>
                     
                 </p>

@@ -24,12 +24,12 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="pip2安装前言有些工具需要用到python2，但又需要pip下载包，而kali并没有自带pip2命令，所以需要手动安装pip2 1、安装setuptools-18.5（路径随便）12wget https:&#x2F;&#x2F;pypi.python.org&#x2F;packages&#x2F;source&#x2F;s&#x2F;setuptools&#x2F;setuptools-18.5.tar.gz &#x2F;&#x2F;安装文件包&#x2F;&#x2F;（可能会比较慢，可以通过物理机下载后">
+        <meta name="description" content="前言有些工具需要用到python2，但又需要pip下载包，而kali并没有自带pip2命令，所以需要手动安装pip2 1、安装setuptools-18.5（路径随便）12wget https:&#x2F;&#x2F;pypi.python.org&#x2F;packages&#x2F;source&#x2F;s&#x2F;setuptools&#x2F;setuptools-18.5.tar.gz &#x2F;&#x2F;安装文件包&#x2F;&#x2F;（可能会比较慢，可以通过物理机下载后传进去）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="kali环境下的pip2安装">
 <meta property="og:url" content="https://blog.overlordzj.cn/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/pip2%E5%AE%89%E8%A3%85/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="pip2安装前言有些工具需要用到python2，但又需要pip下载包，而kali并没有自带pip2命令，所以需要手动安装pip2 1、安装setuptools-18.5（路径随便）12wget https:&#x2F;&#x2F;pypi.python.org&#x2F;packages&#x2F;source&#x2F;s&#x2F;setuptools&#x2F;setuptools-18.5.tar.gz &#x2F;&#x2F;安装文件包&#x2F;&#x2F;（可能会比较慢，可以通过物理机下载后">
+<meta property="og:description" content="前言有些工具需要用到python2，但又需要pip下载包，而kali并没有自带pip2命令，所以需要手动安装pip2 1、安装setuptools-18.5（路径随便）12wget https:&#x2F;&#x2F;pypi.python.org&#x2F;packages&#x2F;source&#x2F;s&#x2F;setuptools&#x2F;setuptools-18.5.tar.gz &#x2F;&#x2F;安装文件包&#x2F;&#x2F;（可能会比较慢，可以通过物理机下载后传进去）">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/pip2%E5%AE%89%E8%A3%85/image-20240913222915609.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/pip2%E5%AE%89%E8%A3%85/image-20240913222940730.png">
@@ -37,7 +37,7 @@
 <meta property="og:image" content="https://blog.overlordzj.cn/images/pip2%E5%AE%89%E8%A3%85/image-20240913224726285.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/pip2%E5%AE%89%E8%A3%85/image-20240913224913728.png">
 <meta property="article:published_time" content="2024-09-12T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-09-13T14:52:07.691Z">
+<meta property="article:modified_time" content="2024-12-10T17:23:40.681Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="kali">
 <meta property="article:tag" content="环境配置">
@@ -663,8 +663,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-09-13 22:52:07</span>
-            <span class="mobile">2024-09-13 22:52:07</span>
+            <span class="desktop">2024-12-11 01:23:40</span>
+            <span class="mobile">2024-12-11 01:23:40</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -716,7 +716,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>367 Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>365 Words</span>
         </span>
     
     
@@ -740,7 +740,7 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h1 id="pip2安装"><a href="#pip2安装" class="headerlink" title="pip2安装"></a>pip2安装</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong>有些工具需要用到python2，但又需要pip下载包，而kali并没有自带pip2命令，所以需要手动安装pip2</strong></p>
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong>有些工具需要用到python2，但又需要pip下载包，而kali并没有自带pip2命令，所以需要手动安装pip2</strong></p>
 <h2 id="1、安装setuptools-18-5（路径随便）"><a href="#1、安装setuptools-18-5（路径随便）" class="headerlink" title="1、安装setuptools-18.5（路径随便）"></a><strong>1、安装setuptools-18.5</strong>（路径随便）</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://pypi.python.org/packages/source/s/setuptools/setuptools-18.5.tar.gz //安装文件包</span><br><span class="line">//（可能会比较慢，可以通过物理机下载后传进去）</span><br></pre></td></tr></table></figure></div>
 
 <p><img  
@@ -811,7 +811,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-09-13 22:52:07
+                    :</strong> 2024-12-11 01:23:40
             </li>
         
         <li>
@@ -856,9 +856,9 @@
     <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/26/ctf/data/web/信息泄露/" title="web信息泄露" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="web信息泄露" class="!max-w-none">
   <span class="title">web信息泄露</span>
-</a><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/ctfhub/信息泄露/" title="信息泄露" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="信息泄露" class="!max-w-none">
-  <span class="title">信息泄露</span>
+</a><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/ctfhub/信息泄露/" title="web-信息泄露" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="web-信息泄露" class="!max-w-none">
+  <span class="title">web-信息泄露</span>
 </a><a class="recommended-article-item" href="/2024/09/12/ctf/writeup/web/buuctf/[web入门]粗心的小李/" title="web入门-粗心的小李" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="web入门-粗心的小李" class="!max-w-none">
   <span class="title">web入门-粗心的小李</span>
@@ -871,9 +871,9 @@
    <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/26/ctf/data/web/信息泄露/" title="web信息泄露" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="web信息泄露" class="!max-w-none">
   <span class="title">web信息泄露</span>
-</a><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/ctfhub/信息泄露/" title="信息泄露" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="信息泄露" class="!max-w-none">
-  <span class="title">信息泄露</span>
+</a><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/ctfhub/信息泄露/" title="web-信息泄露" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="web-信息泄露" class="!max-w-none">
+  <span class="title">web-信息泄露</span>
 </a><a class="recommended-article-item" href="/2024/09/12/ctf/writeup/web/buuctf/[web入门]粗心的小李/" title="web入门-粗心的小李" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="web入门-粗心的小李" class="!max-w-none">
   <span class="title">web入门-粗心的小李</span>
@@ -887,13 +887,13 @@
                     <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="prev"
                         rel="prev"
-                        href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/windows/%E4%BF%AE%E6%94%B9SID/"
+                        href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/"
                         >
                             <span class="left arrow-icon flex justify-center items-center">
                                 <i class="fa-solid fa-chevron-left"></i>
                             </span>
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">windows系统修改系统SID</span>
+                                <span class="post-nav-title-item">msf与cs派生会话</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
@@ -971,7 +971,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">kali环境下的pip2安装</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#pip2%E5%AE%89%E8%A3%85"><span class="nav-text">pip2安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85setuptools-18-5%EF%BC%88%E8%B7%AF%E5%BE%84%E9%9A%8F%E4%BE%BF%EF%BC%89"><span class="nav-text">1、安装setuptools-18.5（路径随便）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E5%AE%89%E8%A3%85pip2"><span class="nav-text">2、安装pip2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E4%BD%BF%E7%94%A8pip2%E5%AE%89%E8%A3%85%E6%A8%A1%E5%9D%97"><span class="nav-text">3、使用pip2安装模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E5%90%8E%E7%9A%84pip%E5%AE%89%E8%A3%85%E5%91%BD%E4%BB%A4"><span class="nav-text">更新后的pip安装命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="nav-text">参考文章</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85setuptools-18-5%EF%BC%88%E8%B7%AF%E5%BE%84%E9%9A%8F%E4%BE%BF%EF%BC%89"><span class="nav-text">1、安装setuptools-18.5（路径随便）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E5%AE%89%E8%A3%85pip2"><span class="nav-text">2、安装pip2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E4%BD%BF%E7%94%A8pip2%E5%AE%89%E8%A3%85%E6%A8%A1%E5%9D%97"><span class="nav-text">3、使用pip2安装模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E5%90%8E%E7%9A%84pip%E5%AE%89%E8%A3%85%E5%91%BD%E4%BB%A4"><span class="nav-text">更新后的pip安装命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="nav-text">参考文章</span></a></li></ol>
 
     </div>
 </div>
@@ -1008,7 +1008,7 @@
                     </span>
                     
                         <span>
-                            120.9k words in total
+                            120.7k words in total
                         </span>
                     
                 </p>

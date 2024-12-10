@@ -24,12 +24,12 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="取证分析通过分析计算机系统运行产生的记录内容，对其进行复现从而实现取证 前言这里会提供一些来自buuctf的案例  这章的WP之后再写，先偷个懒(๑•́ ₃•̀๑)   工具介绍        提供的工具若未破解或链接已挂，请自行搜索破解版使用      TrIDNet  文件识别工具 DiskGenius  磁盘管理与数据恢复工具（windows） ext3grep 恢复工具（kali-ext3">
+        <meta name="description" content="通过分析计算机系统运行产生的记录内容，对其进行复现从而实现取证 前言这里会提供一些来自buuctf的案例  这章的WP之后再写，先偷个懒(๑•́ ₃•̀๑)   工具介绍        提供的工具若未破解或链接已挂，请自行搜索破解版使用      TrIDNet  文件识别工具 DiskGenius  磁盘管理与数据恢复工具（windows） ext3grep 恢复工具（kali-ext3）– a">
 <meta property="og:type" content="article">
-<meta property="og:title" content="取证分析">
+<meta property="og:title" content="misc-取证分析">
 <meta property="og:url" content="https://blog.overlordzj.cn/2024/09/25/ctf/data/misc/%E5%8F%96%E8%AF%81%E5%88%86%E6%9E%90/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="取证分析通过分析计算机系统运行产生的记录内容，对其进行复现从而实现取证 前言这里会提供一些来自buuctf的案例  这章的WP之后再写，先偷个懒(๑•́ ₃•̀๑)   工具介绍        提供的工具若未破解或链接已挂，请自行搜索破解版使用      TrIDNet  文件识别工具 DiskGenius  磁盘管理与数据恢复工具（windows） ext3grep 恢复工具（kali-ext3">
+<meta property="og:description" content="通过分析计算机系统运行产生的记录内容，对其进行复现从而实现取证 前言这里会提供一些来自buuctf的案例  这章的WP之后再写，先偷个懒(๑•́ ₃•̀๑)   工具介绍        提供的工具若未破解或链接已挂，请自行搜索破解版使用      TrIDNet  文件识别工具 DiskGenius  磁盘管理与数据恢复工具（windows） ext3grep 恢复工具（kali-ext3）– a">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%8F%96%E8%AF%81%E5%88%86%E6%9E%90/image-20240925230411889.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%8F%96%E8%AF%81%E5%88%86%E6%9E%90/image-20240925235447304.png">
@@ -51,7 +51,7 @@
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%8F%96%E8%AF%81%E5%88%86%E6%9E%90/image-20240926014722168.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%8F%96%E8%AF%81%E5%88%86%E6%9E%90/image-20240926014933567.png">
 <meta property="article:published_time" content="2024-09-24T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-09-26T12:46:15.040Z">
+<meta property="article:modified_time" content="2024-12-10T17:17:38.716Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="data">
 <meta property="article:tag" content="ctf">
@@ -69,7 +69,7 @@
     
     <title>
         
-            取证分析 -
+            misc-取证分析 -
         
         Overlord Blog
     </title>
@@ -650,7 +650,7 @@
         <div class="article-title relative w-full">
             
                 <div class="w-full flex items-center pt-6 justify-start">
-                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">取证分析</h1>
+                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">misc-取证分析</h1>
                 </div>
             
             </div>
@@ -678,8 +678,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-09-26 20:46:15</span>
-            <span class="mobile">2024-09-26 20:46:15</span>
+            <span class="desktop">2024-12-11 01:17:38</span>
+            <span class="mobile">2024-12-11 01:17:38</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -769,7 +769,7 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h1 id="取证分析"><a href="#取证分析" class="headerlink" title="取证分析"></a>取证分析</h1><p>通过分析计算机系统运行产生的记录内容，对其进行复现从而实现取证</p>
+            <p>通过分析计算机系统运行产生的记录内容，对其进行复现从而实现取证</p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这里会提供一些来自buuctf的案例</p>
 <blockquote>
 <p>这章的WP之后再写，先偷个懒(๑•́ ₃•̀๑) </p>
@@ -1030,14 +1030,14 @@
             <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> 取证分析</li>
+        <li><strong>Title:</strong> misc-取证分析</li>
         <li><strong>Author:</strong> ZJ</li>
         <li><strong>Created at
                 :</strong> 2024-09-25 00:00:00</li>
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-09-26 20:46:15
+                    :</strong> 2024-12-11 01:17:38
             </li>
         
         <li>
@@ -1089,9 +1089,9 @@
 </a><a class="recommended-article-item" href="/2024/09/26/ctf/data/web/信息泄露/" title="web信息泄露" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="web信息泄露" class="!max-w-none">
   <span class="title">web信息泄露</span>
-</a><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/ctfhub/信息泄露/" title="信息泄露" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="信息泄露" class="!max-w-none">
-  <span class="title">信息泄露</span>
+</a><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/ctfhub/信息泄露/" title="web-信息泄露" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="web-信息泄露" class="!max-w-none">
+  <span class="title">web-信息泄露</span>
 </a></div>
    </div>
    <div class="recommended-mobile">
@@ -1104,9 +1104,9 @@
 </a><a class="recommended-article-item" href="/2024/09/26/ctf/data/web/信息泄露/" title="web信息泄露" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="web信息泄露" class="!max-w-none">
   <span class="title">web信息泄露</span>
-</a><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/ctfhub/信息泄露/" title="信息泄露" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="信息泄露" class="!max-w-none">
-  <span class="title">信息泄露</span>
+</a><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/ctfhub/信息泄露/" title="web-信息泄露" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="web-信息泄露" class="!max-w-none">
+  <span class="title">web-信息泄露</span>
 </a></div>
    </div>
   </div>
@@ -1117,13 +1117,13 @@
                     <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="prev"
                         rel="prev"
-                        href="/2024/09/26/ctf/writeup/misc/buuctf/%5Bvolatility%E4%BB%8B%E7%BB%8D%5D%E5%86%85%E5%AD%98%E5%8F%96%E8%AF%81/"
+                        href="/2024/09/26/ctf/data/misc/%E7%9B%AE%E5%BD%95/catalogue/"
                         >
                             <span class="left arrow-icon flex justify-center items-center">
                                 <i class="fa-solid fa-chevron-left"></i>
                             </span>
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">volatility介绍-内存取证*</span>
+                                <span class="post-nav-title-item">misc-data目录</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
@@ -1136,7 +1136,7 @@
                         href="/2024/09/23/ctf/data/misc/%E5%8E%8B%E7%BC%A9%E5%8C%85%E5%88%86%E6%9E%90/"
                         >
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">压缩包分析</span>
+                                <span class="post-nav-title-item">misc-压缩包分析</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex justify-center items-center">
@@ -1200,8 +1200,8 @@
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">取证分析</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%96%E8%AF%81%E5%88%86%E6%9E%90"><span class="nav-text">取证分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D"><span class="nav-text">工具介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A3%81%E7%9B%98%E5%8F%96%E8%AF%81"><span class="nav-text">磁盘取证</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="nav-text">文件系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA"><span class="nav-text">磁盘分区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%96%E8%AF%81%E6%96%B9%E6%B3%95"><span class="nav-text">取证方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#mount%E6%8C%82%E8%BD%BD%E9%95%9C%E5%83%8F"><span class="nav-text">mount挂载镜像</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ext3grep"><span class="nav-text">ext3grep</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#extundelete"><span class="nav-text">extundelete</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E5%8F%96%E8%AF%81"><span class="nav-text">内存取证</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#volatility"><span class="nav-text">volatility</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#volatility%E5%B8%B8%E8%A7%81%E5%8F%82%E6%95%B0"><span class="nav-text">volatility常见参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%8F%92%E4%BB%B6%E5%91%BD%E4%BB%A4"><span class="nav-text">常见插件命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E5%AE%9E%E4%BE%8B"><span class="nav-text">命令实例</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B-%E8%AF%86%E5%88%AB%E9%95%9C%E5%83%8F%E4%BF%A1%E6%81%AF"><span class="nav-text">查看&#x2F;识别镜像信息</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8C%87%E5%AE%9A%E9%95%9C%E5%83%8F%E7%89%88%E6%9C%AC%E5%B9%B6filescan%E6%89%AB%E6%8F%8F%E6%96%87%E4%BB%B6%E5%86%8D%E8%BF%87%E6%BB%A4%E8%BE%93%E5%87%BA"><span class="nav-text">指定镜像版本并filescan扫描文件再过滤输出</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8C%87%E5%AE%9A%E9%95%9C%E5%83%8F%E7%89%88%E6%9C%AC%E5%B9%B6dumpfiles%E6%8C%87%E5%AE%9A%E6%96%87%E4%BB%B6%EF%BC%8C%E6%8C%87%E5%AE%9A%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E5%81%8F%E7%A7%BB%E9%87%8F%E5%B9%B6%E5%AF%BC%E5%87%BA%E5%88%B0%E5%BD%93%E5%89%8D%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8B%E9%9D%A2%E7%9A%84test%E7%9B%AE%E5%BD%95"><span class="nav-text">指定镜像版本并dumpfiles指定文件，指定内存中的偏移量并导出到当前文件夹下面的test目录</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+        <div class="page-title">misc-取证分析</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D"><span class="nav-text">工具介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A3%81%E7%9B%98%E5%8F%96%E8%AF%81"><span class="nav-text">磁盘取证</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="nav-text">文件系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA"><span class="nav-text">磁盘分区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%96%E8%AF%81%E6%96%B9%E6%B3%95"><span class="nav-text">取证方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#mount%E6%8C%82%E8%BD%BD%E9%95%9C%E5%83%8F"><span class="nav-text">mount挂载镜像</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ext3grep"><span class="nav-text">ext3grep</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#extundelete"><span class="nav-text">extundelete</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E5%8F%96%E8%AF%81"><span class="nav-text">内存取证</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#volatility"><span class="nav-text">volatility</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#volatility%E5%B8%B8%E8%A7%81%E5%8F%82%E6%95%B0"><span class="nav-text">volatility常见参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%8F%92%E4%BB%B6%E5%91%BD%E4%BB%A4"><span class="nav-text">常见插件命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E5%AE%9E%E4%BE%8B"><span class="nav-text">命令实例</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B-%E8%AF%86%E5%88%AB%E9%95%9C%E5%83%8F%E4%BF%A1%E6%81%AF"><span class="nav-text">查看&#x2F;识别镜像信息</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8C%87%E5%AE%9A%E9%95%9C%E5%83%8F%E7%89%88%E6%9C%AC%E5%B9%B6filescan%E6%89%AB%E6%8F%8F%E6%96%87%E4%BB%B6%E5%86%8D%E8%BF%87%E6%BB%A4%E8%BE%93%E5%87%BA"><span class="nav-text">指定镜像版本并filescan扫描文件再过滤输出</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8C%87%E5%AE%9A%E9%95%9C%E5%83%8F%E7%89%88%E6%9C%AC%E5%B9%B6dumpfiles%E6%8C%87%E5%AE%9A%E6%96%87%E4%BB%B6%EF%BC%8C%E6%8C%87%E5%AE%9A%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E5%81%8F%E7%A7%BB%E9%87%8F%E5%B9%B6%E5%AF%BC%E5%87%BA%E5%88%B0%E5%BD%93%E5%89%8D%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8B%E9%9D%A2%E7%9A%84test%E7%9B%AE%E5%BD%95"><span class="nav-text">指定镜像版本并dumpfiles指定文件，指定内存中的偏移量并导出到当前文件夹下面的test目录</span></a></li></ol></li></ol></li></ol></li></ol>
 
     </div>
 </div>
@@ -1238,7 +1238,7 @@
                     </span>
                     
                         <span>
-                            120.9k words in total
+                            120.7k words in total
                         </span>
                     
                 </p>
