@@ -22,18 +22,18 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="前言这里会提供一些来自buuctf的案例，有需要还原的可以看我的博客的关于这一节的题目 参考题目目录  基本概念HTTP是一个客户端和服务器之间请求和应答的标准协议，通常以TCP建立连接。 占用端口HTTP-&gt;80端口，HTTPS-&gt;443端口 请求方法   序号 方法 描述    1 GET 从服务器获取资源。用于请求数据而不对数据进行更改。例如，从服务器获取网页、图片等。   2">
+        <meta name="description" content="前言 基本概念 占用端口 请求方法 请求状态码 URL组成 URI和URL的区别 HTTP 响应头信息 HTTP 消息结构 客户端请求消息 服务器响应消息 实例     实战案例 伪造UA访问 伪造Referer访问 伪造IP访问 伪造请求方法   参考文章  前言这里会提供一些来自buuctf的案例，有需要还原的可以看我的博客的关于这一节的题目 参考题目目录  基本概念HTTP是一个客户端和服">
 <meta property="og:type" content="article">
 <meta property="og:title" content="web-HTTP相关基础资料">
 <meta property="og:url" content="https://blog.overlordzj.cn/2024/09/26/ctf/data/web/HTTP%E7%9B%B8%E5%85%B3%E5%9F%BA%E7%A1%80%E8%B5%84%E6%96%99/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="前言这里会提供一些来自buuctf的案例，有需要还原的可以看我的博客的关于这一节的题目 参考题目目录  基本概念HTTP是一个客户端和服务器之间请求和应答的标准协议，通常以TCP建立连接。 占用端口HTTP-&gt;80端口，HTTPS-&gt;443端口 请求方法   序号 方法 描述    1 GET 从服务器获取资源。用于请求数据而不对数据进行更改。例如，从服务器获取网页、图片等。   2">
+<meta property="og:description" content="前言 基本概念 占用端口 请求方法 请求状态码 URL组成 URI和URL的区别 HTTP 响应头信息 HTTP 消息结构 客户端请求消息 服务器响应消息 实例     实战案例 伪造UA访问 伪造Referer访问 伪造IP访问 伪造请求方法   参考文章  前言这里会提供一些来自buuctf的案例，有需要还原的可以看我的博客的关于这一节的题目 参考题目目录  基本概念HTTP是一个客户端和服">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/HTTP/231-O-Que-E-Request-E-Response-02.jpg">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/HTTP/2012072810301161.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/HTTP/httpmessage.jpg">
 <meta property="article:published_time" content="2024-09-25T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-12-10T17:17:17.828Z">
+<meta property="article:modified_time" content="2025-01-16T17:49:05.799Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="data">
 <meta property="article:tag" content="ctf">
@@ -598,15 +598,15 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">27</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">29</div>
         <div class="label text-third-text-color text-sm">Tags</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">25</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">26</div>
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">63</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">64</div>
         <div class="label text-third-text-color text-sm">Posts</div>
     </a>
 </div>
@@ -660,8 +660,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-12-11 01:17:17</span>
-            <span class="mobile">2024-12-11 01:17:17</span>
+            <span class="desktop">2025-01-17 01:49:05</span>
+            <span class="mobile">2025-01-17 01:49:05</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -732,7 +732,7 @@
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>18 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>19 Mins</span>
         </span>
     
     
@@ -751,7 +751,33 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这里会提供一些来自buuctf的案例，有需要还原的可以看我的博客的关于这一节的题目</p>
+            <ul>
+<li><a href="#%E5%89%8D%E8%A8%80">前言</a></li>
+<li><a href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5">基本概念</a><ul>
+<li><a href="#%E5%8D%A0%E7%94%A8%E7%AB%AF%E5%8F%A3">占用端口</a></li>
+<li><a href="#%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95">请求方法</a></li>
+<li><a href="#%E8%AF%B7%E6%B1%82%E7%8A%B6%E6%80%81%E7%A0%81">请求状态码</a></li>
+<li><a href="#url%E7%BB%84%E6%88%90">URL组成</a></li>
+<li><a href="#uri%E5%92%8Curl%E7%9A%84%E5%8C%BA%E5%88%AB">URI和URL的区别</a></li>
+<li><a href="#http-%E5%93%8D%E5%BA%94%E5%A4%B4%E4%BF%A1%E6%81%AF">HTTP 响应头信息</a></li>
+<li><a href="#http-%E6%B6%88%E6%81%AF%E7%BB%93%E6%9E%84">HTTP 消息结构</a><ul>
+<li><a href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%AF%B7%E6%B1%82%E6%B6%88%E6%81%AF">客户端请求消息</a></li>
+<li><a href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%93%8D%E5%BA%94%E6%B6%88%E6%81%AF">服务器响应消息</a></li>
+<li><a href="#%E5%AE%9E%E4%BE%8B">实例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B">实战案例</a><ul>
+<li><a href="#%E4%BC%AA%E9%80%A0ua%E8%AE%BF%E9%97%AE">伪造UA访问</a></li>
+<li><a href="#%E4%BC%AA%E9%80%A0referer%E8%AE%BF%E9%97%AE">伪造Referer访问</a></li>
+<li><a href="#%E4%BC%AA%E9%80%A0ip%E8%AE%BF%E9%97%AE">伪造IP访问</a></li>
+<li><a href="#%E4%BC%AA%E9%80%A0%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95">伪造请求方法</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0">参考文章</a></li>
+</ul>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这里会提供一些来自buuctf的案例，有需要还原的可以看我的博客的关于这一节的题目</p>
 <a href="/2024/09/12/ctf/writeup/web/%E7%9B%AE%E5%BD%95/catalogue/" title="web安全-WP目录">参考题目目录</a>
 
 <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>HTTP是一个客户端和服务器之间请求和应答的标准协议，通常以TCP建立连接。</p>
@@ -1057,7 +1083,7 @@
 <p><strong>URL是uniform resource locator，统一资源定位器，它是一种具体的URI，即URL可以用来标识一个资源，而且还指明了如何locate这个资源。</strong></p>
 <p>URL是Internet上用来描述信息资源的字符串，主要用在各种WWW客户程序和服务器程序上，特别是著名的Mosaic。</p>
 <p>采用URL可以用一种统一的格式来描述各种信息资源，包括文件、服务器的地址和目录等。URL一般由三部组成：<br>①协议(或称为服务方式)<br>②存有该资源的主机IP地址(有时也包括端口号)<br>③主机资源的具体地址。如目录和文件名等</p>
-<p><strong>URN，uniform resource name，统一资源命名，是通过名字来标识资源，比如mailto:<a class="link"   href="mailto:&#106;&#97;&#118;&#97;&#x2d;&#110;&#101;&#x74;&#64;&#106;&#97;&#118;&#x61;&#46;&#115;&#x75;&#x6e;&#46;&#99;&#111;&#x6d;" >&#106;&#97;&#118;&#97;&#x2d;&#110;&#101;&#x74;&#64;&#106;&#97;&#118;&#x61;&#46;&#115;&#x75;&#x6e;&#46;&#99;&#111;&#x6d; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。</strong></p>
+<p><strong>URN，uniform resource name，统一资源命名，是通过名字来标识资源，比如mailto:<a class="link"   href="mailto:&#106;&#x61;&#x76;&#97;&#x2d;&#110;&#x65;&#116;&#64;&#x6a;&#x61;&#x76;&#x61;&#x2e;&#x73;&#x75;&#110;&#46;&#99;&#111;&#x6d;" >&#106;&#x61;&#x76;&#97;&#x2d;&#110;&#x65;&#116;&#64;&#x6a;&#x61;&#x76;&#x61;&#x2e;&#x73;&#x75;&#110;&#46;&#99;&#111;&#x6d; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。</strong></p>
 <p>URI是以一种抽象的，高层次概念定义统一资源标识，而URL和URN则是具体的资源标识的方式。URL和URN都是一种URI。笼统地说，每个 URL 都是 URI，但不一定每个 URI 都是 URL。这是因为 URI 还包括一个子类，即统一资源名称 (URN)，它命名资源但不指定如何定位资源。上面的 mailto、news 和 isbn URI 都是 URN 的示例。</p>
 <p>在Java的URI中，一个URI实例可以代表绝对的，也可以是相对的，只要它符合URI的语法规则。而URL类则不仅符合语义，还包含了定位该资源的信息，因此它不能是相对的。</p>
 <p>在Java类库中，URI类不包含任何访问资源的方法，它唯一的作用就是解析。<br>相反的是，URL类可以打开一个到达资源的流。</p>
@@ -1325,7 +1351,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-12-11 01:17:17
+                    :</strong> 2025-01-17 01:49:05
             </li>
         
         <li>
@@ -1377,9 +1403,9 @@
 </a><a class="recommended-article-item" href="/2024/09/12/ctf/writeup/web/buuctf/[极客大挑战2019]Http/" title="极客大挑战2019 Http" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="极客大挑战2019 Http" class="!max-w-none">
   <span class="title">极客大挑战2019 Http</span>
-</a><a class="recommended-article-item" href="/2024/09/10/备忘录/云服务器/" title="云服务器" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="云服务器" class="!max-w-none">
-  <span class="title">云服务器</span>
+</a><a class="recommended-article-item" href="/2024/09/12/切换国内网页/" title="Blog网络不稳定访问解决方法" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="Blog网络不稳定访问解决方法" class="!max-w-none">
+  <span class="title">Blog网络不稳定访问解决方法</span>
 </a></div>
    </div>
    <div class="recommended-mobile">
@@ -1392,9 +1418,9 @@
 </a><a class="recommended-article-item" href="/2024/09/12/ctf/writeup/web/buuctf/[极客大挑战2019]Http/" title="极客大挑战2019 Http" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="极客大挑战2019 Http" class="!max-w-none">
   <span class="title">极客大挑战2019 Http</span>
-</a><a class="recommended-article-item" href="/2024/09/10/备忘录/云服务器/" title="云服务器" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="云服务器" class="!max-w-none">
-  <span class="title">云服务器</span>
+</a><a class="recommended-article-item" href="/2024/09/12/切换国内网页/" title="Blog网络不稳定访问解决方法" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="Blog网络不稳定访问解决方法" class="!max-w-none">
+  <span class="title">Blog网络不稳定访问解决方法</span>
 </a></div>
    </div>
   </div>
@@ -1517,16 +1543,16 @@
               <span>2024</span>
               -
             
-            2024&nbsp;&nbsp;<i class="fa-solid fa-sync fa-spin" style="color: #f54545"></i>&nbsp;&nbsp;<a href="/">ZJ</a>
+            2025&nbsp;&nbsp;<i class="fa-solid fa-sync fa-spin" style="color: #f54545"></i>&nbsp;&nbsp;<a href="/">ZJ</a>
             
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        63 posts in total
+                        64 posts in total
                     </span>
                     
                         <span>
-                            120.7k words in total
+                            126.5k words in total
                         </span>
                     
                 </p>
@@ -1559,6 +1585,17 @@
                     http://beian.miit.gov.cn
                 
                 ">蜀ICP备2024084968号</a></div>
+        
+        
+            <div class="icp-info my-1">
+                <!-- <span style="padding-left:40px;
+                background:url(/images/gongan.png) no-repeat left center" rel="noreferrer" ></span> -->
+                <img src="/images/gongan.png" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;" rel="noreferrer"/>
+                <a style="display:inline-block;text-decoration:none;height:20px;line-height:20px;" target="_blank" rel="noreferrer" href="
+                
+                    https://beian.mps.gov.cn/#/query/webSearch?code=51150002000806
+                
+                ">川公网安备51150002000806号</a></div>
         
         
             <div>

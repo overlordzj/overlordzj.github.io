@@ -22,18 +22,18 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="波形图前言出自BUUCTF 练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂） 题目打开靶场，会给一个音频的附件，另存为下来  用Audacity 将其打开，对于波形图的题来说一般隐藏文件会存在开端或者结尾，不然选手很难找到  隐藏文件在最最最前面，放大去看看  根据这段奇怪的波形图，将正值写为1，负值写为0，会得到一串二进制码，再用脚">
+        <meta name="description" content="波形图 前言 题目 总结  波形图前言出自BUUCTF 练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂） 题目打开靶场，会给一个音频的附件，另存为下来  用Audacity 将其打开，对于波形图的题来说一般隐藏文件会存在开端或者结尾，不然选手很难找到  隐藏文件在最最最前面，放大去看看  根据这段奇怪的波形图，将正值写为1，负值写为">
 <meta property="og:type" content="article">
 <meta property="og:title" content="波形图">
 <meta property="og:url" content="https://blog.overlordzj.cn/2024/09/19/ctf/writeup/misc/buuctf/%E6%B3%A2%E5%BD%A2%E5%9B%BE/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="波形图前言出自BUUCTF 练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂） 题目打开靶场，会给一个音频的附件，另存为下来  用Audacity 将其打开，对于波形图的题来说一般隐藏文件会存在开端或者结尾，不然选手很难找到  隐藏文件在最最最前面，放大去看看  根据这段奇怪的波形图，将正值写为1，负值写为0，会得到一串二进制码，再用脚">
+<meta property="og:description" content="波形图 前言 题目 总结  波形图前言出自BUUCTF 练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂） 题目打开靶场，会给一个音频的附件，另存为下来  用Audacity 将其打开，对于波形图的题来说一般隐藏文件会存在开端或者结尾，不然选手很难找到  隐藏文件在最最最前面，放大去看看  根据这段奇怪的波形图，将正值写为1，负值写为">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E6%B3%A2%E5%BD%A2%E5%9B%BE/image-20240920011449684.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E6%B3%A2%E5%BD%A2%E5%9B%BE/image-20240920011609290.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E6%B3%A2%E5%BD%A2%E5%9B%BE/image-20240920011701066.png">
 <meta property="article:published_time" content="2024-09-18T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-12-10T17:19:52.221Z">
+<meta property="article:modified_time" content="2025-01-16T17:55:32.533Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="writeup">
 <meta property="article:tag" content="隐写术">
@@ -597,15 +597,15 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">27</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">29</div>
         <div class="label text-third-text-color text-sm">Tags</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">25</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">26</div>
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">63</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">64</div>
         <div class="label text-third-text-color text-sm">Posts</div>
     </a>
 </div>
@@ -659,8 +659,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-12-11 01:19:52</span>
-            <span class="mobile">2024-12-11 01:19:52</span>
+            <span class="desktop">2025-01-17 01:55:32</span>
+            <span class="mobile">2025-01-17 01:55:32</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -732,7 +732,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>231 Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>240 Words</span>
         </span>
     
     
@@ -756,7 +756,13 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h2 id="波形图"><a href="#波形图" class="headerlink" title="波形图"></a>波形图</h2><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>出自<a class="link"   target="_blank" rel="noopener" href="https://buuoj.cn/" >BUUCTF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）</p>
+            <ul>
+<li><a href="#%E6%B3%A2%E5%BD%A2%E5%9B%BE">波形图</a></li>
+<li><a href="#%E5%89%8D%E8%A8%80">前言</a></li>
+<li><a href="#%E9%A2%98%E7%9B%AE">题目</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+<h2 id="波形图"><a href="#波形图" class="headerlink" title="波形图"></a>波形图</h2><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>出自<a class="link"   target="_blank" rel="noopener" href="https://buuoj.cn/" >BUUCTF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>练习场，也有相关的配套课本（我看的是《CTF实战 从入门到提升》，感觉还行，但有不少细节感觉还是得查资料才能懂）</p>
 <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>打开靶场，会给一个音频的附件，另存为下来</p>
 <p><img  
                      lazyload
@@ -797,7 +803,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-12-11 01:19:52
+                    :</strong> 2025-01-17 01:55:32
             </li>
         
         <li>
@@ -842,12 +848,12 @@
     <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/18/ctf/writeup/misc/buuctf/附加字符串/" title="附加字符串" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="附加字符串" class="!max-w-none">
   <span class="title">附加字符串</span>
-</a><a class="recommended-article-item" href="/2024/09/19/ctf/writeup/misc/buuctf/莫尔斯电码/" title="莫尔斯电码" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="莫尔斯电码" class="!max-w-none">
-  <span class="title">莫尔斯电码</span>
 </a><a class="recommended-article-item" href="/2024/09/19/ctf/writeup/misc/buuctf/频谱图/" title="频谱图" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="频谱图" class="!max-w-none">
   <span class="title">频谱图</span>
+</a><a class="recommended-article-item" href="/2024/09/19/ctf/writeup/misc/buuctf/莫尔斯电码/" title="莫尔斯电码" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="莫尔斯电码" class="!max-w-none">
+  <span class="title">莫尔斯电码</span>
 </a></div>
    </div>
    <div class="recommended-mobile">
@@ -857,12 +863,12 @@
    <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/18/ctf/writeup/misc/buuctf/附加字符串/" title="附加字符串" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="附加字符串" class="!max-w-none">
   <span class="title">附加字符串</span>
-</a><a class="recommended-article-item" href="/2024/09/19/ctf/writeup/misc/buuctf/莫尔斯电码/" title="莫尔斯电码" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="莫尔斯电码" class="!max-w-none">
-  <span class="title">莫尔斯电码</span>
 </a><a class="recommended-article-item" href="/2024/09/19/ctf/writeup/misc/buuctf/频谱图/" title="频谱图" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="频谱图" class="!max-w-none">
   <span class="title">频谱图</span>
+</a><a class="recommended-article-item" href="/2024/09/19/ctf/writeup/misc/buuctf/莫尔斯电码/" title="莫尔斯电码" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="莫尔斯电码" class="!max-w-none">
+  <span class="title">莫尔斯电码</span>
 </a></div>
    </div>
   </div>
@@ -985,16 +991,16 @@
               <span>2024</span>
               -
             
-            2024&nbsp;&nbsp;<i class="fa-solid fa-sync fa-spin" style="color: #f54545"></i>&nbsp;&nbsp;<a href="/">ZJ</a>
+            2025&nbsp;&nbsp;<i class="fa-solid fa-sync fa-spin" style="color: #f54545"></i>&nbsp;&nbsp;<a href="/">ZJ</a>
             
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        63 posts in total
+                        64 posts in total
                     </span>
                     
                         <span>
-                            120.7k words in total
+                            126.5k words in total
                         </span>
                     
                 </p>
@@ -1027,6 +1033,17 @@
                     http://beian.miit.gov.cn
                 
                 ">蜀ICP备2024084968号</a></div>
+        
+        
+            <div class="icp-info my-1">
+                <!-- <span style="padding-left:40px;
+                background:url(/images/gongan.png) no-repeat left center" rel="noreferrer" ></span> -->
+                <img src="/images/gongan.png" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;" rel="noreferrer"/>
+                <a style="display:inline-block;text-decoration:none;height:20px;line-height:20px;" target="_blank" rel="noreferrer" href="
+                
+                    https://beian.mps.gov.cn/#/query/webSearch?code=51150002000806
+                
+                ">川公网安备51150002000806号</a></div>
         
         
             <div>

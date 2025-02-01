@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="ZJ">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://https://fonts.lug.ustc.edu.cn/">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+        
+        
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://blog.overlordzj.cn/2025/01/17/数据分析/简单数据分析方法/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="不断更新中……   前言 线性回归于逻辑回归 聚类分析 划分式聚类 k-means k-means++ bi-kmeans   层次聚类（类决策树） 密度聚类   K近邻算法（KNN） 向量支持机SVN 随机森林分析（以弱博强–集成学习）  前言        一些常见的数据分析方法的总结归纳      优质网站分享数据科学分析平台  线性回归于逻辑回归聚类分析划分式聚类k-meansk-mea">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据分析方法（机器学习）">
+<meta property="og:url" content="https://blog.overlordzj.cn/2025/01/17/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="不断更新中……   前言 线性回归于逻辑回归 聚类分析 划分式聚类 k-means k-means++ bi-kmeans   层次聚类（类决策树） 密度聚类   K近邻算法（KNN） 向量支持机SVN 随机森林分析（以弱博强–集成学习）  前言        一些常见的数据分析方法的总结归纳      优质网站分享数据科学分析平台  线性回归于逻辑回归聚类分析划分式聚类k-meansk-mea">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95/image-20250118005801155.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95/image-20250118011215765.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95/image-20250118012701498.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95/image-20250119023758874.png">
+<meta property="og:image" content="https://blog.overlordzj.cn/images/%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95/image-20250119024525189.png">
+<meta property="article:published_time" content="2025-01-16T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-01-18T18:45:57.352Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="数据分析">
+<meta property="article:tag" content="机器学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.overlordzj.cn/images/%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95/image-20250118005801155.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/overlord_ico.ico" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/overlord_ico.ico">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/overlord_ico.ico">
+    <!--- Page Info-->
+    
+    <title>
+        
+            数据分析方法（机器学习） -
+        
+        Overlord Blog
+    </title>
+
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/fonts/Chillax/chillax.css">
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/assets/build/styles.css">
+    
+
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/fonts/GeistMono/geist-mono.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/fonts/Geist/geist.css">
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+        <script src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/libs/anime.min.js"></script>
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"blog.overlordzj.cn","root":"/","language":"en","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":["Lv100"]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":6,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":true,"title":"看看这些文章吧( ૢ⁼̴̤̆ ꇴ ⁼̴̤̆ ૢ)~ෆ","limit":3,"mobile_limit":4,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":["/private/","/secret/","/备忘录/"]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":true,"custom_message":null},"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Overlord Blog","subtitle":{"text":["Welcome my blog","Here are my own study materials and various writeups","Hoping it will be useful to you"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":80,"backing_speed":50,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":true,"type":"mini","audios":[{"name":"mystery-of-love","artist":"----------","url":"/musics/mystery-of-love.mp3","cover":"/images/mystery-of-love.jpg","lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.7.1","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Github":{"path":"https://github.com/overlordzj/overlordzj.github.io","icon":"fa-brands fa-github"},"Links":{"icon":"fa-regular fa-link","submenus":{"tags":"/tags/","categories":"/categories/","docs":"https://redefine-docs.ohevan.com/"}},"访问缓慢请看我":{"icon":"fa-solid fa-rotate-right","submenus":{"博客github源":"https://blog.overlordzj.cn/","博客国内源":"https://blogback.overlordzj.cn/"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":{"Archives":{"path":"/archives/","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags/","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories/","icon":"fa-regular fa-folder"}}},"article_date_format":"YYYY-MM-DD","excerpt_length":200,"categories":{"enable":true,"limit":4},"tags":{"enable":true,"limit":4}},"footerStart":"2024/9/8 00:00:00"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":true};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/fontawesome/regular.min.css">
+    
+    
+        <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/fontawesome/light.min.css">
+    
+    
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+
+    <style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    <h2 class="ml13">
+        Overlord Blog
+    </h2>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+        var animation = anime.timeline({loop: true})
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [40,0],
+                translateZ: 0,
+                opacity: [0,1],
+                filter: ['blur(5px)', 'blur(0px)'], // Starting from blurred to unblurred
+                easing: "easeOutExpo",
+                duration: 1400,
+                delay: (el, i) => 300 + 30 * i,
+            }).add({
+                targets: '.ml13 .letter',
+                translateY: [0,-40],
+                opacity: [1,0],
+                filter: ['blur(0px)', 'blur(5px)'], // Ending from unblurred to blurred
+                easing: "easeInExpo",
+                duration: 1200,
+                delay: (el, i) => 100 + 30 * i,
+                complete: function() {
+                    hidePreloader(); // Call hidePreloader after the animation completes
+                }
+            });
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(hidePreloader, 5000); // Call hidePreloader after 5000 milliseconds if not already called by animation
+        });
+
+        function hidePreloader() {
+            var preloader = document.querySelector('.preloader');
+            preloader.style.opacity = '0';
+            setTimeout(function () {
+                preloader.style.display = 'none';
+            }, 200);
+        }
+    </script>
+</div>
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container px-6 md:px-12">
+
+    <div class="navbar-content ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Overlord Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    ARCHIVES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   target="_blank" rel="noopener" href="https://github.com/overlordzj/overlordzj.github.io"
+                                        >
+                                    <i class="fa-brands fa-github fa-fw"></i>
+                                    GITHUB
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-link fa-fw"></i>
+                                    LINKS
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/tags/">
+                                                    TAGS
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/categories/">
+                                                    CATEGORIES
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://redefine-docs.ohevan.com/">
+                                                    DOCS
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-solid fa-rotate-right fa-fw"></i>
+                                    访问缓慢请看我
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="https://blog.overlordzj.cn/">
+                                                    博客GITHUB源
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://blogback.overlordzj.cn/">
+                                                    博客国内源
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                ARCHIVES
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           target="_blank" rel="noopener" href="https://github.com/overlordzj/overlordzj.github.io"
+                        >
+                            <span>
+                                GITHUB
+                            </span>
+                            
+                                <i class="fa-brands fa-github fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-Links"
+                        >
+                            <span>
+                                LINKS
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-Links">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/tags/">TAGS</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/categories/">CATEGORIES</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://redefine-docs.ohevan.com/">DOCS</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-访问缓慢请看我"
+                        >
+                            <span>
+                                访问缓慢请看我
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-访问缓慢请看我">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="https://blog.overlordzj.cn/">博客GITHUB源</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://blogback.overlordzj.cn/">博客国内源</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/tags/"
+                        >
+                            <span>Tags</span>
+                            <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/categories/"
+                        >
+                            <span>Categories</span>
+                            <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">29</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">26</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">64</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">数据分析方法（机器学习）</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/overlord.jpeg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">ZJ</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv100</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2025-01-17</span>
+        <span class="mobile">2025-01-17</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2025-01-19 02:45:57</span>
+            <span class="mobile">2025-01-19 02:45:57</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">数据分析</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">数据分析</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.9k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>6 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <blockquote>
+<p>不断更新中……</p>
+</blockquote>
+<ul>
+<li><a href="#%E5%89%8D%E8%A8%80">前言</a></li>
+<li><a href="#%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%BA%8E%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92">线性回归于逻辑回归</a></li>
+<li><a href="#%E8%81%9A%E7%B1%BB%E5%88%86%E6%9E%90">聚类分析</a><ul>
+<li><a href="#%E5%88%92%E5%88%86%E5%BC%8F%E8%81%9A%E7%B1%BB">划分式聚类</a><ul>
+<li><a href="#k-means">k-means</a></li>
+<li><a href="#k-means-1">k-means++</a></li>
+<li><a href="#bi-kmeans">bi-kmeans</a></li>
+</ul>
+</li>
+<li><a href="#%E5%B1%82%E6%AC%A1%E8%81%9A%E7%B1%BB%E7%B1%BB%E5%86%B3%E7%AD%96%E6%A0%91">层次聚类（类决策树）</a></li>
+<li><a href="#%E5%AF%86%E5%BA%A6%E8%81%9A%E7%B1%BB">密度聚类</a></li>
+</ul>
+</li>
+<li><a href="#k%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95knn">K近邻算法（KNN）</a></li>
+<li><a href="#%E5%90%91%E9%87%8F%E6%94%AF%E6%8C%81%E6%9C%BAsvn">向量支持机SVN</a></li>
+<li><a href="#%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E5%88%86%E6%9E%90%E4%BB%A5%E5%BC%B1%E5%8D%9A%E5%BC%BA--%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0">随机森林分析（以弱博强–集成学习）</a></li>
+</ul>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2>
+  <div class="note p-4 mb-4 rounded-small info">
+    <p>一些常见的数据分析方法的总结归纳</p>
+
+  </div>
+
+<h2 id="优质网站分享"><a href="#优质网站分享" class="headerlink" title="优质网站分享"></a>优质网站分享</h2><p><a class="link"   target="_blank" rel="noopener" href="https://spssau.com/index.html" >数据科学分析平台 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="线性回归于逻辑回归"><a href="#线性回归于逻辑回归" class="headerlink" title="线性回归于逻辑回归"></a>线性回归于逻辑回归</h2><h2 id="聚类分析"><a href="#聚类分析" class="headerlink" title="聚类分析"></a>聚类分析</h2><h3 id="划分式聚类"><a href="#划分式聚类" class="headerlink" title="划分式聚类"></a>划分式聚类</h3><h4 id="k-means"><a href="#k-means" class="headerlink" title="k-means"></a>k-means</h4><h4 id="k-means-1"><a href="#k-means-1" class="headerlink" title="k-means++"></a>k-means++</h4><h4 id="bi-kmeans"><a href="#bi-kmeans" class="headerlink" title="bi-kmeans"></a>bi-kmeans</h4><h3 id="层次聚类（类决策树）"><a href="#层次聚类（类决策树）" class="headerlink" title="层次聚类（类决策树）"></a>层次聚类（类决策树）</h3><h3 id="密度聚类"><a href="#密度聚类" class="headerlink" title="密度聚类"></a>密度聚类</h3><h2 id="K近邻算法（KNN）"><a href="#K近邻算法（KNN）" class="headerlink" title="K近邻算法（KNN）"></a>K近邻算法（KNN）</h2><h2 id="向量支持机SVN"><a href="#向量支持机SVN" class="headerlink" title="向量支持机SVN"></a>向量支持机SVN</h2><h2 id="随机森林分析（以弱博强–集成学习）"><a href="#随机森林分析（以弱博强–集成学习）" class="headerlink" title="随机森林分析（以弱博强–集成学习）"></a>随机森林分析（以弱博强–集成学习）</h2><h2 id="Adaboost（自适应增强算法）"><a href="#Adaboost（自适应增强算法）" class="headerlink" title="Adaboost（自适应增强算法）"></a>Adaboost（自适应增强算法）</h2><h2 id="GAN生成对抗网络"><a href="#GAN生成对抗网络" class="headerlink" title="GAN生成对抗网络"></a>GAN生成对抗网络</h2><h2 id="潜变量模型"><a href="#潜变量模型" class="headerlink" title="潜变量模型"></a>潜变量模型</h2><h3 id="外显变量与潜变量区分"><a href="#外显变量与潜变量区分" class="headerlink" title="外显变量与潜变量区分"></a>外显变量与潜变量区分</h3><p>潜变量：通过数据加和等统计分析后的变量</p>
+<p>外显变量：直接使用的原始数据变量</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95/image-20250118005801155.png"
+                      alt="image-20250118005801155"
+                ></p>
+<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><table>
+<thead>
+<tr>
+<th></th>
+<th>类别外显变量</th>
+<th>连续外显变量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>类别潜变量</strong></td>
+<td>潜在类别分析（LCA）</td>
+<td>潜在剖面分析（LPA）</td>
+</tr>
+<tr>
+<td><strong>连续潜变量</strong></td>
+<td>潜在特质分析&#x2F;项目反应理论</td>
+<td>因素分析</td>
+</tr>
+</tbody></table>
+<h4 id="潜在剖面分析（LPA）-潜在类别分析（LCA）"><a href="#潜在剖面分析（LPA）-潜在类别分析（LCA）" class="headerlink" title="潜在剖面分析（LPA）&#x2F;潜在类别分析（LCA）"></a>潜在剖面分析（LPA）&#x2F;潜在类别分析（LCA）</h4><h5 id="使用情景（使用限制）"><a href="#使用情景（使用限制）" class="headerlink" title="使用情景（使用限制）"></a>使用情景（使用限制）</h5><blockquote>
+<p>一般用于横断面研究，仅旨在得到分类结果</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95/image-20250118011215765.png"
+                      alt="image-20250118011215765"
+                ></p>
+<h2 id="结构方程模型SEM（路径分析-测量关系）"><a href="#结构方程模型SEM（路径分析-测量关系）" class="headerlink" title="结构方程模型SEM（路径分析+测量关系）"></a>结构方程模型SEM（路径分析+测量关系）</h2><h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p><strong>结构方程模型</strong>(Structural Equation Modeling，SEM)是基于变量的协方差矩阵来分析变量之间关系的一种统计方法。</p>
+<p>通过这种方法，我们既可以探讨因变量受哪几个自变量的影响，也可以探讨一个自变量通过什么途径影响到因变量，还可以探讨在不同情境下，自变量对因变量的影响有何不同等多种复杂关系。</p>
+<blockquote>
+<p>即探讨因变量收多种变量的影响以及其影响途径</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95/image-20250118012701498.png"
+                      alt="image-20250118012701498"
+                ></p>
+<h3 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h3><p>1.SEM擅长处理<strong>潜变量问题</strong>，如动机、态度等研究问题，使研究更科学、客观、准确;</p>
+<p>2.SEM可以进行验证性因素分析，这种分析是检验量表信效度的高级统计技术;</p>
+<p>3.SEM可以高效、快速揭示因变量与自变量之间复杂的关系，更受学者欢迎。SEM是目前量化论文的最主流统计方法之一，更受国内外顶级期刊青睐。</p>
+<h3 id="变量及模型分类"><a href="#变量及模型分类" class="headerlink" title="变量及模型分类"></a>变量及模型分类</h3><p><strong>三种变量</strong>:潜在变量、显性变量(也叫测量变量)和残差变量。</p>
+<p>(1) 潜在变量</p>
+<p>潜在变量(latent variable)又称无法观测的变量(unobserved variables)</p>
+<p>(2) 观测变量<br>观测变量又称显性变量(manifest variables)、指标变量(indicator variables)或可测量变量(measured variables)，研究者可以直接观察或者直接测量获得获得的数据可以转化为量化数据，外因潜在变量的指标变量以符号“X”表示;而内因潜在变量的指标变量以符号“Y”表示。其图形通常以正方形或长方形表示</p>
+<p>(3)残差变异项<br>内因潜在变量无法被模型中外因潜在变量解释的变异量，即结构方程模型中的随机变异部分，以希腊字母ζ表示</p>
+<p><strong>两个基本模型</strong>:测量模型(measurement model)与结构模型(structural model)。</p>
+<p>(1) 测量模型<br>测量模型由潜在变量(latent variable)和观测变量(observed variable)组成。</p>
+<p>(2) 结构模型<br>结构模型是潜在变量间因果关系模型的说明，作为因的潜在变量即称为外因潜在变量，以符号乏表示，作为果的潜在变量即称为内因潜在变量，以符号n表示。</p>
+<h2 id="权重分析"><a href="#权重分析" class="headerlink" title="权重分析"></a>权重分析</h2><h3 id="主观赋权法"><a href="#主观赋权法" class="headerlink" title="主观赋权法"></a>主观赋权法</h3><p><strong>1、AHP:主观打分数据求权重（需要矩阵分析与一致性检验）<br>2、优序图法:相关重要性，数字越大，权重越高。（不需要矩阵分析）<br>3、G1法:改进的AHP法，主观数据求权重。</strong></p>
+<h4 id="层次分析法（AHP）"><a href="#层次分析法（AHP）" class="headerlink" title="层次分析法（AHP）"></a>层次分析法（AHP）</h4><ul>
+<li>数据:主观数据，比如专家打分等。</li>
+<li>原理:利用数据相对重要性，数据越大，权重越大。</li>
+<li>数据格式:<strong>数据格式比较特殊，需要整理成判断矩阵进行分析</strong>。</li>
+<li>操作:python、yaahp、spssau、excel等。</li>
+<li>结论:对结果进行分析与决策。</li>
+</ul>
+<h4 id="优序图法"><a href="#优序图法" class="headerlink" title="优序图法"></a>优序图法</h4><ul>
+<li>数据:主观数据，比如专家打分等。</li>
+<li>原理:利用数据相对重要性，数据越大，权重越大与AHP一致。</li>
+<li>数据格式**:一行为一个样本一列为一个属性**。</li>
+<li>操作:python、spssau、excel等。</li>
+<li>结论:对结果进行分析与决策。</li>
+</ul>
+<h4 id="G1法（改良AHP）"><a href="#G1法（改良AHP）" class="headerlink" title="G1法（改良AHP）"></a>G1法（改良AHP）</h4><ul>
+<li><p>数据:主观数据，比如专家打分等，修正的AHP法。</p>
+</li>
+<li><p>原理:利用数据相对重要性，数据越大，权重越大与AHP一致。</p>
+</li>
+<li><p>计算步骤:</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95/image-20250119023758874.png"
+                      alt="image-20250119023758874"
+                ></p>
+</li>
+</ul>
+<h3 id="客观赋权法"><a href="#客观赋权法" class="headerlink" title="客观赋权法"></a>客观赋权法</h3><p><strong>1、熵值法:最常用的客观赋权法，利用信息量大小求权。</strong><br><strong>2、主成分&#x2F;因子分析:客观赋权法，利用信息浓缩原理。</strong><br><strong>3、变异系数法:也叫信息量权重法。利用数据的波动性原理求权。</strong><br><strong>4、相关系数法:也叫独立性权重。利用数据间的相关系数求权。</strong><br><strong>5、CRITIC法:利用数据的波动性和相关性进行求权。</strong></p>
+<h4 id="熵值法"><a href="#熵值法" class="headerlink" title="熵值法"></a>熵值法</h4><ul>
+<li>数据:客观数据，如统计年鉴搜集的数据。</li>
+<li>原理:利用数据的<strong>熵(信息量)<strong>求</strong>权重</strong>，熵值越大，信息量越小，权重越小，反之越大</li>
+<li>数据格式:一行为一个样本一列为一个属性。</li>
+<li>操作:python、spssau、excel等。</li>
+<li>结论:对结果进行分析与决策。</li>
+</ul>
+<h4 id="主成分法-因子分析法"><a href="#主成分法-因子分析法" class="headerlink" title="主成分法&#x2F;因子分析法"></a>主成分法&#x2F;因子分析法</h4><ul>
+<li>数据:客观数据，如统计年鉴搜集的数据。</li>
+<li>原理:利用数据的<strong>信息浓缩</strong>原理求<strong>权重</strong>，通过方差解释率求权。</li>
+<li>数据格式:一行为一个样本一列为一个属性。</li>
+<li>操作:python、spssau、excel</li>
+<li>结论:对结果进行分析与决策。</li>
+</ul>
+<h4 id="变异系数法"><a href="#变异系数法" class="headerlink" title="变异系数法"></a>变异系数法</h4><ul>
+<li>数据:客观数据，如统计年鉴搜集的数据。</li>
+<li>原理:利用数据的<strong>波动性</strong>原理计算<strong>权重</strong>，其计算指数为变异系数，变异系数越大，权重越大。</li>
+<li>数据格式:一行为一个样本一列为一个属性。</li>
+<li>操作:python、spssau、excel等。</li>
+<li>结论:对结果进行分析与决策。</li>
+</ul>
+<h4 id="相关系数法"><a href="#相关系数法" class="headerlink" title="相关系数法"></a>相关系数法</h4><ul>
+<li>数据:客观数据，如统计年鉴搜集的数据。</li>
+<li>原理:利用数据间的<strong>相关性</strong>求<strong>权重</strong>，相关系数越大，说明重复信息越多，权重越小，反之越大。</li>
+<li>数据格式:一行为一个样本一列为一个属性。</li>
+<li>操作:python、spssau、excel等。</li>
+<li>结论:对结果进行分析与决策。</li>
+</ul>
+<h4 id="CRITIC权重"><a href="#CRITIC权重" class="headerlink" title="CRITIC权重"></a>CRITIC权重</h4><ul>
+<li>数据:客观数据，如统计年鉴搜集的数据。</li>
+<li>原理:利用数据间的<strong>相关性</strong>和<strong>变异系数</strong>求<strong>权重</strong>，相关系数越大，权重越小，反之越大变异系数越大，权重越大，反之越小。</li>
+<li>数据格式:一行为一个样本一列为一个属性。</li>
+<li>操作:python、spssau、excel等。</li>
+<li>结论:对结果进行分析与决策。</li>
+</ul>
+<h3 id="组合赋权法"><a href="#组合赋权法" class="headerlink" title="组合赋权法"></a>组合赋权法</h3><p><strong>1、加法组合:权重相加求和后除以使用权重方法数:</strong><br><strong>2、乘法组合:将属性的权重相乘在归一化;</strong><br><strong>3、极差最大化:可点击主页进行查看。</strong></p>
+<p>整体的分析步骤</p>
+<ul>
+<li>1、计算主观权重;</li>
+<li>2、计算客观权重;</li>
+<li>3、一致性检验;</li>
+<li>4、确定线性组合;</li>
+<li>5、计算组合权重;</li>
+</ul>
+<blockquote>
+<p>两个客观权重进行组合权重也可以</p>
+</blockquote>
+<h4 id="加法组合"><a href="#加法组合" class="headerlink" title="加法组合"></a>加法组合</h4><h4 id="乘法组合"><a href="#乘法组合" class="headerlink" title="乘法组合"></a>乘法组合</h4><h4 id="极差最大化"><a href="#极差最大化" class="headerlink" title="极差最大化"></a>极差最大化</h4><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./../../images/%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95/image-20250119024525189.png"
+                      alt="image-20250119024525189"
+                ></p>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> 数据分析方法（机器学习）</li>
+        <li><strong>Author:</strong> ZJ</li>
+        <li><strong>Created at
+                :</strong> 2025-01-17 00:00:00</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2025-01-19 02:45:57
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://blog.overlordzj.cn/2025/01/17/数据分析/简单数据分析方法/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">#数据分析</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">#机器学习</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+  <div class="recommended-article px-2 sm:px-6 md:px-8">
+   <div class="recommended-desktop">
+    <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>看看这些文章吧( ૢ⁼̴̤̆ ꇴ ⁼̴̤̆ ૢ)~ෆ</span>
+    </div>
+    <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/10/C语言/基础部分/遗漏问题解答/" title="关于C语言学习的部分遗漏问题解答" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="关于C语言学习的部分遗漏问题解答" class="!max-w-none">
+  <span class="title">关于C语言学习的部分遗漏问题解答</span>
+</a><a class="recommended-article-item" href="/2024/09/26/ctf/data/web/PHP相关知识/" title="web-PHP相关知识" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="web-PHP相关知识" class="!max-w-none">
+  <span class="title">web-PHP相关知识</span>
+</a><a class="recommended-article-item" href="/2024/09/26/ctf/data/misc/目录/catalogue/" title="misc-data目录" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="misc-data目录" class="!max-w-none">
+  <span class="title">misc-data目录</span>
+</a></div>
+   </div>
+   <div class="recommended-mobile">
+   <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>看看这些文章吧( ૢ⁼̴̤̆ ꇴ ⁼̴̤̆ ૢ)~ෆ</span>
+   </div>
+   <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/10/C语言/基础部分/遗漏问题解答/" title="关于C语言学习的部分遗漏问题解答" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="关于C语言学习的部分遗漏问题解答" class="!max-w-none">
+  <span class="title">关于C语言学习的部分遗漏问题解答</span>
+</a><a class="recommended-article-item" href="/2024/09/26/ctf/data/web/PHP相关知识/" title="web-PHP相关知识" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="web-PHP相关知识" class="!max-w-none">
+  <span class="title">web-PHP相关知识</span>
+</a><a class="recommended-article-item" href="/2024/09/26/ctf/data/misc/目录/catalogue/" title="misc-data目录" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="misc-data目录" class="!max-w-none">
+  <span class="title">misc-data目录</span>
+</a></div>
+   </div>
+  </div>
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/10/26/C++/C++%E6%8F%90%E9%AB%98%E7%BC%96%E7%A8%8B/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">C++提高编程</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        Comments
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://blogcomment.overlordzj.cn',
+          lang: 'zh-CN',
+          dark: 'body[class~="dark-mode"]',
+          reaction: true,
+          requiredMeta: ['nick', 'mail'],
+          emoji: ['//unpkg.com/@waline/emojis@1.2.0/qq'],
+          recaptchaV3Key: "wasd",
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">数据分析方法（机器学习）</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E8%B4%A8%E7%BD%91%E7%AB%99%E5%88%86%E4%BA%AB"><span class="nav-text">优质网站分享</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%BA%8E%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92"><span class="nav-text">线性回归于逻辑回归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%81%9A%E7%B1%BB%E5%88%86%E6%9E%90"><span class="nav-text">聚类分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%92%E5%88%86%E5%BC%8F%E8%81%9A%E7%B1%BB"><span class="nav-text">划分式聚类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#k-means"><span class="nav-text">k-means</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#k-means-1"><span class="nav-text">k-means++</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bi-kmeans"><span class="nav-text">bi-kmeans</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%82%E6%AC%A1%E8%81%9A%E7%B1%BB%EF%BC%88%E7%B1%BB%E5%86%B3%E7%AD%96%E6%A0%91%EF%BC%89"><span class="nav-text">层次聚类（类决策树）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%86%E5%BA%A6%E8%81%9A%E7%B1%BB"><span class="nav-text">密度聚类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#K%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95%EF%BC%88KNN%EF%BC%89"><span class="nav-text">K近邻算法（KNN）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%91%E9%87%8F%E6%94%AF%E6%8C%81%E6%9C%BASVN"><span class="nav-text">向量支持机SVN</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E5%88%86%E6%9E%90%EF%BC%88%E4%BB%A5%E5%BC%B1%E5%8D%9A%E5%BC%BA%E2%80%93%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0%EF%BC%89"><span class="nav-text">随机森林分析（以弱博强–集成学习）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Adaboost%EF%BC%88%E8%87%AA%E9%80%82%E5%BA%94%E5%A2%9E%E5%BC%BA%E7%AE%97%E6%B3%95%EF%BC%89"><span class="nav-text">Adaboost（自适应增强算法）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GAN%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C"><span class="nav-text">GAN生成对抗网络</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BD%9C%E5%8F%98%E9%87%8F%E6%A8%A1%E5%9E%8B"><span class="nav-text">潜变量模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%96%E6%98%BE%E5%8F%98%E9%87%8F%E4%B8%8E%E6%BD%9C%E5%8F%98%E9%87%8F%E5%8C%BA%E5%88%86"><span class="nav-text">外显变量与潜变量区分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E7%B1%BB"><span class="nav-text">分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%BD%9C%E5%9C%A8%E5%89%96%E9%9D%A2%E5%88%86%E6%9E%90%EF%BC%88LPA%EF%BC%89-%E6%BD%9C%E5%9C%A8%E7%B1%BB%E5%88%AB%E5%88%86%E6%9E%90%EF%BC%88LCA%EF%BC%89"><span class="nav-text">潜在剖面分析（LPA）&#x2F;潜在类别分析（LCA）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%83%85%E6%99%AF%EF%BC%88%E4%BD%BF%E7%94%A8%E9%99%90%E5%88%B6%EF%BC%89"><span class="nav-text">使用情景（使用限制）</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E6%96%B9%E7%A8%8B%E6%A8%A1%E5%9E%8BSEM%EF%BC%88%E8%B7%AF%E5%BE%84%E5%88%86%E6%9E%90-%E6%B5%8B%E9%87%8F%E5%85%B3%E7%B3%BB%EF%BC%89"><span class="nav-text">结构方程模型SEM（路径分析+测量关系）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%9F%E7%90%86"><span class="nav-text">原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%98%E5%8A%BF"><span class="nav-text">优势</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%8F%8A%E6%A8%A1%E5%9E%8B%E5%88%86%E7%B1%BB"><span class="nav-text">变量及模型分类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%83%E9%87%8D%E5%88%86%E6%9E%90"><span class="nav-text">权重分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E8%A7%82%E8%B5%8B%E6%9D%83%E6%B3%95"><span class="nav-text">主观赋权法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B1%82%E6%AC%A1%E5%88%86%E6%9E%90%E6%B3%95%EF%BC%88AHP%EF%BC%89"><span class="nav-text">层次分析法（AHP）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BC%98%E5%BA%8F%E5%9B%BE%E6%B3%95"><span class="nav-text">优序图法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#G1%E6%B3%95%EF%BC%88%E6%94%B9%E8%89%AFAHP%EF%BC%89"><span class="nav-text">G1法（改良AHP）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%A2%E8%A7%82%E8%B5%8B%E6%9D%83%E6%B3%95"><span class="nav-text">客观赋权法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%86%B5%E5%80%BC%E6%B3%95"><span class="nav-text">熵值法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%BB%E6%88%90%E5%88%86%E6%B3%95-%E5%9B%A0%E5%AD%90%E5%88%86%E6%9E%90%E6%B3%95"><span class="nav-text">主成分法&#x2F;因子分析法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%98%E5%BC%82%E7%B3%BB%E6%95%B0%E6%B3%95"><span class="nav-text">变异系数法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E7%B3%BB%E6%95%B0%E6%B3%95"><span class="nav-text">相关系数法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CRITIC%E6%9D%83%E9%87%8D"><span class="nav-text">CRITIC权重</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%84%E5%90%88%E8%B5%8B%E6%9D%83%E6%B3%95"><span class="nav-text">组合赋权法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8A%A0%E6%B3%95%E7%BB%84%E5%90%88"><span class="nav-text">加法组合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B9%98%E6%B3%95%E7%BB%84%E5%90%88"><span class="nav-text">乘法组合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9E%81%E5%B7%AE%E6%9C%80%E5%A4%A7%E5%8C%96"><span class="nav-text">极差最大化</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2025&nbsp;&nbsp;<i class="fa-solid fa-sync fa-spin" style="color: #f54545"></i>&nbsp;&nbsp;<a href="/">ZJ</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        64 posts in total
+                    </span>
+                    
+                        <span>
+                            126.5k words in total
+                        </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.7.1</a></span>
+        </div>
+        
+            <div class="icp-info my-1"><a target="_blank" rel="nofollow" href="
+                
+                    http://beian.miit.gov.cn
+                
+                ">蜀ICP备2024084968号</a></div>
+        
+        
+            <div class="icp-info my-1">
+                <!-- <span style="padding-left:40px;
+                background:url(/images/gongan.png) no-repeat left center" rel="noreferrer" ></span> -->
+                <img src="/images/gongan.png" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;" rel="noreferrer"/>
+                <a style="display:inline-block;text-decoration:none;height:20px;line-height:20px;" target="_blank" rel="noreferrer" href="
+                
+                    https://beian.mps.gov.cn/#/query/webSearch?code=51150002000806
+                
+                ">川公网安备51150002000806号</a></div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+            <li class="right-bottom-tools tool-aplayer flex justify-center items-center">
+
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+    <script src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/libs/Swup.min.js"></script><script src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/libs/SwupSlideTheme.min.js"></script><script src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/libs/SwupScriptsPlugin.min.js"></script><script src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/libs/SwupProgressPlugin.min.js"></script><script src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/libs/SwupScrollPlugin.min.js"></script><script src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/libs/SwupPreloadPlugin.min.js"></script>
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+<script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/tools/imageViewer.js"></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/utils.js"></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/main.js"></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/layouts/navbarShrink.js"></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/tools/scrollTopBottom.js"></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/tools/lightDarkSwitch.js"></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/layouts/categoryList.js"></script>
+
+
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/tools/localSearch.js"></script>
+
+
+
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/tools/codeBlock.js"></script>
+
+
+
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/layouts/lazyload.js"></script>
+
+
+
+    <script src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/tools/runtime.js"></script>
+    <script src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/libs/odometer.min.js"></script>
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/assets/odometer-theme-minimal.css">
+
+
+
+  <script src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/libs/Typed.min.js"></script>
+  <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/plugins/typed.js"></script>
+
+
+
+
+
+    <script src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/libs/minimasonry.min.js"></script>
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/plugins/masonry.js"></script>
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/tools/tocToggle.js"></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/layouts/toc.js"></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/plugins/tabs.js"></script>
+    
+</div>
+
+
+    <div id="aplayer"></div>
+<script src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/libs/APlayer.min.js"></script>
+<script src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.1/files/source/js/plugins/aplayer.js"></script>
+
+</body>
+</html>

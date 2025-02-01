@@ -22,12 +22,12 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="静态IP1vim &#x2F;etc&#x2F;network&#x2F;interfaces &#x2F;&#x2F;进入ip修改环境   在这两行下面输入 123456auto eth0iface eth0 inet staticaddress 192.168.1.111	&#x2F;&#x2F;根据自身ip地址自定义netmask 255.255.255.0gateway 192.168.1.1		&#x2F;&#x2F;根据自身ip网关自定义&#x2F;&#x2F;退出并保存（:wq）    说明">
+        <meta name="description" content="静态IP 动态IP  静态IP1vim &#x2F;etc&#x2F;network&#x2F;interfaces &#x2F;&#x2F;进入ip修改环境   在这两行下面输入 123456auto eth0iface eth0 inet staticaddress 192.168.1.111	&#x2F;&#x2F;根据自身ip地址自定义netmask 255.255.255.0gateway 192.168.1.1		&#x2F;&#x2F;根据自身ip网关自定义&#x2F;&#x2F;退出并保">
 <meta property="og:type" content="article">
 <meta property="og:title" content="kali的IP配置">
 <meta property="og:url" content="https://blog.overlordzj.cn/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/IP%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="静态IP1vim &#x2F;etc&#x2F;network&#x2F;interfaces &#x2F;&#x2F;进入ip修改环境   在这两行下面输入 123456auto eth0iface eth0 inet staticaddress 192.168.1.111	&#x2F;&#x2F;根据自身ip地址自定义netmask 255.255.255.0gateway 192.168.1.1		&#x2F;&#x2F;根据自身ip网关自定义&#x2F;&#x2F;退出并保存（:wq）    说明">
+<meta property="og:description" content="静态IP 动态IP  静态IP1vim &#x2F;etc&#x2F;network&#x2F;interfaces &#x2F;&#x2F;进入ip修改环境   在这两行下面输入 123456auto eth0iface eth0 inet staticaddress 192.168.1.111	&#x2F;&#x2F;根据自身ip地址自定义netmask 255.255.255.0gateway 192.168.1.1		&#x2F;&#x2F;根据自身ip网关自定义&#x2F;&#x2F;退出并保">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/IP%E9%85%8D%E7%BD%AE/image-20240913223421712.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/IP%E9%85%8D%E7%BD%AE/image-20240913223524009.png">
@@ -38,7 +38,7 @@
 <meta property="og:image" content="https://blog.overlordzj.cn/images/IP%E9%85%8D%E7%BD%AE/image-20240913223421712.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/IP%E9%85%8D%E7%BD%AE/image-20240913224612463.png">
 <meta property="article:published_time" content="2024-09-12T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-12-10T17:23:35.375Z">
+<meta property="article:modified_time" content="2025-01-16T17:34:59.348Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="kali">
 <meta property="article:tag" content="环境配置">
@@ -602,15 +602,15 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">27</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">29</div>
         <div class="label text-third-text-color text-sm">Tags</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">25</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">26</div>
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">63</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">64</div>
         <div class="label text-third-text-color text-sm">Posts</div>
     </a>
 </div>
@@ -664,8 +664,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-12-11 01:23:35</span>
-            <span class="mobile">2024-12-11 01:23:35</span>
+            <span class="desktop">2025-01-17 01:34:59</span>
+            <span class="mobile">2025-01-17 01:34:59</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -717,7 +717,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>438 Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>444 Words</span>
         </span>
     
     
@@ -741,7 +741,11 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h2 id="静态IP"><a href="#静态IP" class="headerlink" title="静态IP"></a>静态IP</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/network/interfaces //进入ip修改环境</span><br></pre></td></tr></table></figure></div>
+            <ul>
+<li><a href="#%E9%9D%99%E6%80%81ip">静态IP</a></li>
+<li><a href="#%E5%8A%A8%E6%80%81ip">动态IP</a></li>
+</ul>
+<h2 id="静态IP"><a href="#静态IP" class="headerlink" title="静态IP"></a>静态IP</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/network/interfaces //进入ip修改环境</span><br></pre></td></tr></table></figure></div>
 
 <p><img  
                      lazyload
@@ -851,7 +855,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-12-11 01:23:35
+                    :</strong> 2025-01-17 01:34:59
             </li>
         
         <li>
@@ -927,13 +931,13 @@
                     <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="prev"
                         rel="prev"
-                        href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/msf%E4%B8%8Ecs%E4%BA%92%E8%BD%AC/"
+                        href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/centos-linux/Tab%E9%94%AE%E8%AE%BE%E7%BD%AE/"
                         >
                             <span class="left arrow-icon flex justify-center items-center">
                                 <i class="fa-solid fa-chevron-left"></i>
                             </span>
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">msf与cs派生会话</span>
+                                <span class="post-nav-title-item">Linux系统Tab键相关设置</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
@@ -943,10 +947,10 @@
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="next"
                         rel="next"
-                        href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/windows/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E7%A8%8B%E5%BA%8F/"
+                        href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/kali/pip2%E5%AE%89%E8%A3%85/"
                         >
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">windows系统右键菜单栏自定义添加程序</span>
+                                <span class="post-nav-title-item">kali环境下的pip2安装</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex justify-center items-center">
@@ -1039,16 +1043,16 @@
               <span>2024</span>
               -
             
-            2024&nbsp;&nbsp;<i class="fa-solid fa-sync fa-spin" style="color: #f54545"></i>&nbsp;&nbsp;<a href="/">ZJ</a>
+            2025&nbsp;&nbsp;<i class="fa-solid fa-sync fa-spin" style="color: #f54545"></i>&nbsp;&nbsp;<a href="/">ZJ</a>
             
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        63 posts in total
+                        64 posts in total
                     </span>
                     
                         <span>
-                            120.7k words in total
+                            126.5k words in total
                         </span>
                     
                 </p>
@@ -1081,6 +1085,17 @@
                     http://beian.miit.gov.cn
                 
                 ">蜀ICP备2024084968号</a></div>
+        
+        
+            <div class="icp-info my-1">
+                <!-- <span style="padding-left:40px;
+                background:url(/images/gongan.png) no-repeat left center" rel="noreferrer" ></span> -->
+                <img src="/images/gongan.png" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;" rel="noreferrer"/>
+                <a style="display:inline-block;text-decoration:none;height:20px;line-height:20px;" target="_blank" rel="noreferrer" href="
+                
+                    https://beian.mps.gov.cn/#/query/webSearch?code=51150002000806
+                
+                ">川公网安备51150002000806号</a></div>
         
         
             <div>

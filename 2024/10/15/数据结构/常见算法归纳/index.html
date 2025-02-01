@@ -22,12 +22,12 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="前言        以下将以常见基础问题的对应解答方法进行算法实例与数据结构的总结      字符串匹配  朴素模式匹配算法（暴力解决）原理主串长度为n，模式串长度为 m将主串所有长度为m的子串依次与模式串对比，直到找到一个完全匹配的子串或所有的子串都不匹配为止         最多有n-m+1个子串      代码实现 时间复杂度  KMP算法原理根据next数组，不经过回溯主串指针达到减小时间">
+        <meta name="description" content="前言 字符串匹配 朴素模式匹配算法（暴力解决） 原理 代码实现 时间复杂度   KMP算法 原理 代码实现 求next数组 手算 机算   算法优化   比较   求最小生成树 Prim算法（普里姆算法） 简单记忆：根据节点找权值 原理 理解 图实例 时间复杂度   Kruskal算法（克鲁斯卡尔算法） 简单记忆：根据权值画节点 原理 理解 图示例 时间复杂度   比较   最短路径问题 BFS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="常见简单算法归纳">
 <meta property="og:url" content="https://blog.overlordzj.cn/2024/10/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="前言        以下将以常见基础问题的对应解答方法进行算法实例与数据结构的总结      字符串匹配  朴素模式匹配算法（暴力解决）原理主串长度为n，模式串长度为 m将主串所有长度为m的子串依次与模式串对比，直到找到一个完全匹配的子串或所有的子串都不匹配为止         最多有n-m+1个子串      代码实现 时间复杂度  KMP算法原理根据next数组，不经过回溯主串指针达到减小时间">
+<meta property="og:description" content="前言 字符串匹配 朴素模式匹配算法（暴力解决） 原理 代码实现 时间复杂度   KMP算法 原理 代码实现 求next数组 手算 机算   算法优化   比较   求最小生成树 Prim算法（普里姆算法） 简单记忆：根据节点找权值 原理 理解 图实例 时间复杂度   Kruskal算法（克鲁斯卡尔算法） 简单记忆：根据权值画节点 原理 理解 图示例 时间复杂度   比较   最短路径问题 BFS">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015001746389.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E9%81%97%E6%BC%8F%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/image-20241015002049555.png">
@@ -319,7 +319,7 @@
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241021014712343.png">
 <meta property="og:image" content="https://blog.overlordzj.cn/images/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E5%BD%92%E7%BA%B3/image-20241021014727008.png">
 <meta property="article:published_time" content="2024-10-14T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-12-10T17:24:26.487Z">
+<meta property="article:modified_time" content="2025-01-16T17:35:56.005Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="数据结构">
 <meta property="article:tag" content="算法">
@@ -883,15 +883,15 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">27</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">29</div>
         <div class="label text-third-text-color text-sm">Tags</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">25</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">26</div>
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">63</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">64</div>
         <div class="label text-third-text-color text-sm">Posts</div>
     </a>
 </div>
@@ -945,8 +945,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-12-11 01:24:26</span>
-            <span class="mobile">2024-12-11 01:24:26</span>
+            <span class="desktop">2025-01-17 01:35:56</span>
+            <span class="mobile">2025-01-17 01:35:56</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -988,12 +988,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>4.3k Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>5.4k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>15 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>19 Mins</span>
         </span>
     
     
@@ -1012,7 +1012,363 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2>
+            <ul>
+<li><a href="#%E5%89%8D%E8%A8%80">前言</a></li>
+<li><a href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D">字符串匹配</a><ul>
+<li><a href="#%E6%9C%B4%E7%B4%A0%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95%E6%9A%B4%E5%8A%9B%E8%A7%A3%E5%86%B3">朴素模式匹配算法（暴力解决）</a><ul>
+<li><a href="#%E5%8E%9F%E7%90%86">原理</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0">代码实现</a></li>
+<li><a href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6">时间复杂度</a></li>
+</ul>
+</li>
+<li><a href="#kmp%E7%AE%97%E6%B3%95">KMP算法</a><ul>
+<li><a href="#%E5%8E%9F%E7%90%86-1">原理</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-1">代码实现</a></li>
+<li><a href="#%E6%B1%82next%E6%95%B0%E7%BB%84">求next数组</a><ul>
+<li><a href="#%E6%89%8B%E7%AE%97">手算</a></li>
+<li><a href="#%E6%9C%BA%E7%AE%97">机算</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AE%97%E6%B3%95%E4%BC%98%E5%8C%96">算法优化</a></li>
+</ul>
+</li>
+<li><a href="#%E6%AF%94%E8%BE%83">比较</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B1%82%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91">求最小生成树</a><ul>
+<li><a href="#prim%E7%AE%97%E6%B3%95%E6%99%AE%E9%87%8C%E5%A7%86%E7%AE%97%E6%B3%95">Prim算法（普里姆算法）</a><ul>
+<li><a href="#%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BF%86%E6%A0%B9%E6%8D%AE%E8%8A%82%E7%82%B9%E6%89%BE%E6%9D%83%E5%80%BC">简单记忆：根据节点找权值</a></li>
+<li><a href="#%E5%8E%9F%E7%90%86-2">原理</a></li>
+<li><a href="#%E7%90%86%E8%A7%A3">理解</a></li>
+<li><a href="#%E5%9B%BE%E5%AE%9E%E4%BE%8B">图实例</a></li>
+<li><a href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6-1">时间复杂度</a></li>
+</ul>
+</li>
+<li><a href="#kruskal%E7%AE%97%E6%B3%95%E5%85%8B%E9%B2%81%E6%96%AF%E5%8D%A1%E5%B0%94%E7%AE%97%E6%B3%95">Kruskal算法（克鲁斯卡尔算法）</a><ul>
+<li><a href="#%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BF%86%E6%A0%B9%E6%8D%AE%E6%9D%83%E5%80%BC%E7%94%BB%E8%8A%82%E7%82%B9">简单记忆：根据权值画节点</a></li>
+<li><a href="#%E5%8E%9F%E7%90%86-3">原理</a></li>
+<li><a href="#%E7%90%86%E8%A7%A3-1">理解</a></li>
+<li><a href="#%E5%9B%BE%E7%A4%BA%E4%BE%8B">图示例</a></li>
+<li><a href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6-2">时间复杂度</a></li>
+</ul>
+</li>
+<li><a href="#%E6%AF%94%E8%BE%83-1">比较</a></li>
+</ul>
+</li>
+<li><a href="#%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98">最短路径问题</a><ul>
+<li><a href="#bfs%E7%AE%97%E6%B3%95%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E7%AE%97%E6%B3%95">BFS算法（广度优先算法）</a><ul>
+<li><a href="#%E6%97%A0%E6%9D%83%E5%9B%BE">无权图</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-2">代码实现</a></li>
+<li><a href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3">核心思想</a></li>
+<li><a href="#%E5%B1%80%E9%99%90%E6%80%A7">局限性</a></li>
+</ul>
+</li>
+<li><a href="#dijkstra%E7%AE%97%E6%B3%95%E8%BF%AA%E6%9D%B0%E6%96%AF%E7%89%B9%E6%8B%89%E7%AE%97%E6%B3%95">Dijkstra算法（迪杰斯特拉算法）</a><ul>
+<li><a href="#%E5%9B%BE%E7%A4%BA%E4%BE%8B-1">图示例</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-3">代码实现</a></li>
+<li><a href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6-3">时间复杂度</a></li>
+<li><a href="#%E5%B1%80%E9%99%90%E6%80%A7-1">局限性</a></li>
+</ul>
+</li>
+<li><a href="#floyd%E7%AE%97%E6%B3%95%E5%BC%97%E6%B4%9B%E4%BC%8A%E5%BE%B7%E7%AE%97%E6%B3%95%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92">Floyd算法（弗洛伊德算法——动态规划）</a><ul>
+<li><a href="#%E5%9B%BE%E7%A4%BA%E4%BE%8B-2">图示例</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-4">代码实现</a></li>
+<li><a href="#%E6%97%B6%E9%97%B4%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6">时间、空间复杂度</a></li>
+</ul>
+</li>
+<li><a href="#%E6%AF%94%E8%BE%83-2">比较</a></li>
+</ul>
+</li>
+<li><a href="#%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">查找算法与数据结构</a><ul>
+<li><a href="#asl%E6%A6%82%E5%BF%B5">ASL概念</a><ul>
+<li><a href="#%E6%A6%82%E5%BF%B5">概念</a></li>
+<li><a href="#%E6%9F%A5%E6%89%BE%E6%88%90%E5%8A%9F">查找成功</a></li>
+<li><a href="#%E6%9F%A5%E6%89%BE%E5%A4%B1%E8%B4%A5">查找失败</a></li>
+</ul>
+</li>
+<li><a href="#%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE">顺序查找</a><ul>
+<li><a href="#%E5%8E%9F%E7%90%86-4">原理</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-5">代码实现</a></li>
+<li><a href="#%E7%AE%97%E6%B3%95%E4%BC%98%E5%8C%96-1">算法优化</a><ul>
+<li><a href="#%E5%8E%9F%E7%90%86-5">原理</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-6">代码实现</a></li>
+</ul>
+</li>
+<li><a href="#asl">ASL</a></li>
+<li><a href="#%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE%E6%9C%89%E5%BA%8F%E8%A1%A8%E4%BC%98%E5%8C%96">顺序查找有序表优化</a><ul>
+<li><a href="#%E5%8E%9F%E7%90%86-6">原理</a></li>
+<li><a href="#asl-1">ASL</a></li>
+</ul>
+</li>
+<li><a href="#%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE%E8%A2%AB%E6%9F%A5%E6%A6%82%E7%8E%87%E4%B8%8D%E7%9B%B8%E7%AD%89%E4%BC%98%E5%8C%96">顺序查找被查概率不相等优化</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+</li>
+<li><a href="#%E6%8A%98%E5%8D%8A%E6%9F%A5%E6%89%BE%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE">折半查找（二分查找）</a><ul>
+<li><a href="#%E5%8E%9F%E7%90%86-7">原理</a></li>
+<li><a href="#%E6%8A%98%E5%8D%8A%E6%9F%A5%E6%89%BE%E5%88%A4%E5%AE%9A%E6%A0%91">折半查找判定树</a><ul>
+<li><a href="#%E6%80%A7%E8%B4%A8">性质</a></li>
+<li><a href="#%E5%A4%B1%E8%B4%A5%E7%BB%93%E7%82%B9">失败结点</a></li>
+<li><a href="#asl-2">ASL</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-7">代码实现</a></li>
+<li><a href="#asl-3">ASL</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93-1">总结</a></li>
+</ul>
+</li>
+<li><a href="#%E5%88%86%E5%9D%97%E6%9F%A5%E6%89%BE">分块查找</a><ul>
+<li><a href="#%E5%8E%9F%E7%90%86-8">原理</a></li>
+<li><a href="#asl-4">ASL</a><ul>
+<li><a href="#%E5%B7%B2%E7%9F%A5%E6%83%85%E5%86%B5">已知情况</a></li>
+<li><a href="#%E6%9C%AA%E7%9F%A5%E6%83%85%E5%86%B5">未知情况</a></li>
+</ul>
+</li>
+<li><a href="#%E6%80%BB%E7%BB%93-2">总结</a></li>
+</ul>
+</li>
+<li><a href="#bst%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91">BST（二叉排序树）</a><ul>
+<li><a href="#%E6%A6%82%E5%BF%B5-1">概念</a></li>
+<li><a href="#%E6%9F%A5%E6%89%BE%E6%93%8D%E4%BD%9C">查找操作</a><ul>
+<li><a href="#%E9%9D%9E%E9%80%92%E5%BD%92%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0">非递归代码实现</a></li>
+<li><a href="#%E9%80%92%E5%BD%92%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0">递归代码实现</a></li>
+<li><a href="#%E6%AF%94%E8%BE%83-3">比较</a></li>
+</ul>
+</li>
+<li><a href="#%E6%8F%92%E5%85%A5%E6%93%8D%E4%BD%9C">插入操作</a></li>
+<li><a href="#%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9C">删除操作</a><ul>
+<li><a href="#%E5%88%A0%E9%99%A4%E7%BB%93%E7%82%B9%E4%B8%BA%E5%8F%B6%E5%AD%90%E7%BB%93%E7%82%B9">删除结点为叶子结点</a></li>
+<li><a href="#%E5%88%A0%E9%99%A4%E7%BB%93%E7%82%B9%E5%8F%AA%E6%9C%89%E4%B8%80%E6%A3%B5%E5%B7%A6%E5%AD%90%E6%A0%91%E6%88%96%E8%80%85%E5%8F%B3%E5%AD%90%E6%A0%91">删除结点只有一棵左子树或者右子树</a></li>
+<li><a href="#%E5%88%A0%E9%99%A4%E7%BB%93%E7%82%B9%E6%9C%89%E5%B7%A6%E5%8F%B3%E5%AD%90%E6%A0%91">删除结点有左右子树</a></li>
+</ul>
+</li>
+<li><a href="#asl-5">ASL</a><ul>
+<li><a href="#%E6%9F%A5%E6%89%BE%E6%88%90%E5%8A%9F-1">查找成功</a></li>
+<li><a href="#%E6%9F%A5%E6%89%BE%E5%A4%B1%E8%B4%A5-1">查找失败</a></li>
+</ul>
+</li>
+<li><a href="#%E6%80%BB%E7%BB%93-3">总结</a></li>
+</ul>
+</li>
+<li><a href="#avl%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91">AVL（平衡二叉树）</a><ul>
+<li><a href="#%E5%AE%9A%E4%B9%89">定义</a></li>
+<li><a href="#%E8%B0%83%E6%95%B4%E6%9C%80%E5%B0%8F%E4%B8%8D%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91">调整最小不平衡二叉树</a><ul>
+<li><a href="#ll%E5%B7%A6%E5%AD%A9%E5%AD%90%E5%8F%B3%E4%B8%8A%E6%97%8B">LL（左孩子右上旋）</a></li>
+<li><a href="#rr%E5%8F%B3%E5%AD%A9%E5%AD%90%E5%B7%A6%E4%B8%8A%E6%97%8B">RR（右孩子左上旋）</a></li>
+<li><a href="#lr%E5%B7%A6%E5%AD%A9%E5%AD%90%E7%9A%84%E5%8F%B3%E5%AD%A9%E5%AD%90%E5%85%88%E5%B7%A6%E4%B8%8A%E6%97%8B%E5%86%8D%E5%8F%B3%E4%B8%8A%E6%97%8B">LR（左孩子的右孩子先左上旋再右上旋）</a></li>
+<li><a href="#rl%E5%8F%B3%E5%AD%A9%E5%AD%90%E7%9A%84%E5%B7%A6%E5%AD%A9%E5%AD%90%E5%85%88%E5%8F%B3%E4%B8%8A%E6%97%8B%E5%86%8D%E5%B7%A6%E4%B8%8A%E6%97%8B">RL（右孩子的左孩子先右上旋再左上旋）</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-8">代码实现</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93-4">总结</a></li>
+</ul>
+</li>
+<li><a href="#%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%88%A0%E9%99%A4">平衡二叉树的删除</a></li>
+<li><a href="#asl-6">ASL</a></li>
+</ul>
+</li>
+<li><a href="#rbt%E7%BA%A2%E9%BB%91%E6%A0%91">RBT（红黑树）</a><ul>
+<li><a href="#%E5%8C%BA%E5%88%AB">区别</a></li>
+<li><a href="#%E5%AE%9A%E4%B9%89-1">定义</a></li>
+<li><a href="#%E6%80%A7%E8%B4%A8-1">性质</a></li>
+<li><a href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6-4">时间复杂度</a></li>
+<li><a href="#%E6%8F%92%E5%85%A5%E6%93%8D%E4%BD%9C-1">插入操作</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93-5">总结</a></li>
+</ul>
+</li>
+<li><a href="#b%E6%A0%91">B树</a><ul>
+<li><a href="#%E5%AE%9A%E4%B9%89-2">定义</a></li>
+<li><a href="#%E7%89%B9%E5%BE%81%E6%80%A7%E8%B4%A8">特征性质</a></li>
+<li><a href="#%E9%AB%98%E5%BA%A6%E8%8C%83%E5%9B%B4">高度范围</a></li>
+<li><a href="#%E6%8F%92%E5%85%A5%E6%93%8D%E4%BD%9C-2">插入操作</a><ul>
+<li><a href="#%E5%89%8D%E6%8F%90%E8%A6%81%E6%B1%82">前提要求</a></li>
+<li><a href="#%E8%BF%87%E7%A8%8B">过程</a></li>
+<li><a href="#%E5%B0%8F%E6%80%BB%E7%BB%93">小总结</a></li>
+</ul>
+</li>
+<li><a href="#%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9C-1">删除操作</a><ul>
+<li><a href="#%E8%BF%87%E7%A8%8B-1">过程</a><ul>
+<li><a href="#%E6%8B%89%E5%8F%B3%E5%85%84%E5%BC%9F">拉右兄弟</a></li>
+<li><a href="#%E6%8B%89%E5%B7%A6%E5%85%84%E5%BC%9F">拉左兄弟</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E6%8F%92%E5%85%A5%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9C%E6%80%BB%E7%BB%93">插入删除操作总结</a></li>
+</ul>
+</li>
+<li><a href="#b%E6%A0%91-1">B+树</a><ul>
+<li><a href="#%E5%AE%9A%E4%B9%89-3">定义</a></li>
+<li><a href="#%E6%9F%A5%E6%89%BE">查找</a><ul>
+<li><a href="#%E5%A4%9A%E8%B7%AF%E6%9F%A5%E6%89%BE">多路查找</a></li>
+<li><a href="#%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE-1">顺序查找</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AF%B9%E6%AF%94b%E6%A0%91">对比B树</a><ul>
+<li><a href="#%E5%85%B3%E9%94%AE%E5%AD%97%E5%AF%B9%E5%BA%94%E5%88%86%E5%8F%89%E4%B8%8D%E5%90%8C">关键字对应分叉不同</a></li>
+<li><a href="#%E8%8A%82%E7%82%B9%E5%85%B3%E9%94%AE%E5%AD%97%E8%8C%83%E5%9B%B4%E4%B8%8D%E5%90%8C">节点关键字范围不同</a></li>
+<li><a href="#%E5%8F%B6%E5%AD%90%E7%BB%93%E7%82%B9%E4%B8%8E%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E5%85%B3%E7%B3%BB">叶子结点与关键字的关系</a></li>
+<li><a href="#%E8%8A%82%E7%82%B9%E4%BD%9C%E7%94%A8">节点作用</a></li>
+<li><a href="#%E5%AD%98%E5%82%A8%E6%9C%AC%E8%B4%A8%E5%8C%BA%E5%88%AB">存储本质区别</a></li>
+</ul>
+</li>
+<li><a href="#%E6%80%BB%E7%BB%93%E5%AF%B9%E6%AF%94">总结对比</a></li>
+</ul>
+</li>
+<li><a href="#%E6%95%A3%E5%88%97%E6%9F%A5%E6%89%BE%E7%A9%BA%E9%97%B4%E6%8D%A2%E6%97%B6%E9%97%B4">散列查找（空间换时间）</a><ul>
+<li><a href="#%E6%A6%82%E5%BF%B5-2">概念</a></li>
+<li><a href="#%E6%95%A3%E5%88%97%E5%87%BD%E6%95%B0">散列函数</a></li>
+<li><a href="#asl-7">ASL</a></li>
+<li><a href="#%E8%A3%85%E5%A1%AB%E5%9B%A0%E5%AD%90">装填因子</a></li>
+<li><a href="#%E5%B8%B8%E8%A7%81%E6%95%A3%E5%88%97%E5%87%BD%E6%95%B0%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0">常见散列函数设计方法（哈希函数）</a><ul>
+<li><a href="#%E9%99%A4%E7%95%99%E4%BD%99%E6%95%B0%E6%B3%95">除留余数法</a></li>
+<li><a href="#%E7%9B%B4%E6%8E%A5%E5%AE%9A%E5%9D%80%E6%B3%95">直接定址法</a></li>
+<li><a href="#%E6%95%B0%E5%AD%97%E5%88%86%E6%9E%90%E6%B3%95">数字分析法</a></li>
+<li><a href="#%E5%B9%B3%E6%96%B9%E5%8F%96%E4%B8%AD%E6%B3%95">平方取中法</a></li>
+</ul>
+</li>
+<li><a href="#%E5%A4%84%E7%90%86%E5%86%B2%E7%AA%81%E6%96%B9%E6%B3%95">处理冲突方法</a><ul>
+<li><a href="#%E6%8B%89%E9%93%BE%E6%B3%95">拉链法</a></li>
+<li><a href="#%E5%BC%80%E6%94%BE%E5%AE%9A%E5%9D%80%E6%B3%95">开放定址法</a><ul>
+<li><a href="#%E7%BA%BF%E6%80%A7%E6%8E%A2%E6%B5%8B%E6%B3%95">线性探测法</a></li>
+<li><a href="#%E5%B9%B3%E6%96%B9%E6%8E%A2%E6%B5%8B%E6%B3%95">平方探测法</a></li>
+<li><a href="#%E4%BC%AA%E9%9A%8F%E6%9C%BA%E5%BA%8F%E5%88%97%E6%B3%95">伪随机序列法</a></li>
+</ul>
+</li>
+<li><a href="#%E5%86%8D%E6%95%A3%E5%88%97%E6%B3%95%E5%86%8D%E5%93%88%E5%B8%8C%E6%B3%95">再散列法（再哈希法）</a></li>
+</ul>
+</li>
+<li><a href="#%E6%80%BB%E7%BB%93-6">总结</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">排序算法与数据结构</a><ul>
+<li><a href="#%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F">插入排序</a><ul>
+<li><a href="#%E5%8E%9F%E7%90%86-9">原理</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-9">代码实现</a></li>
+<li><a href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6-5">时间复杂度</a></li>
+<li><a href="#%E4%BC%98%E5%8C%96%E6%8A%98%E5%8D%8A%E6%9F%A5%E6%89%BE">优化——折半查找</a><ul>
+<li><a href="#%E4%BC%98%E5%8C%96%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0">优化代码实现</a></li>
+<li><a href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6-6">时间复杂度</a></li>
+</ul>
+</li>
+<li><a href="#%E6%80%BB%E7%BB%93-7">总结</a></li>
+</ul>
+</li>
+<li><a href="#%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F">希尔排序</a><ul>
+<li><a href="#%E5%AE%9A%E4%B9%89-4">定义</a></li>
+<li><a href="#%E5%8E%9F%E7%90%86-10">原理</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-10">代码实现</a></li>
+<li><a href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%8E%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6">时间复杂度与空间复杂度</a></li>
+<li><a href="#%E7%A8%B3%E5%AE%9A%E6%80%A7%E4%B8%8E%E9%80%82%E7%94%A8%E6%80%A7">稳定性与适用性</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93-8">总结</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BA%A4%E6%8D%A2%E6%8E%92%E5%BA%8F">交换排序</a><ul>
+<li><a href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F">冒泡排序</a><ul>
+<li><a href="#%E5%8E%9F%E7%90%86-11">原理</a></li>
+<li><a href="#%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0">算法实现</a></li>
+<li><a href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%8E%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6-1">时间复杂度与空间复杂度</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93-9">总结</a></li>
+</ul>
+</li>
+<li><a href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E6%9C%80%E5%BF%AB">快速排序（最快）</a><ul>
+<li><a href="#%E5%AE%9A%E4%B9%89-5">定义</a></li>
+<li><a href="#%E5%8E%9F%E7%90%86-12">原理</a></li>
+<li><a href="#%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0-1">算法实现</a></li>
+<li><a href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%8E%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6-2">时间复杂度与空间复杂度</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93-10">总结</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F">选择排序</a><ul>
+<li><a href="#%E7%AE%80%E5%8D%95%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F">简单选择排序</a><ul>
+<li><a href="#%E5%AE%9A%E4%B9%89-6">定义</a></li>
+<li><a href="#%E5%8E%9F%E7%90%86-13">原理</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-11">代码实现</a></li>
+<li><a href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%8E%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6-3">时间复杂度与空间复杂度</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93-11">总结</a></li>
+</ul>
+</li>
+<li><a href="#%E5%A0%86%E6%8E%92%E5%BA%8F">堆排序</a><ul>
+<li><a href="#%E5%AE%9A%E4%B9%89%E5%A0%86">定义堆</a></li>
+<li><a href="#%E5%BB%BA%E7%AB%8B%E5%A4%A7%E6%A0%B9%E5%A0%86">建立大根堆</a><ul>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-12">代码实现</a></li>
+<li><a href="#%E5%A0%86%E7%9A%84%E6%8F%92%E5%85%A5%E4%B8%8E%E5%88%A0%E9%99%A4">堆的插入与删除</a></li>
+</ul>
+</li>
+<li><a href="#%E5%9F%BA%E4%BA%8E%E5%A4%A7%E6%A0%B9%E5%A0%86%E6%8E%92%E5%BA%8F">基于大根堆排序</a><ul>
+<li><a href="#%E5%8E%9F%E7%90%86-14">原理</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-13">代码实现</a></li>
+</ul>
+</li>
+<li><a href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%8E%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6-4">时间复杂度与空间复杂度</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93-12">总结</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F">归并排序</a><ul>
+<li><a href="#%E5%AE%9A%E4%B9%89-7">定义</a></li>
+<li><a href="#%E5%8E%9F%E7%90%86%E4%BA%8C%E8%B7%AF">原理（二路）</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-14">代码实现</a><ul>
+<li><a href="#%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81%E9%80%92%E5%BD%92">完整代码（递归）</a></li>
+</ul>
+</li>
+<li><a href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%8E%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6-5">时间复杂度与空间复杂度</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93-13">总结</a></li>
+</ul>
+</li>
+<li><a href="#%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F">基数排序</a><ul>
+<li><a href="#%E5%AE%9A%E4%B9%89-8">定义</a></li>
+<li><a href="#%E5%8E%9F%E7%90%86-15">原理</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-15">代码实现</a></li>
+<li><a href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%8E%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6-6">时间复杂度与空间复杂度</a></li>
+<li><a href="#%E5%BA%94%E7%94%A8%E8%A7%92%E5%BA%A6">应用角度</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93-14">总结</a></li>
+</ul>
+</li>
+<li><a href="#%E5%A4%96%E9%83%A8%E6%8E%92%E5%BA%8F">外部排序</a><ul>
+<li><a href="#%E5%8E%9F%E7%90%86-16">原理</a></li>
+<li><a href="#%E6%97%B6%E9%97%B4%E5%BC%80%E9%94%80">时间开销</a></li>
+<li><a href="#%E4%BC%98%E5%8C%96">优化</a><ul>
+<li><a href="#%E5%A4%9A%E8%B7%AF%E5%BD%92%E5%B9%B6">多路归并</a></li>
+<li><a href="#%E4%BC%98%E5%8C%96%E5%87%8F%E5%B0%91%E5%88%9D%E5%A7%8B%E5%BD%92%E5%B9%B6%E6%AE%B5">优化：减少初始归并段</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93-15">总结</a></li>
+</ul>
+</li>
+<li><a href="#%E8%B4%A5%E8%80%85%E6%A0%91k%E8%B7%AF%E5%BD%92%E5%B9%B6%E4%BC%98%E5%8C%96">败者树（k路归并优化）</a><ul>
+<li><a href="#%E4%BC%98%E5%8C%96%E5%8E%9F%E5%9B%A0">优化原因</a></li>
+<li><a href="#%E5%AE%9A%E4%B9%89-9">定义</a></li>
+<li><a href="#%E5%8E%9F%E7%90%86-17">原理</a></li>
+<li><a href="#%E5%AF%B9%E6%AF%94%E6%AC%A1%E6%95%B0">对比次数</a></li>
+</ul>
+</li>
+<li><a href="#%E6%80%BB%E7%BB%93-16">总结</a></li>
+</ul>
+</li>
+<li><a href="#%E7%BD%AE%E6%8D%A2-%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F">置换-选择排序</a><ul>
+<li><a href="#%E5%8E%9F%E7%90%86-18">原理</a><ul>
+<li><a href="#%E5%85%B7%E4%BD%93%E6%96%87%E5%AD%97%E6%8F%8F%E8%BF%B0">具体文字描述</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E6%9C%80%E4%BD%B3%E5%BD%92%E5%B9%B6%E6%A0%91">最佳归并树</a><ul>
+<li><a href="#%E5%AE%9A%E4%B9%89-10">定义</a></li>
+<li><a href="#%E6%9E%84%E9%80%A0%E6%9C%80%E4%BD%B3%E5%BD%92%E5%B9%B6%E6%A0%91%E7%B1%BB%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91">构造最佳归并树（类哈夫曼树）</a></li>
+<li><a href="#%E5%A4%9A%E8%B7%AF%E5%BD%92%E5%B9%B6%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">多路归并的注意事项</a><ul>
+<li><a href="#%E6%B1%82%E8%99%9A%E6%AE%B5%E6%95%B0%E9%87%8F">求虚段数量</a></li>
+</ul>
+</li>
+<li><a href="#%E6%80%BB%E7%BB%93-17">总结</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E5%A3%B0%E6%98%8E">声明</a></li>
+</ul>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2>
   <div class="note p-4 mb-4 rounded-small info">
     <p>以下将以常见基础问题的对应解答方法进行算法实例与数据结构的总结</p>
 
@@ -3057,7 +3413,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-12-11 01:24:26
+                    :</strong> 2025-01-17 01:35:56
             </li>
         
         <li>
@@ -3105,9 +3461,9 @@
 </a><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/buuctf/[BJDCTF2020]ZJCTF-不过如此/" title="BJDCTF2020 ZJCTF，不过如此*" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="BJDCTF2020 ZJCTF，不过如此*" class="!max-w-none">
   <span class="title">BJDCTF2020 ZJCTF，不过如此*</span>
-</a><a class="recommended-article-item" href="/2024/09/18/ctf/data/misc/隐写术/" title="misc-隐写术" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="misc-隐写术" class="!max-w-none">
-  <span class="title">misc-隐写术</span>
+</a><a class="recommended-article-item" href="/2024/10/26/C++/C++提高编程/" title="C++提高编程" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="C++提高编程" class="!max-w-none">
+  <span class="title">C++提高编程</span>
 </a></div>
    </div>
    <div class="recommended-mobile">
@@ -3120,9 +3476,9 @@
 </a><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/buuctf/[BJDCTF2020]ZJCTF-不过如此/" title="BJDCTF2020 ZJCTF，不过如此*" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="BJDCTF2020 ZJCTF，不过如此*" class="!max-w-none">
   <span class="title">BJDCTF2020 ZJCTF，不过如此*</span>
-</a><a class="recommended-article-item" href="/2024/09/18/ctf/data/misc/隐写术/" title="misc-隐写术" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="misc-隐写术" class="!max-w-none">
-  <span class="title">misc-隐写术</span>
+</a><a class="recommended-article-item" href="/2024/10/26/C++/C++提高编程/" title="C++提高编程" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="C++提高编程" class="!max-w-none">
+  <span class="title">C++提高编程</span>
 </a></div>
    </div>
   </div>
@@ -3133,13 +3489,13 @@
                     <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="prev"
                         rel="prev"
-                        href="/2024/10/21/C++/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86%E6%80%BB%E7%BB%93/"
+                        href="/2024/10/21/C++/C++%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/"
                         >
                             <span class="left arrow-icon flex justify-center items-center">
                                 <i class="fa-solid fa-chevron-left"></i>
                             </span>
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">C语言与C++的不同点（基础部分）</span>
+                                <span class="post-nav-title-item">C++基础入门</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
@@ -3245,16 +3601,16 @@
               <span>2024</span>
               -
             
-            2024&nbsp;&nbsp;<i class="fa-solid fa-sync fa-spin" style="color: #f54545"></i>&nbsp;&nbsp;<a href="/">ZJ</a>
+            2025&nbsp;&nbsp;<i class="fa-solid fa-sync fa-spin" style="color: #f54545"></i>&nbsp;&nbsp;<a href="/">ZJ</a>
             
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        63 posts in total
+                        64 posts in total
                     </span>
                     
                         <span>
-                            120.7k words in total
+                            126.5k words in total
                         </span>
                     
                 </p>
@@ -3287,6 +3643,17 @@
                     http://beian.miit.gov.cn
                 
                 ">蜀ICP备2024084968号</a></div>
+        
+        
+            <div class="icp-info my-1">
+                <!-- <span style="padding-left:40px;
+                background:url(/images/gongan.png) no-repeat left center" rel="noreferrer" ></span> -->
+                <img src="/images/gongan.png" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;" rel="noreferrer"/>
+                <a style="display:inline-block;text-decoration:none;height:20px;line-height:20px;" target="_blank" rel="noreferrer" href="
+                
+                    https://beian.mps.gov.cn/#/query/webSearch?code=51150002000806
+                
+                ">川公网安备51150002000806号</a></div>
         
         
             <div>

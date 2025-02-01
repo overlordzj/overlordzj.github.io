@@ -22,15 +22,15 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="powershell脚本运行策略Powershell一般初始化情况下都会禁止脚本执行。脚本能否执行取决于Powershell的执行策略 查看权限1Get-ExecutionPolicy   Unrestricted:权限最高，可以不受限制执行任何脚本 Default:为Powershell默认的策略 Restricted，不允许任何脚本执行 AllSigned：所有脚本都必须经过签名才能在运行 R">
+        <meta name="description" content="powershell脚本运行策略 查看权限 改变运行策略    powershell脚本运行策略Powershell一般初始化情况下都会禁止脚本执行。脚本能否执行取决于Powershell的执行策略 查看权限1Get-ExecutionPolicy   Unrestricted:权限最高，可以不受限制执行任何脚本 Default:为Powershell默认的策略 Restricted，不允许任何">
 <meta property="og:type" content="article">
 <meta property="og:title" content="windows系统powershell脚本运行策略">
 <meta property="og:url" content="https://blog.overlordzj.cn/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/windows/powershell%E8%BF%90%E8%A1%8C%E7%AD%96%E7%95%A5/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="powershell脚本运行策略Powershell一般初始化情况下都会禁止脚本执行。脚本能否执行取决于Powershell的执行策略 查看权限1Get-ExecutionPolicy   Unrestricted:权限最高，可以不受限制执行任何脚本 Default:为Powershell默认的策略 Restricted，不允许任何脚本执行 AllSigned：所有脚本都必须经过签名才能在运行 R">
+<meta property="og:description" content="powershell脚本运行策略 查看权限 改变运行策略    powershell脚本运行策略Powershell一般初始化情况下都会禁止脚本执行。脚本能否执行取决于Powershell的执行策略 查看权限1Get-ExecutionPolicy   Unrestricted:权限最高，可以不受限制执行任何脚本 Default:为Powershell默认的策略 Restricted，不允许任何">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-09-12T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-12-10T17:23:57.070Z">
+<meta property="article:modified_time" content="2025-01-16T17:35:44.838Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="windows">
 <meta name="twitter:card" content="summary">
@@ -592,15 +592,15 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">27</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">29</div>
         <div class="label text-third-text-color text-sm">Tags</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">25</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">26</div>
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">63</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">64</div>
         <div class="label text-third-text-color text-sm">Posts</div>
     </a>
 </div>
@@ -654,8 +654,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-12-11 01:23:57</span>
-            <span class="mobile">2024-12-11 01:23:57</span>
+            <span class="desktop">2025-01-17 01:35:44</span>
+            <span class="mobile">2025-01-17 01:35:44</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -703,7 +703,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>129 Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>146 Words</span>
         </span>
     
     
@@ -727,7 +727,14 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h2 id="powershell脚本运行策略"><a href="#powershell脚本运行策略" class="headerlink" title="powershell脚本运行策略"></a>powershell脚本运行策略</h2><p><strong>Powershell一般初始化情况下都会禁止脚本执行。脚本能否执行取决于Powershell的执行策略</strong></p>
+            <ul>
+<li><a href="#powershell%E8%84%9A%E6%9C%AC%E8%BF%90%E8%A1%8C%E7%AD%96%E7%95%A5">powershell脚本运行策略</a><ul>
+<li><a href="#%E6%9F%A5%E7%9C%8B%E6%9D%83%E9%99%90">查看权限</a></li>
+<li><a href="#%E6%94%B9%E5%8F%98%E8%BF%90%E8%A1%8C%E7%AD%96%E7%95%A5">改变运行策略</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="powershell脚本运行策略"><a href="#powershell脚本运行策略" class="headerlink" title="powershell脚本运行策略"></a>powershell脚本运行策略</h2><p><strong>Powershell一般初始化情况下都会禁止脚本执行。脚本能否执行取决于Powershell的执行策略</strong></p>
 <h3 id="查看权限"><a href="#查看权限" class="headerlink" title="查看权限"></a>查看权限</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Get-ExecutionPolicy </span><br></pre></td></tr></table></figure></div>
 
 <p><strong>Unrestricted</strong>:权限最高，可以不受限制执行任何脚本</p>
@@ -751,7 +758,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-12-11 01:23:57
+                    :</strong> 2025-01-17 01:35:44
             </li>
         
         <li>
@@ -792,12 +799,12 @@
     <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/13/操作系统/windows/修改SID/" title="windows系统修改系统SID" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="windows系统修改系统SID" class="!max-w-none">
   <span class="title">windows系统修改系统SID</span>
-</a><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/ctfhub/RCE-eval执行/" title="RCE-eval执行" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="RCE-eval执行" class="!max-w-none">
-  <span class="title">RCE-eval执行</span>
 </a><a class="recommended-article-item" href="/2024/09/23/ctf/writeup/misc/buuctf/[INSHack2019]Passthru/" title="INSHack2019-Passthru*" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="INSHack2019-Passthru*" class="!max-w-none">
   <span class="title">INSHack2019-Passthru*</span>
+</a><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/ctfhub/RCE-eval执行/" title="RCE-eval执行" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="RCE-eval执行" class="!max-w-none">
+  <span class="title">RCE-eval执行</span>
 </a></div>
    </div>
    <div class="recommended-mobile">
@@ -807,12 +814,12 @@
    <div class="recommended-article-group"><a class="recommended-article-item" href="/2024/09/13/操作系统/windows/修改SID/" title="windows系统修改系统SID" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="windows系统修改系统SID" class="!max-w-none">
   <span class="title">windows系统修改系统SID</span>
-</a><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/ctfhub/RCE-eval执行/" title="RCE-eval执行" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="RCE-eval执行" class="!max-w-none">
-  <span class="title">RCE-eval执行</span>
 </a><a class="recommended-article-item" href="/2024/09/23/ctf/writeup/misc/buuctf/[INSHack2019]Passthru/" title="INSHack2019-Passthru*" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="INSHack2019-Passthru*" class="!max-w-none">
   <span class="title">INSHack2019-Passthru*</span>
+</a><a class="recommended-article-item" href="/2024/09/14/ctf/writeup/web/ctfhub/RCE-eval执行/" title="RCE-eval执行" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="RCE-eval执行" class="!max-w-none">
+  <span class="title">RCE-eval执行</span>
 </a></div>
    </div>
   </div>
@@ -823,13 +830,13 @@
                     <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="prev"
                         rel="prev"
-                        href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/centos-linux/Tab%E9%94%AE%E8%AE%BE%E7%BD%AE/"
+                        href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/windows/%E4%BF%AE%E6%94%B9SID/"
                         >
                             <span class="left arrow-icon flex justify-center items-center">
                                 <i class="fa-solid fa-chevron-left"></i>
                             </span>
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">Linux系统Tab键相关设置</span>
+                                <span class="post-nav-title-item">windows系统修改系统SID</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
@@ -839,10 +846,10 @@
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="next"
                         rel="next"
-                        href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/windows/%E4%BF%AE%E6%94%B9SID/"
+                        href="/2024/09/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/windows/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B7%BB%E5%8A%A0%E7%A8%8B%E5%BA%8F/"
                         >
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">windows系统修改系统SID</span>
+                                <span class="post-nav-title-item">windows系统右键菜单栏自定义添加程序</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex justify-center items-center">
@@ -935,16 +942,16 @@
               <span>2024</span>
               -
             
-            2024&nbsp;&nbsp;<i class="fa-solid fa-sync fa-spin" style="color: #f54545"></i>&nbsp;&nbsp;<a href="/">ZJ</a>
+            2025&nbsp;&nbsp;<i class="fa-solid fa-sync fa-spin" style="color: #f54545"></i>&nbsp;&nbsp;<a href="/">ZJ</a>
             
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        63 posts in total
+                        64 posts in total
                     </span>
                     
                         <span>
-                            120.7k words in total
+                            126.5k words in total
                         </span>
                     
                 </p>
@@ -977,6 +984,17 @@
                     http://beian.miit.gov.cn
                 
                 ">蜀ICP备2024084968号</a></div>
+        
+        
+            <div class="icp-info my-1">
+                <!-- <span style="padding-left:40px;
+                background:url(/images/gongan.png) no-repeat left center" rel="noreferrer" ></span> -->
+                <img src="/images/gongan.png" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;" rel="noreferrer"/>
+                <a style="display:inline-block;text-decoration:none;height:20px;line-height:20px;" target="_blank" rel="noreferrer" href="
+                
+                    https://beian.mps.gov.cn/#/query/webSearch?code=51150002000806
+                
+                ">川公网安备51150002000806号</a></div>
         
         
             <div>
